@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+const data=JSON.parse(fs.readFileSync('public/punjab.geojson','utf8'));
+const all=data.features.flatMap(f=>f.geometry.coordinates.flat(f.geometry.type==='MultiPolygon'?2:1));
+const xs=all.map(p=>p[0]*Math.cos(31*Math.PI/180)),ys=all.map(p=>-p[1]);
+const minx=xs.reduce((a,b)=>Math.min(a,b)),miny=ys.reduce((a,b)=>Math.min(a,b)),maxx=xs.reduce((a,b)=>Math.max(a,b)),maxy=ys.reduce((a,b)=>Math.max(a,b));
+const scale=Math.min(730/(maxx-minx),680/(maxy-miny));
+const project=p=>[+(105+(p[0]*Math.cos(31*Math.PI/180)-minx)*scale).toFixed(3),+(75+(-p[1]-miny)*scale).toFixed(3)];
+const area=r=>Math.abs(r.reduce((s,p,i)=>{const q=r[(i+1)%r.length];return s+p[0]*q[1]-q[0]*p[1]},0));
+const inside=(p,r)=>{let c=false;for(let i=0,j=r.length-1;i<r.length;j=i++){if((r[i][1]>p[1])!==(r[j][1]>p[1])&&p[0]<(r[j][0]-r[i][0])*(p[1]-r[i][1])/(r[j][1]-r[i][1])+r[i][0])c=!c}return c};
+const features=data.features.map(f=>{const polys=(f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[f.geometry.coordinates]).map(p=>p.map(r=>r.map(project)));const ring=polys.map(p=>p[0]).sort((a,b)=>area(b)-area(a))[0];let a=0,x=0,y=0;ring.forEach((p,i)=>{const q=ring[(i+1)%ring.length],v=p[0]*q[1]-q[0]*p[1];a+=v;x+=(p[0]+q[0])*v;y+=(p[1]+q[1])*v});let center=[x/(3*a),y/(3*a)];if(!inside(center,ring)){center=ring.find(p=>inside([p[0]+1,p[1]+1],ring))||ring[0]};return {id:String(f.properties.lgd_districtcode),name:f.properties.name,d:polys.map(p=>p.map(r=>'M'+r.map(p=>p.join(',')).join('L')+'Z').join('')).join(''),center}}).sort((a,b)=>a.name.localeCompare(b.name));
+fs.writeFileSync('app/map-data.json',JSON.stringify(features));
+console.log(`${features.length} districts; ${all.length} original vertices retained; extent ${[minx,miny,maxx,maxy]}`);
