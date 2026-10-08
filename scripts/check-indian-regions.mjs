@@ -70,7 +70,8 @@ assert.equal(catalog.filter(a => a.region === 'in-haryana' && a.name === 'Loharu
 // Exercise the actual editor model, including migration of older saved maps.
 const modelSource = (await fs.readFile(new URL('app/map-model.ts', root), 'utf8'))
   .replace("import raw from './catalog.json';", `const raw=${JSON.stringify(catalog)};`)
-  .replace("import indianSources from './indian-region-sources.json';", `const indianSources=${JSON.stringify(manifest)};`);
+  .replace("import indianSources from './indian-region-sources.json';", `const indianSources=${JSON.stringify(manifest)};`)
+  .replace("import delhiData from './delhi-map-sources.json';", `const delhiData=${JSON.stringify(await readJson('app/delhi-map-sources.json'))};`);
 const compiled = ts.transpileModule(modelSource, {compilerOptions: {module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022}}).outputText;
 const model = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 assert.equal(model.subdistrictLabel('in-andhra'), 'Mandals');
