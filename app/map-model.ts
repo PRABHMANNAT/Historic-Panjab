@@ -9,7 +9,14 @@ export const areasByLayer=new Map<string,Area[]>();
 for(const a of areas){const key=a.region+'-'+a.level;const list=areasByLayer.get(key);if(list)list.push(a);else areasByLayer.set(key,[a])}
 export const ucParents=new Set(areas.filter(a=>a.level==='uc').map(a=>a.parent));
 export const divisionRegions=new Set(areas.filter(a=>a.level==='division').map(a=>a.region));
-const snapshotCoverage=(id:string)=>`${areasByLayer.get(id+'-district')?.length||0} districts · ${areasByLayer.get(id+'-tehsil')?.length||0} ${id==='in-andhra'?'mandal areas':'tehsil / sub-tehsil areas'} · LGD 2024`;
+const tehsilRegions=new Set(['in-haryana','in-himachal','in-rajasthan','in-uttar-pradesh','in-uttarakhand','in-jammu-kashmir','in-ladakh','in-punjab','pk-punjab','pk-kp']);
+export const subdistrictLabel=(id:string)=>id==='in-andhra'?'Mandals':tehsilRegions.has(id)?'Tehsils':'Subdistricts';
+export const coverageNotes=new Map(indianSources.regions.map(r=>{
+ const source=r as {districtsWithoutLinkedTehsils?:string[];omittedUnnamedTehsilRecords?:number};
+ const gaps=source.districtsWithoutLinkedTehsils||[],unnamed=source.omittedUnnamedTehsilRecords||0;
+ return [r.id,[gaps.length?`${gaps.length} source district${gaps.length===1?' has':'s have'} no linked subdistrict detail: ${gaps.join(', ')}. Source parent links are retained.`:'',unnamed?`${unnamed} unnamed source subdistrict record${unnamed===1?' is':'s are'} excluded from administrative listings.`:''].filter(Boolean).join(' ')];
+}));
+const snapshotCoverage=(id:string)=>`${areasByLayer.get(id+'-district')?.length||0} districts · ${areasByLayer.get(id+'-tehsil')?.length||0} named ${id==='in-andhra'?'mandal':'subdistrict'} areas · LGD 2024`;
 export const regions=[{id:'in-punjab',name:'Punjab · India',date:'23 districts · 79 tehsil polygons'},...indianSources.regions.map(r=>({id:r.id,name:r.name,date:snapshotCoverage(r.id)})),{id:'pk-punjab',name:'Punjab · Pakistan',date:'36 districts · 147 tehsil polygons'},{id:'pk-kp',name:'Selected KP divisions',date:'20 districts · 72 tehsil polygons'},{id:'islamabad',name:'Islamabad',date:'Capital territory · 1 source subdivision'},{id:'chandigarh',name:'Chandigarh',date:'Union territory · 28 historical wards'}];
 export const regionById=new Map(regions.map(r=>[r.id,r]));
 export const levels:Level[]=['region','district','tehsil','uc','division'];

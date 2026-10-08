@@ -73,6 +73,12 @@ const modelSource = (await fs.readFile(new URL('app/map-model.ts', root), 'utf8'
   .replace("import indianSources from './indian-region-sources.json';", `const indianSources=${JSON.stringify(manifest)};`);
 const compiled = ts.transpileModule(modelSource, {compilerOptions: {module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022}}).outputText;
 const model = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+assert.equal(model.subdistrictLabel('in-andhra'), 'Mandals');
+assert.equal(model.subdistrictLabel('in-haryana'), 'Tehsils');
+assert.equal(model.subdistrictLabel('in-arunachal'), 'Subdistricts');
+assert.ok(model.coverageNotes.get('in-arunachal').includes('Itanagar capital complex'));
+assert.ok(model.coverageNotes.get('in-maharashtra').includes('1 unnamed'));
+assert.equal(model.coverageNotes.get('in-goa'), '');
 assert.deepEqual(model.layerKeys, [...model.areasByLayer.keys()]);
 assert.equal([...model.areasByLayer.values()].flat().length, catalog.length);
 for (const [key, list] of model.areasByLayer) assert.ok(list.every(a => a.region + '-' + a.level === key));

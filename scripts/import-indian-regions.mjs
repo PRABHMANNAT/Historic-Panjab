@@ -53,10 +53,27 @@ const writeJson = (file, value) => fs.writeFile(file, JSON.stringify(value) + '\
 
 async function readSource(level) {
   const cached = path.join(cacheDir, `${level}.geojson`);
+  const selectRequested = features => process.argv.includes('--cache-only') ? features : features.filter(f => definitions.some(r => r.code === Number(f.properties.state_lgd ?? f.properties.State_LGD)));
+  // Avoid reparsing the whole 200 MB subdistrict cache for a single-state import.
+  const shardPath = code => path.join(cacheDir, `${level}-${code}.geojson`);
+  const cacheShards = async features => {
+    const groups = new Map(availableDefinitions.map(r => [r.code, []]));
+    for (const f of features) groups.get(Number(f.properties.state_lgd ?? f.properties.State_LGD))?.push(f);
+    await Promise.all([...groups].map(([code, items]) => writeJson(shardPath(code), collection(items))));
+  };
   if (!process.argv.includes('--refresh')) {
+    if (!process.argv.includes('--cache-only')) {
+      try {
+        const shards = await Promise.all(definitions.map(async r => JSON.parse(await fs.readFile(shardPath(r.code), 'utf8')).features));
+        if (shards.every((items, i) => items.length && items.every(f => Number(f.properties.state_lgd ?? f.properties.State_LGD) === definitions[i].code))) return shards.flat();
+      } catch (error) {if (error.code !== 'ENOENT') throw error;}
+    }
     try {
       const features = JSON.parse(await fs.readFile(cached, 'utf8')).features;
-      if (definitions.every(r => features.some(f => Number(f.properties.state_lgd ?? f.properties.State_LGD) === r.code))) return features;
+      if (definitions.every(r => features.some(f => Number(f.properties.state_lgd ?? f.properties.State_LGD) === r.code))) {
+        await cacheShards(features);
+        return selectRequested(features);
+      }
     } catch (error) {if (error.code !== 'ENOENT') throw error;}
   }
   const rawDir = process.argv.find(arg => arg.startsWith('--raw-dir='))?.slice('--raw-dir='.length);
@@ -83,8 +100,9 @@ async function readSource(level) {
   }
   if (!selected.length) throw Error(`No selected features in ${level}; inspect the upstream format`);
   await writeJson(cached, collection(selected));
+  await cacheShards(selected);
   console.log(`${level}: retained ${selected.length} of ${total} source features`);
-  return selected;
+  return selectRequested(selected);
 }
 
 await fs.mkdir(cacheDir, {recursive: true});
@@ -166,7 +184,7 @@ await writeJson(catalogPath, [...oldCatalog.filter(a => !definitions.some(r => r
 await fs.writeFile(manifestPath, JSON.stringify({
   retrieved: new Date().toISOString().slice(0, 10), snapshot: '2024', license: 'CC0-1.0 (Bharatlas catalogue)',
   attribution: source, catalogUrl: 'https://bharatlas.com/view/lgd_subdistricts',
-  coverage: 'Named district and subdistrict polygons from the LGD 2024 snapshot. Subdistricts include tehsils, taluks, mandals and sub-tehsils. Later administrative changes may be absent. Rajasthan has 50 district polygons but tehsil parent codes predate that reorganisation. Jammu & Kashmir and Ladakh state outlines depict the Indian claimed extent, including disputed territories. Unnamed extent fillers and zero-LGD claimed districts are not presented as administrative tehsils or districts.',
+  coverage: 'Named district and subdistrict polygons from the LGD 2024 snapshot. Subdistricts include tehsils, sub-tehsils, taluks, talukas, mandals, circles and other source units. Later administrative changes may be absent. Rajasthan has 50 district polygons but tehsil parent codes predate that reorganisation. Arunachal Pradesh has one source district without linked subdistrict detail. One unnamed Maharashtra subdistrict record is omitted. Jammu & Kashmir and Ladakh state outlines depict the Indian claimed extent, including disputed territories. Unnamed extent fillers and zero-LGD claimed districts are not presented as administrative tehsils or districts.',
   coordinateProcessing: 'Original source coordinates retained; interior label points derived. Same-code, same-parent fragments (Loharu and Bhopalsagar) are grouped as multipart areas. Kanth has conflicting source parent codes and is retained as two separate source records. Named records with missing LGD codes get stable source-object IDs, without inventing LGD codes.',
   regions: [...previousManifest.regions.filter(r => !definitions.some(d => d.id === r.id)), ...definitions.map(r => ({
     id: r.id, name: r.name, state_lgd: r.code,

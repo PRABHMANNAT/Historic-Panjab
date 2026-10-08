@@ -14,6 +14,7 @@
     "data:indian-regions": "node scripts/import-indian-regions.mjs",
     "data:kashmir-view": "node scripts/build-kashmir-view.mjs",
     "check:browser": "node scripts/verify-map-browser.mjs",
+    "check:states-browser": "node scripts/verify-state-layers.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt"

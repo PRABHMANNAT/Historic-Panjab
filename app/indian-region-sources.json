@@ -4,7 +4,7 @@
   "license": "CC0-1.0 (Bharatlas catalogue)",
   "attribution": "LGD via Bharatlas · 2024 snapshot",
   "catalogUrl": "https://bharatlas.com/view/lgd_subdistricts",
-  "coverage": "Named district and subdistrict polygons from the LGD 2024 snapshot. Subdistricts include tehsils, taluks, mandals and sub-tehsils. Later administrative changes may be absent. Rajasthan has 50 district polygons but tehsil parent codes predate that reorganisation. Jammu & Kashmir and Ladakh state outlines depict the Indian claimed extent, including disputed territories. Unnamed extent fillers and zero-LGD claimed districts are not presented as administrative tehsils or districts.",
+  "coverage": "Named district and subdistrict polygons from the LGD 2024 snapshot. Subdistricts include tehsils, sub-tehsils, taluks, talukas, mandals, circles and other source units. Later administrative changes may be absent. Rajasthan has 50 district polygons but tehsil parent codes predate that reorganisation. Arunachal Pradesh has one source district without linked subdistrict detail. One unnamed Maharashtra subdistrict record is omitted. Jammu & Kashmir and Ladakh state outlines depict the Indian claimed extent, including disputed territories. Unnamed extent fillers and zero-LGD claimed districts are not presented as administrative tehsils or districts.",
   "coordinateProcessing": "Original source coordinates retained; interior label points derived. Same-code, same-parent fragments (Loharu and Bhopalsagar) are grouped as multipart areas. Kanth has conflicting source parent codes and is retained as two separate source records. Named records with missing LGD codes get stable source-object IDs, without inventing LGD codes.",
   "regions": [
     {
