@@ -134,6 +134,13 @@
       "state_lgd": 29,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-kerala",
+      "name": "Kerala",
+      "state_lgd": 32,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -375,6 +382,21 @@
     "in-karnataka-tehsil": {
       "count": 234,
       "sha256": "15fa4d491ef401df3400c12842c51c7bec76772c70c94c89602ba47dd0325f1b",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-kerala-region": {
+      "count": 1,
+      "sha256": "009cd3d0641887f33d231410e3ee2aae08c6eda4a24150cabec5fda1449e2ecd",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-kerala-district": {
+      "count": 14,
+      "sha256": "6812849c6e6797a5fd884c206ef33e75dae6397ed7e9c1868ac876565d05c509",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-kerala-tehsil": {
+      "count": 76,
+      "sha256": "c201521d8c4506f0fbdee7ad1edf1da87c68f8032f0fcd396b3c8141c44830e2",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
