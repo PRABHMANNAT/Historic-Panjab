@@ -148,6 +148,13 @@
       "state_lgd": 23,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-maharashtra",
+      "name": "Maharashtra",
+      "state_lgd": 27,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 1
     }
   ],
   "layers": {
@@ -419,6 +426,21 @@
     "in-madhya-pradesh-tehsil": {
       "count": 416,
       "sha256": "02a22c12e5372380efb4af32d06c755ba1426bb2e3c5c215904fa350e24f140c",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-maharashtra-region": {
+      "count": 1,
+      "sha256": "b3404c5e94f738f531b8be0c0c33021988e34d873e4f550d142417472728763f",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-maharashtra-district": {
+      "count": 36,
+      "sha256": "1fd0d9b28d2bdef81ed74388aaddc6e8dda97c6a1f373f4bab795c08be8fb638",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-maharashtra-tehsil": {
+      "count": 360,
+      "sha256": "4d17584b22dd4eb5224abe5914e919cbd9b94597e6b6af2637236b75c91eda5b",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
