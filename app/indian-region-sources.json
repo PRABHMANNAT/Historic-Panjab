@@ -169,6 +169,13 @@
       "state_lgd": 17,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-mizoram",
+      "name": "Mizoram",
+      "state_lgd": 15,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -485,6 +492,21 @@
     "in-meghalaya-tehsil": {
       "count": 39,
       "sha256": "a19fb7af9a3241e9a26d81e5da98f86379d4d84a956891046b5e3f9c5e19dfe3",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-mizoram-region": {
+      "count": 1,
+      "sha256": "ae17af9bcdb08d664fa92dae2ae895eff4ed6d69532309cc223361d458c8e204",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-mizoram-district": {
+      "count": 11,
+      "sha256": "d43cb10a9ebeadb3361f9886e8dc08eeca7cd74d7f307a5d88c1aa5e7b8ad4a1",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-mizoram-tehsil": {
+      "count": 26,
+      "sha256": "64b0b2da50ad7a06aa31bac04c65fc25099f22c13778dd95ebc619e45f34674d",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
