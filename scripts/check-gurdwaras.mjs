@@ -15,7 +15,7 @@ assert.equal(data.find(x=>x.tier==='featured').id,'gs-harmandir-sahib');
 assert.deepEqual(data.filter(x=>x.tier==='takht').map(x=>x.id),['gs-akal-takht','gs-keshgarh-takht','gs-patna-takht','gs-damdama-takht','gs-hazur-takht']);
 for(const id of ['gs-harmandir-sahib','gs-fatehgarh-sahib','gs-jyoti-sarup-sahib'])assert.equal(data.find(x=>x.id===id)?.tier,'featured');
 assert.ok(data.filter(x=>x.country==='Pakistan').length>=8);
-assert.equal(geo.type,'FeatureCollection');assert.equal(geo.features.length,100);
+assert.equal(geo.type,'FeatureCollection');assert.equal(geo.features.length,data.length+read('app/gurdwara-additions.json').length);
 const evidenceById=new Map(metadata.coordinateEvidence.map(x=>[x.id,x]));
 assert.equal(metadata.identityEvidence.length,100);
 const identityById=new Map(metadata.identityEvidence.map(x=>[x.id,x]));

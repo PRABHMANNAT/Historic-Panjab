@@ -20,6 +20,33 @@
 .premium-studio button {font-size: 12px; border-color: var(--line); color: var(--ink); transition: background .15s, color .15s, border-color .15s;}
 .premium-studio button:hover {background: #edf3ef;}
 .geography-picker {display: grid; gap: 12px; margin-bottom: 22px;}
+.shrine-directory {margin: 18px 0; border: 1px solid #dce6dd; border-radius: 12px; overflow: hidden; background: #fbfdfb;}
+.shrine-directory > summary {display: flex; align-items: center; gap: 10px; padding: 15px 12px; cursor: pointer; color: #235e4b; font-weight: 600; font-size: 13px;}
+.shrine-directory > summary small {display: block; color: #6d7c78; font-size: 10px; font-weight: 400; margin-top: 4px;}
+.shrine-directory-content {padding: 0 12px 14px;}
+.shrine-directory-content > .search {margin: 12px 0;}
+.shrine-directory-count {font-size: 10px; color: #6d7c78; margin: 10px 0;}
+.shrine-directory-results {display: grid; gap: 12px;}
+.shrine-directory-card {border: 1px solid #dfe8e1; border-radius: 10px; overflow: hidden; background: white;}
+.shrine-directory-image {display: block; position: relative;}
+.shrine-directory-image img {width: 100%; height: 146px; object-fit: cover;}
+.shrine-directory-image > span {position: absolute; bottom: 7px; left: 7px; right: 7px; width: fit-content; max-width: calc(100% - 14px); padding: 4px 6px; border-radius: 4px; color: white; background: #173d35df; font-size: 9px;}
+.shrine-directory-no-photo {display: flex; gap: 8px; align-items: center; padding: 12px; background: #f1f5f0; color: #778778; font-size: 10px;}
+.shrine-directory-card-body {padding: 12px;}
+.shrine-directory-card-body h3 {font-weight: 650; font-size: 13px; line-height: 1.45; margin: 0 0 5px;}
+.shrine-directory-card-body p {font-size: 11px; color: #65776b; line-height: 1.5; margin: 4px 0;}
+.shrine-directory-card-body small {display: block; color: #6d7c78; font-size: 9px; line-height: 1.5; margin-top: 8px;}
+.shrine-directory-card-body .shrine-directory-aliases {font-size: 10px;}
+.shrine-directory-card-body .shrine-directory-note {border-left: 2px solid #c5a56c; padding-left: 7px; font-size: 10px;}
+.shrine-directory-card-body a {color: #187467; text-decoration: underline; text-underline-offset: 2px;}
+.shrine-directory-card-actions {display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 11px;}
+.shrine-directory-card-actions > span {font-size: 10px; color: #8a6b35;}
+.shrine-directory-card-actions > a {display: inline-flex; gap: 3px; align-items: center; font-size: 10px; white-space: nowrap;}
+.premium-studio .shrine-directory-card-actions > button {display: inline-flex; align-items: center; gap: 5px; padding: 7px 9px; color: #176653; background: #edf6ef; border: 1px solid #d5e5d9; font-size: 10px;}
+.shrine-directory-notes {margin-top: 11px; font-size: 10px; color: #6d7c78; border-top: 1px solid #edf1ed; padding-top: 8px;}
+.shrine-directory-notes summary {cursor: pointer;}
+.shrine-directory-notes a {display: block; margin-top: 5px; font-size: 10px;}
+.shrine-directory-more {width: 100%; margin: 12px 0;}
 .geography-picker .field {margin: 0;}
 .geography-actions {display: grid; grid-template-columns: 1fr 1fr; gap: 6px;}
 .geography-actions button {display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 39px;}

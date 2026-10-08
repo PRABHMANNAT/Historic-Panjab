@@ -33,3 +33,4 @@ metadata.output = {path:'public/data/gurdwaras.geojson',count:data.length,sha256
 metadata.dataSha256 = crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'app/gurdwara-data.json'))).digest('hex');
 fs.writeFileSync(path.join(root,'app/gurdwara-sources.json'),JSON.stringify(metadata,null,2)+'\n');
 console.log('Generated 100 source-reviewed shrine points (5 Takhts, 15 featured, 80 historic).');
+await import('./build-gurdwara-directory.mjs');

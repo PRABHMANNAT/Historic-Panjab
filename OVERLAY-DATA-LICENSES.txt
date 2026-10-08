@@ -17,6 +17,11 @@ https://www.wikidata.org/wiki/Wikidata:Licensing
 Identity/history references are factual SGPC, DSGMC and official district /
 tourism references. Photograph provenance is recorded separately below.
 Evidence and site-specific coordinate provenance: app/gurdwara-sources.json.
+Additional directory map points: app/gurdwara-addition-sources.json, with
+published OSM/Wikidata evidence and source hashes. The supplied 300-entry
+directory and source references are in app/gurdwara-directory.json; its source
+claims and operation/access status remain unverified. Directory entries without
+separately sourced coordinates are not emitted as map points.
 Pins are published representative points, not surveyed entrances.
 Featured tiers are editorial. Map markers use site photographs where available.
 Photographs retain their individual licenses, authors and source links in

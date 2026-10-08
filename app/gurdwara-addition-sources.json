@@ -1,0 +1,809 @@
+{
+  "reviewedOn": "2026-10-09",
+  "note": "Coordinates are separately sourced. Directory identity and locality were matched; operating status and traditional historical accounts remain unverified.",
+  "databaseLicense": "ODbL-1.0",
+  "wikidataLicense": "CC0-1.0",
+  "coordinateEvidence": [
+    {
+      "id": "gs-gsa014",
+      "directoryId": "GSA014",
+      "sourceIdentity": "osm:node/11235363604",
+      "sourceURL": "https://www.openstreetmap.org/node/11235363604",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        77.3449068,
+        32.0269237
+      ],
+      "raw": {
+        "type": "node",
+        "id": 11235363604,
+        "lat": 32.0269237,
+        "lon": 77.3449068,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Sahib Manikaran",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "02ad453f1e844b63280a7db69a194f80eca9acb2a5a56f0c6c5d0c6bc29ce127",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa032",
+      "directoryId": "GSA032",
+      "sourceIdentity": "osm:node/11802513079",
+      "sourceURL": "https://www.openstreetmap.org/node/11802513079",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        76.4140219,
+        30.8976009
+      ],
+      "raw": {
+        "type": "node",
+        "id": 11802513079,
+        "lat": 30.8976009,
+        "lon": 76.4140219,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Sri Garhi Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਗੜ੍ਹੀ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "bfba4084c1a16e7017fc24b23feeb0166dcdc5c32311e73428836a4984f5b2b8",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa039",
+      "directoryId": "GSA039",
+      "sourceIdentity": "osm:node/5469001921",
+      "sourceURL": "https://www.openstreetmap.org/node/5469001921",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        78.1671103,
+        26.2203773
+      ],
+      "raw": {
+        "type": "node",
+        "id": 5469001921,
+        "lat": 26.2203773,
+        "lon": 78.1671103,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Data Bandi Chhor Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "fd041210d986ebf00688685f8b87c6607c54f30e52ef596ab0ec0f5b018e3c23",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa079",
+      "directoryId": "GSA079",
+      "sourceIdentity": "osm:node/8879191009",
+      "sourceURL": "https://www.openstreetmap.org/node/8879191009",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        75.3888602,
+        30.3376614
+      ],
+      "raw": {
+        "type": "node",
+        "id": 8879191009,
+        "lat": 30.3376614,
+        "lon": 75.3888602,
+        "tags": {
+          "addr:city": "dhilwan",
+          "addr:postcode": "148108",
+          "addr:street": "Dhillwan Tapa Road",
+          "air_conditioning": "yes",
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Sahib Patshahi Nauvin, Dhilwan, Barnala",
+          "name:bn": "গুরুদ্বার সাহেব পাঠশাহী নওভিন, ilিলওয়ান, বার্নালা",
+          "name:en": "Gurudwara Sahib Patshahi Nauvin, Dhilwan, Barnala",
+          "name:hi": "गुरुद्वारा साहिब पातशाही नौविन, ढिलवां, बरनाला",
+          "name:mr": "गुरुद्वारा साहिब पाठशाही नौविन, ढिलवान, बरनाळा",
+          "name:pa": "ਗੁਰੂਦੁਆਰਾ ਸਾਹਿਬ ਪਾਤਸ਼ਾਹੀ ਨੌਵੀਂ, ਢਿੱਲਵਾਂ, ਬਰਨਾਲਾ।",
+          "name:ru": "Гурудвара Сахиб Паатшахи Навин, Дхилван, Барнала",
+          "name:ta": "குருத்வாரா சாஹிப் பாட்ஷாஹி ந au வின், தில்வான், பர்னாலா",
+          "name:te": "గురుద్వారా సాహిబ్ పాట్షాహి నౌవిన్, ధిల్వాన్, బర్నాలా",
+          "opening_hours": "sunrise-sunset",
+          "religion": "sikh",
+          "service_times": "24/7"
+        }
+      },
+      "rawSha256": "daf8a8a3983df5c38ebd47ffca251ea3cf2a738faabb329bf047bbce7ce8c542",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa113",
+      "directoryId": "GSA113",
+      "sourceIdentity": "osm:node/9110516299",
+      "sourceURL": "https://www.openstreetmap.org/node/9110516299",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        75.3547464,
+        29.8985754
+      ],
+      "raw": {
+        "type": "node",
+        "id": 9110516299,
+        "lat": 29.8985754,
+        "lon": 75.3547464,
+        "tags": {
+          "addr:city": "Kot Dharmu",
+          "addr:street": "Uddat Road",
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Sulisar Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "7d88f2b01f8753968409171881e72322322a817bee762f7bf3ebf4b5c05e3b8a",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa118",
+      "directoryId": "GSA118",
+      "sourceIdentity": "osm:way/642316167",
+      "sourceURL": "https://www.openstreetmap.org/way/642316167",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        74.6670369,
+        30.9002158
+      ],
+      "raw": {
+        "type": "way",
+        "id": 642316167,
+        "center": {
+          "lat": 30.9002158,
+          "lon": 74.6670369
+        },
+        "tags": {
+          "addr:city": "Bazidpur , Ferozpur, Punjab",
+          "amenity": "place_of_worship",
+          "denomination": "sikh",
+          "name": "Gurudwara Jamni Sahib Patshahi 10",
+          "name:pa": "Jamni Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "7b70363d714e6a820860b03d2573eafedfa68c28afdc92bcedd87770b42e0133",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa169",
+      "directoryId": "GSA169",
+      "sourceIdentity": "osm:way/556725369",
+      "sourceURL": "https://www.openstreetmap.org/way/556725369",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        75.1978465,
+        31.215182
+      ],
+      "raw": {
+        "type": "way",
+        "id": 556725369,
+        "center": {
+          "lat": 31.215182,
+          "lon": 75.1978465
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Kothri Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "d930c8e53c992e1cc6544f7e5006bb452e26df6076612eaf89a43139db18ac3a",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa173",
+      "directoryId": "GSA173",
+      "sourceIdentity": "osm:node/7806906690",
+      "sourceURL": "https://www.openstreetmap.org/node/7806906690",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        74.8759206,
+        31.6182295
+      ],
+      "raw": {
+        "type": "node",
+        "id": 7806906690,
+        "lat": 31.6182295,
+        "lon": 74.8759206,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Kaulsar Sahib Ji",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "38b2e60186917e2f53fbab5cedca2386427ded9b3af10f8c2c8e45ea84c53fec",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa231",
+      "directoryId": "GSA231",
+      "sourceIdentity": "osm:way/1361137179",
+      "sourceURL": "https://www.openstreetmap.org/way/1361137179",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        73.0028117,
+        21.7016479
+      ],
+      "raw": {
+        "type": "way",
+        "id": 1361137179,
+        "center": {
+          "lat": 21.7016479,
+          "lon": 73.0028117
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Chadar Saheb",
+          "name:gu": "ગુરૂદ્વારા ચાદર સાહેબ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "5e028e6e5c6472e50d361d1901fa320ebf764c744f28ea1a035fec9804fdd427",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa237",
+      "directoryId": "GSA237",
+      "sourceIdentity": "osm:node/7111629877",
+      "sourceURL": "https://www.openstreetmap.org/node/7111629877",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        79.9250927,
+        23.103489
+      ],
+      "raw": {
+        "type": "node",
+        "id": 7111629877,
+        "lat": 23.103489,
+        "lon": 79.9250927,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gwarighat Gurudwara",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "80c9ee2aa7a7693433bd822b4f3cc850243fa6d212a571495cf07682a09a18f2",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa244",
+      "directoryId": "GSA244",
+      "sourceIdentity": "osm:node/2117332067",
+      "sourceURL": "https://www.openstreetmap.org/node/2117332067",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        77.4067687,
+        19.1556779
+      ],
+      "raw": {
+        "type": "node",
+        "id": 2117332067,
+        "lat": 19.1556779,
+        "lon": 77.4067687,
+        "tags": {
+          "amenity": "place_of_worship",
+          "denomination": "Gurudwara Mata Sahib Devan Ji",
+          "name": "Gurudwara Mata Sahib Devan Ji",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "8070f9e57d5e965b394cd99ba5550f055ed577f411855897ce4b93296ff3a7ac",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa280",
+      "directoryId": "GSA280",
+      "sourceIdentity": "osm:way/841235493",
+      "sourceURL": "https://www.openstreetmap.org/way/841235493",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        71.5784628,
+        34.0125727
+      ],
+      "raw": {
+        "type": "way",
+        "id": 841235493,
+        "center": {
+          "lat": 34.0125727,
+          "lon": 71.5784628
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Bhai Biba Singh",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "ac7f4fc5ac30637cbb84448eceb2285ddc5a24f310c878f372a36e25732d1aaf",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa288",
+      "directoryId": "GSA288",
+      "sourceIdentity": "osm:node/3868542692",
+      "sourceURL": "https://www.openstreetmap.org/node/3868542692",
+      "sourceDate": "2026-10-08T04:55:05Z",
+      "coordinates": [
+        90.4137782,
+        23.7068099
+      ],
+      "raw": {
+        "type": "node",
+        "id": 3868542692,
+        "lat": 23.7068099,
+        "lon": 90.4137782,
+        "tags": {
+          "addr:city": "Dhaka",
+          "addr:housenumber": "14",
+          "addr:street": "Srishdas Lane",
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Sangat Tola Dhaka",
+          "note": "Gurdwara in memory of Guru Tegh Bahadur 9th guru of Sikhs who visited Dhaka during 1666-68.",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "3f13f7e1f22b35cb3a7d5e099c0488a71ac4207bb62d5f490e62294253e06f23",
+      "accuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa050",
+      "directoryId": "GSA050",
+      "sourceIdentity": "wd:Q5619975",
+      "sourceURL": "https://www.wikidata.org/wiki/Q5619975",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        90.3936186,
+        23.7336051
+      ],
+      "raw": {
+        "id": "Q5619975",
+        "label": "Gurdwara Nanak Shahi",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "f812b4c527bde7d91558e8945a865dfb9b2adb2b",
+            "datavalue": {
+              "value": {
+                "latitude": 23.7336051,
+                "longitude": 90.3936186,
+                "altitude": null,
+                "precision": 1e-7,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q5619975$1A5A3B95-25F0-4475-AE51-DD75745D8FEC",
+          "rank": "normal",
+          "references": [
+            {
+              "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+              "snaks": {
+                "P143": [
+                  {
+                    "snaktype": "value",
+                    "property": "P143",
+                    "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                    "datavalue": {
+                      "value": {
+                        "entity-type": "item",
+                        "numeric-id": 328,
+                        "id": "Q328"
+                      },
+                      "type": "wikibase-entityid"
+                    },
+                    "datatype": "wikibase-item"
+                  }
+                ]
+              },
+              "snaks-order": [
+                "P143"
+              ]
+            },
+            {
+              "hash": "279097c03d5eb615aa282196fe4bd9be3b9eb4b9",
+              "snaks": {
+                "P854": [
+                  {
+                    "snaktype": "value",
+                    "property": "P854",
+                    "hash": "f68b153720804f67f283b568ed603dc84674263c",
+                    "datavalue": {
+                      "value": "https://www.openstreetmap.org/node/2991028243",
+                      "type": "string"
+                    },
+                    "datatype": "url"
+                  }
+                ]
+              },
+              "snaks-order": [
+                "P854"
+              ]
+            }
+          ]
+        }
+      },
+      "rawSha256": "b9489368a474f2f4960f31a637a2306e6efd7b99c432ecc68dd67a7056cb4b75",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa213",
+      "directoryId": "GSA213",
+      "sourceIdentity": "wd:Q66806771",
+      "sourceURL": "https://www.wikidata.org/wiki/Q66806771",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        76.941312,
+        31.702687
+      ],
+      "raw": {
+        "id": "Q66806771",
+        "label": "Gurdwara Padal Sahib Mandi",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "8e812eff5baf71a8822db5641d26551ae48bb5cb",
+            "datavalue": {
+              "value": {
+                "latitude": 31.702687,
+                "longitude": 76.941312,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q66806771$454518de-413e-c7c6-5811-dd06b27c34c8",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "6573f9549f4ac45b1c091b5287bcc0e36da9758d888e4e73f4a51747553f7f78",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa218",
+      "directoryId": "GSA218",
+      "sourceIdentity": "wd:Q65713030",
+      "sourceURL": "https://www.wikidata.org/wiki/Q65713030",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        85.202062,
+        25.610812
+      ],
+      "raw": {
+        "id": "Q65713030",
+        "label": "Gurdwara Gai Ghat Patna Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "cdfab0c38e88b3ffec46cbf9802c26694d291b50",
+            "datavalue": {
+              "value": {
+                "latitude": 25.610812,
+                "longitude": 85.202062,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q65713030$5da90bbd-4da8-ac6c-aa5e-dd6c33369767",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "1beb1ef91338b5be1683052e4cf8c4aed50145b615854d0e40da8414278bbb4c",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa233",
+      "directoryId": "GSA233",
+      "sourceIdentity": "wd:Q82456051",
+      "sourceURL": "https://www.wikidata.org/wiki/Q82456051",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        76.229063,
+        21.324438
+      ],
+      "raw": {
+        "id": "Q82456051",
+        "label": "Gurdwara Bari Sangat Burhanpur",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "34cab938d5bbffa935d65c30e28ff725e654c95a",
+            "datavalue": {
+              "value": {
+                "latitude": 21.324438,
+                "longitude": 76.229063,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q82456051$55012800-4657-856d-c791-b6676fc03f06",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "4e47afe3ed4f646b91d9e3c96436f33e43978643725942471cfd7f995bd378ef",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa234",
+      "directoryId": "GSA234",
+      "sourceIdentity": "wd:Q82939971",
+      "sourceURL": "https://www.wikidata.org/wiki/Q82939971",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        75.6169375,
+        22.6851875
+      ],
+      "raw": {
+        "id": "Q82939971",
+        "label": "Gurdwara Charan Paduka Sahib Betma",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "2f46bd8de2d2cdf45ab957c9b2d3630414e9cc7e",
+            "datavalue": {
+              "value": {
+                "latitude": 22.6851875,
+                "longitude": 75.6169375,
+                "altitude": null,
+                "precision": 1e-7,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q82939971$0dddc95c-44a2-cf9d-19fe-f437c4ed8816",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "395ec2f1dd83a32a177d1d47905ab34b94f2fa2476a0f534cd990fac18f8ee4f",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa249",
+      "directoryId": "GSA249",
+      "sourceIdentity": "wd:Q66712504",
+      "sourceURL": "https://www.wikidata.org/wiki/Q66712504",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        75.333812,
+        19.887313
+      ],
+      "raw": {
+        "id": "Q66712504",
+        "label": "Gurdwara Bhai Daya Singh Bhai Dharam Singh Ji Aurangabad",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "1f358de25c1c0e5f49184279b127fa4d6ad2d37a",
+            "datavalue": {
+              "value": {
+                "latitude": 19.887313,
+                "longitude": 75.333812,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q66712504$0e090d1b-4b4b-536d-d140-7764f779835a",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "159de21ccc0816f917c6e6e7de321d460fc65508806508a69c6fd8e3efc2a375",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa257",
+      "directoryId": "GSA257",
+      "sourceIdentity": "wd:Q5619973",
+      "sourceURL": "https://www.wikidata.org/wiki/Q5619973",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        88.645847,
+        27.60433
+      ],
+      "raw": {
+        "id": "Q5619973",
+        "label": "Gurdwara Nanaklama",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "50a8f92567004f2686f05e0b4ecd57ced4b711bf",
+            "datavalue": {
+              "value": {
+                "latitude": 27.60433,
+                "longitude": 88.645847,
+                "altitude": null,
+                "precision": 0.00001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q5619973$0EE2B494-A0B2-4B41-B57B-86563F7C54AE",
+          "rank": "normal",
+          "references": [
+            {
+              "hash": "d4bd87b862b12d99d26e86472d44f26858dee639",
+              "snaks": {
+                "P143": [
+                  {
+                    "snaktype": "value",
+                    "property": "P143",
+                    "hash": "f30cbd35620c4ea6d0633aaf0210a8916130469b",
+                    "datavalue": {
+                      "value": {
+                        "entity-type": "item",
+                        "numeric-id": 8447,
+                        "id": "Q8447"
+                      },
+                      "type": "wikibase-entityid"
+                    },
+                    "datatype": "wikibase-item"
+                  }
+                ]
+              },
+              "snaks-order": [
+                "P143"
+              ]
+            }
+          ]
+        }
+      },
+      "rawSha256": "2ffa41bd41bd88301ad9d3e09f1ed969f51a01a2251595088a7a33d5a62ad4b1",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa259",
+      "directoryId": "GSA259",
+      "sourceIdentity": "wd:Q16640646",
+      "sourceURL": "https://www.wikidata.org/wiki/Q16640646",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        78.012187,
+        27.191812
+      ],
+      "raw": {
+        "id": "Q16640646",
+        "label": "Gurdwara Mai Than Agra",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "71ca52d493c4eaff7165a9afcbb0689fda1e9e04",
+            "datavalue": {
+              "value": {
+                "latitude": 27.191812,
+                "longitude": 78.012187,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q16640646$57a8103c-4f0b-57b7-130f-fc2b48144c86",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "a505673b2eb1382d845aa2bfe7ef369acbf9e1fd01c44e90746e98af899ab25e",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa261",
+      "directoryId": "GSA261",
+      "sourceIdentity": "wd:Q65718091",
+      "sourceURL": "https://www.wikidata.org/wiki/Q65718091",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        77.620437,
+        12.976312
+      ],
+      "raw": {
+        "id": "Q65718091",
+        "label": "Gurdwara Sri Guru Singh Sabha Bengaluru",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "8b445e899ca01ed1cd5d4d9e0a5707848bdd15a0",
+            "datavalue": {
+              "value": {
+                "latitude": 12.976312,
+                "longitude": 77.620437,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q65718091$88f6f372-436f-283b-db45-74201b38f1f9",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "1146a2a9341ffc4675707851c5b389335dbbed07e369d77b10f3a438194e09b1",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    },
+    {
+      "id": "gs-gsa295",
+      "directoryId": "GSA295",
+      "sourceIdentity": "wd:Q5619965",
+      "sourceURL": "https://www.wikidata.org/wiki/Q5619965",
+      "sourceDate": "2026-10-09",
+      "coordinates": [
+        69.134805555556,
+        34.534972222222
+      ],
+      "raw": {
+        "id": "Q5619965",
+        "label": "Gurdwara Karte Parwan",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "b51c0c9b674da2c17088d11b241654c10db1f54f",
+            "datavalue": {
+              "value": {
+                "latitude": 34.534972222222,
+                "longitude": 69.134805555556,
+                "altitude": null,
+                "precision": 0.000027777777777778,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q5619965$71da4e46-4ecd-bc60-639b-8ed2f806ffc2",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "a2cb0cdce0bd6b709906bffeed11f1c89661bd876d14b8fb11e0c733df1c7a1d",
+      "accuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance."
+    }
+  ]
+}

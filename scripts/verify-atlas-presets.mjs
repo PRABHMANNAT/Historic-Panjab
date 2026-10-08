@@ -7,15 +7,15 @@ import {chromium} from 'playwright';
 // renderer pixels -> editable SVG/PNG exports. Use an isolated context for the
 // full-map check so earlier visits cannot conceal unwanted detail downloads.
 const read=async file=>JSON.parse(await fs.readFile(new URL('../'+file,import.meta.url),'utf8'));
-const catalog=await read('app/catalog.json'),gurdwaras=await read('app/gurdwara-data.json');
+const catalog=await read('app/catalog.json'),gurdwaras=[...await read('app/gurdwara-data.json'),...await read('app/gurdwara-additions.json')];
 const cities=await read('public/data/cities.geojson');
 const byId=new Map(catalog.map(a=>[a.id,a]));
 const synthetic=new Set(['delhi-ncr','kashmir-united','tibet-modern-three']);
 const regionAreas=catalog.filter(a=>a.level==='region'&&!synthetic.has(a.region));
-assert.equal(gurdwaras.length,100);
+assert.equal(gurdwaras.length,123);
 const takhtIds=gurdwaras.filter(g=>g.tier==='takht').map(g=>g.id);
 const featuredIds=gurdwaras.filter(g=>g.tier==='featured').map(g=>g.id);
-assert.equal(takhtIds.length,5);assert.equal(featuredIds.length,15);
+assert.equal(takhtIds.length,5);assert.equal(featuredIds.length,16);
 const fullMaskAreas=regionAreas.filter(a=>!['pk-punjab','pk-kp','islamabad'].includes(a.region));
 const fullMasks=await Promise.all(fullMaskAreas.map(async area=>({area,geo:await read('public/data/'+area.region+'-region.geojson')})));
 const seed={fills:{'in-d-608':{color:'#8239a8',pattern:'solid'}},regions:Object.fromEntries(regionAreas.map(a=>[a.region,{show:false,province:false,district:a.region==='in-delhi',tehsil:a.region==='in-delhi',uc:false,division:false}])),cities:false,rivers:false,gurdwaras:false};
@@ -114,19 +114,19 @@ try{
   const riverPixels=await pixelCount(t.page,await canvas(t.page,'delhi-rivers'),'#00c2a8');assert.ok(riverPixels>20,'Custom river color renders on the canvas');
   const riverSvg=await t.svg('delhi-rivers');assert.ok(overlayIds(riverSvg,'river').length>0&&riverSvg.includes('#00c2a8'));
   await t.page.getByRole('tab',{name:'Places',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show major cities',exact:true}).uncheck();await t.page.getByRole('tab',{name:'Nature',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show rivers',exact:true}).uncheck();
-  await t.choose('full');await t.page.getByRole('tab',{name:'Places',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).check();assert.equal(await t.page.getByLabel('Find a gurdwara',{exact:true}).locator('option').count(),101,'Picker includes all 100 curated sites plus placeholder');
+  await t.choose('full');await t.page.getByRole('tab',{name:'Places',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).check();assert.equal(await t.page.getByLabel('Find a gurdwara',{exact:true}).locator('option').count(),gurdwaras.length+1,'Picker includes all mapped sites plus placeholder');
   await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('takht');await t.page.getByRole('checkbox',{name:'Show gurdwara names',exact:true}).uncheck();await t.page.getByRole('button',{name:'Fit shown gurdwaras',exact:true}).click();await t.idle();
   const takhtSvg=await t.svg('five-takhts');assert.deepEqual(overlayIds(takhtSvg,'gurdwara').sort((a,b)=>a.localeCompare(b)),[...takhtIds].sort((a,b)=>a.localeCompare(b)));assert.equal([...takhtSvg.matchAll(/data-gurdwara-tier="takht"/g)].length,5);
   const withShrines=await canvas(t.page,'five-takhts');await t.page.getByRole('tab',{name:'Places',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).uncheck();await t.idle();const withoutShrines=await canvas(t.page,'without-takhts');const shrinePixels=await changedPixels(t.page,withoutShrines,withShrines);assert.ok(shrinePixels>100,'Dedicated Takht sprites actually affect the WebGL map');
-  await t.page.getByRole('tab',{name:'Places',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).check();await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('featured');await t.idle();const featured=await t.svg('featured-fifteen');assert.deepEqual(overlayIds(featured,'gurdwara').sort((a,b)=>a.localeCompare(b)),[...featuredIds].sort((a,b)=>a.localeCompare(b)));assert.ok(featured.includes('gs-harmandir-sahib')&&featured.includes('gs-fatehgarh-sahib')&&featured.includes('gs-jyoti-sarup-sahib'));
-  await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('special');await t.idle();assert.equal(overlayIds(await t.svg('twenty-special-sites'),'gurdwara').length,20);
+  await t.page.getByRole('tab',{name:'Places',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).check();await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('featured');await t.idle();const featured=await t.svg('featured-sites');assert.deepEqual(overlayIds(featured,'gurdwara').sort((a,b)=>a.localeCompare(b)),[...featuredIds].sort((a,b)=>a.localeCompare(b)));assert.ok(featured.includes('gs-harmandir-sahib')&&featured.includes('gs-fatehgarh-sahib')&&featured.includes('gs-jyoti-sarup-sahib'));
+  await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('special');await t.idle();assert.equal(overlayIds(await t.svg('special-sites'),'gurdwara').length,takhtIds.length+featuredIds.length);
   await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('all');await t.page.getByRole('checkbox',{name:'Show gurdwara names',exact:true}).check();await t.idle();const allSites=await t.svg('all-shrines');const expectedSites=gurdwaras.filter(g=>inFullGeography(g.coordinates)).map(g=>g.id).sort((a,b)=>a.localeCompare(b));assert.deepEqual(overlayIds(allSites,'gurdwara').sort((a,b)=>a.localeCompare(b)),expectedSites,'All—and only—catalog sites inside supplied geographic outlines are exported');assert.ok(/SGPC|Shiromani|gurdwara-sources|Curated/i.test(allSites),'Shrine provenance is retained in exports');
   await configureExport(t.page,{width:1200});const png=await fs.readFile(await t.exportFile('png','all-shrines'));assert.equal(png.subarray(1,4).toString(),'PNG');
   const download=t.page.waitForEvent('download');await t.page.getByRole('button',{name:'Save',exact:true}).click();const file=output+'/overlay-settings.json';await(await download).saveAs(file);const expected=await t.saved();
   await t.page.getByRole('tab',{name:'Places',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).uncheck();await t.page.locator('input[type=file]').setInputFiles(file);await t.setting('gurdwaras',true);await t.idle();const restored=await t.saved();
   for(const key of ['mapScope','fullDetail','cities','cityMode','cityAutoColors','cityColor','rivers','riverColor','gurdwaras','gurdwaraFilter','gurdwaraLabels'])assert.equal(restored[key],expected[key],'Settings Load restores '+key);
   await t.page.reload({waitUntil:'networkidle'});await t.idle();const reloaded=await t.saved();for(const key of ['mapScope','cityColor','riverColor','gurdwaras','gurdwaraFilter'])assert.equal(reloaded[key],expected[key]);assert.deepEqual(reloaded.fills,expected.fills);
-  await t.success({scopedMajorCities:cityIds.length,cityPixels,cityDistrictAutoColor:true,undoRedo:true,riverPixels,gurdwaraCatalog:100,sitesInsideSuppliedMap:expectedSites.length,takhts:5,featured:15,special:20,shrinePixels,pngSvg:true,saveLoadReload:true});
+  await t.success({scopedMajorCities:cityIds.length,cityPixels,cityDistrictAutoColor:true,undoRedo:true,riverPixels,gurdwaraCatalog:gurdwaras.length,sitesInsideSuppliedMap:expectedSites.length,takhts:takhtIds.length,featured:featuredIds.length,special:takhtIds.length+featuredIds.length,shrinePixels,pngSvg:true,saveLoadReload:true});
  }
  console.log(JSON.stringify({result:'passed',checks:results}));
 }catch(error){if(activePage){await activePage.screenshot({path:output+'/failure.png',fullPage:true}).catch(()=>{});console.log((await activePage.locator('body').innerText()).slice(0,2600));}throw error;}

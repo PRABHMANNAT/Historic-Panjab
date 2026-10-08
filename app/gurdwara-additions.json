@@ -1,0 +1,462 @@
+[
+  {
+    "id": "gs-gsa014",
+    "name": "Gurdwara Manikaran Sahib",
+    "city": "Manikaran",
+    "country": "India",
+    "coordinates": [
+      77.3449068,
+      32.0269237
+    ],
+    "tier": "featured",
+    "iconIndex": 100,
+    "iconVariant": "historic",
+    "sourceURL": "https://himachaltourism.gov.in/destination/gurudwara/",
+    "significanceSource": "https://himachaltourism.gov.in/destination/gurudwara/",
+    "significance": "Traditionally associated with Guru Nanak’s visit to Manikaran.",
+    "sourceIdentity": "osm:node/11235363604",
+    "coordinateSource": "https://www.openstreetmap.org/node/11235363604",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa032",
+    "name": "Gurdwara Sri Garhi Sahib",
+    "city": "Chamkaur Sahib",
+    "country": "India",
+    "coordinates": [
+      76.4140219,
+      30.8976009
+    ],
+    "tier": "historic",
+    "iconIndex": 101,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/Gurdwara_Garhi_Sahib",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/Gurdwara_Garhi_Sahib",
+    "significance": "Marks the defensive house associated with the Battle of Chamkaur.",
+    "sourceIdentity": "osm:node/11802513079",
+    "coordinateSource": "https://www.openstreetmap.org/node/11802513079",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa039",
+    "name": "Gurdwara Data Bandi Chhor Sahib",
+    "city": "Gwalior Fort",
+    "country": "India",
+    "coordinates": [
+      78.1671103,
+      26.2203773
+    ],
+    "tier": "historic",
+    "iconIndex": 102,
+    "iconVariant": "historic",
+    "sourceURL": "https://censusindia.gov.in/nada/index.php/catalog/706/download/2472/DH_2011_2304_PART_A_DCHB_GWALIOR.pdf",
+    "significanceSource": "https://censusindia.gov.in/nada/index.php/catalog/706/download/2472/DH_2011_2304_PART_A_DCHB_GWALIOR.pdf",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:node/5469001921",
+    "coordinateSource": "https://www.openstreetmap.org/node/5469001921",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa079",
+    "name": "Gurdwara Patshahi Nauvin Dhilwan",
+    "city": "Dhilwan",
+    "country": "India",
+    "coordinates": [
+      75.3888602,
+      30.3376614
+    ],
+    "tier": "historic",
+    "iconIndex": 103,
+    "iconVariant": "historic",
+    "sourceURL": "https://sgpc.net/gurdwaras-in-sangrur/",
+    "significanceSource": "https://sgpc.net/gurdwaras-in-sangrur/",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:node/8879191009",
+    "coordinateSource": "https://www.openstreetmap.org/node/8879191009",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa113",
+    "name": "Gurdwara Sri Sulisar Sahib",
+    "city": "Kot Dharmu",
+    "country": "India",
+    "coordinates": [
+      75.3547464,
+      29.8985754
+    ],
+    "tier": "historic",
+    "iconIndex": 104,
+    "iconVariant": "historic",
+    "sourceURL": "https://sgpc.net/gurdwaras-in-mansa/",
+    "significanceSource": "https://sgpc.net/gurdwaras-in-mansa/",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:node/9110516299",
+    "coordinateSource": "https://www.openstreetmap.org/node/9110516299",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa118",
+    "name": "Gurdwara Sri Gurusar Sahib Bazidpur",
+    "city": "Bazidpur",
+    "country": "India",
+    "coordinates": [
+      74.6670369,
+      30.9002158
+    ],
+    "tier": "historic",
+    "iconIndex": 105,
+    "iconVariant": "historic",
+    "sourceURL": "https://sgpc.net/gurdwaras-in-ferozpur/",
+    "significanceSource": "https://sgpc.net/gurdwaras-in-ferozpur/",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:way/642316167",
+    "coordinateSource": "https://www.openstreetmap.org/way/642316167",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa169",
+    "name": "Gurdwara Sri Kothri Sahib",
+    "city": "Sultanpur Lodhi",
+    "country": "India",
+    "coordinates": [
+      75.1978465,
+      31.215182
+    ],
+    "tier": "historic",
+    "iconIndex": 106,
+    "iconVariant": "historic",
+    "sourceURL": "https://en.wikipedia.org/wiki/Sultanpur_Lodhi",
+    "significanceSource": "https://en.wikipedia.org/wiki/Sultanpur_Lodhi",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:way/556725369",
+    "coordinateSource": "https://www.openstreetmap.org/way/556725369",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa173",
+    "name": "Gurdwara Sri Kaulsar Sahib",
+    "city": "Amritsar",
+    "country": "India",
+    "coordinates": [
+      74.8759206,
+      31.6182295
+    ],
+    "tier": "historic",
+    "iconIndex": 107,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/Historical_Gurdwaras",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/Historical_Gurdwaras",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:node/7806906690",
+    "coordinateSource": "https://www.openstreetmap.org/node/7806906690",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa231",
+    "name": "Gurdwara Sri Chadar Sahib",
+    "city": "Bharuch",
+    "country": "India",
+    "coordinates": [
+      73.0028117,
+      21.7016479
+    ],
+    "tier": "historic",
+    "iconIndex": 108,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/Gurudwara_Pehli_Patshahi_(Baroch)",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/Gurudwara_Pehli_Patshahi_(Baroch)",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:way/1361137179",
+    "coordinateSource": "https://www.openstreetmap.org/way/1361137179",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa237",
+    "name": "Gurdwara Sri Gwari Ghat Sahib",
+    "city": "Gwarighat, Jabalpur",
+    "country": "India",
+    "coordinates": [
+      79.9250927,
+      23.103489
+    ],
+    "tier": "historic",
+    "iconIndex": 109,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.discoversikhism.com/sikh_gurdwaras/gurdwara_sri_gwari_ghat_sahib.html",
+    "significanceSource": "https://www.discoversikhism.com/sikh_gurdwaras/gurdwara_sri_gwari_ghat_sahib.html",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:node/7111629877",
+    "coordinateSource": "https://www.openstreetmap.org/node/7111629877",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa244",
+    "name": "Gurdwara Sri Mata Sahib",
+    "city": "Nanded area",
+    "country": "India",
+    "coordinates": [
+      77.4067687,
+      19.1556779
+    ],
+    "tier": "historic",
+    "iconIndex": 110,
+    "iconVariant": "historic",
+    "sourceURL": "https://hazursahib.com/web/history",
+    "significanceSource": "https://hazursahib.com/web/history",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:node/2117332067",
+    "coordinateSource": "https://www.openstreetmap.org/node/2117332067",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa280",
+    "name": "Gurdwara Bhai Biba Singh",
+    "city": "Peshawar",
+    "country": "Pakistan",
+    "coordinates": [
+      71.5784628,
+      34.0125727
+    ],
+    "tier": "historic",
+    "iconIndex": 111,
+    "iconVariant": "historic",
+    "sourceURL": "https://etpb.gov.pk/shrines/gurdwaras/functional/",
+    "significanceSource": "https://etpb.gov.pk/shrines/gurdwaras/functional/",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "osm:way/841235493",
+    "coordinateSource": "https://www.openstreetmap.org/way/841235493",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa288",
+    "name": "Gurdwara Sangat Tola",
+    "city": "Bangla Bazar, Old Dhaka",
+    "country": "Bangladesh",
+    "coordinates": [
+      90.4137782,
+      23.7068099
+    ],
+    "tier": "historic",
+    "iconIndex": 112,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/Gurudwara_Sangat_Tola",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/Gurudwara_Sangat_Tola",
+    "significance": "Historic shrine traditionally associated with Guru Tegh Bahadur.",
+    "sourceIdentity": "osm:node/3868542692",
+    "coordinateSource": "https://www.openstreetmap.org/node/3868542692",
+    "coordinateAccuracy": "Published OSM point or building bounding-box center; approximate location, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa050",
+    "name": "Gurdwara Nanak Shahi",
+    "city": "University of Dhaka, Shahbagh",
+    "country": "Bangladesh",
+    "coordinates": [
+      90.3936186,
+      23.7336051
+    ],
+    "tier": "historic",
+    "iconIndex": 113,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/Gurdwara_Nanak_Shahi,_Dhaka",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/Gurdwara_Nanak_Shahi,_Dhaka",
+    "significance": "Historic Sikh shrine on the University of Dhaka campus.",
+    "sourceIdentity": "wd:Q5619975",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q5619975",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa213",
+    "name": "Gurdwara Sri Padal Sahib",
+    "city": "Mandi",
+    "country": "India",
+    "coordinates": [
+      76.941312,
+      31.702687
+    ],
+    "tier": "historic",
+    "iconIndex": 114,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/Historical_Gurdwaras",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/Historical_Gurdwaras",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q66806771",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q66806771",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa218",
+    "name": "Gurdwara Sri Gai Ghat Sahib",
+    "city": "Gaighat, Patna",
+    "country": "India",
+    "coordinates": [
+      85.202062,
+      25.610812
+    ],
+    "tier": "historic",
+    "iconIndex": 115,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/List_of_Gurdwaras_in_Major_Indian_Cities",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/List_of_Gurdwaras_in_Major_Indian_Cities",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q65713030",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q65713030",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa233",
+    "name": "Gurdwara Bari Sangat Sahib",
+    "city": "Lodhipura, Burhanpur",
+    "country": "India",
+    "coordinates": [
+      76.229063,
+      21.324438
+    ],
+    "tier": "historic",
+    "iconIndex": 116,
+    "iconVariant": "historic",
+    "sourceURL": "https://utsav.gov.in/view-event/lodhipura-gurudwara-event",
+    "significanceSource": "https://utsav.gov.in/view-event/lodhipura-gurudwara-event",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q82456051",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q82456051",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa234",
+    "name": "Gurdwara Charan Paduka Betma Sahib",
+    "city": "Betma",
+    "country": "India",
+    "coordinates": [
+      75.6169375,
+      22.6851875
+    ],
+    "tier": "historic",
+    "iconIndex": 117,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/Gurdwara_Betma_Sahib",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/Gurdwara_Betma_Sahib",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q82939971",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q82939971",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa249",
+    "name": "Gurdwara Bhai Daya Singh Bhai Dharam Singh",
+    "city": "Chhatrapati Sambhajinagar / Aurangabad",
+    "country": "India",
+    "coordinates": [
+      75.333812,
+      19.887313
+    ],
+    "tier": "historic",
+    "iconIndex": 118,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.discoversikhism.com/sikh_gurdwaras/gurdwara_bhai_daya_singh_bhai_dharam_singh_aurangabad.html",
+    "significanceSource": "https://www.discoversikhism.com/sikh_gurdwaras/gurdwara_bhai_daya_singh_bhai_dharam_singh_aurangabad.html",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q66712504",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q66712504",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa257",
+    "name": "Gurdwara Sri Nanaklama Sahib",
+    "city": "Chungthang",
+    "country": "India",
+    "coordinates": [
+      88.645847,
+      27.60433
+    ],
+    "tier": "historic",
+    "iconIndex": 119,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.discoversikhism.com/sikh_gurdwaras/gurdwara_sri_nanaklama_sahib.html",
+    "significanceSource": "https://www.discoversikhism.com/sikh_gurdwaras/gurdwara_sri_nanaklama_sahib.html",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q5619973",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q5619973",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa259",
+    "name": "Gurdwara Sri Mai Than Sahib",
+    "city": "Mai Than Mohalla, Agra",
+    "country": "India",
+    "coordinates": [
+      78.012187,
+      27.191812
+    ],
+    "tier": "historic",
+    "iconIndex": 120,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sikhiwiki.org/index.php/Gurdwara_Mai_Than_Sahib",
+    "significanceSource": "https://www.sikhiwiki.org/index.php/Gurdwara_Mai_Than_Sahib",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q16640646",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q16640646",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa261",
+    "name": "Gurdwara Sri Guru Singh Sabha Bengaluru",
+    "city": "Ulsoor / Halasuru, Bengaluru",
+    "country": "India",
+    "coordinates": [
+      77.620437,
+      12.976312
+    ],
+    "tier": "historic",
+    "iconIndex": 121,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.sgssbangalore.com/index.html",
+    "significanceSource": "https://www.sgssbangalore.com/index.html",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q65718091",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q65718091",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  },
+  {
+    "id": "gs-gsa295",
+    "name": "Gurdwara Karte Parwan",
+    "city": "Karte Parwan, Kabul",
+    "country": "Afghanistan",
+    "coordinates": [
+      69.134805555556,
+      34.534972222222
+    ],
+    "tier": "historic",
+    "iconIndex": 122,
+    "iconVariant": "historic",
+    "sourceURL": "https://www.ecoi.net/en/file/local/2048207/Afghanistan-CPIN-Hindus_and_Sikhs_v6.0_March_2021_.pdf",
+    "significanceSource": "https://www.ecoi.net/en/file/local/2048207/Afghanistan-CPIN-Hindus_and_Sikhs_v6.0_March_2021_.pdf",
+    "significance": "Listed in the supplied South Asia Gurdwara Directory.",
+    "sourceIdentity": "wd:Q5619965",
+    "coordinateSource": "https://www.wikidata.org/wiki/Q5619965",
+    "coordinateAccuracy": "Published Wikidata representative coordinate; source precision is retained, not a surveyed entrance.",
+    "sourceStatus": "directory-with-published-coordinate"
+  }
+]

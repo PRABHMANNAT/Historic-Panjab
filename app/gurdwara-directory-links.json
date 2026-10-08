@@ -1,0 +1,545 @@
+{
+  "reviewedOn": "2026-10-09",
+  "links": [
+    {
+      "directoryId": "GSA001",
+      "mapId": "gs-akal-takht",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA002",
+      "mapId": "gs-keshgarh-takht",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA004",
+      "mapId": "gs-patna-takht",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA003",
+      "mapId": "gs-damdama-takht",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA005",
+      "mapId": "gs-hazur-takht",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA006",
+      "mapId": "gs-harmandir-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA017",
+      "mapId": "gs-fatehgarh-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA015",
+      "mapId": "gs-tarn-taran-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA021",
+      "mapId": "gs-ber-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA016",
+      "mapId": "gs-baoli-goindwal",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA008",
+      "mapId": "gs-kartarpur-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA007",
+      "mapId": "gs-nankana-janam-asthan",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA009",
+      "mapId": "gs-panja-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA010",
+      "mapId": "gs-bangla-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA011",
+      "mapId": "gs-sis-ganj-delhi",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA012",
+      "mapId": "gs-rakab-ganj-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA013",
+      "mapId": "gs-hemkund-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA020",
+      "mapId": "gs-paonta-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA018",
+      "mapId": "gs-nanakmatta-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA172",
+      "mapId": "gs-baba-atal-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA028",
+      "mapId": "gs-baba-deep-singh-shaheed",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA029",
+      "mapId": "gs-ramsar-amritsar",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA052",
+      "mapId": "gs-bibeksar-amritsar",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA174",
+      "mapId": "gs-santokhsar-amritsar",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA030",
+      "mapId": "gs-guru-ke-mahal",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA053",
+      "mapId": "gs-guru-ki-wadali",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA056",
+      "mapId": "gs-chheharta-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA027",
+      "mapId": "gs-bir-baba-buddha",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA055",
+      "mapId": "gs-guru-ka-bagh-ghukewali",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA057",
+      "mapId": "gs-janam-baba-buddha",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA026",
+      "mapId": "gs-baba-bakala-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA127",
+      "mapId": "gs-sann-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA023",
+      "mapId": "gs-dera-baba-nanak",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA071",
+      "mapId": "gs-burj-dhariwal",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA024",
+      "mapId": "gs-kandh-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA035",
+      "mapId": "gs-patalpuri-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA152",
+      "mapId": "gs-charan-kamal-kiratpur",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA033",
+      "mapId": "gs-sisganj-anandpur",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA143",
+      "mapId": "gs-anandgarh-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA022",
+      "mapId": "gs-khadoor-darbar-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA031",
+      "mapId": "gs-katalgarh-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA034",
+      "mapId": "gs-parivar-vichora-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA181",
+      "mapId": "gs-bhatha-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA084",
+      "mapId": "gs-charan-kanwal-machhiwara",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA133",
+      "mapId": "gs-jand-bir-guru",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA088",
+      "mapId": "gs-manji-alamgir",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA086",
+      "mapId": "gs-degsar-katana",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA090",
+      "mapId": "gs-tahliana-raikot",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA100",
+      "mapId": "gs-haji-ratan-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA042",
+      "mapId": "gs-tuti-gandi-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA120",
+      "mapId": "gs-gangsar-jaito",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA121",
+      "mapId": "gs-guru-ki-dhab",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA165",
+      "mapId": "gs-guru-ka-bagh-sultanpur",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA116",
+      "mapId": "gs-lohgarh-dina",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA117",
+      "mapId": "gs-nanaksar-takhtupura",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA168",
+      "mapId": "gs-hatt-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA081",
+      "mapId": "gs-baba-gandha-barnala",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA036",
+      "mapId": "gs-dukh-nivaran-patiala",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA074",
+      "mapId": "gs-bahadurgarh-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA073",
+      "mapId": "gs-nabha-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA063",
+      "mapId": "gs-amb-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA037",
+      "mapId": "gs-nada-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA038",
+      "mapId": "gs-panjokhra-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA183",
+      "mapId": "gs-manji-ambala",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA193",
+      "mapId": "gs-manji-karnal",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA196",
+      "mapId": "gs-chhevin-kurukshetra",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA188",
+      "mapId": "gs-dhamtan-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA204",
+      "mapId": "gs-moti-bagh-delhi",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA205",
+      "mapId": "gs-damdama-delhi",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA207",
+      "mapId": "gs-majnu-ka-tila",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA206",
+      "mapId": "gs-bala-sahib-delhi",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA208",
+      "mapId": "gs-mata-sundri-delhi",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA019",
+      "mapId": "gs-nanak-jhira-bidar",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA258",
+      "mapId": "gs-guru-ka-tal-agra",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA049",
+      "mapId": "gs-lakhpat-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA041",
+      "mapId": "gs-pathar-sahib",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA253",
+      "mapId": "gs-chatti-srinagar",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA250",
+      "mapId": "gs-buddha-johad",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA269",
+      "mapId": "gs-beri-sialkot",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA046",
+      "mapId": "gs-janam-ram-das-lahore",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA043",
+      "mapId": "gs-dera-lahore",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA273",
+      "mapId": "gs-bhai-taru-lahore",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA044",
+      "mapId": "gs-rori-eminabad",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA279",
+      "mapId": "gs-bhai-joga-peshawar",
+      "method": "Reviewed name, aliases and locality against the existing sourced site record"
+    },
+    {
+      "directoryId": "GSA254",
+      "mapId": "gs-mattan-sahib",
+      "method": "Reviewed shrine name and Mattan locality against existing sourced record"
+    },
+    {
+      "directoryId": "GSA014",
+      "mapId": "gs-gsa014",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA032",
+      "mapId": "gs-gsa032",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA039",
+      "mapId": "gs-gsa039",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA079",
+      "mapId": "gs-gsa079",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA113",
+      "mapId": "gs-gsa113",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA118",
+      "mapId": "gs-gsa118",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA169",
+      "mapId": "gs-gsa169",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA173",
+      "mapId": "gs-gsa173",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA231",
+      "mapId": "gs-gsa231",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA237",
+      "mapId": "gs-gsa237",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA244",
+      "mapId": "gs-gsa244",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA280",
+      "mapId": "gs-gsa280",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA288",
+      "mapId": "gs-gsa288",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA050",
+      "mapId": "gs-gsa050",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA213",
+      "mapId": "gs-gsa213",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA218",
+      "mapId": "gs-gsa218",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA233",
+      "mapId": "gs-gsa233",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA234",
+      "mapId": "gs-gsa234",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA249",
+      "mapId": "gs-gsa249",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA257",
+      "mapId": "gs-gsa257",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA259",
+      "mapId": "gs-gsa259",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA261",
+      "mapId": "gs-gsa261",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    },
+    {
+      "directoryId": "GSA295",
+      "mapId": "gs-gsa295",
+      "method": "Reviewed published coordinate identity, shrine name and locality against supplied directory"
+    }
+  ]
+}

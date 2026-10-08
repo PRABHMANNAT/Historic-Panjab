@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const read=path=>JSON.parse(fs.readFileSync(new URL('../'+path,import.meta.url),'utf8'));
+const write=(path,data)=>fs.writeFileSync(new URL('../'+path,import.meta.url),JSON.stringify(data,null,2)+'\n');
+const directory=read('app/gurdwara-directory.json'),base=read('app/gurdwara-data.json');
+const {links}=read('app/gurdwara-directory-links.json'),evidence=read('app/gurdwara-addition-sources.json');
+const byId=new Map(directory.gurdwaras.map(site=>[site.id,site])),sources=new Map(directory.sources.map(source=>[source.id,source]));
+assert.equal(byId.size,300);assert.equal(new Set(links.map(link=>link.directoryId)).size,links.length);assert.equal(new Set(links.map(link=>link.mapId)).size,links.length);
+const additions=evidence.coordinateEvidence.map((proof,index)=>{
+ const site=byId.get(proof.directoryId);assert.ok(site);assert.ok(links.some(link=>link.directoryId===site.id&&link.mapId===proof.id));
+ assert.equal(crypto.createHash('sha256').update(JSON.stringify(proof.raw)).digest('hex'),proof.rawSha256);
+ const raw=proof.sourceIdentity.startsWith('osm:')?(proof.raw.center||proof.raw):proof.raw.claim.mainsnak.datavalue.value;
+ assert.deepEqual(proof.coordinates,proof.sourceIdentity.startsWith('osm:')?[raw.lon,raw.lat]:[raw.longitude,raw.latitude]);
+ assert.ok(proof.coordinates.every(Number.isFinite));
+ const source=sources.get(site.source_ids[0]);assert.ok(source);
+ return {id:proof.id,name:site.name,city:site.locality,country:site.country,coordinates:proof.coordinates,tier:site.is_takht?'takht':directory.curated_lists.top_20_famous.includes(site.id)?'featured':'historic',iconIndex:base.length+index,iconVariant:'historic',sourceURL:source.url,significanceSource:source.url,significance:site.historical_note||'Listed in the supplied South Asia Gurdwara Directory.',sourceIdentity:proof.sourceIdentity,coordinateSource:proof.sourceURL,coordinateAccuracy:proof.accuracy,sourceStatus:'directory-with-published-coordinate'};
+});
+const mapped=[...base,...additions];assert.equal(new Set(mapped.map(site=>site.id)).size,mapped.length);assert.equal(new Set(mapped.map(site=>site.sourceIdentity)).size,mapped.length);
+for(const link of links)assert.ok(mapped.some(site=>site.id===link.mapId));
+write('app/gurdwara-additions.json',additions);
+write('app/gurdwara-curated-groups.json',Object.fromEntries(Object.entries(directory.curated_lists).map(([name,ids])=>[name,links.filter(link=>ids.includes(link.directoryId)).map(link=>link.mapId)])));
+write('public/data/gurdwaras.geojson',{type:'FeatureCollection',features:mapped.map(site=>({type:'Feature',id:site.id,properties:site,geometry:{type:'Point',coordinates:site.coordinates}}))});
+const metadata=read('app/gurdwara-sources.json');
+metadata.output={path:'public/data/gurdwaras.geojson',count:mapped.length,sha256:crypto.createHash('sha256').update(fs.readFileSync(new URL('../public/data/gurdwaras.geojson',import.meta.url))).digest('hex')};
+metadata.additionalCoordinateEvidence='app/gurdwara-addition-sources.json';
+write('app/gurdwara-sources.json',metadata);
+console.log(`Directory: ${directory.gurdwaras.length} supplied records, ${links.length} linked locations; ${mapped.length} total map points (${additions.length} new).`);

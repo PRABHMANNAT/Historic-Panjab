@@ -21,7 +21,7 @@ source dates vary; the detailed notes below explain what each layer represents.
 - **Style your map:** colors, patterns, labels, borders, legends and map backgrounds.
 - **Add nature:** 232,370 regional river reaches, mountain ranges, plateaus and a 2021 tree-cover overview over political maps.
 - **Inspect and measure:** area source information, approximate path distances, and shape tools for coloring, clearing or hiding areas.
-- **Add context:** cities, Delhi metro lines and 100 curated gurdwaras, with 57 verified photographs.
+- **Add context:** cities, Delhi metro lines, a 300-entry gurdwara directory, 123 sourced shrine map locations and 65 credited photographs.
 - **Keep and share your work:** local autosave, undo/redo, settings files, and PNG, SVG or JPG exports.
 
 ### View multiple states or territories together
@@ -394,22 +394,48 @@ are filtered to selected source polygons and displayed/exported rivers are clipp
 to their union, including holes; bundled original geometry remains unchanged.
 Provenance and hashes are in app/atlas-overlay-sources.json.
 
-**Show historic gurdwaras** displays 100 curated named shrines: the 5 Takhts,
-15 additional editorial featured sites (including Harmandir/Golden Temple,
-Fatehgarh Sahib and Jyoti Sarup Sahib), and 80 other historic/notable sites.
-Filter tiers, change label visibility and photo marker size/frame color, or locate
-a shrine with the 100-site picker. The 5 Takhts, all 15 featured sites, and additional
-historic sites use photographs in rounded frames. Click a marker for its full photo
-and source credits. Sites without a verified reusable photograph have an explicit
-"Photo unavailable" badge. Photographs are stored locally and embedded in exports;
-authors, individual licenses, source links and file hashes are recorded in
-`app/gurdwara-photo-sources.json` and linked from the Guide. Run
-`npm run check:gurdwara-photos` to verify the assets and photo marker rendering.
-The collection is not an objective ranking or a complete global register.
-Published OSM/Wikidata representative points are not surveyed entrances.
-Geographic scope still applies to shrines. Identity references, coordinate evidence,
-licenses and hashes are in app/gurdwara-sources.json; the location database is
-distributed under ODbL 1.0 with OSM attribution and Wikidata CC0 provenance.
+### South Asia gurdwara directory and photographs
+
+Open **Places → Browse all 300 gurdwaras** to search the supplied directory by
+name, alternate spelling, town or country. It covers India (254), Pakistan (32),
+Bangladesh (2), Nepal (5), Afghanistan (6) and Sri Lanka (1). Filters include the
+five Takhts, the editorial famous 20 and important historic 50, and photographs
+taken in 2026. These lists overlap and are not official rankings.
+
+The supplied file contains **no GPS coordinates**. **108 directory entries** now
+link to separately sourced locations: 85 matches to existing sites and **23 new
+OSM/Wikidata points**. The other **192 entries remain searchable with their
+locality and references**, marked as awaiting coordinate verification. All 100
+original map sites are retained, giving **123 map points** in total; 15 of these
+are outside the supplied directory. **Show on map** switches to the site's region
+and enables its marker. Geographic filtering also applies to exports. The famous
+20 are all mapped; 45 of the historic 50 have sourced positions.
+
+The map includes **65 locally bundled photographs**, with author, license, source
+and capture-date information in the directory, marker popup and Guide. Recent
+examples include [Nabha Sahib, 8 September 2026](https://commons.wikimedia.org/wiki/File:Main_Gate_of_Gurdwara_Nabha_Sahib,_Zirakpur.jpg)
+and [Nanakmatta Sahib, 10 September 2026](https://commons.wikimedia.org/wiki/File:Gurdwara_Sri_Nanakmatta_Sahib.jpg).
+Older photographs retain their recorded dates; unknown dates are labeled.
+Search/upload/review dates are never substituted for capture dates. A photo with
+conflicting site identification was excluded. Sites without a verified reusable
+photo retain the explicit **Photo unavailable** marker. SVG exports embed photos
+and their attribution metadata.
+
+Directory sources and historical notes are preserved as supplied; current
+operation, access and traditional historical accounts are not independently
+verified. Published map coordinates are representative points, not surveyed
+entrances. The collection is a selected directory, not a complete census.
+
+[Supplied directory](docs/data/south-asia-gurdwaras-300.md) ·
+[Imported records and sources](app/gurdwara-directory.json) ·
+[Reviewed identity links](app/gurdwara-directory-links.json) ·
+[Additional coordinate evidence](app/gurdwara-addition-sources.json) ·
+[Original coordinate evidence](app/gurdwara-sources.json) ·
+[Photo credits, dates and hashes](app/gurdwara-photo-sources.json).
+The location database retains ODbL 1.0 with OSM attribution and Wikidata CC0
+provenance; photographs retain their individual licenses. Run
+`npm run check:gurdwara-directory` and `npm run check:gurdwara-photos` to verify
+directory links, coordinates, photo assets and exports.
 
 ## Combined Kashmir view
 

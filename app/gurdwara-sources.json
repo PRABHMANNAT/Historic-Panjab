@@ -4099,8 +4099,9 @@
   ],
   "output": {
     "path": "public/data/gurdwaras.geojson",
-    "count": 100,
-    "sha256": "4fb9806eab8e1ecf7aa9e595b25f0d766ea892bff1c8812e94996f2c55af7184"
+    "count": 123,
+    "sha256": "61b4ecf35ab27c36b83aa682cd11640bf9531f1458fac571d3bb9161bea1e03e"
   },
-  "dataSha256": "6c14e8e35ff1804901c9d39def91776c9a1aa53ba6d5cddd9eb07f4ba3a70cc0"
+  "dataSha256": "6c14e8e35ff1804901c9d39def91776c9a1aa53ba6d5cddd9eb07f4ba3a70cc0",
+  "additionalCoordinateEvidence": "app/gurdwara-addition-sources.json"
 }

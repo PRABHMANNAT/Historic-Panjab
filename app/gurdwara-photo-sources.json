@@ -13,7 +13,8 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/2/28/Akal_takhat_amritsar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q118893",
       "description": "Akal Takhat Sahib at Golden Temple Complex. The Supreme place from where all important decisions (by SGPC) related to Sikhism are issued.",
-      "sha256": "a6e108c3bf8d532061ca6f2b8e1df9c242cf69a180b4a5a7a07f56365a63b807"
+      "sha256": "a6e108c3bf8d532061ca6f2b8e1df9c242cf69a180b4a5a7a07f56365a63b807",
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-keshgarh-takht",
@@ -26,7 +27,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Takht_Sri_Keshgarh_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Keshgarh",
       "description": "Takht Sri Keshgarh Sahib, Birthplace of the Khalsa",
-      "sha256": "698cb33ecbc3f20c627fadc921205e7a980dde8210f5f0b27d6a9438abf63a0c"
+      "sha256": "698cb33ecbc3f20c627fadc921205e7a980dde8210f5f0b27d6a9438abf63a0c",
+      "captureDate": "2007-01-15 00:00:17",
+      "captureYear": 2007,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2007-01-15 00:00:17"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-patna-takht",
@@ -39,7 +47,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/18/Takht_Sri_Patna_Sahib_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Harmandir Patna",
       "description": "Takht Sri Patna Sahib",
-      "sha256": "c100ffd2d795adf68f80bc382fc5f5751202df8443f802a2097fc31ee720ae44"
+      "sha256": "c100ffd2d795adf68f80bc382fc5f5751202df8443f802a2097fc31ee720ae44",
+      "captureDate": "2016-12-27 12:02:38",
+      "captureYear": 2016,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2016-12-27 12:02:38"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-damdama-takht",
@@ -52,7 +67,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/8/89/Takht_Sri_Damdama_Sahib%2C_Talwandi_Sabo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q48375",
       "description": "Takht Sri Damdama Sahib, Talwandi Sabo",
-      "sha256": "d1089b46cb0c1431fceaa18a6c6c8d9fb679dda81d9ceb0f29856d472f4315cf"
+      "sha256": "d1089b46cb0c1431fceaa18a6c6c8d9fb679dda81d9ceb0f29856d472f4315cf",
+      "captureDate": "2025-12-08 14:10:54",
+      "captureYear": 2025,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2025-12-08 14:10:54"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-tarn-taran-sahib",
@@ -65,7 +87,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/17/The_Sarovar_besides_the_GurudwaraTarn_Taran_Sahib%2C_Punjab%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Darbar Tarn Taran",
       "description": "The Sarovar besides the GurudwaraTarn Taran Sahib, Punjab, India.",
-      "sha256": "09844bf6d28fff3514207c90f84ce94fe7cfbb54bf0254af9c5616e522d61ac1"
+      "sha256": "09844bf6d28fff3514207c90f84ce94fe7cfbb54bf0254af9c5616e522d61ac1",
+      "captureDate": "2007-11-27 09:52",
+      "captureYear": 2007,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2007-11-27 09:52"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-ber-sahib",
@@ -78,7 +107,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Ber_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Ber",
       "description": "Gurudwara Shree Ber Sahib",
-      "sha256": "9f0b34b783493da79e5a411b57674b5a7da061f2a23f29a51fcd3c355601afa5"
+      "sha256": "9f0b34b783493da79e5a411b57674b5a7da061f2a23f29a51fcd3c355601afa5",
+      "captureDate": "1 January 2010",
+      "captureYear": 2010,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "Taken on 1 January 2010"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-baoli-goindwal",
@@ -91,7 +127,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Gurdwara_Baoli_Sahib%2C_Goindwal_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Baoli",
       "description": "Gurdwara Baoli Sahib in Goindwal Sahib, Tarn Taran, Punjab, India",
-      "sha256": "9168031d26566cd75501e3233439bd3a907e504a01c256d899a867c7076bc7e1"
+      "sha256": "9168031d26566cd75501e3233439bd3a907e504a01c256d899a867c7076bc7e1",
+      "captureDate": "23 November 2023",
+      "captureYear": 2023,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "23 November 2023 (according to <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Exif\" class=\"extiw\" title=\"en:Exif\">Exif</a></span> data)"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-kartarpur-sahib",
@@ -104,7 +147,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Kartarpur_Guru_Nanak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q5619951",
       "description": "Shrine of Guru Nanak",
-      "sha256": "d1587f200a1916083417f154d393c4a16b5eb75e901e7702ca2e9d161a7a5ae9"
+      "sha256": "d1587f200a1916083417f154d393c4a16b5eb75e901e7702ca2e9d161a7a5ae9",
+      "captureDate": "2012-11-19",
+      "captureYear": 2012,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2012-11-19"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-nankana-janam-asthan",
@@ -117,7 +167,8 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/17/Nankana_Sahib.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q3695654",
       "description": "Gurdwara Nankana Sahib (Janam Asthan), in en:Nankana Sahib, en:Pakistan.",
-      "sha256": "ff135c4054f8764999c624a08108468ff890fa8a230ace7a8e6bd34c12ddb428"
+      "sha256": "ff135c4054f8764999c624a08108468ff890fa8a230ace7a8e6bd34c12ddb428",
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-hazur-takht",
@@ -130,7 +181,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Hazur_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q3694968",
       "description": "View of the Gurudwara Hazur Sahib",
-      "sha256": "d1e5ceea6a06dcd93473f47657baebd7d15b6b6ca5e2540ac04d7c9b44635cef"
+      "sha256": "d1e5ceea6a06dcd93473f47657baebd7d15b6b6ca5e2540ac04d7c9b44635cef",
+      "captureDate": "2009-12-23",
+      "captureYear": 2009,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2009-12-23"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-harmandir-sahib",
@@ -143,20 +201,34 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Hamandir_Sahib_%28Golden_Temple%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q180422",
       "description": "Hamandir Sahib or Darbar Sahib (also known as the Golden Temple). The holiest shrine in Sikhism located in the city of Amritsar, India.",
-      "sha256": "86586b48c0441bfcaf4f73484608b41efc6de0e4472259c6a8c5457675fdb024"
+      "sha256": "86586b48c0441bfcaf4f73484608b41efc6de0e4472259c6a8c5457675fdb024",
+      "captureDate": "2010-06-28",
+      "captureYear": 2010,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2010-06-28"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-fatehgarh-sahib",
       "file": "/photos/gurdwaras/gs-fatehgarh-sahib.jpg",
-      "title": "Fatehgarh Sahib Gurdwara, Punjab, India.jpg",
-      "author": "Jasleen Kaur from USA",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fatehgarh_Sahib_Gurdwara,_Punjab,_India.jpg",
-      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Fatehgarh_Sahib_Gurdwara%2C_Punjab%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "identityEvidence": "Commons filename/description search: Fatehgarh",
-      "description": "Gurdwara in Fatehgarh Sahib; Blick auf das Eingangstor",
-      "sha256": "ab8e3cffa59072a7d30a4a4624e1791e5e47c1b6c4391aea2860e71df8d87d60"
+      "title": "Gurdwara Fatehgarh Sahib.jpg",
+      "author": "Kuldeepburjbhalaike",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurdwara_Fatehgarh_Sahib.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/2/22/Gurdwara_Fatehgarh_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Commons named-site description and visible building/signage reviewed against the sourced shrine.",
+      "description": "Main Building of Gurdwara Fatehgarh Sahib, Punjab, India.",
+      "captureDate": "26 December 2025",
+      "captureYear": 2025,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "26 December 2025 (according to <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Exif\" class=\"extiw\" title=\"en:Exif\">Exif</a></span> data)"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "9add3383b20de294a2683a1cea6cc23adf472a66143fff4b966ca189e8569449"
     },
     {
       "id": "gs-jyoti-sarup-sahib",
@@ -169,7 +241,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Gurdwara_Jyoti_Saroop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q5619963",
       "description": "Gurdwara Jyoti Saroop",
-      "sha256": "efc6089bc46d3a71f67c4e82f78964c106c530890239a6c0941d72353d0f887e"
+      "sha256": "efc6089bc46d3a71f67c4e82f78964c106c530890239a6c0941d72353d0f887e",
+      "captureDate": "2008-01-04 23:33:23",
+      "captureYear": 2008,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2008-01-04 23:33:23"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-panja-sahib",
@@ -182,7 +261,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/ba/PanjaSahibHasanAbdal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q2619968",
       "description": "A view of the Panja Sahib Shrine in Hasan Abdal, Pakistan",
-      "sha256": "b2aaf9c2ac61f7ab099b3bc1734603b0d2e3669f5a652d7e6ef2d049ba53014f"
+      "sha256": "b2aaf9c2ac61f7ab099b3bc1734603b0d2e3669f5a652d7e6ef2d049ba53014f",
+      "captureDate": "2013-06-02 12:00:14",
+      "captureYear": 2013,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2013-06-02 12:00:14"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-sis-ganj-delhi",
@@ -195,7 +281,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/0/00/Gurdwara_sis_ganj.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q5620491",
       "description": "Gurudwara Sis Ganj",
-      "sha256": "20a47b32cea2be668f94a4dfe3d96badad815f1be9d452172dfe266af3cf3f70"
+      "sha256": "20a47b32cea2be668f94a4dfe3d96badad815f1be9d452172dfe266af3cf3f70",
+      "captureDate": "2006-02-12",
+      "captureYear": 2006,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2006-02-12"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-rakab-ganj-sahib",
@@ -208,7 +301,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Gurdwara_Rakabganj_Sahib%2C_Delhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q5619976",
       "description": "Gurdwara Rakabganj Sahib, Delhi.",
-      "sha256": "1e0c33019b82deb7de110d82e2e2e2905f892fe5485f8ff704b358c813a2f93b"
+      "sha256": "1e0c33019b82deb7de110d82e2e2e2905f892fe5485f8ff704b358c813a2f93b",
+      "captureDate": "2010-10-02",
+      "captureYear": 2010,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2010-10-02"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-hemkund-sahib",
@@ -221,7 +321,8 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Hemkunt-003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q8671219",
       "description": "Gurdwara Hemkunt Sahib, More pictures and information about Hemkunt Sahib",
-      "sha256": "137e8b2c8a35ecf78596c4ef162893faaba5026fa6acbd7cc24700f9603c6388"
+      "sha256": "137e8b2c8a35ecf78596c4ef162893faaba5026fa6acbd7cc24700f9603c6388",
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-bangla-sahib",
@@ -234,7 +335,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/4/49/Front_view_of_Gurudwara_Bangla_Sahib%2C_Delhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q2375435",
       "description": "Front view of Gurudwara Bangla Sahib, Delhi.",
-      "sha256": "f1218a58beab6d7f7eec6ec2ba2689dee1e84cde90f6b018ea05cb09e3ede60a"
+      "sha256": "f1218a58beab6d7f7eec6ec2ba2689dee1e84cde90f6b018ea05cb09e3ede60a",
+      "captureDate": "2009-03-17 21:54",
+      "captureYear": 2009,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2009-03-17 21:54"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-nanakmatta-sahib",
@@ -247,7 +355,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Gurdwara_Sri_Nanakmatta_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Nanakmatta",
       "description": "Gurdwara Sri Nanakmatta Sahib and sacred pipal sahib tree a major historical Sikh pilgrimage site associated with Guru Nanak Dev Ji and Guru Hargobind Ji",
-      "sha256": "a0f6271d20bec664ba36519300144fecae7044854e05068b697539acd0b3fbaa"
+      "sha256": "a0f6271d20bec664ba36519300144fecae7044854e05068b697539acd0b3fbaa",
+      "captureDate": "2026-09-10",
+      "captureYear": 2026,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2026-09-10"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-baba-atal-sahib",
@@ -260,7 +375,8 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Baba_Atal_Amritsar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Baba Atal Rai",
       "description": "en:Gurdwara Baba Atal, near en:Golden Temple en:Amritsar. Dedicated to Baba Atal Rai, the son of en:Guru Hargobind sahib. Good view of city can be seen from top of this nine floor building.",
-      "sha256": "3b2d88582219f77a5c2e2a18bef7731e5ac997fa23a8a3ac54f9801ce4e1d912"
+      "sha256": "3b2d88582219f77a5c2e2a18bef7731e5ac997fa23a8a3ac54f9801ce4e1d912",
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-baba-deep-singh-shaheed",
@@ -273,7 +389,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Photograph_of_Gurdwara_Shaheed_Baba_Deep_Singh_Ji%2C_Amritsar%2C_by_Jasleen_Kaur%2C_11_December_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Shaheed Ganj Baba Deep Singh",
       "description": "Photograph of Gurdwara Shaheed Baba Deep Singh Ji, Amritsar, by Jasleen Kaur, 11 December 2008. There are various names given to this gurdwara: 1) Gurdwara Shaheed Baba Deep Singh Ji, Amritsar 2) Gurudwara Shaheed Baba Deep Singh Ji Asthaan Antim Sanskar Sahib (Shaheedan Sahib) 3) Gurdwara Shaheeda Sahib 4) Gurdwara Sri Shaheed Ganj Baba Deep Singh 5) Gurdwara Baba Deep Singh Shaheed Amritsar 6) Gurdwara Shaheedan Sahib, Amritsar 7) Gurudwara Shaheed Ganj Sahib Shaheeda Sahib",
-      "sha256": "919c9b62f88be9fc0b230b909287e28585a28387491509ce2535417d3608ca60"
+      "sha256": "919c9b62f88be9fc0b230b909287e28585a28387491509ce2535417d3608ca60",
+      "captureDate": "2008-12-11 05:10:47",
+      "captureYear": 2008,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2008-12-11 05:10:47"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-ramsar-amritsar",
@@ -286,7 +409,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/5/54/Gurdwara_Ramsar_Sahib-Amritsar-India05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Ramsar",
       "description": "Gurdwara Ramsar Sahib, Amritsar, India",
-      "sha256": "4464aff8b290efdb29379833966505e91fd5e37a4288c76029987920237f7703"
+      "sha256": "4464aff8b290efdb29379833966505e91fd5e37a4288c76029987920237f7703",
+      "captureDate": "2009-12-07",
+      "captureYear": 2009,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2009-12-07"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-santokhsar-amritsar",
@@ -299,7 +429,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Gurudwara_Shri_Santokhsar_Sahib-3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Santokhsar",
       "description": "Amritsar",
-      "sha256": "631a2ec186793d3431c934f6e3d13fa58edcfcc658cb5a2c072c83a8bc513f16"
+      "sha256": "631a2ec186793d3431c934f6e3d13fa58edcfcc658cb5a2c072c83a8bc513f16",
+      "captureDate": "2024-11-05 17:42:28",
+      "captureYear": 2024,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2024-11-05 17:42:28"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-guru-ki-wadali",
@@ -312,7 +449,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/0/01/Guru_Ki_Wadali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Guru Ki Wadali",
       "description": "Guru Ki Wadali",
-      "sha256": "40e29adcc7736619b1c9c37a7a871d8f6b65a1414e7f424e100acc1493ce9e9b"
+      "sha256": "40e29adcc7736619b1c9c37a7a871d8f6b65a1414e7f424e100acc1493ce9e9b",
+      "captureDate": "2008-12-08",
+      "captureYear": 2008,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2008-12-08"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-baba-bakala-sahib",
@@ -325,7 +469,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/7/74/Gurdwara_Baba_Bakala_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Baba Bakala",
       "description": "Photo taken of Gurdwara Baba Bakala Sahib during the daytime.",
-      "sha256": "e218867ce034ff5c4caf6d4f469dffb5c4126218f7617fedd430f07f6dfebf77"
+      "sha256": "e218867ce034ff5c4caf6d4f469dffb5c4126218f7617fedd430f07f6dfebf77",
+      "captureDate": "2016-06-14",
+      "captureYear": 2016,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2016-06-14"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-sann-sahib",
@@ -338,7 +489,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Gurdwara_Sann_Sahib_Basarke_Gillan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q69872507",
       "description": "ਬਾਬਾ ਬੁੱਢਾ ਜੀ ਦਵਾਰਾ ਦੀਵਾਰ ਵਿੱਚ ਸੰਨ ਲਗਾ ਕੇ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੂੰ ਅਗਿਆਤਵਾਸ ਤੋਂ ਪ੍ਰਗਟ ਕਰਨ ਦੀ ਯਾਦ ਵਿੱਚ ਗੁਰਦਵਾਰਾ",
-      "sha256": "c12c9f157c4c5b09bea980cd2a218676b3ecc06f447a32e4e22874e0f59df85b"
+      "sha256": "c12c9f157c4c5b09bea980cd2a218676b3ecc06f447a32e4e22874e0f59df85b",
+      "captureDate": "2019-10-06 12:25:12",
+      "captureYear": 2019,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2019-10-06 12:25:12"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-kandh-sahib",
@@ -351,7 +509,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Kandh_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q114166085",
       "description": "Gurudwara KandhSahib (Marriage place of Guru Nanak Dev ji)",
-      "sha256": "6d058aadc0acbb4aa0a1c19f1a3bc997f685700639301758064124fc4a2f5378"
+      "sha256": "6d058aadc0acbb4aa0a1c19f1a3bc997f685700639301758064124fc4a2f5378",
+      "captureDate": "2014-04-06 14:53:25",
+      "captureYear": 2014,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2014-04-06 14:53:25"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-patalpuri-sahib",
@@ -364,7 +529,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Gurdwara_Patalpuri%2C_in_Kiratpur%2C_Punjab%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Patalpuri",
       "description": "Gurdwara Patalpuri in Kiratpur Sahib (Punjab)",
-      "sha256": "e208c31a4880b3bdf702721517b2ca73f42420a8d3c8e819db849b3cf7b90963"
+      "sha256": "e208c31a4880b3bdf702721517b2ca73f42420a8d3c8e819db849b3cf7b90963",
+      "captureDate": "2008-01-03 23:22:06",
+      "captureYear": 2008,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2008-01-03 23:22:06"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-charan-kamal-kiratpur",
@@ -377,7 +549,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/4/46/Gurdwara_Charan_Kamal%2C_Kiratpur_Sahib%2C_Punjab.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Charan Kamal",
       "description": "Gurdwara Charan Kamal in Kiratpur Sahib (Punjab)",
-      "sha256": "15a76700ea8926817a1fe74bad0d92693a47ac18007d79fadd3b07755efc8b8f"
+      "sha256": "15a76700ea8926817a1fe74bad0d92693a47ac18007d79fadd3b07755efc8b8f",
+      "captureDate": "2008-01-03 22:57",
+      "captureYear": 2008,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2008-01-03 22:57"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-anandgarh-sahib",
@@ -390,7 +569,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Gurudwara_Qila_Anandgarh_Sahib%2C_Anandpur_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Qila Anandgarh",
       "description": "This Gurdwara was one of the five forts constructed by Guru Gobind Singh at Anandpur Sahib for the defense of the Sikhs. Guru Gobind Singh spent 25 years at Anandpur Sahib. To protect the Sikhs from the hill Rajas or Mughals, Guru Gobind Singh began the construction of five defensive forts all around the town. Keshgarh at the center (now a Takht), Anandgarh (fort of bliss), Lohgarh (fort of steel), Holgarh (fort of colour) and Fatehgarh (fort of victory). All the forts were joined together with earthworks and underground tunnels. The construction began in 1689 and took over ten years to complete.",
-      "sha256": "fed053c0012a35ee5e6e002fa34cc369cb4aaa046d6e69fd27eba50dbdc1663a"
+      "sha256": "fed053c0012a35ee5e6e002fa34cc369cb4aaa046d6e69fd27eba50dbdc1663a",
+      "captureDate": "2009-12-21 18:57:05",
+      "captureYear": 2009,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2009-12-21 18:57:05"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-katalgarh-sahib",
@@ -403,7 +589,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Gurudwara_Shri_Katalgarh_sahib%2C_chamkaur_sahib_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Katalgarh",
       "description": "Gurudwara Shri Katalgarh sahib, chamkaur sahib",
-      "sha256": "f8ce49c65f965657383579c56708506d5ece639bcbca11bd3253b704fe108a2d"
+      "sha256": "f8ce49c65f965657383579c56708506d5ece639bcbca11bd3253b704fe108a2d",
+      "captureDate": "21 December 2010",
+      "captureYear": 2010,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "Taken on 21 December 2010"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-parivar-vichora-sahib",
@@ -416,7 +609,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/7/73/Pariwar_vichhora_gurudwara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Parivar Vichora",
       "description": "i wikiuser:SHEMAROO aka SIVENDER SINGH have taken and uploaded for wikipedia.this is about Parivar Vichora gurudwara in Roopnagar district. Shemaroo (talk) 13:08, 15 December 2012 (UTC)",
-      "sha256": "56f7017948aa62257d3423b88259457a081164a98af866862507498cc9d7bb96"
+      "sha256": "56f7017948aa62257d3423b88259457a081164a98af866862507498cc9d7bb96",
+      "captureDate": "30 November 2012",
+      "captureYear": 2012,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "30 November 2012 (according to <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Exif\" class=\"extiw\" title=\"en:Exif\">Exif</a></span> data)"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-bhatha-sahib",
@@ -429,7 +629,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Gurudwara_of_Bhatha_Sahib%2C_Kotla_Nihang%2C_Rupnagar%2C_Punjab%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Bhatha",
       "description": "Gurudwara of Bhatha Sahib, Kotla Nihang, Rupnagar, Punjab, India",
-      "sha256": "0548e0bdfa5565bdc2f3889fc390a34c106cfa56a9040d4919d4cb28a713f480"
+      "sha256": "0548e0bdfa5565bdc2f3889fc390a34c106cfa56a9040d4919d4cb28a713f480",
+      "captureDate": "2016-08-25 15:49:37",
+      "captureYear": 2016,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2016-08-25 15:49:37"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-manji-alamgir",
@@ -442,7 +649,8 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/15/Manjisahib_alamgir.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Manji Alamgir",
       "description": "Alamgir Sahib",
-      "sha256": "ed886dc3bfc98d011f4eeafc5e4581a6f0290a9bdff786694f0c66765702b3bd"
+      "sha256": "ed886dc3bfc98d011f4eeafc5e4581a6f0290a9bdff786694f0c66765702b3bd",
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-mehdiana-sahib",
@@ -455,7 +663,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Gurudwara_Mehdiana_Sahib%2C_Punjab%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Mehdiana",
       "description": "Gurudwara Mehdiana Sahib, Punjab, India.",
-      "sha256": "f5cf5f33a4492f7142aea5cc91c2f70f6847a7eb555cce5e17b8dce9ef695160"
+      "sha256": "f5cf5f33a4492f7142aea5cc91c2f70f6847a7eb555cce5e17b8dce9ef695160",
+      "captureDate": "2007-11-28 16:54",
+      "captureYear": 2007,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2007-11-28 16:54"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-karamsar-rara",
@@ -468,7 +683,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/16/Gurdwara_Karamsar_Rara_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Karamsar Rara",
       "description": "Gurdwara Karamsar Rara Sahib",
-      "sha256": "8fcc5976ffbc905c3f54c19338f5e950a0c7aae8c97578c99a693bc1f743ca56"
+      "sha256": "8fcc5976ffbc905c3f54c19338f5e950a0c7aae8c97578c99a693bc1f743ca56",
+      "captureDate": "2010-10-12",
+      "captureYear": 2010,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2010-10-12"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-likhansar-sahib",
@@ -481,7 +703,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/2/24/Gurdwara_Likhansar_Sahib_Patshahi_10th.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q28180146",
       "description": "Gurdwara Likhansar Sahib Patshahi 10th",
-      "sha256": "57e65c266884bd48b8f58c440379c1d89bf35b5bf262cf625d46ff71db5436ed"
+      "sha256": "57e65c266884bd48b8f58c440379c1d89bf35b5bf262cf625d46ff71db5436ed",
+      "captureDate": "2025-12-08 14:22:31",
+      "captureYear": 2025,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2025-12-08 14:22:31"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-guptsar-sahib",
@@ -494,7 +723,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Gurudwara_Guptsar_Sahib%2C_Chhattiana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Guptsar",
       "description": "A view of Gurudwara Guptsar Sahib in the Chhattiana village of Sri Muktsar Sahib district in East Punjab (India), from the new Sarovar.",
-      "sha256": "aee031f3a75d8f4b9b5c621648b4b1f145d6bb8584351b5fee31f68a96efd924"
+      "sha256": "aee031f3a75d8f4b9b5c621648b4b1f145d6bb8584351b5fee31f68a96efd924",
+      "captureDate": "2012-01-31",
+      "captureYear": 2012,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2012-01-31"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-paonta-sahib",
@@ -507,7 +743,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Ponta_Sahib.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Verified Commons file description, category and Wikipedia site usage: https://commons.wikimedia.org/wiki/File:Ponta_Sahib.JPG",
       "description": "Gurdwara Ponta Sahib",
-      "sha256": "ff82d1e8a1da6f26362b8f1137f697cfa5b8a603941cf29e643df0ada2efbe58"
+      "sha256": "ff82d1e8a1da6f26362b8f1137f697cfa5b8a603941cf29e643df0ada2efbe58",
+      "captureDate": "2 July 2014, 11:35:45",
+      "captureYear": 2014,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "Taken on 2 July 2014, 11:35:45"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-chheharta-sahib",
@@ -520,7 +763,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Gurudwara_Chheharta_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Verified Commons file description, category and Wikipedia site usage: https://commons.wikimedia.org/wiki/File:Gurudwara_Chheharta_Sahib.jpg",
       "description": "Gurudwara Chheharta Sahib",
-      "sha256": "4cfacbba6ac2b570abda64cb807d517cd7089c445074d9527235890413b01456"
+      "sha256": "4cfacbba6ac2b570abda64cb807d517cd7089c445074d9527235890413b01456",
+      "captureDate": "2019-09-28",
+      "captureYear": 2019,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2019-09-28"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-guru-ka-bagh-sultanpur",
@@ -533,7 +783,13 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Guru_Ka_Bagh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Verified Commons file description, category and Wikipedia site usage: https://commons.wikimedia.org/wiki/File:Guru_Ka_Bagh.jpg",
       "description": "Gurudwara Shree Guru Ka Bagh",
-      "sha256": "fe524a02ab1792d2aa4a01a2aaa9aefbd06ca57b874eb319449fe4d914dbf727"
+      "sha256": "fe524a02ab1792d2aa4a01a2aaa9aefbd06ca57b874eb319449fe4d914dbf727",
+      "captureDate": "1/1/10",
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "1/1/10"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-dukh-nivaran-patiala",
@@ -546,20 +802,34 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/6/68/Gurdwara_Dukh_Nivaran_Sahib%2C_Patiala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Dukh Nivaran",
       "description": "",
-      "sha256": "135106da4d03ae1c332a823a0362b979ff6f232d8fc99772f02f5b0084d2890b"
+      "sha256": "135106da4d03ae1c332a823a0362b979ff6f232d8fc99772f02f5b0084d2890b",
+      "captureDate": "2012-03-07",
+      "captureYear": 2012,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2012-03-07"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-nabha-sahib",
       "file": "/photos/gurdwaras/gs-nabha-sahib.jpg",
-      "title": "Gurdwara Nabha Sahib, Zirakpur - 2.jpg",
+      "title": "Main Gate of Gurdwara Nabha Sahib, Zirakpur.jpg",
       "author": "Kuldeepburjbhalaike",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurdwara_Nabha_Sahib,_Zirakpur_-_2.jpg",
-      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Gurdwara_Nabha_Sahib%2C_Zirakpur_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-      "identityEvidence": "https://www.wikidata.org/wiki/Q141408841",
-      "description": "Gurdwara Nabha Sahib, Zirakpur, Sahibzada Ajit Singh Nagar district, Punjab, India.",
-      "sha256": "4e762fc1ffc684ca130c7decf96489427eada3b30f2719fd87408106f4917f24"
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Main_Gate_of_Gurdwara_Nabha_Sahib,_Zirakpur.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Main_Gate_of_Gurdwara_Nabha_Sahib%2C_Zirakpur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Commons named-site description and visible building/signage reviewed against the sourced shrine.",
+      "description": "Main Gate of Gurdwara Nabha Sahib, Zirakpur, Sahibzada Ajit Singh Nagar district, Punjab, India.",
+      "captureDate": "8 September 2026",
+      "captureYear": 2026,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "8 September 2026 (according to <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Exif\" class=\"extiw\" title=\"en:Exif\">Exif</a></span> data)"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "deede6f058ee5f99979356824a4a35967d2f0858967ed3ef26a766995f0a4545"
     },
     {
       "id": "gs-amb-sahib",
@@ -572,7 +842,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/4/47/AmbSahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Amb",
       "description": "Gurudwara Amb Sahib",
-      "sha256": "1e6a468566eba31c7b50432da92b51379840baf8f9630cecb4798f24f0654662"
+      "sha256": "1e6a468566eba31c7b50432da92b51379840baf8f9630cecb4798f24f0654662",
+      "captureDate": "2013-04-09 14:17:45",
+      "captureYear": 2013,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2013-04-09 14:17:45"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-nada-sahib",
@@ -585,7 +862,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Nada_sahib_gurudwara.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q6957398",
       "description": "Outside view of Gurudwara Nada Sahib",
-      "sha256": "98a0138dbe9c2639ba9c4f320dc5a615152365274563fc77e4c223c59d2bac1b"
+      "sha256": "98a0138dbe9c2639ba9c4f320dc5a615152365274563fc77e4c223c59d2bac1b",
+      "captureDate": "2009-10-02",
+      "captureYear": 2009,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2009-10-02"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-panjokhra-sahib",
@@ -598,7 +882,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Gurudwara_Panjokhra_Sahib%2C_Haryana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q96187462",
       "description": "Gurudwara Panjokhra Sahib, Haryana. Pertaining to 8th Sikh Guru Shri Har Krishan Ji",
-      "sha256": "78c655a0f7d51bd8c9f23edf8bcb051d53f6087fcbe72dfa5e9024a589359d0a"
+      "sha256": "78c655a0f7d51bd8c9f23edf8bcb051d53f6087fcbe72dfa5e9024a589359d0a",
+      "captureDate": "2014-03-16 12:45:22",
+      "captureYear": 2014,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2014-03-16 12:45:22"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-manji-karnal",
@@ -611,7 +902,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/0/08/Gurdwara_Manji_Sahib_%2824977%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q25624734",
       "description": "Gurdwara Manji Sahib (gurdwara in Karnal district)",
-      "sha256": "7d9b76fb376e27c5d088690b5ee80e39db378b164cbc6e1e51dc5d492dc4c1be"
+      "sha256": "7d9b76fb376e27c5d088690b5ee80e39db378b164cbc6e1e51dc5d492dc4c1be",
+      "captureDate": "18 January 2025",
+      "captureYear": 2025,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "18 January 2025 (according to <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Exif\" class=\"extiw\" title=\"en:Exif\">Exif</a></span> data)"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-dhamtan-sahib",
@@ -624,7 +922,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Gurdwara_dhamtan_sahib1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q119249713",
       "description": "Gurdwara Shri guru teg bahadur sahib, dhamtan sahib, Jind district, Haryana, India",
-      "sha256": "5915746377276c11e7e105724526a029bbb21fd1e2376a6f9275e6e9ea90411a"
+      "sha256": "5915746377276c11e7e105724526a029bbb21fd1e2376a6f9275e6e9ea90411a",
+      "captureDate": "2023-04-02 16:37:25",
+      "captureYear": 2023,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2023-04-02 16:37:25"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-damdama-delhi",
@@ -637,7 +942,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Gurdwara_Damdama_Sahib%2C_Delhi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Damdama",
       "description": "Gurdwara Damdama Sahib, Delhi.",
-      "sha256": "eeebdfc7714db6eecd3f5915db26b92b07bec049735873866a05eb41495710a0"
+      "sha256": "eeebdfc7714db6eecd3f5915db26b92b07bec049735873866a05eb41495710a0",
+      "captureDate": "2008-12-28 03:18",
+      "captureYear": 2008,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2008-12-28 03:18"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-jand-sahib",
@@ -650,7 +962,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Jand_sahib_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Jand",
       "description": "Gurudwara jand sahib, Faridkot, Pin Code - 151212",
-      "sha256": "b80325109ffc6f32d9f53ebaeaa499a5d58ca621db7b1d6d49c5155c3c2c783d"
+      "sha256": "b80325109ffc6f32d9f53ebaeaa499a5d58ca621db7b1d6d49c5155c3c2c783d",
+      "captureDate": "2017-05-06 09:23:04",
+      "captureYear": 2017,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2017-05-06 09:23:04"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-hatt-sahib",
@@ -663,7 +982,13 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/3/32/HattSahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Hatt",
       "description": "Gurudwara Shree Hut Sahib",
-      "sha256": "1fd514c91ceea40d0efda2ca61fd71a1100b9d41b197f35f4e1090be0c42fbe2"
+      "sha256": "1fd514c91ceea40d0efda2ca61fd71a1100b9d41b197f35f4e1090be0c42fbe2",
+      "captureDate": "1/1/10",
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "1/1/10"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-nanak-jhira-bidar",
@@ -676,7 +1001,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Gurdwara_Nanak_Jhira_Sahib.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q19891658",
       "description": "Gurdwara Nanak Jhira Sahib",
-      "sha256": "016de7bf45ca62a24c960e1d699eb5d6e55f93c8dc8e84b3d09032217f4272a6"
+      "sha256": "016de7bf45ca62a24c960e1d699eb5d6e55f93c8dc8e84b3d09032217f4272a6",
+      "captureDate": "2013-07-20 16:25:22",
+      "captureYear": 2013,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2013-07-20 16:25:22"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-guru-ka-tal-agra",
@@ -689,7 +1021,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/0/04/Guru-ka-Tal_wikijib-13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Guru Ka Tal",
       "description": "This is a photo of ASI monument number",
-      "sha256": "51698081d649ec17b3860cdc02c7cf5438fdf1aaff9b4fc295ba0cf6e9ff0231"
+      "sha256": "51698081d649ec17b3860cdc02c7cf5438fdf1aaff9b4fc295ba0cf6e9ff0231",
+      "captureDate": "2016-08-07 12:26:34",
+      "captureYear": 2016,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2016-08-07 12:26:34"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-lakhpat-sahib",
@@ -702,7 +1041,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Lakhpat_Gurdwara_2014-01-27_13-07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Lakhpat",
       "description": "This is a photo of ASI monument number",
-      "sha256": "ba3823c9da754c21ba7b876c883a7c8e1b33b245d94c287abc9c7fc7279de733"
+      "sha256": "ba3823c9da754c21ba7b876c883a7c8e1b33b245d94c287abc9c7fc7279de733",
+      "captureDate": "2014-01-25",
+      "captureYear": 2014,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2014-01-25"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-pathar-sahib",
@@ -715,7 +1061,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gurdwara_Pathar_Sahib%2C_Leh_district_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Pathar",
       "description": "Gurdwara Pathar Sahib, Leh district",
-      "sha256": "c38edbd3ac4930ec8ad3822acf50eae0bd2885c940cea6caa9fc5eef9bf7048b"
+      "sha256": "c38edbd3ac4930ec8ad3822acf50eae0bd2885c940cea6caa9fc5eef9bf7048b",
+      "captureDate": "2022-08-27 13:51:30",
+      "captureYear": 2022,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2022-08-27 13:51:30"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-beri-sialkot",
@@ -728,7 +1081,14 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Centuries_old_Sikh_Gurdwara_Baba_Di_Bair.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "https://www.wikidata.org/wiki/Q5619946",
       "description": "Centuries old gurdwara Baba Di Bair (Beri Sahib) in Sialkot, Punjab, Pakistan",
-      "sha256": "3863372a4b9298fe44e1f3ca0fe1b4819d027309c55f431a1c211a3bc641db79"
+      "sha256": "3863372a4b9298fe44e1f3ca0fe1b4819d027309c55f431a1c211a3bc641db79",
+      "captureDate": "2014-02-18 02:31:44",
+      "captureYear": 2014,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2014-02-18 02:31:44"
+      },
+      "checkedOn": "2026-10-09"
     },
     {
       "id": "gs-chatti-srinagar",
@@ -741,7 +1101,183 @@
       "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Gurdwara_Chatti_Patshahi%2C_also_called_Gurdwara_Patshai_Chevin%2C_Srinagar_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
       "identityEvidence": "Commons filename/description search: Chatti Patshahi",
       "description": "Gurdwara Chatti Patshahi, also called Gurdwara Patshahi Chevin is located in the Rainawari neighbourhood of the city of Srinagar in Kashmir valley, Jammu and Kashmir.",
-      "sha256": "b13cb9b28931e28b69ed54cab6f049c4705ccc26c890dc47ede75cb11b0933b2"
+      "sha256": "b13cb9b28931e28b69ed54cab6f049c4705ccc26c890dc47ede75cb11b0933b2",
+      "captureDate": "2024-09-17 10:26:15",
+      "captureYear": 2024,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2024-09-17 10:26:15"
+      },
+      "checkedOn": "2026-10-09"
+    },
+    {
+      "id": "gs-gsa014",
+      "file": "/photos/gurdwaras/gs-gsa014.jpg",
+      "title": "Manikaran Gurdwara, a Holy place for Shikhs at Manikaran 01.jpg",
+      "author": "Pinakpani",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manikaran_Gurdwara,_a_Holy_place_for_Shikhs_at_Manikaran_01.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/2/21/Manikaran_Gurdwara%2C_a_Holy_place_for_Shikhs_at_Manikaran_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Named Commons description and locality reviewed against directory entry; Manikaran Gurdwara, a Holy place for Shikhs at Manikaran in Himachal Pradesh",
+      "description": "Manikaran Gurdwara, a Holy place for Shikhs at Manikaran in Himachal Pradesh",
+      "captureDate": "2022-08-20 15:00:26",
+      "captureYear": 2022,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2022-08-20 15:00:26"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "4c7f7e01b3dae8c0efcd2cf8c96944deb6be48ff0fd2b9e52b4ab89fc134eb94"
+    },
+    {
+      "id": "gs-gsa032",
+      "file": "/photos/gurdwaras/gs-gsa032.jpg",
+      "title": "Gurudwara shri garhi sahib Chamkaur sahib - panoramio.jpg",
+      "author": "baljinder kang",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurudwara_shri_garhi_sahib_Chamkaur_sahib_-_panoramio.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Gurudwara_shri_garhi_sahib_Chamkaur_sahib_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Named Commons description and locality reviewed against directory entry; Gurudwara shri garhi sahib Chamkaur sahib",
+      "description": "Gurudwara shri garhi sahib Chamkaur sahib",
+      "captureDate": "22 December 2012",
+      "captureYear": 2012,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "Taken on 22 December 2012"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "5702c9b8f7257a34cd77a92a595509edb461d942ce09e3e9327679bc6ca6c2a6"
+    },
+    {
+      "id": "gs-gsa039",
+      "file": "/photos/gurdwaras/gs-gsa039.jpg",
+      "title": "Gurudwara Shri Data Bandi Chhor Shahib Gwalior 001 (2).jpg",
+      "author": "Suyash Dwivedi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurudwara_Shri_Data_Bandi_Chhor_Shahib_Gwalior_001_(2).jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/0/02/Gurudwara_Shri_Data_Bandi_Chhor_Shahib_Gwalior_001_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Named Commons description and locality reviewed against directory entry; Gurudwara Shri Data Bandi Chhor Shahib Gwalior",
+      "description": "Gurudwara Shri Data Bandi Chhor Shahib Gwalior",
+      "captureDate": "2018-03-09 18:15:53",
+      "captureYear": 2018,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2018-03-09 18:15:53"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "f09f7311726367d283da838407f6d303ad7a855f33e844e0a72a27f931f62324"
+    },
+    {
+      "id": "gs-gsa118",
+      "file": "/photos/gurdwaras/gs-gsa118.jpg",
+      "title": "Gurudwara Jamni Sahib Bazidpur.jpg",
+      "author": "Solomon5",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurudwara_Jamni_Sahib_Bazidpur.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Gurudwara_Jamni_Sahib_Bazidpur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Named Commons description and locality reviewed against directory entry; Gurudwara Jamni Sahib is a Sikh temple located at Bazidpur, Punjab, India",
+      "description": "Gurudwara Jamni Sahib is a Sikh temple located at Bazidpur, Punjab, India",
+      "captureDate": "2012-04-17",
+      "captureYear": 2012,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2012-04-17"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "81a03bf0c223e3f880e328044dc0579cca5eded62b09a7022642a6bf76e46dc7"
+    },
+    {
+      "id": "gs-gsa288",
+      "file": "/photos/gurdwaras/gs-gsa288.jpg",
+      "title": "গুরুদুয়ারা সঙ্গতটোলা.jpg",
+      "author": "অভিজিৎ দাস",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E0%A6%97%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%A6%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A6%BE_%E0%A6%B8%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A6%A4%E0%A6%9F%E0%A7%8B%E0%A6%B2%E0%A6%BE.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/e/e6/%E0%A6%97%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%A6%E0%A7%81%E0%A6%AF%E0%A6%BC%E0%A6%BE%E0%A6%B0%E0%A6%BE_%E0%A6%B8%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A6%A4%E0%A6%9F%E0%A7%8B%E0%A6%B2%E0%A6%BE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Named Commons description and locality reviewed against directory entry; গুরুদুয়ারা সঙ্গতটোলা, ঢাকার বাংলাবাজারে অবস্থিত একটি শিখ উপাসনালয়",
+      "description": "গুরুদুয়ারা সঙ্গতটোলা, ঢাকার বাংলাবাজারে অবস্থিত একটি শিখ উপাসনালয়",
+      "captureDate": "2017-06-21 17:47:45",
+      "captureYear": 2017,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2017-06-21 17:47:45"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "012c618c198c0c6aa33d76167b3a5e99ce5379747b5aa582d71313016786d0af"
+    },
+    {
+      "id": "gs-gsa050",
+      "file": "/photos/gurdwaras/gs-gsa050.jpg",
+      "title": "Gurdwara Nanak Shahi in Dhaka 05.jpg",
+      "author": "Nahid.rajbd",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurdwara_Nanak_Shahi_in_Dhaka_05.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/2/27/Gurdwara_Nanak_Shahi_in_Dhaka_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Named Commons description and locality reviewed against directory entry; This is a photo of a monument in Bangladesh identified by the ID",
+      "description": "This is a photo of a monument in Bangladesh identified by the ID",
+      "captureDate": "2018-09-26 00:57:35",
+      "captureYear": 2018,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2018-09-26 00:57:35"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "a267ba992bde6748de73a9b5bde041ff90719be169dcf784ce781e0e856a1cdc"
+    },
+    {
+      "id": "gs-gsa213",
+      "file": "/photos/gurdwaras/gs-gsa213.jpg",
+      "title": "Gurudwara Palang Sahib, Mandi 01.jpg",
+      "author": "Harvinder Chandigarh",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurudwara_Palang_Sahib,_Mandi_01.jpg",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Gurudwara_Palang_Sahib%2C_Mandi_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Named Commons description and locality reviewed against directory entry; is a Historical Gurudwara of Sikhs in Mandi town of Himachal Pardesh related to tenth Guru Gobind Sdingh .The Gurdwara is also known as Palang Sahab, because the Guru's Bed 'Palang' iis still preserved here.",
+      "description": "is a Historical Gurudwara of Sikhs in Mandi town of Himachal Pardesh related to tenth Guru Gobind Sdingh .The Gurdwara is also known as Palang Sahab, because the Guru's Bed 'Palang' iis still preserved here.",
+      "captureDate": "2019-06-30 13:23:37",
+      "captureYear": 2019,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2019-06-30 13:23:37"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "ded213520dccbbe740a5508b0c18e7195356a2c702e1d60c261327c1eed44e10"
+    },
+    {
+      "id": "gs-gsa295",
+      "file": "/photos/gurdwaras/gs-gsa295.jpg",
+      "title": "Kabul Gurdwara Karte Parwan IMG 0623.JPG",
+      "author": "Singhalong100",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kabul_Gurdwara_Karte_Parwan_IMG_0623.JPG",
+      "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Kabul_Gurdwara_Karte_Parwan_IMG_0623.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "identityEvidence": "Wikidata Q5619965 P18 identifies this photograph of Gurdwara Karte Parwan.",
+      "description": "Inside the Gurdwara Sahib in Karte Parwan, Kabul, Afghanistan",
+      "captureDate": "June 2008",
+      "captureYear": 2008,
+      "captureDateEvidence": {
+        "field": "DateTimeOriginal",
+        "value": "2008-06"
+      },
+      "checkedOn": "2026-10-09",
+      "sha256": "d920ccc7c484fc0cbc5fecd01524c69370910fb7c179654a1c578342ca0c6cfd"
+    }
+  ],
+  "reviewedOn": "2026-10-09",
+  "recencyNote": "Capture dates are from Commons DateTimeOriginal metadata where recorded. Review/upload dates are not capture dates. 2026 photos are labeled individually; other site photos retain their older or unknown dates.",
+  "rejectedCandidates": [
+    {
+      "title": "Gurdwara Bangla Sahib 2026.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurdwara_Bangla_Sahib_2026.jpg",
+      "reason": "Page claims Bangla Sahib, but visual building signage identifies Sis Ganj Sahib. Excluded because the page identity and depicted site conflict."
     }
   ]
 }

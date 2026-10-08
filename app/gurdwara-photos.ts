@@ -1,10 +1,11 @@
 import sources from './gurdwara-photo-sources.json';
 import type {ShrineSymbolTier} from './gurdwara-icons';
 
-export type ShrinePhoto = {id:string;file:string;title:string;author:string;license:string;licenseUrl:string;sourceUrl:string;sha256:string};
+export type ShrinePhoto = {id:string;file:string;title:string;author:string;license:string;licenseUrl:string;sourceUrl:string;sha256:string;captureDate?:string;captureYear?:number;checkedOn?:string};
 export const shrinePhotos = sources.photos as ShrinePhoto[];
 export const photoById = new Map(shrinePhotos.map(photo=>[photo.id,photo]));
-export const photoCreditsUrl = 'https://github.com/PRABHMANNAT/Historic-Panjab/blob/main/app/gurdwara-photo-sources.json';
+export const photoCreditsUrl = 'https://github.com/PRABHMANNAT/OpenCarto/blob/main/app/gurdwara-photo-sources.json';
+export const photoDateLabel=(photo:ShrinePhoto)=>photo.captureDate?'Photo taken '+photo.captureDate:'Photo date unverified';
 const cache = new Map<string,Promise<string>>();
 
 export function photoDataUrl(id:string):Promise<string> {
