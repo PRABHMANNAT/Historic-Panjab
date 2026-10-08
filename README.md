@@ -11,7 +11,7 @@ atlas includes Punjab, Indian states and union territories, neighbouring South
 Asian countries, and documented Tibetan administrative context. Coverage and
 source dates vary; the detailed notes below explain what each layer represents.
 
-[Get started](#run-locally) · [Workspace](#workspace-controls) · [Coverage](#indian-boundary-coverage) · [Developer](#developer) · [License](#license)
+[Get started](#run-locally) · [Map gallery](#map-gallery) · [Workspace](#workspace-controls) · [Coverage](#indian-boundary-coverage) · [Developer](#developer) · [License](#license)
 
 ## What you can do
 
@@ -28,6 +28,50 @@ source dates vary; the detailed notes below explain what each layer represents.
 *An actual application export, rendered as a PNG for this README. Colors illustrate
 regional groupings; they do not encode a statistical measurement. Source credits
 are retained in the image. This is a regional example of the wider atlas.*
+
+## Map gallery
+
+These maps are exported from the studio's bundled boundary layers. Click an image
+to open the full-size version. Colors distinguish administrative areas and do not
+represent population or another statistical measure. All available source areas
+for each illustrated detail level are included; source gaps and historical
+editions are retained. [Gallery counts and provenance](docs/images/gallery-provenance.json).
+
+### Delhi — administrative divisions and municipal detail
+
+| Districts and subdivisions | Historical wards and charges |
+| --- | --- |
+| [![Delhi map showing all 11 source districts and 34 subdivisions](docs/images/delhi-administrative.png)](docs/images/delhi-administrative.png) | [![Delhi map showing 289 historical municipal wards and charges](docs/images/delhi-municipal.png)](docs/images/delhi-municipal.png) |
+| **11 districts · 34 subdivisions** from the LGD-derived 2024 snapshot. | **289 named areas:** 272 MCD wards, 9 NDMC charges and 8 Cantonment charges. |
+
+The administrative example predates Delhi's December 2025 reorganization; the
+municipal example depicts the historical source arrangement, not today's 250 MCD
+wards. Municipal source: OpenCity via Bharatlas, **CC BY-SA 4.0**.
+See [Delhi coverage and source details](#delhi-explorer-finer-detail-and-metro).
+
+### Lahore — division, district and local coverage
+
+| Division and administrative detail | Union-council coverage |
+| --- | --- |
+| [![Lahore Division map with four source districts and 22 retained local units](docs/images/lahore-division.png)](docs/images/lahore-division.png) | [![Lahore Division map with 428 source union-council polygons](docs/images/lahore-local.png)](docs/images/lahore-local.png) |
+| **4 districts · 22 local detail areas:** Lahore, Kasur, Sheikhupura and Nankana Sahib, with the retained tehsil/town-detail layer. | **428 source union-council polygons** across the division, with district outlines for context. |
+
+District outlines and standard tehsils retain WFP/OCHA 2022 geometry. The 22 local
+detail areas include 10 Lahore polygons from an **unverified August 2025 upload**,
+as identified in the app's catalog. Union councils retain the Alhasan Systems/HDX
+source published in 2017. These mixed-edition examples show available source
+coverage, not a certified current local-government register.
+
+### Maharashtra and Andaman & Nicobar Islands
+
+| Maharashtra | Andaman & Nicobar Islands |
+| --- | --- |
+| [![Maharashtra map with all 36 source districts and 360 named subdistrict areas](docs/images/maharashtra.png)](docs/images/maharashtra.png) | [![Andaman and Nicobar Islands map with all three source districts and nine subdistrict areas at their actual geographic positions](docs/images/andaman-nicobar.png)](docs/images/andaman-nicobar.png) |
+| **36 districts · 360 named subdistrict areas.** District colors and finer subdivision borders are shown. | **3 districts · 9 subdistrict areas.** The full island chain retains its actual geographic positions and relative scale. |
+
+Both examples use the LGD-derived 2024 snapshot via Bharatlas. Maharashtra's
+unnamed source record remains excluded. See [Indian boundary coverage](#indian-boundary-coverage)
+for the complete state/UT table and source qualifications.
 
 ## Developer
 

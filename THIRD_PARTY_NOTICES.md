@@ -21,6 +21,11 @@ following third-party materials. Existing copyright notices remain applicable.
 - `docs/images/research-map.png`: a raster preview of an actual application SVG
   export. Its geographic-source attribution is embedded in the image. Example
   colors are illustrative and do not encode a statistical measurement.
+- The six regional gallery PNGs in `docs/images/` are also actual application
+  exports. [Gallery provenance](docs/images/gallery-provenance.json) records their
+  coverage and source-edition notes. Geographic-source credits remain embedded.
+  `delhi-municipal.png` uses OpenCity/Bharatlas historical ward data under
+  **CC BY-SA 4.0**; that license and attribution continue to apply to this preview.
 
 Keep the relevant data and photo credits when sharing exports or redistributing
 assets. Research use is the project's focus; the MIT software license does not

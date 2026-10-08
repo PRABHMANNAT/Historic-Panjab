@@ -1,0 +1,60 @@
+{
+  "generator": "Actual Prabh Map Studio exportMap function, rasterized from its SVG output. No source geometry changes. Colors distinguish areas and do not encode measurements.",
+  "examples": [
+    {
+      "file": "delhi-administrative.png",
+      "title": "Delhi · districts and subdivisions",
+      "counts": {
+        "district": 11,
+        "tehsil": 34
+      },
+      "note": "LGD 2024 source: 11 districts and 34 subdivisions. Does not depict the December 2025 reorganization."
+    },
+    {
+      "file": "delhi-municipal.png",
+      "title": "Delhi · historical municipal detail",
+      "counts": {
+        "uc": 289
+      },
+      "note": "Historical source: 272 MCD wards, 9 NDMC charges and 8 Cantonment charges; not the current 250-ward arrangement."
+    },
+    {
+      "file": "lahore-division.png",
+      "title": "Lahore Division · district and local detail",
+      "counts": {
+        "district": 4,
+        "tehsil": 22,
+        "division": 1
+      },
+      "note": "Four source districts: Lahore, Kasur, Sheikhupura and Nankana Sahib. WFP/OCHA 2022 district and standard tehsil geometry. The 22 local-detail areas include 10 Lahore polygons from an unverified August 2025 upload, as labeled in app/catalog.json. Not a certified current administrative map."
+    },
+    {
+      "file": "lahore-local.png",
+      "title": "Lahore Division · union-council coverage",
+      "counts": {
+        "district": 4,
+        "uc": 428,
+        "division": 1
+      },
+      "note": "Retained Alhasan Systems/HDX 2017-publication union-council coverage; source gaps remain visible. Not a current complete local-government register."
+    },
+    {
+      "file": "maharashtra.png",
+      "title": "Maharashtra · districts and subdistricts",
+      "counts": {
+        "district": 36,
+        "tehsil": 360
+      },
+      "note": "LGD 2024 source: 36 districts and 360 named subdistrict areas; one unnamed source record is excluded."
+    },
+    {
+      "file": "andaman-nicobar.png",
+      "title": "Andaman & Nicobar · administrative detail",
+      "counts": {
+        "district": 3,
+        "tehsil": 9
+      },
+      "note": "LGD 2024 source: 3 districts and 9 named subdistrict areas. Actual geographic positions and relative scale are retained."
+    }
+  ]
+}
