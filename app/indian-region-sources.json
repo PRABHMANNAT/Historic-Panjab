@@ -253,6 +253,13 @@
       "state_lgd": 31,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-puducherry",
+      "name": "Puducherry",
+      "state_lgd": 34,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -749,6 +756,21 @@
     "in-lakshadweep-tehsil": {
       "count": 10,
       "sha256": "8dea3668dd32bd8612e77b4ade9efc22b629e1eed3224bc6cbc9d1e9c1bdc9ab",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-puducherry-region": {
+      "count": 1,
+      "sha256": "92b806b524c36c9eba655e5b3c13c04f0be2ff1aa2164fc6815e3be06b774f32",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-puducherry-district": {
+      "count": 4,
+      "sha256": "a1224e7ea8f67be3ceb89eb2d3b0672b2e5d10884ae86c3e5b68a026a190bb4f",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-puducherry-tehsil": {
+      "count": 8,
+      "sha256": "ae970ec99001c852b0523ad20d4f7a3a50dcbd6fce6e07c08ec5d0b3a204a20f",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
