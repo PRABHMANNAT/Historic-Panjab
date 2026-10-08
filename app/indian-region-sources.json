@@ -48,6 +48,34 @@
         "Gangapurcity"
       ],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-uttar-pradesh",
+      "name": "Uttar Pradesh",
+      "state_lgd": 9,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-uttarakhand",
+      "name": "Uttarakhand",
+      "state_lgd": 5,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-jammu-kashmir",
+      "name": "Jammu & Kashmir",
+      "state_lgd": 1,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 3
+    },
+    {
+      "id": "in-ladakh",
+      "name": "Ladakh",
+      "state_lgd": 37,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 2
     }
   ],
   "layers": {
@@ -109,6 +137,66 @@
     "in-rajasthan-tehsil": {
       "count": 314,
       "sha256": "7b1baf7bd2c45be426b1d70402d558c04b322e176b569beaa478b4fd474627ef",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-uttar-pradesh-region": {
+      "count": 1,
+      "sha256": "83ee7c7c911cb95bda86eaa01a5a2111931040e77a3563bb1a73270b10342c97",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-uttar-pradesh-district": {
+      "count": 75,
+      "sha256": "c18e6da744c181927ae8706052bd332ac99a9ea183dfe5c18e8d80f0361b16ff",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-uttar-pradesh-tehsil": {
+      "count": 316,
+      "sha256": "aa479968337c8170fca112993ce84115b3191888b07e6e170d0ec43a59ada37d",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-uttarakhand-region": {
+      "count": 1,
+      "sha256": "06103bb6f7acca2045674b23ddd332dc225bc0d2b8264fc5ccbbd0370699fb1c",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-uttarakhand-district": {
+      "count": 13,
+      "sha256": "d4a24316ef59717f8b8bbe25b1d88b62595a6339f7a5370ca79ef653aa9a170d",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-uttarakhand-tehsil": {
+      "count": 80,
+      "sha256": "2693d5a6350f61910c065121b4208d92fe6ed0e5a50e62ccacde4785e827f069",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-jammu-kashmir-region": {
+      "count": 1,
+      "sha256": "63f92a148c50440f7bd9e7f5b5f77079e7ad5b3914e8e90ff68b42dfc0ec708f",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-jammu-kashmir-district": {
+      "count": 20,
+      "sha256": "f964a07ecabce7dc10e094ef2e520cbf02d0f8e54b33bda62ae8aac6e9963350",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-jammu-kashmir-tehsil": {
+      "count": 75,
+      "sha256": "8b8a6a5b501bc67693290a5319d380f47818b4c8cb579203d6020e4d512933c8",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-ladakh-region": {
+      "count": 1,
+      "sha256": "e48dbf7c3961e58082a82727b9e54ecc694fd920767c7d1305337450787836c0",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-ladakh-district": {
+      "count": 2,
+      "sha256": "a78b7927ddaa97d31e2e7f4af9076bc697d71466dfce2b8a8ca6f80b17782a8b",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-ladakh-tehsil": {
+      "count": 6,
+      "sha256": "04ca63a289987fd9d16406376313fa1568bf48560e759d053fd5903deef8f9e7",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
