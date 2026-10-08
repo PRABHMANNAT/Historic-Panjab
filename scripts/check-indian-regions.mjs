@@ -9,7 +9,7 @@ const catalog = await readJson('app/catalog.json');
 const manifest = await readJson('app/indian-region-sources.json');
 const byId = new Map(catalog.map(a => [a.id, a]));
 assert.equal(byId.size, catalog.length, 'Catalog IDs must be unique');
-const expected = {'in-haryana': {district: 22, tehsil: 81}, 'in-himachal': {district: 12, tehsil: 123}, 'in-andhra': {district: 26, tehsil: 671}, 'in-rajasthan': {district: 50, tehsil: 314}, 'in-uttar-pradesh': {district: 75, tehsil: 316}, 'in-uttarakhand': {district: 13, tehsil: 80}, 'in-jammu-kashmir': {district: 20, tehsil: 75}, 'in-ladakh': {district: 2, tehsil: 6}, 'in-arunachal': {district: 26, tehsil: 185}, 'in-assam': {district: 35, tehsil: 172}, 'in-bihar': {district: 38, tehsil: 533}, 'in-chhattisgarh': {district: 33, tehsil: 164}, 'in-goa': {district: 2, tehsil: 12}, 'in-gujarat': {district: 33, tehsil: 252}};
+const expected = {'in-haryana': {district: 22, tehsil: 81}, 'in-himachal': {district: 12, tehsil: 123}, 'in-andhra': {district: 26, tehsil: 671}, 'in-rajasthan': {district: 50, tehsil: 314}, 'in-uttar-pradesh': {district: 75, tehsil: 316}, 'in-uttarakhand': {district: 13, tehsil: 80}, 'in-jammu-kashmir': {district: 20, tehsil: 75}, 'in-ladakh': {district: 2, tehsil: 6}, 'in-arunachal': {district: 26, tehsil: 185}, 'in-assam': {district: 35, tehsil: 172}, 'in-bihar': {district: 38, tehsil: 533}, 'in-chhattisgarh': {district: 33, tehsil: 164}, 'in-goa': {district: 2, tehsil: 12}, 'in-gujarat': {district: 33, tehsil: 252}, 'in-jharkhand': {district: 24, tehsil: 270}};
 const ringContains = (p, ring) => {
   let inside = false;
   for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {

@@ -120,6 +120,13 @@
       "state_lgd": 24,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-jharkhand",
+      "name": "Jharkhand",
+      "state_lgd": 20,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -331,6 +338,21 @@
     "in-gujarat-tehsil": {
       "count": 252,
       "sha256": "342255e176dab6d248a9e360d775b121083c21bf80125dc68f5a938077c62c8c",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-jharkhand-region": {
+      "count": 1,
+      "sha256": "a73a1f6f7bc7d932c5d1c6b86dd0eaced1317056b87950bbee988b9095b79a1a",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-jharkhand-district": {
+      "count": 24,
+      "sha256": "e9237f5abc0ff4c0372f7888619fbe04eb4998ccefb741ae2e9c1d2f28dd5906",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-jharkhand-tehsil": {
+      "count": 270,
+      "sha256": "a1a6965b2e45ce076beec83c346d12e4cc1aff5df7cd3f3b7f86d910e2790893",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
