@@ -141,6 +141,13 @@
       "state_lgd": 32,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-madhya-pradesh",
+      "name": "Madhya Pradesh",
+      "state_lgd": 23,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -397,6 +404,21 @@
     "in-kerala-tehsil": {
       "count": 76,
       "sha256": "c201521d8c4506f0fbdee7ad1edf1da87c68f8032f0fcd396b3c8141c44830e2",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-madhya-pradesh-region": {
+      "count": 1,
+      "sha256": "90771895a2c524694da9b440ea5e5b17ff81bd7631dc31b3743c50ae851f8875",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-madhya-pradesh-district": {
+      "count": 52,
+      "sha256": "e1ae0f079c0b9ca45ca1b49848ac1320c2acdf3216869bab54a30f01da2a46de",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-madhya-pradesh-tehsil": {
+      "count": 416,
+      "sha256": "02a22c12e5372380efb4af32d06c755ba1426bb2e3c5c215904fa350e24f140c",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
