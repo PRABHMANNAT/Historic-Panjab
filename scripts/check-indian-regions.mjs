@@ -76,6 +76,18 @@ const model = await import(`data:text/javascript;base64,${Buffer.from(compiled).
 const older = structuredClone(model.initial);
 for (const region of Object.keys(expected)) delete older.regions[region];
 const restored = model.validate(older);
+const legacyKashmir = structuredClone(older);
+delete legacyKashmir.kashmirView;
+assert.equal(model.validate(legacyKashmir).kashmirView, 'separate', 'Older saved files use separate UTs');
+assert.equal(model.validate({...older, kashmirView: 'unknown'}).kashmirView, 'separate');
+const combinedDoc = model.validate({...older, kashmirView: 'combined'});
+assert.equal(combinedDoc.kashmirView, 'combined');
+assert.ok(model.visible(byId.get('kashmir-united'), combinedDoc));
+assert.equal(model.visible(byId.get('kashmir-united'), restored), false);
+for (const region of ['in-jammu-kashmir', 'in-ladakh']) {
+  assert.equal(model.visible(byId.get(region), combinedDoc), false, 'UT outline suppressed in combined view');
+  assert.ok(model.visible(catalog.find(a => a.region === region && a.level === 'district'), combinedDoc), 'Optional district detail remains available');
+}
 for (const region of Object.keys(expected)) {
   assert.deepEqual(restored.regions[region], model.initial.regions[region]);
   restored.regions[region].tehsil = true;
