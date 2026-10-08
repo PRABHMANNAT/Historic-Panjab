@@ -1,13 +1,77 @@
-# Historic Panjab — regional map editor
+# Prabh Map Studio
 
-Explore, color, save, and export real administrative-boundary geometries. Existing Punjab, Pakistan Punjab, selected KP, Islamabad, and Chandigarh layers are preserved.
+![Prabh Map Studio — South Asia research atlas, developed and created by Prabhmannat Singh](docs/images/prabh-map-studio-banner.svg)
+
+**Open-source mapping software for South Asia research.**
+Developed and created by **Prabhmannat Singh (Prabh)**.
+
+Explore real administrative boundaries, build regional comparisons, style maps,
+and export your work for research, education, and geographic exploration. The
+atlas includes Punjab, Indian states and union territories, neighbouring South
+Asian countries, and documented Tibetan administrative context. Coverage and
+source dates vary; the detailed notes below explain what each layer represents.
+
+[Get started](#run-locally) · [Workspace](#workspace-controls) · [Coverage](#indian-boundary-coverage) · [Developer](#developer) · [License](#license)
+
+## What you can do
+
+- **Explore regions:** country, state, district, subdistrict and selected local layers.
+- **Build research views:** individual regions, custom combinations, Tricity and editable Historic Punjab context.
+- **Style your map:** colors, patterns, labels, borders, legends and map backgrounds.
+- **Add context:** cities, rivers, Delhi metro lines and 100 curated gurdwaras, with 57 verified photographs.
+- **Keep and share your work:** local autosave, undo/redo, settings files, and PNG, SVG or JPG exports.
+
+## A map made with the studio
+
+![Regional map of Punjab in India and Pakistan, Haryana, Himachal Pradesh and Chandigarh, exported by Prabh Map Studio with district boundaries and a legend](docs/images/research-map.png)
+
+*An actual application export, rendered as a PNG for this README. Colors illustrate
+regional groupings; they do not encode a statistical measurement. Source credits
+are retained in the image. This is a regional example of the wider atlas.*
+
+## Developer
+
+**Developed and created by Prabhmannat Singh — Prabh.**
+
+Prabh Map Studio is an independent open-source project for research, learning,
+and exploring South Asia through maps.
+
+- Developer: [Prabhmannat Singh on GitHub](https://github.com/PRABHMANNAT)
+- Source code: [PRABHMANNAT/Historic-Panjab](https://github.com/PRABHMANNAT/Historic-Panjab)
+- Feedback and contributions: [GitHub issues](https://github.com/PRABHMANNAT/Historic-Panjab/issues)
+
+The repository keeps its existing `Historic-Panjab` URL. The application is named
+**Prabh Map Studio**. Select the logo or open **Guide** in the app for developer
+information, usage notes, and source attribution.
+
+## License
+
+Application code and original branding are released under the [MIT License](LICENSE),
+Copyright © 2026 Prabhmannat Singh (Prabh). Research is the project's focus; the
+software license also permits other uses under its terms.
+
+Geographic datasets, photographs, basemap imagery, fonts, and dependencies retain
+their own licenses. See [third-party notices](THIRD_PARTY_NOTICES.md),
+[country data licenses](COUNTRY-DATA-LICENSES.txt), [overlay data licenses](OVERLAY-DATA-LICENSES.txt),
+and [individual photograph credits](app/gurdwara-photo-sources.json).
+Retain the relevant attribution when sharing maps or redistributing assets.
+
+Maps reflect their documented source editions and geographic qualifications.
+They are intended to support research and are not certified surveys or a complete
+current administrative register.
 
 ## Run locally
 
 Requires Node.js 22.13 or newer.
 
     npm ci
-    npm run dev -- --port 4545 --host 127.0.0.1
+    npm run build:vercel
+    npm run preview:vercel -- --port 4545 --strictPort --host 127.0.0.1
+
+This serves the static application used by the local preview. For active
+development with the Vinext runtime, use `npm run dev -- --port 4545 --host 127.0.0.1`.
+The static build is also available when the Workers development runtime is
+unavailable on your machine.
 
 Open [localhost:4545](http://localhost:4545/). Select a state from **Explore a region** to enable district and tehsil detail and fit its extent. Layers can also be toggled independently. The Tehsils tab groups source subdistrict units, including tehsils, mandals, taluks, talukas, circles, and other state-specific units. Andhra Pradesh's subdistricts are mandals. Area names appear at closer zooms. Tehsils inherit district colors unless painted individually.
 

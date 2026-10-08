@@ -1,5 +1,5 @@
 {
-  "name": "sites-project",
+  "name": "prabh-map-studio",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -74,5 +74,12 @@
     "vite": "8.0.13",
     "wrangler": "4.92.0"
   },
-  "type": "module"
+  "type": "module",
+  "description": "Open-source South Asia mapping software for research, developed and created by Prabhmannat Singh.",
+  "author": "Prabhmannat Singh (Prabh)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PRABHMANNAT/Historic-Panjab.git"
+  }
 }

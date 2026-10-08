@@ -27,6 +27,26 @@
 .premium-studio .brand {font-size: 17px; letter-spacing: -.55px; gap: 11px;}
 .premium-studio .brand-mark {width: 36px; height: 36px; border-radius: 10px; background: #183d35; box-shadow: inset 0 0 0 1px #ffffff20;}
 .premium-studio .brand small {font-size: 8px; letter-spacing: 2px; margin-top: 3px; color: #7c8882; font-weight: 600;}
+.premium-studio .brand-home {border: 0; padding: 0; background: transparent; text-align: left; color: inherit; flex-shrink: 0;}
+.premium-studio .brand-home:hover {background: transparent; opacity: .85;}
+.premium-studio .brand-home:focus-visible {outline: 2px solid #9ba97a; outline-offset: 6px; border-radius: 6px;}
+.premium-studio .brand-mark svg {width: 100%; height: 100%;}
+.studio-credit {font-size: 10px; color: #647c6a; background: transparent; border: 0; padding: 4px 6px; white-space: nowrap;}
+.studio-about {padding: 24px; margin: 22px 0 28px; border: 1px solid #dce5d6; border-radius: 16px; background: #f5f8f0;}
+.studio-about-heading {display: flex; align-items: center; gap: 15px;}
+.studio-about-heading > svg {width: 56px; height: 56px; flex: none;}
+.studio-about-kicker, .studio-creator > span {font-size: 9px; font-weight: 600; letter-spacing: 1.6px; color: #647d65;}
+.studio-about h2 {font-size: clamp(20px, 4vw, 27px); letter-spacing: -.8px; line-height: 1.25; margin: 5px 0 0; color: #183d35;}
+.studio-about .studio-about-intro {font-size: 15px; line-height: 1.7; margin: 18px 0; color: #3d5945;}
+.studio-creator {border-top: 1px solid #dce5d6; padding-top: 18px; margin-top: 18px;}
+.studio-creator > strong {display: block; font-size: 20px; color: #203f34; margin-top: 7px;}
+.studio-creator strong small {font-size: 11px; font-weight: 500; padding: 4px 8px; border-radius: 6px; background: #e4ecd9; margin-left: 8px; vertical-align: middle;}
+.studio-about-links {display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0;}
+.studio-about-links a {display: inline-flex; padding: 9px 12px; border: 1px solid #d2dfc9; border-radius: 8px; background: white; color: #345e47; font-size: 12px; font-weight: 600; text-decoration: none;}
+.studio-about-links a:hover {background: #eaf0e1;}
+.studio-about .studio-about-note {font-size: 11px; line-height: 1.7; color: #6b7d6d; margin-bottom: 0;}
+@media (max-width: 1050px) {.studio-credit {display: none;}}
+@media (max-width: 540px) {.studio-about {padding: 17px;}.studio-about-heading {gap: 10px;}.studio-about-heading > svg {width: 44px; height: 44px;}.studio-about-kicker {font-size: 7px;}}
 .premium-studio .header-actions {width: auto; gap: 5px; flex-wrap: nowrap;}
 .premium-studio .header-actions button {height: 35px; padding: 0 12px; font-size: 12px; border-radius: 7px; white-space: nowrap;}
 .premium-studio .header-utility {border-color: transparent; background: transparent;}
@@ -271,7 +291,7 @@
   .premium-studio .topbar {height: 56px; min-height: 56px; padding: 0 12px; gap: 8px;}
   .premium-studio .brand {gap: 8px; font-size: 13px; letter-spacing: -.4px;}
   .premium-studio .brand-mark {width: 30px; height: 32px; border-radius: 8px;}
-  .premium-studio .brand-mark svg {width: 19px;}
+  .premium-studio .brand-mark svg {width: 100%; height: 100%;}
   .premium-studio .brand small {font-size: 6px; letter-spacing: 1.3px;}
   .premium-studio .saved, .header-divider {display: none;}
   .premium-studio .header-actions {gap: 2px;}

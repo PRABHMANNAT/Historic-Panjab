@@ -1,4 +1,4 @@
-Historic Panjab overlay datasets
+Prabh Map Studio overlay datasets
 
 Cities and rivers: Natural Earth 1:10m populated places and rivers/lake
 centerlines. Public domain. Source revision, retrieval date, input URLs and
@@ -15,11 +15,14 @@ https://www.openstreetmap.org/copyright
 https://opendatacommons.org/licenses/odbl/1-0/
 https://www.wikidata.org/wiki/Wikidata:Licensing
 Identity/history references are factual SGPC, DSGMC and official district /
-tourism references. No source photographs or extensive text are reproduced.
+tourism references. Photograph provenance is recorded separately below.
 Evidence and site-specific coordinate provenance: app/gurdwara-sources.json.
 Pins are published representative points, not surveyed entrances.
-Featured tiers are editorial. Symbols are original stylized artwork, not
-photographs or exact architectural reconstructions.
+Featured tiers are editorial. Map markers use site photographs where available.
+Photographs retain their individual licenses, authors and source links in
+app/gurdwara-photo-sources.json; the application MIT license does not cover them.
+Rounded marker crops are display adaptations. Credits are included in the Guide
+and exports. See also THIRD_PARTY_NOTICES.md.
 
 Pakistan division geometry: derived exact unions of WFP/OCHA 2022 source
 district geometry, CC BY-IGO. Source edition and attribution retained in
