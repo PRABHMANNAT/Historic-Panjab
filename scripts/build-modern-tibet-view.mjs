@@ -1,0 +1,15 @@
+import clipping from 'polygon-clipping';
+import {extent,labelPoint} from './geojson-utils.mjs';
+import {read,write,hash,collection} from './delhi-source-utils.mjs';
+const regionIds=['cn-tibet','cn-qinghai','cn-sichuan'];
+const input=await Promise.all(regionIds.map(async id=>(await read(`public/data/${id}-region.geojson`)).features[0]));
+const geometry={type:'MultiPolygon',coordinates:clipping.union(...input.map(f=>f.geometry.coordinates))};
+const id='tibet-modern-three';
+const properties={id,name:'Tibet + Qinghai + Sichuan · modern administrative context',region:id,level:'region',parent:'',center:labelPoint(geometry),bbox:extent(geometry),source:'Exact union of cn-atlas / CTAmap 2023 modern province outlines · ISC / MIT · not historical Greater Tibet'};
+const feature={type:'Feature',id,properties,geometry};
+await write(`public/data/${id}-region.geojson`,collection([feature]));await write(`public/data/${id}-region-labels.geojson`,collection([{...feature,geometry:{type:'Point',coordinates:properties.center}}]));
+await write('app/catalog.json',[...(await read('app/catalog.json')).filter(a=>a.id!==id),properties]);
+const manifest=await read('app/neighbour-country-sources.json');
+manifest.views=[{id,name:properties.name,regionIds,bbox:properties.bbox,qualification:'Modern administrative selection only. Tibet AR, all Qinghai and all Sichuan are not the same geography as traditional Ü-Tsang, Amdo and Kham. This is not an exact historical/cultural Greater Tibet boundary or an assertion resolving territorial disputes.',inputs:await Promise.all(regionIds.map(async id=>({file:`${id}-region.geojson`,sha256:await hash(`public/data/${id}-region.geojson`)}))),outputs:await Promise.all(['','-labels'].map(async suffix=>({file:`${id}-region${suffix}.geojson`,sha256:await hash(`public/data/${id}-region${suffix}.geojson`)})))}];
+await write('app/neighbour-country-sources.json',manifest);
+console.log('Built modern three-province union, explicitly distinct from traditional Greater Tibet.');

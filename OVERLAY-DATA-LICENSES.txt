@@ -1,0 +1,28 @@
+Historic Panjab overlay datasets
+
+Cities and rivers: Natural Earth 1:10m populated places and rivers/lake
+centerlines. Public domain. Source revision, retrieval date, input URLs and
+SHA-256 hashes: app/atlas-overlay-sources.json.
+Terms: https://www.naturalearthdata.com/about/terms-of-use/
+These are generalized archival overview data, not municipal boundaries,
+current population statistics or surveyed river channels.
+
+Gurdwara location database: © OpenStreetMap contributors, ODbL 1.0, with
+Wikidata CC0 coordinate contributions; distributed as a combined database
+under ODbL 1.0. Retain attribution and comply with ODbL requirements when
+redistributing modified databases or produced works.
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+https://www.wikidata.org/wiki/Wikidata:Licensing
+Identity/history references are factual SGPC, DSGMC and official district /
+tourism references. No source photographs or extensive text are reproduced.
+Evidence and site-specific coordinate provenance: app/gurdwara-sources.json.
+Pins are published representative points, not surveyed entrances.
+Featured tiers are editorial. Symbols are original stylized artwork, not
+photographs or exact architectural reconstructions.
+
+Pakistan division geometry: derived exact unions of WFP/OCHA 2022 source
+district geometry, CC BY-IGO. Source edition and attribution retained in
+COUNTRY-DATA-LICENSES.txt and app/neighbour-country-sources.json.
+Membership references and supplementary reconciliation evidence are in
+app/pakistan-division-sources.json. No claim of current2026 completeness.

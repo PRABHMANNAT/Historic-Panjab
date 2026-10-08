@@ -1,0 +1,4106 @@
+{
+  "version": 1,
+  "accessedOn": "2026-10-08",
+  "count": 100,
+  "counts": {
+    "takht": 5,
+    "featured": 15,
+    "historic": 80
+  },
+  "selection": "100 named historic or notable Sikh shrines: 5 Takhts, 15 additional editorial featured sites, and 80 historic/notable sites. This is not an objective ranking, a complete register, or a surveyed-location dataset.",
+  "coordinateNotice": "Pins are published representative points or OSM complex centers, not surveyed entrances. Source decimal precision does not establish ground accuracy. Nearby shrines may overlap at small scales.",
+  "iconNotice": "Building icons are original symbolic designs, not exact architectural reconstructions or photographs.",
+  "databaseLicense": "ODbL-1.0",
+  "databaseLicenseURL": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "Gurdwara locations © OpenStreetMap contributors (ODbL 1.0) / Wikidata (CC0). Shrine identities/history: SGPC, DSGMC and official government/tourism sources.",
+  "sources": [
+    {
+      "id": "osm",
+      "name": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright",
+      "license": "ODbL-1.0",
+      "licenseURL": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "coordinateMethod": "Tagged OSM point or Overpass out center bounding-box center, copied without guessed shifts."
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "coordinateMethod": "Published Earth P625 claims; claim IDs and precision retained. Precision is not a surveyed accuracy guarantee."
+    },
+    {
+      "id": "identity",
+      "name": "SGPC, DSGMC and official district/tourism authorities",
+      "url": "https://sgpc.net/gurdwara-sahib-section-85",
+      "license": "Factual identity references; no photographs or lengthy source text reproduced."
+    }
+  ],
+  "coordinateEvidence": [
+    {
+      "id": "gs-akal-takht",
+      "sourceIdentity": "osm:way/845155418",
+      "sourceURL": "https://www.openstreetmap.org/way/845155418",
+      "coordinates": [
+        74.8753881,
+        31.6207025
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 845155418,
+        "center": {
+          "lat": 31.6207025,
+          "lon": 74.8753881
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Sri Akal Takht Sahib",
+          "religion": "sikh",
+          "wikidata": "Q118893",
+          "wikipedia": "en:Akal Takht"
+        }
+      },
+      "rawSha256": "aad23153d775f30de8b19e2cc533a5cf7cb0a803a2c286b49fc7138b5eb8885d"
+    },
+    {
+      "id": "gs-keshgarh-takht",
+      "sourceIdentity": "osm:way/480025122",
+      "sourceURL": "https://www.openstreetmap.org/way/480025122",
+      "coordinates": [
+        76.4989665,
+        31.235057
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 480025122,
+        "center": {
+          "lat": 31.235057,
+          "lon": 76.4989665
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Takht Sri Kesgarh Sahib",
+          "name:pa": "ਤਖਤ ਸ੍ਰੀ ਕੇਸਗੜ੍ਹ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "1902785d9c2730ec9a7ef469baee5f2bc7aa69774a9a3f78a6556a30d9e51fee"
+    },
+    {
+      "id": "gs-patna-takht",
+      "sourceIdentity": "osm:way/771685751",
+      "sourceURL": "https://www.openstreetmap.org/way/771685751",
+      "coordinates": [
+        85.2298141,
+        25.5960628
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 771685751,
+        "center": {
+          "lat": 25.5960628,
+          "lon": 85.2298141
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Takht Shri Harmandir Ji Patna Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "12921c6afb7e42cdf3232ad47def3291cdfdfe2186860c0fee92c3b5f8296128"
+    },
+    {
+      "id": "gs-damdama-takht",
+      "sourceIdentity": "osm:node/11971191271",
+      "sourceURL": "https://www.openstreetmap.org/node/11971191271",
+      "coordinates": [
+        75.0786061,
+        29.9869854
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 11971191271,
+        "lat": 29.9869854,
+        "lon": 75.0786061,
+        "tags": {
+          "addr:city": "Talwandi Sabo",
+          "addr:district": "Bathinda",
+          "addr:postcode": "151302",
+          "amenity": "place_of_worship",
+          "check_date": "2025-12-08",
+          "denomination": "khalsa",
+          "name": "ਤਖਤ ਸ੍ਰੀ ਦਮਦਮਾ ਸਾਹਿਬ ਤਲਵੰਡੀ ਸਾਬੋ",
+          "name:en": "Takht Sri Damdama Sahib Talwandi Sabo",
+          "name:pa": "ਤਖਤ ਸ੍ਰੀ ਦਮਦਮਾ ਸਾਹਿਬ ਤਲਵੰਡੀ ਸਾਬੋ",
+          "religion": "sikh",
+          "wikidata": "Q48375",
+          "wikipedia": "en:Takht Sri Damdama Sahib"
+        }
+      },
+      "rawSha256": "1a362443d300ed10dc2d55bcb729af654964a25170d335bd370a1a2dcb4712b1"
+    },
+    {
+      "id": "gs-hazur-takht",
+      "sourceIdentity": "wd:Q3694968",
+      "sourceURL": "https://www.wikidata.org/wiki/Q3694968",
+      "coordinates": [
+        77.319,
+        19.1528
+      ],
+      "raw": {
+        "id": "Q3694968",
+        "name": "Hazur Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "f155a748602c0e15dc1ca5ce51852cf661c5cae6",
+            "datavalue": {
+              "value": {
+                "latitude": 19.1528,
+                "longitude": 77.319,
+                "altitude": null,
+                "precision": 0.00000277777777778,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q3694968$2308398F-1A38-4823-B8B8-7535B8B6C2CF",
+          "rank": "normal",
+          "references": [
+            {
+              "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+              "snaks": {
+                "P143": [
+                  {
+                    "snaktype": "value",
+                    "property": "P143",
+                    "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                    "datavalue": {
+                      "value": {
+                        "entity-type": "item",
+                        "numeric-id": 328,
+                        "id": "Q328"
+                      },
+                      "type": "wikibase-entityid"
+                    },
+                    "datatype": "wikibase-item"
+                  }
+                ]
+              },
+              "snaks-order": [
+                "P143"
+              ]
+            }
+          ]
+        }
+      },
+      "rawSha256": "80d0ccbc414d845556640fa5ef65283bdb652a0783f0ff2cc026cf604159701e"
+    },
+    {
+      "id": "gs-harmandir-sahib",
+      "sourceIdentity": "osm:way/705233057",
+      "sourceURL": "https://www.openstreetmap.org/way/705233057",
+      "coordinates": [
+        74.8765273,
+        31.6199789
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 705233057,
+        "center": {
+          "lat": 31.6199789,
+          "lon": 74.8765273
+        },
+        "tags": {
+          "alt_name": "Golden Temple",
+          "amenity": "place_of_worship",
+          "building": "gurdwara",
+          "int_name": "Golden Temple",
+          "name": "Shri Harmandir Sahib",
+          "name:ar": "هرمندير صاحب (المعبد الذهبي)",
+          "name:en": "Shri Harmandir Sahib",
+          "name:fa": "دربار صاحب (معبد طلایی)",
+          "name:hi": "श्री हरिमन्दिर साहिब (स्वर्ण मन्दिर)",
+          "name:ml": "ഹർമന്ദർ സാഹിബ് (സുവർണ്ണക്ഷേത്രം)",
+          "name:pa": "ਤਖ਼ਤ ਸ੍ਰੀ ਹਰਿਮੰਦਰ ਸਾਹਿਬ",
+          "name:ru": "Хармандир-Сахиб (Золотой храм)",
+          "name:ta": "ஹர்மந்திர் சாஹிப் (பொற்கோயில்)",
+          "religion": "sikh",
+          "service_times": "24/7",
+          "tourism": "attraction",
+          "wheelchair": "limited",
+          "wikidata": "Q180422",
+          "wikipedia": "en:Golden Temple"
+        }
+      },
+      "rawSha256": "a7e2283795705ca5495be42eec1894d8321eebc7397773fd2bfae66a24760f4d"
+    },
+    {
+      "id": "gs-fatehgarh-sahib",
+      "sourceIdentity": "osm:way/239448731",
+      "sourceURL": "https://www.openstreetmap.org/way/239448731",
+      "coordinates": [
+        76.3935663,
+        30.6530176
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 239448731,
+        "center": {
+          "lat": 30.6530176,
+          "lon": 76.3935663
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Shri Fatehgarh Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "e54d06d9479abfab0d44fc71ed815d124fb206046c988d0c67f0f29bd1414a93"
+    },
+    {
+      "id": "gs-jyoti-sarup-sahib",
+      "sourceIdentity": "wd:Q5619963",
+      "sourceURL": "https://www.wikidata.org/wiki/Q5619963",
+      "coordinates": [
+        76.40461969757787,
+        30.64540656425684
+      ],
+      "raw": {
+        "id": "Q5619963",
+        "name": "Gurdwara Jyoti Sarup",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "80c47d5b190bdc7f9ef4c9309c3eaef67369650b",
+            "datavalue": {
+              "value": {
+                "latitude": 30.64540656425684,
+                "longitude": 76.40461969757787,
+                "altitude": null,
+                "precision": 0.00001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q5619963$881fb3d0-f2a3-4e50-b5e9-e8204fb7bf57",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "3bcebf23b2d0273775eee929c7c468ab0fb45c54e8b9b78c3bdd8589042e9bba"
+    },
+    {
+      "id": "gs-tarn-taran-sahib",
+      "sourceIdentity": "osm:way/146803401",
+      "sourceURL": "https://www.openstreetmap.org/way/146803401",
+      "coordinates": [
+        74.9237718,
+        31.4514882
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 146803401,
+        "center": {
+          "lat": 31.4514882,
+          "lon": 74.9237718
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Sri Darbar Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "22c61d483c56ed4605072a8d034c0161a31a986998654a4fd654f13a0f3e20a4"
+    },
+    {
+      "id": "gs-ber-sahib",
+      "sourceIdentity": "osm:way/549860039",
+      "sourceURL": "https://www.openstreetmap.org/way/549860039",
+      "coordinates": [
+        75.1854698,
+        31.2167689
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 549860039,
+        "center": {
+          "lat": 31.2167689,
+          "lon": 75.1854698
+        },
+        "tags": {
+          "landuse": "religious",
+          "name": "Gurudwara Ber Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "aa085dbdc734be86ff776ed93d1eb672a434e41e6bef3fc7461257e9950fef5b"
+    },
+    {
+      "id": "gs-baoli-goindwal",
+      "sourceIdentity": "osm:way/743529624",
+      "sourceURL": "https://www.openstreetmap.org/way/743529624",
+      "coordinates": [
+        75.1447249,
+        31.3642623
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 743529624,
+        "center": {
+          "lat": 31.3642623,
+          "lon": 75.1447249
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Bauli Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "093a0f4a3131785e06489429207da904697be8d5d9a1d67c5157ba3a3336ba13"
+    },
+    {
+      "id": "gs-kartarpur-sahib",
+      "sourceIdentity": "osm:way/743532013",
+      "sourceURL": "https://www.openstreetmap.org/way/743532013",
+      "coordinates": [
+        75.0165688,
+        32.0871671
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 743532013,
+        "center": {
+          "lat": 32.0871671,
+          "lon": 75.0165688
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "layer": "2",
+          "name": "گردوارہ سری دربار صاحب",
+          "name:ar": "جوردوارا كارتاربور صاحب",
+          "name:de": "Gurdwara Sri Darbar Sahib",
+          "name:en": "Gurdwara Sri Darbar Sahib",
+          "name:es": "Gurdwara Sri Darbar Sahib",
+          "name:fr": "Gurdwara Sri Darbar Sahib",
+          "name:hi": "करतारपुर साहिब गुरुद्वारा",
+          "name:ml": "ഗുരുദ്വാര കർതാർപൂർ സാഹിബ്",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਦਰਬਾਰ ਸਾਹਿਬ ਕਰਤਾਰਪੁਰ",
+          "name:pnb": "گردوارا دربار صاحب کرتارپور",
+          "name:ta": "கர்தார்பூர் தர்பார் சாகிப் குருத்துவார்",
+          "name:th": "คุรุทวาราดรบาร์สาหิบ กรตารปุระ",
+          "name:ur": "گردوارہ سری دربار صاحب",
+          "religion": "sikh",
+          "wikidata": "Q5619951",
+          "wikipedia": "ur:گردوارہ دربار صاحب کرتارپور"
+        }
+      },
+      "rawSha256": "462d57bcdb9cb68247b43c846e56a9abb7a1fe34c2f6a4a7f367f3930795203e"
+    },
+    {
+      "id": "gs-nankana-janam-asthan",
+      "sourceIdentity": "osm:way/633355235",
+      "sourceURL": "https://www.openstreetmap.org/way/633355235",
+      "coordinates": [
+        73.6964522,
+        31.4452827
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 633355235,
+        "center": {
+          "lat": 31.4452827,
+          "lon": 73.6964522
+        },
+        "tags": {
+          "addr:city": "Nankana Sahib",
+          "alt_name": "گردوارہ جنم استھان‎",
+          "amenity": "place_of_worship",
+          "landuse": "religious",
+          "name": "گوردوارہ جنم استھان‎",
+          "name:en": "Gurdwara Janam Asthan",
+          "name:hi": "गुरुद्वारा जनम अस्थान",
+          "name:ml": "ഗുരുദ്വാര ജനമസ്ഥാൻ",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਜਨਮ ਅਸਥਾਨ",
+          "religion": "sikh",
+          "wikidata": "Q3695654"
+        }
+      },
+      "rawSha256": "84ce5ae4e91ea3c63401117cc718c30e080c522c6a9d2aa7e7102291d7bc68d6"
+    },
+    {
+      "id": "gs-panja-sahib",
+      "sourceIdentity": "osm:way/234114449",
+      "sourceURL": "https://www.openstreetmap.org/way/234114449",
+      "coordinates": [
+        72.6890599,
+        33.8203105
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 234114449,
+        "center": {
+          "lat": 33.8203105,
+          "lon": 72.6890599
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Panja Sahib",
+          "religion": "sikh",
+          "wikidata": "Q2619968"
+        }
+      },
+      "rawSha256": "ba40db1b0adf55fbd741dc993e3a470035a490b9e4c00c28cc16cb23fd9743ef"
+    },
+    {
+      "id": "gs-bangla-sahib",
+      "sourceIdentity": "osm:way/839844482",
+      "sourceURL": "https://www.openstreetmap.org/way/839844482",
+      "coordinates": [
+        77.2088277,
+        28.62646
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 839844482,
+        "center": {
+          "lat": 28.62646,
+          "lon": 77.2088277
+        },
+        "tags": {
+          "addr:city": "New Delhi",
+          "addr:postcode": "110001",
+          "addr:street": "Hanuman Road",
+          "amenity": "place_of_worship",
+          "check_date": "2026-03-18",
+          "name": "Sri Bangla Sahib Gurudwara",
+          "name:hi": "श्री बांग्ला साहिब गुरुद्वारा",
+          "name:ru": "Гурудвару Бангла Сахиб",
+          "phone": "+91-11-23340177",
+          "religion": "sikh",
+          "start_date": "1664",
+          "wikidata": "Q2375435",
+          "wikimedia_commons": "Category:Gurudwara Bangla Sahib",
+          "wikipedia": "en:Gurudwara Bangla Sahib",
+          "wikipedia:en": "https://en.wikipedia.org/wiki/Gurdwara_Bangla_Sahib"
+        }
+      },
+      "rawSha256": "f0d2a4290b612269c7e0c6866faf0766d4fb77233f47a3bdae504e29a27e3951"
+    },
+    {
+      "id": "gs-sis-ganj-delhi",
+      "sourceIdentity": "osm:way/265824668",
+      "sourceURL": "https://www.openstreetmap.org/way/265824668",
+      "coordinates": [
+        77.2324212,
+        28.6559559
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 265824668,
+        "center": {
+          "lat": 28.6559559,
+          "lon": 77.2324212
+        },
+        "tags": {
+          "addr:city": "delhi",
+          "addr:postcode": "110006",
+          "addr:street": "Chandni Chowk",
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Sis Ganj Sahib",
+          "name:hi": "गुरुद्वारा सीस गंज साहिब जी",
+          "religion": "sikh",
+          "wikidata": "Q5620491",
+          "wikipedia": "en:Gurdwara Sis Ganj Sahib"
+        }
+      },
+      "rawSha256": "3c84a6e73850b60042e236461c63f0408808d95ffd037822b032df9cdcc1a03f"
+    },
+    {
+      "id": "gs-rakab-ganj-sahib",
+      "sourceIdentity": "osm:way/359804883",
+      "sourceURL": "https://www.openstreetmap.org/way/359804883",
+      "coordinates": [
+        77.2048712,
+        28.6182322
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 359804883,
+        "center": {
+          "lat": 28.6182322,
+          "lon": 77.2048712
+        },
+        "tags": {
+          "addr:city": "New Delhi",
+          "amenity": "place_of_worship",
+          "building": "gurdwara",
+          "name": "Gurdwara Rakab Ganj Sahib",
+          "name:hi": "गुरुद्वारा रकाब गंज साहिब",
+          "religion": "sikh",
+          "website": "https://www.dsgmc.in/DharmParchar/GurdwaraRakabGanjSahib#",
+          "wikidata": "Q5619976",
+          "wikipedia": "en:Gurdwara Rakab Ganj Sahib"
+        }
+      },
+      "rawSha256": "bca046ec0294227b19d785e3d15f9b80477137c5bef33c18c55489898bb39a82"
+    },
+    {
+      "id": "gs-hemkund-sahib",
+      "sourceIdentity": "osm:way/229586717",
+      "sourceURL": "https://www.openstreetmap.org/way/229586717",
+      "coordinates": [
+        79.6152633,
+        30.6993058
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 229586717,
+        "center": {
+          "lat": 30.6993058,
+          "lon": 79.6152633
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Sri Hemkunt Sahib (Hemkunt)",
+          "religion": "sikh",
+          "source": "Bing",
+          "wikidata": "Q8671219",
+          "wikipedia": "en:Gurdwara Hemkund Sahib"
+        }
+      },
+      "rawSha256": "613c9aac81dfed513fa854379b2df8c80dfc18749222b8b8c1afb820a2067a54"
+    },
+    {
+      "id": "gs-paonta-sahib",
+      "sourceIdentity": "osm:way/352005110",
+      "sourceURL": "https://www.openstreetmap.org/way/352005110",
+      "coordinates": [
+        77.6219723,
+        30.4351801
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 352005110,
+        "center": {
+          "lat": 30.4351801,
+          "lon": 77.6219723
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Paonta sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "2cf3d6a28abb4ea56bf00208eeb6b6a9d32af92d62e46a948adce4751b3e881c"
+    },
+    {
+      "id": "gs-nanakmatta-sahib",
+      "sourceIdentity": "wd:Q5619969",
+      "sourceURL": "https://www.wikidata.org/wiki/Q5619969",
+      "coordinates": [
+        79.810688,
+        28.947937
+      ],
+      "raw": {
+        "id": "Q5619969",
+        "name": "Gurdwara Nanak Mata Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "83dd2d9b3f7dbaac1fcda34d19692b7d4c644f6c",
+            "datavalue": {
+              "value": {
+                "latitude": 28.947937,
+                "longitude": 79.810688,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q5619969$96069ffe-4dc7-b32b-68f5-c5bae2994f29",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "095b7650f450221e1c0aea90cadf19ad1b9ccd9d81413404b14ce8029a35b15b"
+    },
+    {
+      "id": "gs-baba-atal-sahib",
+      "sourceIdentity": "osm:node/332084940",
+      "sourceURL": "https://www.openstreetmap.org/node/332084940",
+      "coordinates": [
+        74.8771427,
+        31.6173279
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 332084940,
+        "lat": 31.6173279,
+        "lon": 74.8771427,
+        "tags": {
+          "amenity": "place_of_worship",
+          "height": "45 m",
+          "man_made": "tower",
+          "name": "Gurdwara Baba Atal Rai Sahib Ji",
+          "opening_hours": "Mo-Su 07:00-10:00, 15:00-18:00",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "cb80b712c28b7576a845eebcdee7bf36c0c7bedf90b6e14c4332098ff00d7efa"
+    },
+    {
+      "id": "gs-baba-deep-singh-shaheed",
+      "sourceIdentity": "osm:way/297232674",
+      "sourceURL": "https://www.openstreetmap.org/way/297232674",
+      "coordinates": [
+        74.8804023,
+        31.6130322
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 297232674,
+        "center": {
+          "lat": 31.6130322,
+          "lon": 74.8804023
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "check_date": "2024-04-10",
+          "name": "Gurudwara Shahidan",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "56129a7805907de93d7b3d4f316398b6929f727257e49a3b7dee4952e31c269f"
+    },
+    {
+      "id": "gs-ramsar-amritsar",
+      "sourceIdentity": "osm:way/297232672",
+      "sourceURL": "https://www.openstreetmap.org/way/297232672",
+      "coordinates": [
+        74.8809233,
+        31.6136901
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 297232672,
+        "center": {
+          "lat": 31.6136901,
+          "lon": 74.8809233
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Ramsar Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "ec58084fb932ec23032eba56226f21aae835604aabbf8c965d0aee2f9b7d8227"
+    },
+    {
+      "id": "gs-bibeksar-amritsar",
+      "sourceIdentity": "osm:way/297232670",
+      "sourceURL": "https://www.openstreetmap.org/way/297232670",
+      "coordinates": [
+        74.8810584,
+        31.6151514
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 297232670,
+        "center": {
+          "lat": 31.6151514,
+          "lon": 74.8810584
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "ਗੁਰੂਦੁਆਰਾ ਬਿਬੇਕਸਰ ਸਾਹਿਬ",
+          "name:en": "Gurudwara Bibeksar Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "cf2175b23bf8c459c6fcee6e0112cdcda85adfd5270b6f9f26308799c749be4a"
+    },
+    {
+      "id": "gs-santokhsar-amritsar",
+      "sourceIdentity": "osm:way/102958140",
+      "sourceURL": "https://www.openstreetmap.org/way/102958140",
+      "coordinates": [
+        74.8768711,
+        31.6243124
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 102958140,
+        "center": {
+          "lat": 31.6243124,
+          "lon": 74.8768711
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "check_date": "2023-12-17",
+          "name": "ਗੁਰੂਦੁਆਰਾ ਸੰਤੋਖ ਸਰ",
+          "name:en": "Gurudwara Santokh Sar",
+          "name:hi": "गुरुद्वारा संतोख सर",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "b8c11e0d73d727522cea77b47fb1f986ecd2766f3770487ad026862a3e82c196"
+    },
+    {
+      "id": "gs-guru-ke-mahal",
+      "sourceIdentity": "wd:Q63291549",
+      "sourceURL": "https://www.wikidata.org/wiki/Q63291549",
+      "coordinates": [
+        74.8733125,
+        31.6228125
+      ],
+      "raw": {
+        "id": "Q63291549",
+        "name": "Gurdwara Guru ke mehal",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "02b5e9ff4d8e18e9e294650d16d43854872acdad",
+            "datavalue": {
+              "value": {
+                "latitude": 31.6228125,
+                "longitude": 74.8733125,
+                "altitude": null,
+                "precision": 1e-7,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q63291549$ebc3cd39-4862-184a-06f2-c169f6cf1284",
+          "rank": "normal",
+          "references": [
+            {
+              "hash": "be9642728d8fe48436475636bf5005a74de5302f",
+              "snaks": {
+                "P854": [
+                  {
+                    "snaktype": "value",
+                    "property": "P854",
+                    "hash": "2f5f0b66753c3f6e2360eaba5f7c38a4fa33555a",
+                    "datavalue": {
+                      "value": "https://www.searchgurbani.com/mahan-kosh/view",
+                      "type": "string"
+                    },
+                    "datatype": "url"
+                  }
+                ]
+              },
+              "snaks-order": [
+                "P854"
+              ]
+            }
+          ]
+        }
+      },
+      "rawSha256": "2e8296608054592b8918acda5fa799bb037bf39d12ac5baac2a457c05300f4e8"
+    },
+    {
+      "id": "gs-guru-ki-wadali",
+      "sourceIdentity": "osm:way/644900711",
+      "sourceURL": "https://www.openstreetmap.org/way/644900711",
+      "coordinates": [
+        74.7994642,
+        31.6127773
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 644900711,
+        "center": {
+          "lat": 31.6127773,
+          "lon": 74.7994642
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Guru Ki Wadali",
+          "religion": "sikh",
+          "website": "https://www.sikhiwiki.org/index.php/Guru_Ki_Wadali"
+        }
+      },
+      "rawSha256": "70176bd6ebdbba6a442a93ee5969d42580827a7e601624eca4f8ebdbe4d971f9"
+    },
+    {
+      "id": "gs-chheharta-sahib",
+      "sourceIdentity": "osm:node/3861719763",
+      "sourceURL": "https://www.openstreetmap.org/node/3861719763",
+      "coordinates": [
+        74.7930049,
+        31.6191598
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 3861719763,
+        "lat": 31.6191598,
+        "lon": 74.7930049,
+        "tags": {
+          "addr:city": "Amritsar, Punjab",
+          "addr:postcode": "143105",
+          "addr:street": "Near Chheharta Park",
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Chheharta Sahib",
+          "name:hi": "गुरुद्वारा छेहर्टा साहिब",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਛੇਹਰਟਾ ਸਾਹਿਬ",
+          "religion": "sikh",
+          "website": "https://www.sikhiwiki.org/index.php/Gurudwara_Chheharta_Sahib"
+        }
+      },
+      "rawSha256": "f0ff7c58b86b55f17233939f7079f64878bf88245f214807254bc8c7a574b2ed"
+    },
+    {
+      "id": "gs-bir-baba-buddha",
+      "sourceIdentity": "osm:way/643535974",
+      "sourceURL": "https://www.openstreetmap.org/way/643535974",
+      "coordinates": [
+        74.7747973,
+        31.5129043
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 643535974,
+        "center": {
+          "lat": 31.5129043,
+          "lon": 74.7747973
+        },
+        "tags": {
+          "addr:street": "Baba Budha Ji Marg",
+          "amenity": "place_of_worship",
+          "description": "Historic Sikh Gurudwara (Temple)",
+          "name": "Gurudwara Bir Baba Budha Sahib",
+          "religion": "sikh",
+          "shop": "religion"
+        }
+      },
+      "rawSha256": "1f73a0a44e9cb08b5b620ec315f01343ada26e976fbba270405a114691413a75"
+    },
+    {
+      "id": "gs-guru-ka-bagh-ghukewali",
+      "sourceIdentity": "osm:way/643941721",
+      "sourceURL": "https://www.openstreetmap.org/way/643941721",
+      "coordinates": [
+        74.837923,
+        31.7844836
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 643941721,
+        "center": {
+          "lat": 31.7844836,
+          "lon": 74.837923
+        },
+        "tags": {
+          "addr:city": "Ghukewali",
+          "addr:district": "Amritsar",
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Guru Ka Bagh",
+          "name:pa": "ਗੁਰੂ ਕਾ ਬਾਗ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "b9343e5e816564a353a6f792fd213225c53e7feb9d7ded920e6c91a8668c7071"
+    },
+    {
+      "id": "gs-janam-baba-buddha",
+      "sourceIdentity": "osm:node/2120325965",
+      "sourceURL": "https://www.openstreetmap.org/node/2120325965",
+      "coordinates": [
+        75.0397007,
+        31.7268981
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 2120325965,
+        "lat": 31.7268981,
+        "lon": 75.0397007,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Baba Buda Sahib",
+          "opening_hours": "24/7",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "0f6fa72bbf2d01c6a3c73335bc3ba5a00163445a8e4ba5220d6da5eed475655c"
+    },
+    {
+      "id": "gs-baba-bakala-sahib",
+      "sourceIdentity": "osm:node/10554391359",
+      "sourceURL": "https://www.openstreetmap.org/node/10554391359",
+      "coordinates": [
+        75.2644088,
+        31.555186
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 10554391359,
+        "lat": 31.555186,
+        "lon": 75.2644088,
+        "tags": {
+          "addr:city": "Baba Bakala",
+          "addr:postcode": "143202",
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Shri Guru Teg Bahadur Ji, Baba Bakala Sahib ਗੁਰੂਦੁਆਰਾ ਸ਼੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦੁਰ ਜੀ, ਬਾਬਾ ਬਕਾਲਾ ਸਾਹਿਬ",
+          "name:pa": "ਗੁਰੂਦੁਆਰਾ ਸ਼੍ਰੀ ਗੁਰੂ ਤੇਗ ਬਹਾਦੁਰ ਜੀ, ਬਾਬਾ ਬਕਾਲਾ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "d47481b49e54c3ccf64945437a5ae1be0b5616b8bce6689877e789d1c9f99b2b"
+    },
+    {
+      "id": "gs-sann-sahib",
+      "sourceIdentity": "wd:Q69872507",
+      "sourceURL": "https://www.wikidata.org/wiki/Q69872507",
+      "coordinates": [
+        74.772688,
+        31.577312
+      ],
+      "raw": {
+        "id": "Q69872507",
+        "name": "Gurdwara Sann Sahib Basarke Gillan",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "940b159b244e383dfa09c5ce2695144bf90019d7",
+            "datavalue": {
+              "value": {
+                "latitude": 31.577312,
+                "longitude": 74.772688,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q69872507$c371456e-44df-0403-c326-685f38aa1dcd",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "4cba90aac0c1682d4df73ce271e4f1f6157b17c00c5fabdd01599149c51f5207"
+    },
+    {
+      "id": "gs-gurusar-rupana",
+      "sourceIdentity": "osm:way/624434233",
+      "sourceURL": "https://www.openstreetmap.org/way/624434233",
+      "coordinates": [
+        74.5265818,
+        30.4076083
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 624434233,
+        "center": {
+          "lat": 30.4076083,
+          "lon": 74.5265818
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Gurushar Sahib, Patshahi 10, Rupana",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਗੁਰੂਸਰ ਸਾਹਿਬ, ਪਾਤਸ਼ਾਹੀ ੧੦, ਰੁਪਾਣਾ",
+          "religion": "sikh",
+          "source": "DigitalGlobe-Standard"
+        }
+      },
+      "rawSha256": "35c71bf5efac3c2e52382db251583da78fca574e18001e043761567bf3535487"
+    },
+    {
+      "id": "gs-dera-baba-nanak",
+      "sourceIdentity": "osm:way/199784600",
+      "sourceURL": "https://www.openstreetmap.org/way/199784600",
+      "coordinates": [
+        75.0265978,
+        32.0338217
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 199784600,
+        "center": {
+          "lat": 32.0338217,
+          "lon": 75.0265978
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "ਸ੍ਰੀ ਦਰਬਾਰ ਸਾਹਿਬ, ਡੇਰਾ ਬਾਬਾ ਨਾਨਕ",
+          "name:en": "Sri Darbar Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "fc5425b8f51ad566d982583f25de5264d6fa2e06fad4bad9357cfd8ebd6dceec"
+    },
+    {
+      "id": "gs-burj-dhariwal",
+      "sourceIdentity": "osm:way/1518010072",
+      "sourceURL": "https://www.openstreetmap.org/way/1518010072",
+      "coordinates": [
+        75.3334196,
+        31.9504337
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 1518010072,
+        "center": {
+          "lat": 31.9504337,
+          "lon": 75.3334196
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Burj Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਬੁਰਜ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "ddc7f9a966dd41859d71625238d38e0fdd1800605d835cd5244ad2933511ae53"
+    },
+    {
+      "id": "gs-kandh-sahib",
+      "sourceIdentity": "wd:Q114166085",
+      "sourceURL": "https://www.wikidata.org/wiki/Q114166085",
+      "coordinates": [
+        75.2039808,
+        31.8068385
+      ],
+      "raw": {
+        "id": "Q114166085",
+        "name": "Gurudwara Kandh Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "50e9da33087d96bccfcc05457ce28c4d347c8c4d",
+            "datavalue": {
+              "value": {
+                "latitude": 31.8068385,
+                "longitude": 75.2039808,
+                "altitude": null,
+                "precision": 1e-7,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q114166085$edc5b166-43b0-b3a9-3252-7d4ff2510d36",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "fa74501a9efdd3a5d76031962ad9bc71a0385a35f493064091ca74a308ca7f5a"
+    },
+    {
+      "id": "gs-patalpuri-sahib",
+      "sourceIdentity": "osm:way/646909969",
+      "sourceURL": "https://www.openstreetmap.org/way/646909969",
+      "coordinates": [
+        76.5628598,
+        31.1777146
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 646909969,
+        "center": {
+          "lat": 31.1777146,
+          "lon": 76.5628598
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Patal Puri Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "3b3ea2364d1b8c2cfe68e000760d77d4ee746dc4a9d28cfd190d8ffab7bbaf08"
+    },
+    {
+      "id": "gs-charan-kamal-kiratpur",
+      "sourceIdentity": "osm:way/646320321",
+      "sourceURL": "https://www.openstreetmap.org/way/646320321",
+      "coordinates": [
+        76.5663761,
+        31.1875445
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 646320321,
+        "center": {
+          "lat": 31.1875445,
+          "lon": 76.5663761
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Charan Kamal",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "e07f230d6058be38194ea62b9b6db9e32e3f9b4b2346a90ddebac7d5fd6ef1bd"
+    },
+    {
+      "id": "gs-sisganj-anandpur",
+      "sourceIdentity": "osm:node/4729505125",
+      "sourceURL": "https://www.openstreetmap.org/node/4729505125",
+      "coordinates": [
+        76.4981358,
+        31.237367
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 4729505125,
+        "lat": 31.237367,
+        "lon": 76.4981358,
+        "tags": {
+          "addr:city": "Anandpur Sahib",
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Sisganj sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "c1c127d8d77d1413276ae4a698daeb23baaabcd2122564703289eeb759694e5a"
+    },
+    {
+      "id": "gs-anandgarh-sahib",
+      "sourceIdentity": "osm:way/480025123",
+      "sourceURL": "https://www.openstreetmap.org/way/480025123",
+      "coordinates": [
+        76.5051337,
+        31.2315213
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 480025123,
+        "center": {
+          "lat": 31.2315213,
+          "lon": 76.5051337
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Killa Anandgarh Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਕਿਲ੍ਹਾ ਅਨੰਦਗੜ੍ਹ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "66ca8ffb7f739189d3dd0afda87e5d59c85b20985dd9ec575856525d762d2640"
+    },
+    {
+      "id": "gs-khadoor-darbar-sahib",
+      "sourceIdentity": "osm:way/1515590759",
+      "sourceURL": "https://www.openstreetmap.org/way/1515590759",
+      "coordinates": [
+        75.0991323,
+        31.4252746
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 1515590759,
+        "center": {
+          "lat": 31.4252746,
+          "lon": 75.0991323
+        },
+        "tags": {
+          "alt_name": "Gurdwara Sri Angeetha Sahib;Gurdwara Sri Angitha Sahib",
+          "alt_name:pa": "ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਅੰਗੀਠਾ ਸਾਹਿਬ",
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Sri Darbar Sahib Khadoor Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ 'ਸ੍ਰੀ ਦਰਬਾਰ ਸਾਹਿਬ' ਖਡੂਰ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "337bf82f092dfe0c73c7989f7d2a7aa0d7a5c58fb649bd4263751623ca703729"
+    },
+    {
+      "id": "gs-katalgarh-sahib",
+      "sourceIdentity": "osm:way/366390453",
+      "sourceURL": "https://www.openstreetmap.org/way/366390453",
+      "coordinates": [
+        76.4128502,
+        30.8981021
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 366390453,
+        "center": {
+          "lat": 30.8981021,
+          "lon": 76.4128502
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Sri Katalgarh Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਸ੍ਰੀ ਕਤਲਗੜ੍ਹ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "3a8ebe4d0e709bd2fbef8629799e665ae9822b4100c83b9e1de3946bfb1ad400"
+    },
+    {
+      "id": "gs-parivar-vichora-sahib",
+      "sourceIdentity": "osm:way/644575664",
+      "sourceURL": "https://www.openstreetmap.org/way/644575664",
+      "coordinates": [
+        76.5925987,
+        31.0599731
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 644575664,
+        "center": {
+          "lat": 31.0599731,
+          "lon": 76.5925987
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Pairvaar Vichora Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਪਰਿਵਾਰ ਵਿਛੋੜਾ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "1564a1b5f73a15df0620dc4e906e60c08573dd45ba620911f8c0ad465c27df89"
+    },
+    {
+      "id": "gs-bhatha-sahib",
+      "sourceIdentity": "osm:node/11802450279",
+      "sourceURL": "https://www.openstreetmap.org/node/11802450279",
+      "coordinates": [
+        76.5345088,
+        30.9500985
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 11802450279,
+        "lat": 30.9500985,
+        "lon": 76.5345088,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Batha Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਭੱਠਾ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "8a843a76ca8930ad3231c62a980a5fd701f9b7617fa3433c9d71f3c5c5d510ce"
+    },
+    {
+      "id": "gs-charan-kanwal-machhiwara",
+      "sourceIdentity": "osm:way/646575672",
+      "sourceURL": "https://www.openstreetmap.org/way/646575672",
+      "coordinates": [
+        76.211114,
+        30.9146409
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 646575672,
+        "center": {
+          "lat": 30.9146409,
+          "lon": 76.211114
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Charan Kanwal Sahib Machhiwara",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਚਰਨ ਕੰਵਲ ਸਾਹਿਬ ਮਾਛੀਵਾੜਾ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "fee7f2d074cbb50854119dd005c23680f28c5e8be5269e25cb56567a16c6b1b3"
+    },
+    {
+      "id": "gs-jand-bir-guru",
+      "sourceIdentity": "osm:way/368305361",
+      "sourceURL": "https://www.openstreetmap.org/way/368305361",
+      "coordinates": [
+        76.3644561,
+        30.9137815
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 368305361,
+        "center": {
+          "lat": 30.9137815,
+          "lon": 76.3644561
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Jand Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਜੰਡ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "37a96110d01261e6ce2f0014a3a97827b8ca47c05e390d9a9f57bbeeb9e56864"
+    },
+    {
+      "id": "gs-chubara-machhiwara",
+      "sourceIdentity": "osm:way/646575678",
+      "sourceURL": "https://www.openstreetmap.org/way/646575678",
+      "coordinates": [
+        76.2019518,
+        30.9165852
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 646575678,
+        "center": {
+          "lat": 30.9165852,
+          "lon": 76.2019518
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Chubara Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਚੁਬਾਰਾ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "517c851793ef05f361ead70a3b2bb8ace2f67f7f0551bab9add801e7c470d13c"
+    },
+    {
+      "id": "gs-manji-alamgir",
+      "sourceIdentity": "wd:Q65666116",
+      "sourceURL": "https://www.wikidata.org/wiki/Q65666116",
+      "coordinates": [
+        75.862437,
+        30.810688
+      ],
+      "raw": {
+        "id": "Q65666116",
+        "name": "Gurdwara Manji Sahib Patshahi 10 Alamgir",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "e78f69c0ef64d3ec7fe72f8610046c21ab3706c7",
+            "datavalue": {
+              "value": {
+                "latitude": 30.810688,
+                "longitude": 75.862437,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q65666116$5deeeb28-44f0-8c48-f8eb-d16478c63a09",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "4abf5cad0019e2aa0ebccc6abfb7be205067dd7ac780b22f5e4f417ddca8a9f8"
+    },
+    {
+      "id": "gs-degsar-katana",
+      "sourceIdentity": "osm:node/2907517401",
+      "sourceURL": "https://www.openstreetmap.org/node/2907517401",
+      "coordinates": [
+        76.0727424,
+        30.8334262
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 2907517401,
+        "lat": 30.8334262,
+        "lon": 76.0727424,
+        "tags": {
+          "addr:city": "Sahnewal",
+          "addr:street": "Ropar-Doraha Road",
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Degsar Sahib (Katana)",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਦੇਗਸਰ ਸਾਹਿਬ (ਕਟਾਣਾ)",
+          "religion": "sikh",
+          "source": "Local"
+        }
+      },
+      "rawSha256": "d8ac7c6fdce13df1b7bbdf6b5c69afaab4ef47dd8fab92edec3caee5c989d9a0"
+    },
+    {
+      "id": "gs-tahliana-raikot",
+      "sourceIdentity": "osm:way/131761273",
+      "sourceURL": "https://www.openstreetmap.org/way/131761273",
+      "coordinates": [
+        75.5896016,
+        30.6571865
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 131761273,
+        "center": {
+          "lat": 30.6571865,
+          "lon": 75.5896016
+        },
+        "tags": {
+          "addr:city": "Raikot",
+          "addr:postcode": "141109",
+          "addr:street": "Gurudwara Tahliana Sahib Road",
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Tahliana Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਟਾਹਲੀਆਣਾ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "0693edd9b599c432a2737610a69d6c3d11378e7cdff5d7e72b6583df789574ff"
+    },
+    {
+      "id": "gs-gurusar-sudhar",
+      "sourceIdentity": "osm:node/1436106543",
+      "sourceURL": "https://www.openstreetmap.org/node/1436106543",
+      "coordinates": [
+        75.6406451,
+        30.777028
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 1436106543,
+        "lat": 30.777028,
+        "lon": 75.6406451,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Patshahi 6v Gurusar Sudhar",
+          "religion": "sikh",
+          "source": "local knowledge"
+        }
+      },
+      "rawSha256": "813cd05fd68ab3deabafc244d17ee7d9e021c1b6ddea63e06404c44b0975d8c2"
+    },
+    {
+      "id": "gs-mehdiana-sahib",
+      "sourceIdentity": "osm:way/260116527",
+      "sourceURL": "https://www.openstreetmap.org/way/260116527",
+      "coordinates": [
+        75.426319,
+        30.6739668
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 260116527,
+        "center": {
+          "lat": 30.6739668,
+          "lon": 75.426319
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "denomination": "sikhism",
+          "name": "Gurudwara Mehdiana Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਮਹਿਦੀਆਣਾ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "d8fa8eddb961548f5763a367b3ba2b39c90c672a8c3421983dbab5eaf9472717"
+    },
+    {
+      "id": "gs-karamsar-rara",
+      "sourceIdentity": "osm:node/928535151",
+      "sourceURL": "https://www.openstreetmap.org/node/928535151",
+      "coordinates": [
+        75.9471074,
+        30.7275663
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 928535151,
+        "lat": 30.7275663,
+        "lon": 75.9471074,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Karamsar RARA SAHIB",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "1ac0bba18358f2894b42145447825d72176d57c4fd56697ee4f0462883ba65a2"
+    },
+    {
+      "id": "gs-haji-ratan-sahib",
+      "sourceIdentity": "osm:way/772302551",
+      "sourceURL": "https://www.openstreetmap.org/way/772302551",
+      "coordinates": [
+        74.9448077,
+        30.1956992
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 772302551,
+        "center": {
+          "lat": 30.1956992,
+          "lon": 74.9448077
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Hazi Ratan Gurudwara",
+          "name:hi": "हाज़ी रतन गुरुद्वारा",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "74eaa4800af543a30c213bb0c3396f6b957f22b574e91127a49480e1c4ce5120"
+    },
+    {
+      "id": "gs-likhansar-sahib",
+      "sourceIdentity": "osm:node/13361070099",
+      "sourceURL": "https://www.openstreetmap.org/node/13361070099",
+      "coordinates": [
+        75.0792871,
+        29.9877091
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 13361070099,
+        "lat": 29.9877091,
+        "lon": 75.0792871,
+        "tags": {
+          "amenity": "place_of_worship",
+          "check_date": "2025-12-08",
+          "name": "ਗੁਰਦੁਆਰਾ ਲਿਖਣਸਰ ਸਾਹਿਬ",
+          "religion": "sikh",
+          "wikidata": "Q28180146",
+          "wikipedia": "en:Gurdwara Likhansar Sahib"
+        }
+      },
+      "rawSha256": "139db47ec1865ea5e9a88bf78d55d461172b960072e14666b139fef085c34c7d"
+    },
+    {
+      "id": "gs-jandsar-talwandi",
+      "sourceIdentity": "osm:way/1457103663",
+      "sourceURL": "https://www.openstreetmap.org/way/1457103663",
+      "coordinates": [
+        75.0795899,
+        29.9922649
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 1457103663,
+        "center": {
+          "lat": 29.9922649,
+          "lon": 75.0795899
+        },
+        "tags": {
+          "addr:city": "Talwandi Sabo",
+          "addr:district": "Bathinda",
+          "addr:postcode": "151302",
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Jandsar Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "3427878d9170e441b07ebfb98359016bc1b0533267856f2fa8f621bc7a150a51"
+    },
+    {
+      "id": "gs-tuti-gandi-sahib",
+      "sourceIdentity": "osm:way/400687410",
+      "sourceURL": "https://www.openstreetmap.org/way/400687410",
+      "coordinates": [
+        74.5153856,
+        30.4733127
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 400687410,
+        "center": {
+          "lat": 30.4733127,
+          "lon": 74.5153856
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Tuti Gandi Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "ef42481b69c40239a74148acbf05f79ca15f31f963b2972db44d43f800537b7a"
+    },
+    {
+      "id": "gs-guptsar-sahib",
+      "sourceIdentity": "osm:way/639993961",
+      "sourceURL": "https://www.openstreetmap.org/way/639993961",
+      "coordinates": [
+        74.6817407,
+        30.315131
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 639993961,
+        "center": {
+          "lat": 30.315131,
+          "lon": 74.6817407
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Guptsar Sahib, Chhattiana",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਗੁਪਤਸਰ ਸਾਹਿਬ, ਛਤਿਆਣਾ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "bd727829669559e470e6c6ea61c5b8b9f2afa1b5746a3ca512fa9352e56b131d"
+    },
+    {
+      "id": "gs-gangsar-jaito",
+      "sourceIdentity": "osm:way/562420721",
+      "sourceURL": "https://www.openstreetmap.org/way/562420721",
+      "coordinates": [
+        74.8872078,
+        30.4515593
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 562420721,
+        "center": {
+          "lat": 30.4515593,
+          "lon": 74.8872078
+        },
+        "tags": {
+          "addr:city": "Jaito",
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Gangsar Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "56d621fb0255f8b598f2ed7270fe04a16c02ffd836f68310cbbe50e7d2b42e73"
+    },
+    {
+      "id": "gs-jand-sahib",
+      "sourceIdentity": "osm:node/7007844128",
+      "sourceURL": "https://www.openstreetmap.org/node/7007844128",
+      "coordinates": [
+        74.5270926,
+        30.6895608
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 7007844128,
+        "lat": 30.6895608,
+        "lon": 74.5270926,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Jand sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "c94eda489a30bd759afd2cc131bbbd2906b3b7f4e089ff3c4dff47a54c11702c"
+    },
+    {
+      "id": "gs-guru-ki-dhab",
+      "sourceIdentity": "osm:node/7085631966",
+      "sourceURL": "https://www.openstreetmap.org/node/7085631966",
+      "coordinates": [
+        74.8665379,
+        30.4956408
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 7085631966,
+        "lat": 30.4956408,
+        "lon": 74.8665379,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Guru ki dhab",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਗੁਰੂ ਕੀ ਢਾਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "fa21aa4b4a6acf22e4006adbdbd7ebab501d2513bfe28155c345dd54f29cd419"
+    },
+    {
+      "id": "gs-guru-ka-bagh-sultanpur",
+      "sourceIdentity": "osm:way/549861012",
+      "sourceURL": "https://www.openstreetmap.org/way/549861012",
+      "coordinates": [
+        75.1986053,
+        31.2149654
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 549861012,
+        "center": {
+          "lat": 31.2149654,
+          "lon": 75.1986053
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Guru Ka Bagh",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "43667e6bbaa5516e55621a9ce9d56af5022c2a47415749a1b8c78eb30369d45b"
+    },
+    {
+      "id": "gs-lohgarh-dina",
+      "sourceIdentity": "osm:node/6738072059",
+      "sourceURL": "https://www.openstreetmap.org/node/6738072059",
+      "coordinates": [
+        75.2139527,
+        30.4806994
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 6738072059,
+        "lat": 30.4806994,
+        "lon": 75.2139527,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Sri Darbar Jafarnama Sahib",
+          "name:pa": "ਸ੍ਰੀ ਦਰਬਾਰ ਜ਼ਫ਼ਰਨਾਮਾ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "e0493a7b69ba2345f1230aac92ad9a80fa5522ad78abc5612a1a3f408947c92a"
+    },
+    {
+      "id": "gs-nanaksar-takhtupura",
+      "sourceIdentity": "osm:node/12074604193",
+      "sourceURL": "https://www.openstreetmap.org/node/12074604193",
+      "coordinates": [
+        75.3362092,
+        30.5830178
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 12074604193,
+        "lat": 30.5830178,
+        "lon": 75.3362092,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Takhtupura Sahib",
+          "name:pa": "ਗੁਰਦੁਆਰਾ ਤਖ਼ਤੂਪੁਰਾ ਸਾਹਿਬ",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "71386bf7c39ac1a14feb45100caf745f00ff5cc64dfc53a91ddbe7a855ebd78b"
+    },
+    {
+      "id": "gs-hatt-sahib",
+      "sourceIdentity": "wd:Q66646000",
+      "sourceURL": "https://www.wikidata.org/wiki/Q66646000",
+      "coordinates": [
+        75.191312,
+        31.212438
+      ],
+      "raw": {
+        "id": "Q66646000",
+        "name": "Gurdwara Hatt Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "2596badff0b2542a020ea41f5202a3faec142c16",
+            "datavalue": {
+              "value": {
+                "latitude": 31.212438,
+                "longitude": 75.191312,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q66646000$d159c08b-40b0-9406-6f76-1f50cd8fc1d9",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "69d1fd9d2114e9a7b647299b9d8a29a35cb9e1f4c9cbc57eb026c8f5aaf905fc"
+    },
+    {
+      "id": "gs-baba-gandha-barnala",
+      "sourceIdentity": "osm:node/1305369976",
+      "sourceURL": "https://www.openstreetmap.org/node/1305369976",
+      "coordinates": [
+        75.5478482,
+        30.3796636
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 1305369976,
+        "lat": 30.3796636,
+        "lon": 75.5478482,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Baba Gandha singh Gurudwara",
+          "opening_hours": "24/7",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "38b4fc7162f8ea5ea9a35043b3535cab989fc48dccb0d84c3aa83fba31aa3cba"
+    },
+    {
+      "id": "gs-dukh-nivaran-patiala",
+      "sourceIdentity": "osm:way/332516383",
+      "sourceURL": "https://www.openstreetmap.org/way/332516383",
+      "coordinates": [
+        76.3965738,
+        30.3469975
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 332516383,
+        "center": {
+          "lat": 30.3469975,
+          "lon": 76.3965738
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "check_date": "2023-09-01",
+          "name": "Gurudwara Dukh Niwarn Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "e4183b51201071d5328cfdcbb1ab7cee98c77d2ee845a5ac9013002fe0d80ebf"
+    },
+    {
+      "id": "gs-bahadurgarh-sahib",
+      "sourceIdentity": "osm:node/3431050295",
+      "sourceURL": "https://www.openstreetmap.org/node/3431050295",
+      "coordinates": [
+        76.4679647,
+        30.3679985
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 3431050295,
+        "lat": 30.3679985,
+        "lon": 76.4679647,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Bahadurgarh Patshahi Nauvi",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "35539f05db21727aff86b01e3d7b59ef7936df477add24fdf48eb952230b245d"
+    },
+    {
+      "id": "gs-nabha-sahib",
+      "sourceIdentity": "wd:Q141408841",
+      "sourceURL": "https://www.wikidata.org/wiki/Q141408841",
+      "coordinates": [
+        76.7980341,
+        30.6349673
+      ],
+      "raw": {
+        "id": "Q141408841",
+        "name": "Gurdwara Nabha Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "acc99b285f55edcf1c8708dd6fce0d49e87bf027",
+            "datavalue": {
+              "value": {
+                "latitude": 30.6349673,
+                "longitude": 76.7980341,
+                "altitude": null,
+                "precision": 1e-7,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q141408841$99eea179-40a6-7351-93ea-01436fee1f67",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "a23fdcadd61944f2b8da28fd99357044ab6b8a3a5cdbc117705dc618d36799ed"
+    },
+    {
+      "id": "gs-moti-bagh-patiala",
+      "sourceIdentity": "osm:node/4687188486",
+      "sourceURL": "https://www.openstreetmap.org/node/4687188486",
+      "coordinates": [
+        76.3894383,
+        30.3107668
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 4687188486,
+        "lat": 30.3107668,
+        "lon": 76.3894383,
+        "tags": {
+          "addr:city": "Patiala",
+          "addr:postcode": "147001",
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Shri Moti Bagh Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "eecb55422cf75313a81b23321dc458d5ba5e26348d6133dd18d562f1801dd152"
+    },
+    {
+      "id": "gs-amb-sahib",
+      "sourceIdentity": "osm:way/1531425880",
+      "sourceURL": "https://www.openstreetmap.org/way/1531425880",
+      "coordinates": [
+        76.732477,
+        30.699148
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 1531425880,
+        "center": {
+          "lat": 30.699148,
+          "lon": 76.732477
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Amb Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "3f989edf550984cef869fe191f39c2c02f00d8935dbd679fb3019c33eb7fc23f"
+    },
+    {
+      "id": "gs-nada-sahib",
+      "sourceIdentity": "osm:way/696661513",
+      "sourceURL": "https://www.openstreetmap.org/way/696661513",
+      "coordinates": [
+        76.8808968,
+        30.6941974
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 696661513,
+        "center": {
+          "lat": 30.6941974,
+          "lon": 76.8808968
+        },
+        "tags": {
+          "addr:city": "Panchkula",
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Nada Sahib",
+          "religion": "sikh",
+          "wikidata": "Q6957398",
+          "wikimedia_commons": "Category:Nada_Sahib",
+          "wikipedia": "en:Nada Sahib"
+        }
+      },
+      "rawSha256": "6d3e4c1883a674212630aaaab0b022b45ab0b6a2dd536bea9234a78eb024c081"
+    },
+    {
+      "id": "gs-panjokhra-sahib",
+      "sourceIdentity": "wd:Q96187462",
+      "sourceURL": "https://www.wikidata.org/wiki/Q96187462",
+      "coordinates": [
+        76.8476,
+        30.4084
+      ],
+      "raw": {
+        "id": "Q96187462",
+        "name": "Gurudwara Panjokhra Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "1a204dc4aeb7fd9c3da2b8043cb683c4a65b617a",
+            "datavalue": {
+              "value": {
+                "latitude": 30.4084,
+                "longitude": 76.8476,
+                "altitude": null,
+                "precision": 0.0001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q96187462$833f3677-47f7-9f07-e491-d442cd6c57dc",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "a4dba696e8a1f007df0ce852f6d26f41dc561cc003acd99069d674b2946113ec"
+    },
+    {
+      "id": "gs-manji-ambala",
+      "sourceIdentity": "osm:way/290690658",
+      "sourceURL": "https://www.openstreetmap.org/way/290690658",
+      "coordinates": [
+        76.7708677,
+        30.3920737
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 290690658,
+        "center": {
+          "lat": 30.3920737,
+          "lon": 76.7708677
+        },
+        "tags": {
+          "addr:city": "Ambala",
+          "addr:country": "IN",
+          "addr:state": "Haryana",
+          "amenity": "place_of_worship",
+          "name": "Baoli Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "b043a60bb6fa60786235ecc149d734fb83f4e5e80d419c4a723a69206565cba0"
+    },
+    {
+      "id": "gs-manji-karnal",
+      "sourceIdentity": "wd:Q25624734",
+      "sourceURL": "https://www.wikidata.org/wiki/Q25624734",
+      "coordinates": [
+        76.99019444444444,
+        29.682472222222223
+      ],
+      "raw": {
+        "id": "Q25624734",
+        "name": "Gurdwara Manji Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "1b86536550a6180ac1bf37be011cb47e50708637",
+            "datavalue": {
+              "value": {
+                "latitude": 29.682472222222223,
+                "longitude": 76.99019444444444,
+                "altitude": null,
+                "precision": 0.00002777777777777778,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q25624734$6b5b0b03-4e4a-5ffb-58b0-cdf3b2703129",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "3a39fa0584d167956a84e69de2987c244a632fe6c2048a52aef7d90ad3831d9d"
+    },
+    {
+      "id": "gs-chhevin-kurukshetra",
+      "sourceIdentity": "osm:way/868050173",
+      "sourceURL": "https://www.openstreetmap.org/way/868050173",
+      "coordinates": [
+        76.8340238,
+        29.9688795
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 868050173,
+        "center": {
+          "lat": 29.9688795,
+          "lon": 76.8340238
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Chhevin Patshahi",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "b4bd9b08201e3f5dd41b9455b0d4ce0d7c7a241500e3b6ed1faa1f25db149534"
+    },
+    {
+      "id": "gs-dhamtan-sahib",
+      "sourceIdentity": "wd:Q119249713",
+      "sourceURL": "https://www.wikidata.org/wiki/Q119249713",
+      "coordinates": [
+        76.01938888888888,
+        29.70193888888889
+      ],
+      "raw": {
+        "id": "Q119249713",
+        "name": "Gurdwara Sri Guru Tegh Bahadur Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "3fd816c2a9f1ea5dbfe57a83a42ac5c1b82c1ea1",
+            "datavalue": {
+              "value": {
+                "latitude": 29.70193888888889,
+                "longitude": 76.01938888888888,
+                "altitude": null,
+                "precision": 0.000002777777777777778,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q119249713$23c57c65-4d13-7a53-0be3-47f338277b5c",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "252d65087b321e4a6ad6caa6aea1370092251705fd0506b73367fb346bfd534c"
+    },
+    {
+      "id": "gs-haa-da-naara-sahib",
+      "sourceIdentity": "wd:Q70577878",
+      "sourceURL": "https://www.wikidata.org/wiki/Q70577878",
+      "coordinates": [
+        75.8890625,
+        30.5238125
+      ],
+      "raw": {
+        "id": "Q70577878",
+        "name": "Gurdwara Haa da Naara  Sahib",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "4c7fdf5af188d3b52d0cdb24409612967457fcc9",
+            "datavalue": {
+              "value": {
+                "latitude": 30.5238125,
+                "longitude": 75.8890625,
+                "altitude": null,
+                "precision": 1e-7,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q70577878$84f358c0-4404-5c57-2b67-1b0a6cbf4864",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "8ff04738556727312657603b9a731e9359e1585c51e8f6f92750c247a430aa59"
+    },
+    {
+      "id": "gs-moti-bagh-delhi",
+      "sourceIdentity": "osm:node/1740891891",
+      "sourceURL": "https://www.openstreetmap.org/node/1740891891",
+      "coordinates": [
+        77.1712306,
+        28.586024
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 1740891891,
+        "lat": 28.586024,
+        "lon": 77.1712306,
+        "tags": {
+          "amenity": "place_of_worship",
+          "check_date": "2024-04-11",
+          "name": "Gurudwara Moti Bagh Sahib",
+          "name:hi": "गुरुद्वारा मोटीबाग़ साहिब",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "ff739bf8251f75929b68cbaf92441decb40c8117d5e91ec60bc1b3ccb2a201f8"
+    },
+    {
+      "id": "gs-damdama-delhi",
+      "sourceIdentity": "osm:node/2295090140",
+      "sourceURL": "https://www.openstreetmap.org/node/2295090140",
+      "coordinates": [
+        77.2525408,
+        28.5947837
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 2295090140,
+        "lat": 28.5947837,
+        "lon": 77.2525408,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Damdama Sahib",
+          "religion": "sikh",
+          "wheelchair": "yes"
+        }
+      },
+      "rawSha256": "37f3fa1cda469f1be1a9d8ce2e0e7ae105c7b66b8e7dcc6a669e0894c1cd9939"
+    },
+    {
+      "id": "gs-majnu-ka-tila",
+      "sourceIdentity": "osm:way/167843077",
+      "sourceURL": "https://www.openstreetmap.org/way/167843077",
+      "coordinates": [
+        77.2280818,
+        28.6958554
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 167843077,
+        "center": {
+          "lat": 28.6958554,
+          "lon": 77.2280818
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurudwara Majnu Tilla Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "c0385449ab734a7484d42e338c4dc6bbea0446c98e182aa663371bb3579c058d"
+    },
+    {
+      "id": "gs-bala-sahib-delhi",
+      "sourceIdentity": "osm:way/294119564",
+      "sourceURL": "https://www.openstreetmap.org/way/294119564",
+      "coordinates": [
+        77.2614213,
+        28.5806815
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 294119564,
+        "center": {
+          "lat": 28.5806815,
+          "lon": 77.2614213
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Bala Sahib Gurudwara",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "ecbaf262dbffabec7a10a08fcbda4bfc9e52dca96b91db07f9d2f58692b65ab0"
+    },
+    {
+      "id": "gs-mata-sundri-delhi",
+      "sourceIdentity": "osm:way/289883322",
+      "sourceURL": "https://www.openstreetmap.org/way/289883322",
+      "coordinates": [
+        77.2338179,
+        28.6344596
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 289883322,
+        "center": {
+          "lat": 28.6344596,
+          "lon": 77.2338179
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "barrier": "wall",
+          "check_date": "2026-03-20",
+          "name": "Mata Sundari Gurdwara",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "b2fc8ae73f960d455ee03ca7530d24489e83b83951b6e791a8ba2fd42bc6ccd4"
+    },
+    {
+      "id": "gs-nanak-jhira-bidar",
+      "sourceIdentity": "osm:way/1228449058",
+      "sourceURL": "https://www.openstreetmap.org/way/1228449058",
+      "coordinates": [
+        77.507831,
+        17.9285358
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 1228449058,
+        "center": {
+          "lat": 17.9285358,
+          "lon": 77.507831
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Sri Nanak Jhira Sahib",
+          "religion": "sikh",
+          "website": "http://www.gurunanakjhirabidar.com/",
+          "wikidata": "Q19891658",
+          "wikipedia": "en:Guru Nanak Jhira Sahib"
+        }
+      },
+      "rawSha256": "82a2dd4b221fc6a920be7db615176b084b00595e0174f805c78465d7a3308066"
+    },
+    {
+      "id": "gs-guru-ka-tal-agra",
+      "sourceIdentity": "wd:Q5620454",
+      "sourceURL": "https://www.wikidata.org/wiki/Q5620454",
+      "coordinates": [
+        77.9674964393727,
+        27.211668815128235
+      ],
+      "raw": {
+        "id": "Q5620454",
+        "name": "Guru ka Tal",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "2df089b841f25e4447083c8f63b0baaa9f8c6f9c",
+            "datavalue": {
+              "value": {
+                "latitude": 27.211668815128235,
+                "longitude": 77.9674964393727,
+                "altitude": null,
+                "precision": 1e-8,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q5620454$4702286a-4cfa-826d-af15-5cf127bba3bf",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "8c6578b77fc79f148a6daaec6ba3cbedb279e69855409c3dd75b17c0e62c2e26"
+    },
+    {
+      "id": "gs-lakhpat-sahib",
+      "sourceIdentity": "osm:node/2640051411",
+      "sourceURL": "https://www.openstreetmap.org/node/2640051411",
+      "coordinates": [
+        68.7786462,
+        23.8260774
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 2640051411,
+        "lat": 23.8260774,
+        "lon": 68.7786462,
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "house",
+          "description": "Also state protected monument (S-GJ-65).",
+          "name": "Lakhpat Gurdwara",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "311b7edc505253dad3788b08920909afc5eec72cf78a42bc41fc7321b28036e0"
+    },
+    {
+      "id": "gs-pathar-sahib",
+      "sourceIdentity": "osm:way/183827408",
+      "sourceURL": "https://www.openstreetmap.org/way/183827408",
+      "coordinates": [
+        77.3758775,
+        34.1916705
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 183827408,
+        "center": {
+          "lat": 34.1916705,
+          "lon": 77.3758775
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Pathar Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "5eb4c4e6989c62586d46a2b292379b8df3d72cc9d5d8fedc4a11a0493c82ac5e"
+    },
+    {
+      "id": "gs-chatti-srinagar",
+      "sourceIdentity": "osm:way/680716364",
+      "sourceURL": "https://www.openstreetmap.org/way/680716364",
+      "coordinates": [
+        74.8220309,
+        34.1028545
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 680716364,
+        "center": {
+          "lat": 34.1028545,
+          "lon": 74.8220309
+        },
+        "tags": {
+          "addr:city": "Srinagar",
+          "addr:postcode": "190003",
+          "addr:street": "Kathi Darwaza",
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Sahib Chatti Patshahi",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "25a2b11148c5f3ebe10082fac8910845587673530470fa97062df3cc363dd809"
+    },
+    {
+      "id": "gs-mattan-sahib",
+      "sourceIdentity": "wd:Q68463871",
+      "sourceURL": "https://www.wikidata.org/wiki/Q68463871",
+      "coordinates": [
+        75.211234,
+        33.762023
+      ],
+      "raw": {
+        "id": "Q68463871",
+        "name": "Gurdwara Sri Mattan Sahib,Mattan",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "f42920889ae10aff922df9cf1e1964c83379f2cd",
+            "datavalue": {
+              "value": {
+                "latitude": 33.762023,
+                "longitude": 75.211234,
+                "altitude": null,
+                "precision": 0.000001,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q68463871$fa2490f3-4074-a398-5440-b77f0e0e0089",
+          "rank": "normal"
+        }
+      },
+      "rawSha256": "50757449d4b7cdc465c6fbd6ae15df151566fad8c278a881bc276de059c3c1cb"
+    },
+    {
+      "id": "gs-buddha-johad",
+      "sourceIdentity": "wd:Q15222327",
+      "sourceURL": "https://www.wikidata.org/wiki/Q15222327",
+      "coordinates": [
+        73.384223,
+        29.284234
+      ],
+      "raw": {
+        "id": "Q15222327",
+        "name": "Gurudwara Buddha Johad",
+        "claim": {
+          "mainsnak": {
+            "snaktype": "value",
+            "property": "P625",
+            "hash": "f88a67cac804674e32e1119cbac0d87ea3da03c0",
+            "datavalue": {
+              "value": {
+                "latitude": 29.284234,
+                "longitude": 73.384223,
+                "altitude": null,
+                "precision": 0.00000277777777778,
+                "globe": "http://www.wikidata.org/entity/Q2"
+              },
+              "type": "globecoordinate"
+            },
+            "datatype": "globe-coordinate"
+          },
+          "type": "statement",
+          "id": "Q15222327$D2897776-92E2-4AB8-9669-AC1052303D8E",
+          "rank": "normal",
+          "references": [
+            {
+              "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+              "snaks": {
+                "P143": [
+                  {
+                    "snaktype": "value",
+                    "property": "P143",
+                    "hash": "e4f6d9441d0600513c4533c672b5ab472dc73694",
+                    "datavalue": {
+                      "value": {
+                        "entity-type": "item",
+                        "numeric-id": 328,
+                        "id": "Q328"
+                      },
+                      "type": "wikibase-entityid"
+                    },
+                    "datatype": "wikibase-item"
+                  }
+                ]
+              },
+              "snaks-order": [
+                "P143"
+              ]
+            }
+          ]
+        }
+      },
+      "rawSha256": "7bf07364e7f8ac64457a2efe8dea47ed192fe601337522069207557754320133"
+    },
+    {
+      "id": "gs-beri-sialkot",
+      "sourceIdentity": "osm:relation/12253086",
+      "sourceURL": "https://www.openstreetmap.org/relation/12253086",
+      "coordinates": [
+        74.5488923,
+        32.4810183
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "relation",
+        "id": 12253086,
+        "center": {
+          "lat": 32.4810183,
+          "lon": 74.5488923
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "no",
+          "name": "Gurdwara Beri Sahib",
+          "religion": "sikh",
+          "type": "multipolygon",
+          "wikidata": "Q5619946"
+        }
+      },
+      "rawSha256": "c9a5f96e5443592c1ef6fb34e758b1f498029a43e54fe5a12096c145ac5aa60d"
+    },
+    {
+      "id": "gs-janam-ram-das-lahore",
+      "sourceIdentity": "osm:way/469237468",
+      "sourceURL": "https://www.openstreetmap.org/way/469237468",
+      "coordinates": [
+        74.3210206,
+        31.5849271
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 469237468,
+        "center": {
+          "lat": 31.5849271,
+          "lon": 74.3210206
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "no",
+          "name": "گوردوارہ جنم آسھن گرو رام داس",
+          "name:en": "Gurdwara Janam Asthan Guru Ram Das",
+          "name:ur": "گوردوارہ جنم آسھن گرو رام داس",
+          "religion": "sikh",
+          "wikidata": "Q48726775",
+          "wikimedia_commons": "Category:Gurudwara Arjun Ram, Lahore",
+          "wikipedia": "ur:گردوارہ جنم استھان گرو رام داس"
+        }
+      },
+      "rawSha256": "a7e3774cc19084b43828ec81ed93ad003f42e3b0bc23f1203a8cd554d687d3da"
+    },
+    {
+      "id": "gs-dera-lahore",
+      "sourceIdentity": "osm:way/903463528",
+      "sourceURL": "https://www.openstreetmap.org/way/903463528",
+      "coordinates": [
+        74.311769,
+        31.5897298
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 903463528,
+        "center": {
+          "lat": 31.5897298,
+          "lon": 74.311769
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "گوردوارہ ڈیرا صاحب",
+          "name:en": "Gurdwara Dera Sahib",
+          "name:hi": "गुरुद्वारा डेरा साहिब",
+          "name:ml": "ഗുരുദ്വാര ഡേര സാഹിബ്",
+          "religion": "sikh",
+          "wikidata": "Q39053987",
+          "wikipedia": "ur:گوردوارہ ڈیرہ صاحب"
+        }
+      },
+      "rawSha256": "9b312ae923e12a50bd95a17d09734fcc35bed0daddc48347ebc1fc20ea61b2a4"
+    },
+    {
+      "id": "gs-bhai-taru-lahore",
+      "sourceIdentity": "osm:way/611961544",
+      "sourceURL": "https://www.openstreetmap.org/way/611961544",
+      "coordinates": [
+        74.3317153,
+        31.5790029
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 611961544,
+        "center": {
+          "lat": 31.5790029,
+          "lon": 74.3317153
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurdwara Bhai Taru Singh",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "829c87418a766d4e69de9880d961ccd089bc8a1a688b7a4013172b40cb14d056"
+    },
+    {
+      "id": "gs-shaheed-singhnian-lahore",
+      "sourceIdentity": "osm:way/619290344",
+      "sourceURL": "https://www.openstreetmap.org/way/619290344",
+      "coordinates": [
+        74.3320567,
+        31.5785573
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 619290344,
+        "center": {
+          "lat": 31.5785573,
+          "lon": 74.3320567
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Shaheed Ganj Gurdwara",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "9cb0e3baefd98ae5a223e6f29707535413f2c3ba184548fc0a2b9721119dd17c"
+    },
+    {
+      "id": "gs-chowa-rohtas",
+      "sourceIdentity": "osm:node/8661461630",
+      "sourceURL": "https://www.openstreetmap.org/node/8661461630",
+      "coordinates": [
+        73.573253,
+        32.9712317
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "node",
+        "id": 8661461630,
+        "lat": 32.9712317,
+        "lon": 73.573253,
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Chowa Sahib",
+          "religion": "sikh",
+          "wikidata": "Q30641887",
+          "wikipedia": "en:Gurdwara Chowa Sahib"
+        }
+      },
+      "rawSha256": "e15cec33544565ad98c8d81bcec7eb73bf9db9d19856afbf3381c492212d710f"
+    },
+    {
+      "id": "gs-rori-eminabad",
+      "sourceIdentity": "osm:way/863294226",
+      "sourceURL": "https://www.openstreetmap.org/way/863294226",
+      "coordinates": [
+        74.2489723,
+        32.0473948
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 863294226,
+        "center": {
+          "lat": 32.0473948,
+          "lon": 74.2489723
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Gurdwara Rori Sahib",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "e00603de3bd163fe402a7d47f52e4a957fceccfcbd5c839da4272306b11fc25f"
+    },
+    {
+      "id": "gs-chhevin-muzang",
+      "sourceIdentity": "osm:way/618622153",
+      "sourceURL": "https://www.openstreetmap.org/way/618622153",
+      "coordinates": [
+        74.3160051,
+        31.5555003
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 618622153,
+        "center": {
+          "lat": 31.5555003,
+          "lon": 74.3160051
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "name": "Old Gurudwara Chhevin Patshahi",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "acf7f9266080512e281e24e25b6949a4f93c40c223600da0d32e757df9a42163"
+    },
+    {
+      "id": "gs-bhai-joga-peshawar",
+      "sourceIdentity": "osm:way/838390251",
+      "sourceURL": "https://www.openstreetmap.org/way/838390251",
+      "coordinates": [
+        71.5630477,
+        34.0020392
+      ],
+      "timestamp": "2026-10-08T04:55:05Z",
+      "raw": {
+        "type": "way",
+        "id": 838390251,
+        "center": {
+          "lat": 34.0020392,
+          "lon": 71.5630477
+        },
+        "tags": {
+          "amenity": "place_of_worship",
+          "building": "yes",
+          "name": "Gurudwara Bhai Joga Singh",
+          "religion": "sikh"
+        }
+      },
+      "rawSha256": "9ee0f18037bff03034bc4161e5e878ab1903658340ba210b7aff7dc87cdc755c"
+    }
+  ],
+  "identityEvidence": [
+    {
+      "id": "gs-akal-takht",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: Singh Sahibans and historic Delhi gurdwaras",
+      "namedIdentity": "Sri Akal Takht Sahib",
+      "locality": "Amritsar",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "significance": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "4f5280a734c7043303602366d549461ab70cbaaaf078341a1f017d0cffe6dbeb"
+    },
+    {
+      "id": "gs-keshgarh-takht",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: Singh Sahibans and historic Delhi gurdwaras",
+      "namedIdentity": "Takht Sri Keshgarh Sahib",
+      "locality": "Anandpur Sahib",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "significance": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "ff1c3adc98cab6c2da9fca489e550da82b89784f49d4375380e6ca46157f4572"
+    },
+    {
+      "id": "gs-patna-takht",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: Singh Sahibans and historic Delhi gurdwaras",
+      "namedIdentity": "Takht Sri Harmandir Ji Patna Sahib",
+      "locality": "Patna",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "significance": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "a8c5ba90f8757fb21b8f4a27ab8d6d55a47a6021f1fbb1827af0045b71269d2c"
+    },
+    {
+      "id": "gs-damdama-takht",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: Singh Sahibans and historic Delhi gurdwaras",
+      "namedIdentity": "Takht Sri Damdama Sahib",
+      "locality": "Talwandi Sabo",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "significance": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "69d8fe225c36643287ec23b89b728c993acd64a0e29f984fe7c5968bbf2e0cf7"
+    },
+    {
+      "id": "gs-hazur-takht",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: Singh Sahibans and historic Delhi gurdwaras",
+      "namedIdentity": "Takht Sachkhand Sri Hazur Sahib",
+      "locality": "Nanded",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "significance": "Listed among the five Sikh Takhts in the DSGMC authority directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "336c115ac69c96e7396a95264fcf4bd25a0a90a159eb5120c00d8722e7d9c585"
+    },
+    {
+      "id": "gs-harmandir-sahib",
+      "sourceURL": "https://sgpc.net/sri-harmandir-sahib/",
+      "sourceTitle": "SGPC: Sri Harmandir Sahib",
+      "namedIdentity": "Sri Harmandir Sahib (Golden Temple)",
+      "locality": "Amritsar",
+      "verificationMethod": "Official shrine page and indexed source passage reviewed",
+      "identityEvidence": "The Golden Temple at Amritsar; SGPC describes its central place in Sikh religious life.",
+      "significance": "The Golden Temple at Amritsar; SGPC describes its central place in Sikh religious life.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "173a727b956b41fa50d8677b3ba6ef117d9d4046109e88759559a82481a8a7fa"
+    },
+    {
+      "id": "gs-fatehgarh-sahib",
+      "sourceURL": "https://fatehgarhsahib.nic.in/tourist-place/gurudwara-fatehgarh-sahib/",
+      "sourceTitle": "District Fatehgarh Sahib: Gurudwara Fatehgarh Sahib",
+      "namedIdentity": "Gurdwara Sri Fatehgarh Sahib",
+      "locality": "Fatehgarh Sahib",
+      "verificationMethod": "Official district religious-sites page reviewed",
+      "identityEvidence": "Memorial shrine associated with the martyrdom of Guru Gobind Singh’s younger sons.",
+      "significance": "Memorial shrine associated with the martyrdom of Guru Gobind Singh’s younger sons.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "24fed1c243265291b0146228bff06a6d2d8d8268ccede09a358c1b45ca829d3c"
+    },
+    {
+      "id": "gs-jyoti-sarup-sahib",
+      "sourceURL": "https://fatehgarhsahib.nic.in/tourist-place/gurudwara-jyoti-sarup/",
+      "sourceTitle": "District Fatehgarh Sahib: Gurudwara Jyoti Sarup",
+      "namedIdentity": "Gurdwara Sri Jyoti Sarup Sahib",
+      "locality": "Fatehgarh Sahib",
+      "verificationMethod": "Official district religious-sites page reviewed",
+      "identityEvidence": "Commemorates the cremation of Mata Gujri and the younger Sahibzadas.",
+      "significance": "Commemorates the cremation of Mata Gujri and the younger Sahibzadas.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "fdb4619abd1c6f2da974fbfeb03d2d814b2a8aa7030bee2e274ec562f2549200"
+    },
+    {
+      "id": "gs-tarn-taran-sahib",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-tarn-taran",
+      "sourceTitle": "SGPC: Gurdwaras in Tarn Taran",
+      "namedIdentity": "Gurdwara Sri Darbar Sahib Tarn Taran",
+      "locality": "Tarn Taran",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Darbar Sahib Tarn Taran in Tarn Taran.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Tarn Taran.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "a57d32d3010363de94b9c7a93c15eb98607236974af255d984411c9b56772bd9"
+    },
+    {
+      "id": "gs-ber-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Ber Sahib",
+      "locality": "Sultanpur Lodhi",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Ber Sahib in Sultanpur Lodhi.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "fd5c672630f04ed27513efbb821d740d322ebc5315b60c072041b22761b9a909"
+    },
+    {
+      "id": "gs-baoli-goindwal",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-tarn-taran",
+      "sourceTitle": "SGPC: Gurdwaras in Tarn Taran",
+      "namedIdentity": "Gurdwara Sri Baoli Sahib",
+      "locality": "Goindwal Sahib",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Baoli Sahib in Goindwal Sahib.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Tarn Taran.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "928270a58059063e6fb2ea0f20759c765cbc5c489907930e40f2734d28969e99"
+    },
+    {
+      "id": "gs-kartarpur-sahib",
+      "sourceURL": "https://ptegp.punjab.gov.pk/",
+      "sourceTitle": "Government of Punjab, Pakistan: Punjab Tourism for Economic Growth Project",
+      "namedIdentity": "Gurdwara Darbar Sahib Kartarpur",
+      "locality": "Kartarpur, Narowal",
+      "verificationMethod": "Official project indexed source passage reviewed",
+      "identityEvidence": "Kartarpur Darbar Sahib commemorates the settlement where Guru Nanak spent his later years.",
+      "significance": "Kartarpur Darbar Sahib commemorates the settlement where Guru Nanak spent his later years.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "9ab3b9057ca04c99234dfa9e3af3306e4dfc13973ea6fceee33eb1172ac7b50c"
+    },
+    {
+      "id": "gs-nankana-janam-asthan",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-pakistan",
+      "sourceTitle": "SGPC: Named historic gurdwaras in Pakistan",
+      "namedIdentity": "Gurdwara Janam Asthan Nankana Sahib",
+      "locality": "Nankana Sahib",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Janam Asthan Nankana Sahib in Nankana Sahib.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named historic gurdwaras in Pakistan.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "171762c6bc0015b05b3eb512443bb42595145917702031661121df4ae6e68723"
+    },
+    {
+      "id": "gs-panja-sahib",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-pakistan",
+      "sourceTitle": "SGPC: Named historic gurdwaras in Pakistan",
+      "namedIdentity": "Gurdwara Panja Sahib",
+      "locality": "Hasan Abdal",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Panja Sahib in Hasan Abdal.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named historic gurdwaras in Pakistan.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "7dabfa7278dd3ea556394e464867cd82c10c2f1643c632168e2d42a7588ed800"
+    },
+    {
+      "id": "gs-bangla-sahib",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: historic Delhi gurdwaras",
+      "namedIdentity": "Gurdwara Bangla Sahib",
+      "locality": "New Delhi",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Bangla Sahib in New Delhi.",
+      "significance": "Named Sikh shrine recorded in DSGMC Directory 2022: historic Delhi gurdwaras.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "e3878bced595d9bcdf123969daf42de0e0c0657ef79d937d529f202c63257e9a"
+    },
+    {
+      "id": "gs-sis-ganj-delhi",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: historic Delhi gurdwaras",
+      "namedIdentity": "Gurdwara Sis Ganj Sahib",
+      "locality": "Old Delhi",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sis Ganj Sahib in Old Delhi.",
+      "significance": "Named Sikh shrine recorded in DSGMC Directory 2022: historic Delhi gurdwaras.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "7871b37a70aaca27b95c1c223403500cf935ed4998299d1bd347f3e10ee8b034"
+    },
+    {
+      "id": "gs-rakab-ganj-sahib",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: historic Delhi gurdwaras",
+      "namedIdentity": "Gurdwara Rakab Ganj Sahib",
+      "locality": "New Delhi",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Rakab Ganj Sahib in New Delhi.",
+      "significance": "Named Sikh shrine recorded in DSGMC Directory 2022: historic Delhi gurdwaras.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "2cc77efaffa55f83aba105e0cd3990bcced3b3f9bc0651c25d7622b7ac97c12d"
+    },
+    {
+      "id": "gs-hemkund-sahib",
+      "sourceURL": "https://chamoli.gov.in/tourist-place/hemkund-sahib/",
+      "sourceTitle": "District Chamoli: Hemkund Sahib",
+      "namedIdentity": "Gurdwara Sri Hemkund Sahib",
+      "locality": "Chamoli",
+      "verificationMethod": "Official district tourism page reviewed",
+      "identityEvidence": "High-altitude Sikh pilgrimage shrine in the Chamoli Himalaya.",
+      "significance": "High-altitude Sikh pilgrimage shrine in the Chamoli Himalaya.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "f377ebbc57dd0ff19be05a4cb72a9144cdc895ef08099b1917df812f21b7e461"
+    },
+    {
+      "id": "gs-paonta-sahib",
+      "sourceURL": "https://himachaltourism.gov.in/destination/paonta-sahib/",
+      "sourceTitle": "Himachal Tourism: Paonta Sahib",
+      "namedIdentity": "Gurdwara Sri Paonta Sahib",
+      "locality": "Paonta Sahib",
+      "verificationMethod": "Official tourism indexed source passage reviewed",
+      "identityEvidence": "Historic gurdwara at Paonta Sahib on the bank of the Yamuna.",
+      "significance": "Historic gurdwara at Paonta Sahib on the bank of the Yamuna.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "a0099648d12911499af092b0c9a0653114bea7da01e865b0544667af059ce0c7"
+    },
+    {
+      "id": "gs-nanakmatta-sahib",
+      "sourceURL": "https://uttarakhandtourism.gov.in/destination/nanakmatta",
+      "sourceTitle": "Uttarakhand Tourism: Nanakmatta",
+      "namedIdentity": "Gurdwara Sri Nanakmatta Sahib",
+      "locality": "Nanakmatta",
+      "verificationMethod": "Official tourism indexed source passage reviewed",
+      "identityEvidence": "Nanakmatta Sahib is a major Sikh pilgrimage shrine in Uttarakhand.",
+      "significance": "Nanakmatta Sahib is a major Sikh pilgrimage shrine in Uttarakhand.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "d5c37a07ecdc7be0dae9d521a68ddd3abddfbc503c43cdbfb2a52cf68c489957"
+    },
+    {
+      "id": "gs-baba-atal-sahib",
+      "sourceURL": "https://sgpc.net/around-harmandir-sahib/",
+      "sourceTitle": "SGPC: Around Harmandir Sahib, Baba Atal section",
+      "namedIdentity": "Gurdwara Baba Atal Rai Sahib",
+      "locality": "Amritsar",
+      "verificationMethod": "Official shrine surroundings page named section reviewed",
+      "identityEvidence": "Baba Atal Sahib is a historic shrine in the Harmandir Sahib surroundings.",
+      "significance": "Baba Atal Sahib is a historic shrine in the Harmandir Sahib surroundings.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "f04b26b19663b36020652dff1edac6f96ab07d30fd3cd8fc352670a2b195d6f4"
+    },
+    {
+      "id": "gs-baba-deep-singh-shaheed",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Shaheed Ganj Baba Deep Singh",
+      "locality": "Amritsar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Shaheed Ganj Baba Deep Singh in Amritsar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "de21d08dd754b1ed298dff846d27445e6f063970f1d492a1d54d339e1cd9cd52"
+    },
+    {
+      "id": "gs-ramsar-amritsar",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-amritsar",
+      "sourceTitle": "SGPC: Gurdwaras in Amritsar",
+      "namedIdentity": "Gurdwara Sri Ramsar Sahib",
+      "locality": "Amritsar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Ramsar Sahib in Amritsar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Amritsar.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "73b6eee61bfdbf169f608c15f94a872b55ed72afbf10142bbeae9a1ff68dc54e"
+    },
+    {
+      "id": "gs-bibeksar-amritsar",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-amritsar",
+      "sourceTitle": "SGPC: Gurdwaras in Amritsar",
+      "namedIdentity": "Gurdwara Sri Bibeksar Sahib",
+      "locality": "Amritsar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Bibeksar Sahib in Amritsar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Amritsar.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "e9503b0f64acd4cf0bc221d88220ac2d74ab2d0c4c37148bd551a7b4d6e09fb5"
+    },
+    {
+      "id": "gs-santokhsar-amritsar",
+      "sourceURL": "https://sgpc.net/the-city-amritsar/",
+      "sourceTitle": "SGPC: The City Amritsar",
+      "namedIdentity": "Gurdwara Sri Santokhsar Sahib",
+      "locality": "Amritsar",
+      "verificationMethod": "Official historical account reviewed",
+      "identityEvidence": "Santokhsar is one of Amritsar’s early Sikh sacred tanks and associated shrines.",
+      "significance": "Santokhsar is one of Amritsar’s early Sikh sacred tanks and associated shrines.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "1fecf9cbd529284382261810ce9397a3abbd350e5ba32aa39fa0ea3464cf9b07"
+    },
+    {
+      "id": "gs-guru-ke-mahal",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Guru Ke Mahal",
+      "locality": "Amritsar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Guru Ke Mahal in Amritsar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "76b3bc1dc45ed951b42effcf2301daa4b53034ce042897723f2ed8b46310ee16"
+    },
+    {
+      "id": "gs-guru-ki-wadali",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Guru Ki Wadali (Prakash Asthan)",
+      "locality": "Amritsar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Guru Ki Wadali (Prakash Asthan) in Amritsar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "a3f3c8982b7d56fc87defa2f9f399f643cc9e1a37053ac8e8fbec99db269bc2e"
+    },
+    {
+      "id": "gs-chheharta-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Chheharta Sahib",
+      "locality": "Amritsar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Chheharta Sahib in Amritsar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "f2aa347ec98c0e394d76251084aa2bfb5044599064153e33c95d65f009ecc763"
+    },
+    {
+      "id": "gs-bir-baba-buddha",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-tarn-taran",
+      "sourceTitle": "SGPC: Gurdwaras in Tarn Taran",
+      "namedIdentity": "Gurdwara Bir Baba Buddha Sahib",
+      "locality": "Thatta, Tarn Taran",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Bir Baba Buddha Sahib in Thatta, Tarn Taran.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Tarn Taran.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "ac290e9125ebc697f805ba1083423cd8bbc5b996a05c21356df0ca4229054570"
+    },
+    {
+      "id": "gs-guru-ka-bagh-ghukewali",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Guru Ka Bagh",
+      "locality": "Ghukewali, Amritsar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Guru Ka Bagh in Ghukewali, Amritsar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "5d533c03f498b9828127592708907901ac55a003dcdf346abeb0577fae65545c"
+    },
+    {
+      "id": "gs-janam-baba-buddha",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Janam Asthan Baba Buddha",
+      "locality": "Kathunangal",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Janam Asthan Baba Buddha in Kathunangal.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "c6b473bdf5377d0dc1e10d2e472e4bf5725e141b533e9083c6e9b06e800baf10"
+    },
+    {
+      "id": "gs-baba-bakala-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Baba Bakala Sahib",
+      "locality": "Baba Bakala",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Baba Bakala Sahib in Baba Bakala.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "9fc9dfaca50b96d661bd7021b306f8fe7513dc40073b62a4479965dbe5f096f7"
+    },
+    {
+      "id": "gs-sann-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-87",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 87 directory",
+      "namedIdentity": "Gurdwara Sri Sann Sahib",
+      "locality": "Basarke Gillan",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Sann Sahib in Basarke Gillan.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 87 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "273b929f7417ee3bd21d3e215e0ef0b58d2539350b4d3d737470f4e43ad6c613"
+    },
+    {
+      "id": "gs-gurusar-rupana",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-87",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 87 directory",
+      "namedIdentity": "Gurdwara Gurusar Sahib Patshahi Dasvin",
+      "locality": "Rupana, Muktsar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Gurusar Sahib Patshahi Dasvin in Rupana, Muktsar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 87 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "caff5ccd78f403ca84b9db1b199c1f36f90a4c84eee7dd144cb70b9da768bd36"
+    },
+    {
+      "id": "gs-dera-baba-nanak",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Darbar Sahib Dera Baba Nanak",
+      "locality": "Dera Baba Nanak",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Darbar Sahib Dera Baba Nanak in Dera Baba Nanak.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "58cf733ca7eb95e9e5b4a9f8b293a91280c1b8392644111fcc4e7b794cfa3044"
+    },
+    {
+      "id": "gs-burj-dhariwal",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-gurdaspur",
+      "sourceTitle": "SGPC: Gurdwaras in Gurdaspur",
+      "namedIdentity": "Gurdwara Sri Burj Sahib",
+      "locality": "Dhariwal",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Burj Sahib in Dhariwal.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Gurdaspur.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "3a1325d87255f67842ffda2bc2f2965bd759fc4f6fd787766e59cbad7d30232c"
+    },
+    {
+      "id": "gs-kandh-sahib",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-gurdaspur",
+      "sourceTitle": "SGPC: Gurdwaras in Gurdaspur",
+      "namedIdentity": "Gurdwara Sri Kandh Sahib",
+      "locality": "Batala",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Kandh Sahib in Batala.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Gurdaspur.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "c4ad6a1c74a9911cf71402e6ec1f195b218d19949d52e6dd381a8db3a2204745"
+    },
+    {
+      "id": "gs-patalpuri-sahib",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-ropar",
+      "sourceTitle": "SGPC: Gurdwaras in Ropar",
+      "namedIdentity": "Gurdwara Sri Patalpuri Sahib",
+      "locality": "Kiratpur Sahib",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Patalpuri Sahib in Kiratpur Sahib.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Ropar.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "959696373f08c8b372a66bcf17e9190276e2f00ae820a6ec9d5897a58b556290"
+    },
+    {
+      "id": "gs-charan-kamal-kiratpur",
+      "sourceURL": "https://censusindia.gov.in/nada/index.php/catalog/1012/download/3062/DH_2011_0317_PART_A_DCHB_RUPNAGAR.pdf",
+      "sourceTitle": "Census of India 2011: Rupnagar District Census Handbook, Part A",
+      "namedIdentity": "Gurdwara Charan Kamal Sahib",
+      "locality": "Kiratpur Sahib",
+      "verificationMethod": "Official census handbook named attraction passage reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Charan Kamal Sahib in Kiratpur Sahib.",
+      "significance": "Named Sikh shrine recorded in Census of India 2011: Rupnagar District Census Handbook, Part A.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "6a763b34ebde4ed2da8a082031130bcbeca8d1e80106a9a5af684ed3d9027bc4"
+    },
+    {
+      "id": "gs-sisganj-anandpur",
+      "sourceURL": "https://censusindia.gov.in/nada/index.php/catalog/44006/download/47671/DH_03_2001_RUP.pdf",
+      "sourceTitle": "Census of India 2001: Rupnagar District Census Handbook",
+      "namedIdentity": "Gurdwara Sis Ganj Sahib",
+      "locality": "Anandpur Sahib",
+      "verificationMethod": "Official census handbook named attraction passage reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sis Ganj Sahib in Anandpur Sahib.",
+      "significance": "Named Sikh shrine recorded in Census of India 2001: Rupnagar District Census Handbook.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "76f7e7d781b3fd8447cac210adc2d3f216998275db5e2665dd7981d4284dae1a"
+    },
+    {
+      "id": "gs-anandgarh-sahib",
+      "sourceURL": "https://www.incredibleindia.gov.in/en/punjab/rupnagar/gurdwara-anandgarh-sahib",
+      "sourceTitle": "Incredible India: Gurdwara Anandgarh Sahib, Rupnagar",
+      "namedIdentity": "Gurdwara Qila Anandgarh Sahib",
+      "locality": "Anandpur Sahib",
+      "verificationMethod": "Official tourism indexed source passage reviewed",
+      "identityEvidence": "Named historic gurdwara at Anandpur Sahib associated with its fort heritage.",
+      "significance": "Named historic gurdwara at Anandpur Sahib associated with its fort heritage.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "9ace4bd13bdfab28b24359b1b06f00616a191272d2d0a1031a69a1e71ab677f5"
+    },
+    {
+      "id": "gs-khadoor-darbar-sahib",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-tarn-taran",
+      "sourceTitle": "SGPC: Gurdwaras in Tarn Taran",
+      "namedIdentity": "Gurdwara Sri Darbar Sahib Khadoor Sahib",
+      "locality": "Khadoor Sahib",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Darbar Sahib Khadoor Sahib in Khadoor Sahib.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Tarn Taran.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "971cce06c98bc29d21511ab4cf9b087429156cd7f88e91ae45ee9b53356a2085"
+    },
+    {
+      "id": "gs-katalgarh-sahib",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-ropar",
+      "sourceTitle": "SGPC: Gurdwaras in Ropar",
+      "namedIdentity": "Gurdwara Sri Katalgarh Sahib",
+      "locality": "Chamkaur Sahib",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Katalgarh Sahib in Chamkaur Sahib.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Ropar.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "713062d4569b3ef4c62b657e38e91944d9d5d205d1b94131a1671d2404eb0c42"
+    },
+    {
+      "id": "gs-parivar-vichora-sahib",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-ropar",
+      "sourceTitle": "SGPC: Gurdwaras in Ropar",
+      "namedIdentity": "Gurdwara Parivar Vichora Sahib",
+      "locality": "Rupnagar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Parivar Vichora Sahib in Rupnagar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Ropar.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "5fe6557520072b04c185f60123a31760fd24ad66e0ecdd5d66bf7c21a9db4f8d"
+    },
+    {
+      "id": "gs-bhatha-sahib",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-ropar",
+      "sourceTitle": "SGPC: Gurdwaras in Ropar",
+      "namedIdentity": "Gurdwara Sri Bhatha Sahib",
+      "locality": "Rupnagar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Bhatha Sahib in Rupnagar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Ropar.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "7572207a169c0cd8517afda701e8bb4f00c39130662b4bf31dce6593c9961fa6"
+    },
+    {
+      "id": "gs-charan-kanwal-machhiwara",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Charan Kanwal Sahib",
+      "locality": "Machhiwara",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Charan Kanwal Sahib in Machhiwara.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "f825d4b525e4581b496e4f71798d5bf4c572cf29293202067cfe73b1effc3015"
+    },
+    {
+      "id": "gs-jand-bir-guru",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-87",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 87 directory",
+      "namedIdentity": "Gurdwara Sri Jand Sahib",
+      "locality": "Bir Guru, Rupnagar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Jand Sahib in Bir Guru, Rupnagar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 87 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "e73a8ab39d183d56f1d4d63ae2b59f0e7965303cc61c95b133dc9b9985c7e193"
+    },
+    {
+      "id": "gs-chubara-machhiwara",
+      "sourceURL": "https://censusindia.gov.in/nada/index.php/catalog/1002/download/3022/DH_2011_0307_PART_A_DCHB_LUDHIANA.pdf",
+      "sourceTitle": "Census of India 2011: Ludhiana District Census Handbook, Part A",
+      "namedIdentity": "Gurdwara Chubara Sahib",
+      "locality": "Machhiwara",
+      "verificationMethod": "Official census handbook named attraction passages reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Chubara Sahib in Machhiwara.",
+      "significance": "Named Sikh shrine recorded in Census of India 2011: Ludhiana District Census Handbook, Part A.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "a6039b21ba6733019287b165ecf06048751577c3ca858b87c6539371a0b72494"
+    },
+    {
+      "id": "gs-manji-alamgir",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Manji Sahib Alamgir",
+      "locality": "Alamgir, Ludhiana",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Manji Sahib Alamgir in Alamgir, Ludhiana.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "f2f114cd60afbe160a0f7275a67d6e3fcd3d4ed32c0a6346559d759e1f66d2ca"
+    },
+    {
+      "id": "gs-degsar-katana",
+      "sourceURL": "https://censusindia.gov.in/nada/index.php/catalog/1002/download/3022/DH_2011_0307_PART_A_DCHB_LUDHIANA.pdf",
+      "sourceTitle": "Census of India 2011: Ludhiana District Census Handbook, Part A",
+      "namedIdentity": "Gurdwara Sri Degsar Sahib",
+      "locality": "Katana, Ludhiana",
+      "verificationMethod": "Official census handbook named attraction passages reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Degsar Sahib in Katana, Ludhiana.",
+      "significance": "Named Sikh shrine recorded in Census of India 2011: Ludhiana District Census Handbook, Part A.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "0ea457ceb2e74eb62254d5a34a8af515372b1d70b96aaebb3160742937102d88"
+    },
+    {
+      "id": "gs-tahliana-raikot",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Tahliana Sahib",
+      "locality": "Raikot",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Tahliana Sahib in Raikot.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "b44528359fa72714f743620b2e2d4a5b0a01435d95cf8830ca1b0f3e0a2bb32e"
+    },
+    {
+      "id": "gs-gurusar-sudhar",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Gurusar Sahib Patshahi Chhevin",
+      "locality": "Sudhar",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Gurusar Sahib Patshahi Chhevin in Sudhar.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "0161bc73cbbcf746650ce0c1de06538edbf8b47acbe4d09bdaf6170b81a9790c"
+    },
+    {
+      "id": "gs-mehdiana-sahib",
+      "sourceURL": "https://gurdwaramehdianasahib.org/historical-significance/",
+      "sourceTitle": "Gurdwara Mehdiana Sahib: Historical Significance",
+      "namedIdentity": "Gurdwara Sri Mehdiana Sahib",
+      "locality": "Mehdiana, Ludhiana",
+      "verificationMethod": "Official shrine historical account reviewed",
+      "identityEvidence": "The shrine’s account associates Mehdiana with Guru Gobind Singh’s journey and the Zafarnama.",
+      "significance": "The shrine’s account associates Mehdiana with Guru Gobind Singh’s journey and the Zafarnama.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "963845a454a74a0d99e6f5fdade42f57c417b151b297b35d9d1f3de2358b612e"
+    },
+    {
+      "id": "gs-karamsar-rara",
+      "sourceURL": "https://rarasahib.com/",
+      "sourceTitle": "Official Gurdwara Karamsar Rara Sahib website",
+      "namedIdentity": "Gurdwara Karamsar Rara Sahib",
+      "locality": "Rara Sahib",
+      "verificationMethod": "Official shrine home page identity reviewed",
+      "identityEvidence": "Named Sikh shrine at Rara Sahib, identified by its official website.",
+      "significance": "Named Sikh shrine at Rara Sahib, identified by its official website.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "dfd4583e56f80e5775431923df3898adb2aedb089e9449913605be63767bd801"
+    },
+    {
+      "id": "gs-haji-ratan-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Haji Ratan Sahib",
+      "locality": "Bathinda",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Haji Ratan Sahib in Bathinda.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "5fcd89999371f1e3b9c0aa0d27363722ffb467076b1e83e5a24a293c92d89393"
+    },
+    {
+      "id": "gs-likhansar-sahib",
+      "sourceURL": "https://sgpc.net/takhat-sri-damdama-sahib-guru-kanshi-sabo-ki-talwandi/",
+      "sourceTitle": "SGPC: Takhat Sri Damdama Sahib, Guru Kanshi, Talwandi Sabo",
+      "namedIdentity": "Gurdwara Sri Likhansar Sahib",
+      "locality": "Talwandi Sabo",
+      "verificationMethod": "Official Takht page named associated shrine reviewed",
+      "identityEvidence": "Likhansar Sahib is named among the historic shrines associated with Talwandi Sabo.",
+      "significance": "Likhansar Sahib is named among the historic shrines associated with Talwandi Sabo.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "69dd76678a2aea2ad55eb59331b1b824291b08d99a26450adaaee828485cb52d"
+    },
+    {
+      "id": "gs-jandsar-talwandi",
+      "sourceURL": "https://www.mha.gov.in/sites/default/files/2022-10/Sikh_Gurrdwara_Act1925_1%5B1%5D.pdf",
+      "sourceTitle": "Ministry of Home Affairs: Sikh Gurdwaras Act 1925, named shrine schedules",
+      "namedIdentity": "Gurdwara Sri Jandsar Sahib",
+      "locality": "Talwandi Sabo",
+      "verificationMethod": "Official historical named schedule indexed passages reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Jandsar Sahib in Talwandi Sabo.",
+      "significance": "Named Sikh shrine recorded in Ministry of Home Affairs: Sikh Gurdwaras Act 1925, named shrine schedules.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "6c7b4a69c79c6c8bb292aef2331764fbcbd15a226f21354250c994aa12dd7075"
+    },
+    {
+      "id": "gs-tuti-gandi-sahib",
+      "sourceURL": "https://muktsar.nic.in/places-of-interest/",
+      "sourceTitle": "District Sri Muktsar Sahib: Places of Interest",
+      "namedIdentity": "Gurdwara Sri Tuti Gandi Sahib",
+      "locality": "Sri Muktsar Sahib",
+      "verificationMethod": "Official district named shrine descriptions reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Tuti Gandi Sahib in Sri Muktsar Sahib.",
+      "significance": "Named Sikh shrine recorded in District Sri Muktsar Sahib: Places of Interest.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "56322f16595e14c09084473627ac733c609e92eb3557e7b74cb5297b834e800b"
+    },
+    {
+      "id": "gs-guptsar-sahib",
+      "sourceURL": "https://muktsar.nic.in/places-of-interest/",
+      "sourceTitle": "District Sri Muktsar Sahib: Places of Interest",
+      "namedIdentity": "Gurdwara Sri Guptsar Sahib",
+      "locality": "Chhattiana",
+      "verificationMethod": "Official district named shrine descriptions reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Guptsar Sahib in Chhattiana.",
+      "significance": "Named Sikh shrine recorded in District Sri Muktsar Sahib: Places of Interest.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "e33686ae421093b6631946439d026d5ba7107ef7b83140fb131c080e5c0e8e2b"
+    },
+    {
+      "id": "gs-gangsar-jaito",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-faridkot",
+      "sourceTitle": "SGPC: Gurdwaras in Faridkot",
+      "namedIdentity": "Gurdwara Sri Gangsar Sahib",
+      "locality": "Jaito",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Gangsar Sahib in Jaito.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Faridkot.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "ae706dd4ad6458765c7edf82cc4a2ea5d433c550eb375e819a91a8b24c4c9c24"
+    },
+    {
+      "id": "gs-jand-sahib",
+      "sourceURL": "https://nidhi.tourism.gov.in/home/attractions-list",
+      "sourceTitle": "Ministry of Tourism NIDHI: Gurdwara Jand Sahib attraction listing",
+      "namedIdentity": "Gurdwara Sri Jand Sahib",
+      "locality": "Jand Sahib, Faridkot",
+      "verificationMethod": "Official tourism named attraction listing and Faridkot district court landmark reference reviewed",
+      "identityEvidence": "Named gurdwara in Faridkot district, independently identified by official tourism and district court records; no unverified historical narrative is asserted.",
+      "significance": "Named gurdwara in Faridkot district, independently identified by official tourism and district court records; no unverified historical narrative is asserted.",
+      "accessedOn": "2026-10-08",
+      "corroboratingSources": [
+        {
+          "sourceURL": "https://nidhi.tourism.gov.in/home/attraction-details/9d161936-049e-47d5-bbb0-42a115892ee9",
+          "sourceTitle": "NIDHI stable attraction identity: Gurdwara Jand Sahib",
+          "evidence": "Linked attraction identity from the official tourism listing."
+        },
+        {
+          "sourceURL": "https://cdnbbsr.s3waas.gov.in/s3ec03073b00ab99487b74b63c9a6d2b96/uploads/2024/02/2024020941.pdf",
+          "sourceTitle": "District and Sessions Judge Faridkot, January 2024 document, page 59",
+          "evidence": "A location reference identifies Gurudwara Jand Sahib in Faridkot. No personal records are reproduced."
+        }
+      ],
+      "recordSha256": "b8fc8fc55796da9199ae1310856d5b510f69169122d11dec0d5aff466be5e142"
+    },
+    {
+      "id": "gs-guru-ki-dhab",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-faridkot",
+      "sourceTitle": "SGPC: Gurdwaras in Faridkot",
+      "namedIdentity": "Gurdwara Guru Ki Dhab",
+      "locality": "Matta, Faridkot",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Guru Ki Dhab in Matta, Faridkot.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Faridkot.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "bf7ec5e098aa0c3dbe88fab01a78f9e2e8a36293d2d3a66f0145dd44f2026c0b"
+    },
+    {
+      "id": "gs-guru-ka-bagh-sultanpur",
+      "sourceURL": "https://www.incredibleindia.gov.in/en/punjab/kapurthala/gurdwara-sri-guru-ka-baag",
+      "sourceTitle": "Incredible India: Gurudwara Sri Guru Ka Baag, Kapurthala",
+      "namedIdentity": "Gurdwara Guru Ka Bagh",
+      "locality": "Sultanpur Lodhi",
+      "verificationMethod": "Official tourism indexed source passage reviewed",
+      "identityEvidence": "Named historic gurdwara in Sultanpur Lodhi, Kapurthala district.",
+      "significance": "Named historic gurdwara in Sultanpur Lodhi, Kapurthala district.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "0c364a1e94d26776a89a37d22e05494507f789d5288cd6002da86234564d8e14"
+    },
+    {
+      "id": "gs-lohgarh-dina",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-moga",
+      "sourceTitle": "SGPC: Gurdwaras in Moga",
+      "namedIdentity": "Gurdwara Lohgarh (Zafarnama) Sahib",
+      "locality": "Dina",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Lohgarh (Zafarnama) Sahib in Dina.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Moga.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "5d252fbac6344019dbde55db43a146fdc1cfd8665e662ec4716a5f3a674cfb1f"
+    },
+    {
+      "id": "gs-nanaksar-takhtupura",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-moga",
+      "sourceTitle": "SGPC: Gurdwaras in Moga",
+      "namedIdentity": "Gurdwara Sri Nanaksar Sahib",
+      "locality": "Takhtupura",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Nanaksar Sahib in Takhtupura.",
+      "significance": "Named Sikh shrine recorded in SGPC: Gurdwaras in Moga.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "0f3fdb8306ed503429b9e65bd9111f05f0fd2b4f9b09b8f75c739f964f6ff6df"
+    },
+    {
+      "id": "gs-hatt-sahib",
+      "sourceURL": "https://www.mha.gov.in/sites/default/files/2022-10/Sikh_Gurrdwara_Act1925_1%5B1%5D.pdf",
+      "sourceTitle": "Ministry of Home Affairs: Sikh Gurdwaras Act 1925, named shrine schedules",
+      "namedIdentity": "Gurdwara Sri Hatt Sahib",
+      "locality": "Sultanpur Lodhi",
+      "verificationMethod": "Official historical named schedule indexed passages reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Hatt Sahib in Sultanpur Lodhi.",
+      "significance": "Named Sikh shrine recorded in Ministry of Home Affairs: Sikh Gurdwaras Act 1925, named shrine schedules.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "5828f41fd25b6e49029524fa9e5ab363ad23a2fcd5332ad0aadb737ab063f564"
+    },
+    {
+      "id": "gs-baba-gandha-barnala",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Baba Gandha Singh",
+      "locality": "Barnala",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Baba Gandha Singh in Barnala.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "1aef3daed56f03cb8f8fe96ebd62de2d6aa45f82c7b3836ea7ff7c2ae96266b9"
+    },
+    {
+      "id": "gs-dukh-nivaran-patiala",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Dukh Nivaran Sahib",
+      "locality": "Patiala",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Dukh Nivaran Sahib in Patiala.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "467f7eaec63a07bdb31769452df3dbf03f943444a9e897e2a912d312f75dc9f1"
+    },
+    {
+      "id": "gs-bahadurgarh-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sahib Patshahi Nauvin Bahadurgarh",
+      "locality": "Bahadurgarh, Patiala",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sahib Patshahi Nauvin Bahadurgarh in Bahadurgarh, Patiala.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "f9aec60a044f1906f62b9644f1885a8e7162dd74db7cbcf88ba0c27fd39ddd9c"
+    },
+    {
+      "id": "gs-nabha-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-87",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 87 directory",
+      "namedIdentity": "Gurdwara Sri Nabha Sahib",
+      "locality": "Zirakpur",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Nabha Sahib in Zirakpur.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 87 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "2fd6c4bb14eb2d57af4a949c187f12de2416754f7f01ea1b77f730d12913ccfe"
+    },
+    {
+      "id": "gs-moti-bagh-patiala",
+      "sourceURL": "https://patiala.nic.in/public-utility/government-ayurvedic-college/",
+      "sourceTitle": "District Patiala: Government Ayurvedic College directory",
+      "namedIdentity": "Gurdwara Sri Moti Bagh Sahib",
+      "locality": "Patiala",
+      "verificationMethod": "Official district address reference reviewed",
+      "identityEvidence": "Named Sikh shrine in Patiala, used as a local landmark by the district’s official directory.",
+      "significance": "Named Sikh shrine in Patiala, used as a local landmark by the district’s official directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "016ba140b6ef27cce1f543934a3530dde092f8def01fdb7921076cf625fd1edb"
+    },
+    {
+      "id": "gs-amb-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Amb Sahib",
+      "locality": "Mohali",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Amb Sahib in Mohali.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "b88b1eeb449f1ad3fa7e4d663ec447cea282f2a89286ade3d79d6136e1ffe448"
+    },
+    {
+      "id": "gs-nada-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Nada Sahib",
+      "locality": "Panchkula",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Nada Sahib in Panchkula.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "42a670544591009dee4cea176a33dc667c6a6b55cc6f853e64cd03debf58aaf9"
+    },
+    {
+      "id": "gs-panjokhra-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Panjokhra Sahib",
+      "locality": "Panjokhra, Ambala",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Panjokhra Sahib in Panjokhra, Ambala.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "eab3b72509ecf4ceeb4c2caae06a299e3c8fc6c3e980b1b6a2a8be7a1d39e232"
+    },
+    {
+      "id": "gs-manji-ambala",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Manji (Baoli) Sahib",
+      "locality": "Ambala",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Manji (Baoli) Sahib in Ambala.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "9b9ad56d7b6f103bb7ebd2f927427181eec38d45e78a8f564ab47e88f535a07f"
+    },
+    {
+      "id": "gs-manji-karnal",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-87",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 87 directory",
+      "namedIdentity": "Gurdwara Sri Manji Sahib",
+      "locality": "Karnal",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Manji Sahib in Karnal.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 87 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "d807e1025ed961177147495b08187c2ff3494c30aff908ed29e435709a323d42"
+    },
+    {
+      "id": "gs-chhevin-kurukshetra",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Patshahi Chhevin",
+      "locality": "Kurukshetra",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Patshahi Chhevin in Kurukshetra.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "95d832a9d7cca2a897d2b358ecbccaa5242509d01cfd17dbe41d34f9025318cf"
+    },
+    {
+      "id": "gs-dhamtan-sahib",
+      "sourceURL": "https://sgpc.net/gurdwara-sahib-section-85",
+      "sourceTitle": "SGPC: Named gurdwaras, Section 85 directory",
+      "namedIdentity": "Gurdwara Sri Dhamtan Sahib",
+      "locality": "Dhamtan, Jind",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Dhamtan Sahib in Dhamtan, Jind.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named gurdwaras, Section 85 directory.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "3eae06287841abffede0943186a5d665bed1400d66c2f9b283901980c21d21c1"
+    },
+    {
+      "id": "gs-haa-da-naara-sahib",
+      "sourceURL": "https://malerkotla.dcourts.gov.in/about-department/history/",
+      "sourceTitle": "District Court Malerkotla: History",
+      "namedIdentity": "Gurdwara Haa Da Naara Sahib",
+      "locality": "Malerkotla",
+      "verificationMethod": "Official district court indexed named history passage reviewed",
+      "identityEvidence": "Commemorates Nawab Sher Mohammed Khan’s protest over the treatment of the younger Sahibzadas.",
+      "significance": "Commemorates Nawab Sher Mohammed Khan’s protest over the treatment of the younger Sahibzadas.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "f99959457c0e6d5b71b6e2dae4ca5c40ecd3b47d3858422a4a8fc0ed19e840df"
+    },
+    {
+      "id": "gs-moti-bagh-delhi",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: historic Delhi gurdwaras",
+      "namedIdentity": "Gurdwara Sri Moti Bagh Sahib",
+      "locality": "New Delhi",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Moti Bagh Sahib in New Delhi.",
+      "significance": "Named Sikh shrine recorded in DSGMC Directory 2022: historic Delhi gurdwaras.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "53eca7f2002d1e5c32787c29ac3c46ade6418233cbc9d064d4bcad6af2f1d2a9"
+    },
+    {
+      "id": "gs-damdama-delhi",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: historic Delhi gurdwaras",
+      "namedIdentity": "Gurdwara Sri Damdama Sahib",
+      "locality": "New Delhi",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Damdama Sahib in New Delhi.",
+      "significance": "Named Sikh shrine recorded in DSGMC Directory 2022: historic Delhi gurdwaras.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "04c08500a80d39338f7b0a0868ec8ca52340438cf7f0257181556fc9a1004723"
+    },
+    {
+      "id": "gs-majnu-ka-tila",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: historic Delhi gurdwaras",
+      "namedIdentity": "Gurdwara Majnu Ka Tila Sahib",
+      "locality": "Delhi",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Majnu Ka Tila Sahib in Delhi.",
+      "significance": "Named Sikh shrine recorded in DSGMC Directory 2022: historic Delhi gurdwaras.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "2570103464395464da010b01807e29ee04e8c29f24eb9ca665ad1ea5b7727b29"
+    },
+    {
+      "id": "gs-bala-sahib-delhi",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: historic Delhi gurdwaras",
+      "namedIdentity": "Gurdwara Sri Bala Sahib",
+      "locality": "New Delhi",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Sri Bala Sahib in New Delhi.",
+      "significance": "Named Sikh shrine recorded in DSGMC Directory 2022: historic Delhi gurdwaras.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "018941995ddb5164c43790f4b3b95c103916d1b399c44ecc1d0fe5e5f07b0c0a"
+    },
+    {
+      "id": "gs-mata-sundri-delhi",
+      "sourceURL": "https://dsgmc.in/Content/PDF/Directory2022.pdf",
+      "sourceTitle": "DSGMC Directory 2022: historic Delhi gurdwaras",
+      "namedIdentity": "Gurdwara Mata Sundri Sahib",
+      "locality": "New Delhi",
+      "verificationMethod": "Official directory PDF named entries reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Mata Sundri Sahib in New Delhi.",
+      "significance": "Named Sikh shrine recorded in DSGMC Directory 2022: historic Delhi gurdwaras.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "10bf7d08a728dd633e207b42918fc642b9d0e35d1c5941a05d60cbe22f41b10e"
+    },
+    {
+      "id": "gs-nanak-jhira-bidar",
+      "sourceURL": "https://www.incredibleindia.gov.in/en/karnataka/bidar/guru-nanak-jhira",
+      "sourceTitle": "Incredible India: Guru Nanak Jhira, Bidar",
+      "namedIdentity": "Gurdwara Sri Guru Nanak Jhira Sahib",
+      "locality": "Bidar",
+      "verificationMethod": "Official tourism named shrine account reviewed",
+      "identityEvidence": "Sikh pilgrimage shrine in Bidar associated with Guru Nanak.",
+      "significance": "Sikh pilgrimage shrine in Bidar associated with Guru Nanak.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "2494d61db02c4bd193f23397b08ddf203bd39ca3bfc333c617081bd89d5a6e20"
+    },
+    {
+      "id": "gs-guru-ka-tal-agra",
+      "sourceURL": "https://www.incredibleindia.gov.in/en/uttar-pradesh/agra",
+      "sourceTitle": "Incredible India: Agra",
+      "namedIdentity": "Gurdwara Guru Ka Tal",
+      "locality": "Agra",
+      "verificationMethod": "Official tourism named attraction passage reviewed",
+      "identityEvidence": "Agra Sikh pilgrimage shrine dedicated to Guru Tegh Bahadur.",
+      "significance": "Agra Sikh pilgrimage shrine dedicated to Guru Tegh Bahadur.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "7c95dac36f37810c7dcc322771cee5f9220c3a86e71dc51b3c9a9102653c959f"
+    },
+    {
+      "id": "gs-lakhpat-sahib",
+      "sourceURL": "https://gujarattourism.com/kutch-zone/kutch/lakhpat-fort-and-gurudwara.html",
+      "sourceTitle": "Gujarat Tourism: Lakhpat Fort and Gurudwara",
+      "namedIdentity": "Gurdwara Lakhpat Sahib",
+      "locality": "Lakhpat, Kutch",
+      "verificationMethod": "Official tourism indexed named attraction passage reviewed",
+      "identityEvidence": "Named Sikh gurdwara within the historic Lakhpat fort settlement in Kutch.",
+      "significance": "Named Sikh gurdwara within the historic Lakhpat fort settlement in Kutch.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "a112683b3fc5ca753fb7606e0263601c1b0d540b2804ff46002decb69cc85c25"
+    },
+    {
+      "id": "gs-pathar-sahib",
+      "sourceURL": "https://www.incredibleindia.gov.in/en/ladakh/leh/gurudwara-pathar-sahib",
+      "sourceTitle": "Incredible India: Gurudwara Pathar Sahib, Leh",
+      "namedIdentity": "Gurdwara Sri Pathar Sahib",
+      "locality": "Leh",
+      "verificationMethod": "Official tourism indexed named shrine passage reviewed",
+      "identityEvidence": "Historic Sikh shrine near Leh dedicated to Guru Nanak.",
+      "significance": "Historic Sikh shrine near Leh dedicated to Guru Nanak.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "3c50dce2fcd99a3b6655ed9e6ebb45055682b59d50fe4daddc338a05d878ec1b"
+    },
+    {
+      "id": "gs-chatti-srinagar",
+      "sourceURL": "https://srinagar.nic.in/deputy-commissioner-srinagar-reviews-arrangements-for-prakash-utsav/",
+      "sourceTitle": "District Srinagar: Arrangements for Prakash Utsav",
+      "namedIdentity": "Gurdwara Chatti Patshahi",
+      "locality": "Srinagar",
+      "verificationMethod": "Official district event page named shrine passage reviewed",
+      "identityEvidence": "Historic Chatti Padshahi shrine in Rainawari, Srinagar; the district documents its Prakash Utsav arrangements.",
+      "significance": "Historic Chatti Padshahi shrine in Rainawari, Srinagar; the district documents its Prakash Utsav arrangements.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "d4b2a6954a4235c14ffbb4198742a042348b8b82f62d8dac219131b526a57ee7"
+    },
+    {
+      "id": "gs-mattan-sahib",
+      "sourceURL": "https://culture.gov.in/events/north-zone-cultural-centre-organises-two-day-programme-kashmir-observe-350th-martyrdom-year",
+      "sourceTitle": "Ministry of Culture: Kashmir programme for the 350th martyrdom year",
+      "namedIdentity": "Gurdwara Sri Guru Nanak Dev Ji (Mattan Sahib)",
+      "locality": "Mattan, Anantnag",
+      "verificationMethod": "Official Ministry of Culture event page named venue reviewed",
+      "identityEvidence": "The Ministry of Culture identifies the Guru Nanak Dev Ji gurdwara at Mattan Sahib as a Sikh commemorative programme venue.",
+      "significance": "The Ministry of Culture identifies the Guru Nanak Dev Ji gurdwara at Mattan Sahib as a Sikh commemorative programme venue.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "03fdc99285b01961d7bf10a6c6f007ec1b0c3f62076c0690e9e80e1b7ce53d15"
+    },
+    {
+      "id": "gs-buddha-johad",
+      "sourceURL": "https://www.tourism.rajasthan.gov.in/content/rajasthan-tourism/en/tourist-destinations/sriganganagar.html",
+      "sourceTitle": "Rajasthan Tourism: Sri Ganganagar, Buddha Johad",
+      "namedIdentity": "Gurdwara Buddha Johad",
+      "locality": "Raisinghnagar",
+      "verificationMethod": "Official tourism named shrine account reviewed",
+      "identityEvidence": "Historic Buddha Johad gurdwara associated with the Sikh account of Bhai Sukha Singh and Bhai Mehtab Singh.",
+      "significance": "Historic Buddha Johad gurdwara associated with the Sikh account of Bhai Sukha Singh and Bhai Mehtab Singh.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "ed492bc0f385710829353fac976a11d9d368517053ba30a6cecd1abc8605ed0d"
+    },
+    {
+      "id": "gs-beri-sialkot",
+      "sourceURL": "https://sialkot.dc.lhc.gov.pk/PublicPages/HistoryOfDistrict.aspx",
+      "sourceTitle": "District Judiciary Sialkot: History of District",
+      "namedIdentity": "Gurdwara Sri Beri Sahib",
+      "locality": "Sialkot",
+      "verificationMethod": "Official district judiciary indexed named shrine passage reviewed",
+      "identityEvidence": "Named Sikh pilgrimage shrine on Zafarwal Road in Sialkot.",
+      "significance": "Named Sikh pilgrimage shrine on Zafarwal Road in Sialkot.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "dec644500a0ec06d537aacbce87627bfe972a046d79c80c774c6a4bbc024eadf"
+    },
+    {
+      "id": "gs-janam-ram-das-lahore",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-pakistan",
+      "sourceTitle": "SGPC: Named historic gurdwaras in Pakistan",
+      "namedIdentity": "Gurdwara Janam Asthan Guru Ram Das",
+      "locality": "Lahore",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Janam Asthan Guru Ram Das in Lahore.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named historic gurdwaras in Pakistan.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "23b1dbf01316a04403449a03831e7fc22d4e7d64d535142b0b600d58b5806ac4"
+    },
+    {
+      "id": "gs-dera-lahore",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-pakistan",
+      "sourceTitle": "SGPC: Named historic gurdwaras in Pakistan",
+      "namedIdentity": "Gurdwara Dehra Sahib Guru Arjan Dev",
+      "locality": "Lahore",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Dehra Sahib Guru Arjan Dev in Lahore.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named historic gurdwaras in Pakistan.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "4d1bf3c512ccd33b6e6c15f64a1df17b5307860faf5d87711dacff1747bc157f"
+    },
+    {
+      "id": "gs-bhai-taru-lahore",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-pakistan",
+      "sourceTitle": "SGPC: Named historic gurdwaras in Pakistan",
+      "namedIdentity": "Gurdwara Shaheed Bhai Taru Singh",
+      "locality": "Lahore",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Shaheed Bhai Taru Singh in Lahore.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named historic gurdwaras in Pakistan.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "14cc21403b2730cf9e8adbd98d86cea2bf5f1e993bc2b3b24028add839666645"
+    },
+    {
+      "id": "gs-shaheed-singhnian-lahore",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-pakistan",
+      "sourceTitle": "SGPC: Named historic gurdwaras in Pakistan",
+      "namedIdentity": "Gurdwara Shaheed Ganj Singh Singhnian",
+      "locality": "Lahore",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Shaheed Ganj Singh Singhnian in Lahore.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named historic gurdwaras in Pakistan.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "afd2a0754d9c037888d71bbba4b7563f7758bf4dbcb263e59fbfc52d5f618daa"
+    },
+    {
+      "id": "gs-chowa-rohtas",
+      "sourceURL": "https://www.salampakistan.gov.pk/where-to-go/category/gurdwara-chowa-sahib/location/gurdwara-chowa-sahib",
+      "sourceTitle": "Salam Pakistan: Gurdwara Chowa Sahib",
+      "namedIdentity": "Gurdwara Sri Chowa Sahib",
+      "locality": "Rohtas, Jhelum",
+      "verificationMethod": "Official Pakistan tourism named shrine account reviewed",
+      "identityEvidence": "Historic gurdwara near Rohtas Fort associated with Guru Nanak.",
+      "significance": "Historic gurdwara near Rohtas Fort associated with Guru Nanak.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "e932156155a3a223a11505f3b7038a0962633223b3e89d34795fb2254e201993"
+    },
+    {
+      "id": "gs-rori-eminabad",
+      "sourceURL": "https://gujranwala.punjab.gov.pk/important-places",
+      "sourceTitle": "District Gujranwala: Important Places",
+      "namedIdentity": "Gurdwara Sri Rori Sahib",
+      "locality": "Eminabad",
+      "verificationMethod": "Official district named shrine account reviewed",
+      "identityEvidence": "Eminabad’s historic Rori Sahib shrine is associated with Guru Nanak and Bhai Lalo traditions.",
+      "significance": "Eminabad’s historic Rori Sahib shrine is associated with Guru Nanak and Bhai Lalo traditions.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "516dd1bcccdfb487fd4e5c80599eebd472d45348ae440ec4fc94e2d36793a046"
+    },
+    {
+      "id": "gs-chhevin-muzang",
+      "sourceURL": "https://sgpc.net/gurdwaras-in-pakistan",
+      "sourceTitle": "SGPC: Named historic gurdwaras in Pakistan",
+      "namedIdentity": "Gurdwara Patshahi Chhevin Muzang",
+      "locality": "Lahore",
+      "verificationMethod": "Official named directory reviewed",
+      "identityEvidence": "The official source identifies Gurdwara Patshahi Chhevin Muzang in Lahore.",
+      "significance": "Named Sikh shrine recorded in SGPC: Named historic gurdwaras in Pakistan.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "c80b7a0f1ea7b0fe1c34cd658d9431c2ffdcf12e87e35529da631883b931511d"
+    },
+    {
+      "id": "gs-bhai-joga-peshawar",
+      "sourceURL": "https://radio.gov.pk/21-07-2024/kp-governor-emphasized-need-for-interfaith-harmony",
+      "sourceTitle": "Radio Pakistan: Governor’s interfaith harmony visit",
+      "namedIdentity": "Gurdwara Bhai Joga Singh",
+      "locality": "Peshawar",
+      "verificationMethod": "Official public broadcaster named shrine visit report reviewed",
+      "identityEvidence": "Historic named Sikh shrine in Peshawar; an official report records a governor’s visit and interfaith gathering.",
+      "significance": "Historic named Sikh shrine in Peshawar; an official report records a governor’s visit and interfaith gathering.",
+      "accessedOn": "2026-10-08",
+      "recordSha256": "fa17e7e934ac4fe19135752bd81658dab64ae3237bb2af1469b29181a0740c44"
+    }
+  ],
+  "identityReviewNotice": "Each record has an independently reviewed named primary identity reference. Directory entries and official event/address references establish identity, not necessarily a detailed historical narrative. Review record hashes protect the stored paraphrased proof records; they are not hashes of original copyrighted web pages. Current opening/access or surveyed entrance locations are not asserted.",
+  "inputs": [
+    {
+      "path": "work/gurdwara-osm.json",
+      "url": "https://overpass-api.de/api/interpreter",
+      "sha256": "abf00c578422e455a5a35e11f2e20a59eb39215f6f3fc90ff3a5d49e81819922"
+    },
+    {
+      "path": "work/gurdwara-wikidata-items.json",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities",
+      "sha256": "9e97f361a0b5106c1b250152cd4a980ecc01dc5c47804ac7e75f0813689f8692"
+    }
+  ],
+  "rejectedCoordinateCandidates": [
+    {
+      "id": "Q16640628",
+      "reason": "Published Achal Sahib pin is inconsistent with its stated Batala location; omitted rather than shifted or invented."
+    },
+    {
+      "id": "Q25624561",
+      "reason": "Published Guru Tegh Bahadur Sahib pin is near Patiala, not Jind; not assigned to the Jind shrine."
+    }
+  ],
+  "replacedIdentityCandidates": [
+    {
+      "id": "janam-guru-amar-das",
+      "reason": "Primary named shrine identity could not be established from the retrieved official references; replaced with explicitly listed Gurusar Sahib Rupana."
+    },
+    {
+      "id": "ghani-nabi-khan-sahib",
+      "reason": "Retrieved official census mentions the brothers at Degsar, not a separate shrine bearing their names; replaced with explicitly listed Jand Sahib Bir Guru."
+    }
+  ],
+  "output": {
+    "path": "public/data/gurdwaras.geojson",
+    "count": 100,
+    "sha256": "4fb9806eab8e1ecf7aa9e595b25f0d766ea892bff1c8812e94996f2c55af7184"
+  },
+  "dataSha256": "6c14e8e35ff1804901c9d39def91776c9a1aa53ba6d5cddd9eb07f4ba3a70cc0"
+}

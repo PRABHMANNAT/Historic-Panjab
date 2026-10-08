@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import ts from 'typescript';
+import {loadMapModel} from './load-map-model.mjs';
 
 const root = new URL('../', import.meta.url);
 const readJson = async file => JSON.parse(await fs.readFile(new URL(file, root), 'utf8'));
@@ -68,12 +68,7 @@ for (const [region, counts] of Object.entries(expected)) {
 assert.equal(catalog.filter(a => a.region === 'in-haryana' && a.name === 'Loharu').length, 1);
 
 // Exercise the actual editor model, including migration of older saved maps.
-const modelSource = (await fs.readFile(new URL('app/map-model.ts', root), 'utf8'))
-  .replace("import raw from './catalog.json';", `const raw=${JSON.stringify(catalog)};`)
-  .replace("import indianSources from './indian-region-sources.json';", `const indianSources=${JSON.stringify(manifest)};`)
-  .replace("import delhiData from './delhi-map-sources.json';", `const delhiData=${JSON.stringify(await readJson('app/delhi-map-sources.json'))};`);
-const compiled = ts.transpileModule(modelSource, {compilerOptions: {module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022}}).outputText;
-const model = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const model = await loadMapModel();
 assert.equal(model.subdistrictLabel('in-andhra'), 'Mandals');
 assert.equal(model.subdistrictLabel('in-haryana'), 'Tehsils');
 assert.equal(model.subdistrictLabel('in-arunachal'), 'Subdistricts');
@@ -81,7 +76,7 @@ assert.ok(model.coverageNotes.get('in-arunachal').includes('Itanagar capital com
 assert.ok(model.coverageNotes.get('in-maharashtra').includes('1 unnamed'));
 assert.equal(model.coverageNotes.get('in-goa'), '');
 assert.deepEqual(model.layerKeys, [...model.areasByLayer.keys()]);
-assert.equal([...model.areasByLayer.values()].flat().length, catalog.length);
+assert.equal([...model.areasByLayer.values()].flat().length, catalog.length + model.pakistanDivisionData.count);
 for (const [key, list] of model.areasByLayer) assert.ok(list.every(a => a.region + '-' + a.level === key));
 const older = structuredClone(model.initial);
 for (const region of Object.keys(expected)) delete older.regions[region];

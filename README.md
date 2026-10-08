@@ -68,6 +68,129 @@ The **Delhi explorer** at the top of Layers offers Delhi NCT, Old Delhi / New De
 
 Metro data: [© OpenStreetMap contributors, ODbL-1.0](https://www.openstreetmap.org/copyright), retrieved 8 October 2026. See [Delhi Metro](https://wiki.openstreetmap.org/wiki/Delhi_Metro), [Noida Metro](https://wiki.openstreetmap.org/wiki/Noida_Metro) and the [official DMRC network map](https://delhimetrorail.com/network_map). This is an OSM snapshot, not a live timetable or a guarantee of complete current coverage. Proposed routes, RRTS and suburban rail are excluded. Same-name station points within 150m are consolidated for display, not certified interchanges. Retain OSM attribution and comply with ODbL when redistributing the database. Provenance, source IDs, licenses, processing notes and output hashes are in app/delhi-map-sources.json. Browser rendering uses bundled local GeoJSON; no live OSM request is required.
 
+## Neighbouring countries and Tibetan context
+
+Under **Layers → Countries & Tibetan context**, select a country to scope and fit
+the map. Province/regional, district and local-unit layers have independent
+switches. Use the province selector to zoom, or the Areas tab to search, paint,
+hide and focus individual polygons. Province colors flow to districts and local
+units unless overridden; hiding a parent hides its descendants. These settings
+survive auto-save, Save/Load and undo/redo. New countries start off in the regional
+atlas to avoid loading all detailed datasets at once.
+
+| Source country/context | Province / regional units | District / equivalent | Local-unit polygons |
+| --- | ---: | ---: | ---: |
+| Nepal (2024) | 7 provinces | 77 districts | 775 source local units |
+| Bangladesh (2023) | 8 divisions | 64 districts | 507 upazila / city areas |
+| Bhutan (2020) | No separate tier | 20 dzongkhags | 205 gewogs |
+| Sri Lanka (2022) | 9 provinces | 25 districts | 339 DS divisions |
+| Maldives (2024) | No separate tier | 21 atoll / city areas | 1,556 source island areas |
+| Myanmar (2024) | 18 state / region / special areas | 80 districts | 330 townships |
+| Afghanistan (2025) | 34 provinces | 401 mapped districts | Not supplied |
+| Pakistan (2022) | 7 province / territory areas | 160 districts | 577 tehsils |
+| Tibet AR (2023 / 2017) | 1 modern AR | 7 prefectures / cities | 78 county source areas |
+| Qinghai (2023 / 2017) | 1 modern province | 8 prefectures / cities | 41 county source areas |
+| Sichuan (2023 / 2017) | 1 modern province | 21 prefectures / cities | 158 county source areas |
+
+Counts describe **published source records, not complete current registers**.
+Nepal's 775 records are not a claim about its current municipality count.
+Bangladesh includes 495 upazilas and 12 city corporations. Maldives island areas
+include non-inhabited source areas, not 1,556 inhabited islands. Afghanistan's
+humanitarian source notes 457 designated units but supplies only 401 mapped
+districts; deeper subdivisions are not invented. Bhutan and Maldives do not
+receive a fictional province tier.
+
+Pakistan's seven records include four provinces, Islamabad, and
+Pakistan-administered Azad Kashmir and Gilgit-Baltistan; seven constitutional
+provinces or settled sovereignty are not asserted. While full-country coverage is
+enabled, it takes precedence over the separately edited Punjab/Lahore, selected-KP
+and Islamabad editions. Disabling it restores those saved layers and colors.
+
+The **Tibet + Qinghai + Sichuan · modern administrative context** option is an exact
+union of the three source provincial outlines. It is **not** a traditional
+Ü-Tsang / Amdo / Kham reconstruction or an exact Greater Tibet boundary: all Qinghai
+and Sichuan territory is included, including non-Tibetan areas. Source extents
+do not resolve territorial disputes.
+
+Chinese province/prefecture geometry uses the simplified 2023
+[cn-atlas](https://github.com/BarbarossaWang/cn-atlas) source (Amll, ISC), derived from
+[CTAmap](https://github.com/ruiduobao/shengshixian.com) (Rui Cheng, MIT). County
+polygons use the 2017 [geoBoundaries](https://www.geoboundaries.org/) CHN ADM2 source
+(National Administration of Surveying, Mapping and Geoinformation /
+Revolutionary GIS, PDDL-1.0). County membership and prefecture parents are derived
+from interior-label-point containment, **not official code joins**. County
+geometry is retained without spatial splits; this mixed-edition association may
+disagree with current administrative membership.
+
+The eight country hierarchies use [OCHA/HDX COD-AB](https://data.humdata.org/dashboards/cod)
+snapshots, **CC BY-IGO**, with explicit source parent codes. Attribution, dates,
+download URLs, source hashes, notes and geometry/label output hashes are in
+app/neighbour-country-sources.json. License notices are retained in
+COUNTRY-DATA-LICENSES.txt. The app Guide and exports include source credits.
+No live boundary service is needed for display.
+
+Import scripts use reviewed local source caches under ignored work/:
+work/hdx-ISO-metadata.json, work/country-sources/ISO/ISO_adminN.geojson
+(Pakistan: work/pakistan-admin-source/), work/cn-atlas-provinces.json,
+work/cn-atlas-prefectures.json, work/cn-atlas-package.json,
+work/china-ADM2.geojson and work/geoboundaries-CHN-metadata.json.
+Download URLs and expected source hashes are retained in the manifest.
+Run npm run data:neighbour-countries (optionally -- --countries=npl,bgd), then
+npm run data:tibet-context and npm run check:boundaries. Review changed licenses,
+editions, counts and source gaps before using new downloads.
+
+## Map scopes, Pakistan divisions and place overlays
+
+**Layers → Map views & combinations** offers enabled-layer atlas, full available
+map, individual state/territory/country, custom combinations, Chandigarh Tricity
+and user-editable Historic Punjab context. Individual views draw only the selected
+geography while preserving other regions' colors. Region controls still select
+district, tehsil/subdivision and historical ward detail. Full map starts with 47
+non-overlapping source-region outlines; **Include enabled detail layers** follows
+saved detail preferences instead of downloading all subdivisions automatically.
+
+Tricity uses Chandigarh, S A S Nagar (Mohali) district and Panchkula district, as
+identified by [SAS Nagar Police](https://sasnagar.punjabpolice.gov.in/about_sas_nagar.php).
+This is administrative district context, **not an exact urban or planning boundary**.
+The initial custom Historic Punjab selection is Indian/Pakistani Punjab, Haryana,
+Himachal Pradesh and Chandigarh. Edit its included regions freely; it is modern
+context, **not a dated historical province or Sikh Empire reconstruction**.
+Scope settings, paints and qualifications persist into saved files and exports.
+
+The full Pakistan layer now includes **36 source-era division outlines**: Punjab 9,
+Sindh 6, Balochistan 8, KP 7, Pakistan-administered AJK 3 and GB 3. Their geometries are
+exact unions of 159 WFP/OCHA 2022 district polygons. Islamabad has no invented
+division. Membership uses the [PBS list frozen 1 March 2023](https://www.pbs.gov.pk/wp-content/uploads/2020/07/List-of-Administrative-Districts-2023.pdf),
+with documented Lehri/Sibi and GB edition reconciliations. West Karachi retains
+the source's unsplit Keamari area. These are **not guaranteed current 2026 divisions**.
+Sources, individual crosswalks, qualifications and hashes are in
+app/pakistan-division-sources.json. Province, division, district and tehsil controls
+are independent; the Areas tab exposes all 36 named division outlines.
+
+**Cities, rivers & Sikh heritage** adds 447 Natural Earth settlement points and 155
+generalized river records (public domain). By default 353 source major/capital
+points qualify before geographic filtering. Set a population threshold, show all
+source settlements, use automatic city marker colors or a custom highlight.
+**Auto-color major-city districts** changes only the containing visible districts;
+it does not invent municipal city polygons. The most populous source city wins
+when several fall in one district. This is undoable. Population estimates are
+archival, not a current census. Rivers have color, width and name controls. Points
+are filtered to selected source polygons and displayed/exported rivers are clipped
+to their union, including holes; bundled original geometry remains unchanged.
+Provenance and hashes are in app/atlas-overlay-sources.json.
+
+**Show historic gurdwaras** displays 100 curated named shrines: the 5 Takhts,
+15 additional editorial featured sites (including Harmandir/Golden Temple,
+Fatehgarh Sahib and Jyoti Sarup Sahib), and 80 other historic/notable sites.
+Filter tiers, change label visibility and symbol size/color, or locate a shrine
+with the 100-site picker. The 5 Takhts and15 featured sites have distinctive original
+building symbols; these are stylized designs, not exact architectural replicas.
+The collection is not an objective ranking or a complete global register.
+Published OSM/Wikidata representative points are not surveyed entrances.
+Geographic scope still applies to shrines. Identity references, coordinate evidence,
+licenses and hashes are in app/gurdwara-sources.json; the location database is
+distributed under ODbL 1.0 with OSM attribution and Wikidata CC0 provenance.
+
 ## Combined Kashmir view
 
 Under **Layers → Kashmir boundary view**, choose **Combined J&K · Indian claimed extent**. This dissolves the published J&K and Ladakh UT outlines into one connected outer boundary. It includes Gilgit-Baltistan, Azad Jammu & Kashmir (PoK), Ladakh, Aksai Chin, and Shaksgam. Default detail is off for these two UTs; their district and tehsil controls can be re-enabled. The shared outline remains visible while Combined is selected; choose Separate to return to independent UT outlines.
@@ -79,12 +202,22 @@ The derived outline and context-label provenance are recorded in app/kashmir-vie
 ## Verification and data refresh
 
     npm run check:boundaries
+    npm run check:atlas
     npx tsc --noEmit --incremental false
     npx oxlint app/map-model.ts app/map-view.tsx app/extended-editor.tsx app/export-map.ts scripts
     npm run build:vercel
     npm run check:browser
     npm run check:states-browser
     npm run check:delhi-browser
+    npm run check:countries-browser
+    npm run check:atlas-browser
+
+The country check isolates all 11 country/modern-context entries and the combined
+three-province view. It verifies available hierarchy levels, loaded resources,
+inherited geometry colors on map-only canvas pixels, recursive hiding,
+undo/redo, source-attributed SVG/PNG exports, Save/Load, reload and mobile layout.
+Use MAP_COUNTRY_IDS for a comma-separated subset. Repeated place names are
+distinguished by their source IDs.
 
 Browser checks require the app running on port 4545 and Chrome installed. The state-layer check isolates each LGD region and verifies district/subdistrict lists, six resources per region, coloring, visibility, persistence, undo/redo, exports, coverage notes and mobile layout; MAP_STATE_IDS can select a comma-separated subset. The Delhi check covers city/NCR presets, historical detail, metro colors/toggles/stations, actual canvas pixels, save/load, undo/redo, SVG/PNG exports and mobile layout. The Kashmir regression check verifies the six previously added regions, actual canvas painting, combined Kashmir rendering, SVG/PNG downloads, auto-save and manual Save/Load, undo/redo, and a mobile viewport. Screenshots and downloads are written to ignored outputs/. Set MAP_TEST_URL to test another server or MAP_BROWSER_CHANNEL for another supported installed browser. The dev watcher excludes generated outputs and source caches to avoid Windows file-lock crashes.
 

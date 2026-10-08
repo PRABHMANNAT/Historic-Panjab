@@ -1,8 +1,7 @@
 import assert from 'node:assert/strict';
-import fs from 'node:fs/promises';
-import ts from 'typescript';
+import {loadMapModel} from './load-map-model.mjs';
 import clipping from 'polygon-clipping';
-import {collection, hash, read, root} from './delhi-source-utils.mjs';
+import {collection, hash, read} from './delhi-source-utils.mjs';
 import {extent, labelPoint, polygons} from './geojson-utils.mjs';
 
 const manifest = await read('app/delhi-map-sources.json'), catalog = await read('app/catalog.json');
@@ -49,10 +48,7 @@ for (const line of manifest.metro.lines) {
   if (rawWays.size) for (let i = 0; i < line.wayIds.length; i++) assert.deepEqual(f.geometry.coordinates[i], rawWays.get(line.wayIds[i]), `${line.name}: actual source way`);
 }
 for (const f of stations.features) {assert.equal(f.geometry.type, 'Point');assert.ok(f.properties.name);assert.ok(f.properties.lineIds.every(id => lineIds.has(id)));assert.ok(f.properties.osmNodeIds.length);}
-let source = await fs.readFile(new URL('app/map-model.ts', root), 'utf8');
-for (const [binding, file] of [['raw', 'catalog.json'], ['indianSources', 'indian-region-sources.json'], ['delhiData', 'delhi-map-sources.json']]) source = source.replace(`import ${binding} from './${file}';`, `const ${binding}=${JSON.stringify(await read('app/' + file))};`);
-const compiled = ts.transpileModule(source, {compilerOptions: {module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022}}).outputText;
-const m = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
+const m = await loadMapModel();
 const old = m.validate({fills: {}, regions: {}});assert.equal(old.delhiView, 'none');assert.equal(old.delhiMetro, false);assert.equal(Object.keys(old.metroLines).length, 11);
 const d = {...old, ...m.delhiPreset(old, 'ncr')};assert.ok(m.visible(byId.get('delhi-ncr'), d));assert.equal(m.visible(byId.get('in-haryana'), d), false);assert.equal(m.visible(byId.get('in-uttar-pradesh-d-120'), d), false);
 assert.equal(catalog.filter(a => a.level === 'district' && a.region === 'in-haryana' && m.visible(a, d)).length, 14);

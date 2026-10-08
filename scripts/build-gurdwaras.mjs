@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const data = JSON.parse(fs.readFileSync(path.join(root,'app/gurdwara-data.json'),'utf8'));
+const metadata = JSON.parse(fs.readFileSync(path.join(root,'app/gurdwara-sources.json'),'utf8'));
+const evidenceById = new Map(metadata.coordinateEvidence.map(item=>[item.id,item]));
+const identityById = new Map(metadata.identityEvidence.map(item=>[item.id,item]));
+const ids = new Set();
+const sourceIds = new Set();
+const counts = { takht:0,featured:0,historic:0 };
+for (const item of data) {
+ if (ids.has(item.id) || sourceIds.has(item.sourceIdentity)) throw new Error(`Duplicate shrine or coordinate identity: ${item.id}`);
+ ids.add(item.id); sourceIds.add(item.sourceIdentity);
+ if (!Object.hasOwn(counts,item.tier)) throw new Error(`Unsupported shrine tier: ${item.tier}`);
+ counts[item.tier]++;
+ if (!Array.isArray(item.coordinates)||item.coordinates.length!==2||!item.coordinates.every(Number.isFinite)||Math.abs(item.coordinates[0])>180||Math.abs(item.coordinates[1])>90) throw new Error(`Invalid point: ${item.id}`);
+ const e = evidenceById.get(item.id);
+ if (!e || e.sourceIdentity!==item.sourceIdentity || JSON.stringify(e.coordinates)!==JSON.stringify(item.coordinates)) throw new Error(`Point differs from published coordinate evidence: ${item.id}`);
+ const hash = crypto.createHash('sha256').update(JSON.stringify(e.raw)).digest('hex');
+ if (hash !== e.rawSha256) throw new Error(`Coordinate evidence hash mismatch: ${item.id}`);
+ const identity = identityById.get(item.id);
+ if (!identity || item.sourceStatus!=='verified-primary-reference' || identity.sourceURL!==item.significanceSource || identity.namedIdentity!==item.name || identity.locality!==item.city || identity.significance!==item.significance || !identity.identityEvidence || !identity.sourceTitle || !identity.verificationMethod || !identity.accessedOn) throw new Error(`Primary named identity proof missing or mismatched: ${item.id}`);
+ const {id:identityId,recordSha256,...proof} = identity;
+ if (identityId!==item.id || crypto.createHash('sha256').update(JSON.stringify(proof)).digest('hex')!==recordSha256) throw new Error(`Primary identity review hash mismatch: ${item.id}`);
+}
+if (data.length!==100||identityById.size!==100||counts.takht!==5||counts.featured!==15||counts.historic!==80) throw new Error('Expected exactly 100 source-reviewed shrines: 5 Takhts + 15 featured + 80 historic.');
+const geojson = {type:'FeatureCollection',features:data.map(item=>({type:'Feature',id:item.id,properties:{...item},geometry:{type:'Point',coordinates:item.coordinates}}))};
+const out = path.join(root,'public/data/gurdwaras.geojson');
+fs.writeFileSync(out,JSON.stringify(geojson)+'\n');
+metadata.output = {path:'public/data/gurdwaras.geojson',count:data.length,sha256:crypto.createHash('sha256').update(fs.readFileSync(out)).digest('hex')};
+metadata.dataSha256 = crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'app/gurdwara-data.json'))).digest('hex');
+fs.writeFileSync(path.join(root,'app/gurdwara-sources.json'),JSON.stringify(metadata,null,2)+'\n');
+console.log('Generated 100 source-reviewed shrine points (5 Takhts, 15 featured, 80 historic).');

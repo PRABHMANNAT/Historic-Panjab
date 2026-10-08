@@ -1,0 +1,66 @@
+Neighbour-country boundary data notices
+=======================================
+
+The OCHA/HDX COD-AB snapshots for Nepal, Bangladesh, Bhutan, Sri Lanka,
+Maldives, Myanmar, Afghanistan and Pakistan are CC BY-IGO. Dataset authors,
+versions, source links, processing notes and output hashes are recorded in
+app/neighbour-country-sources.json and the application Guide.
+License: https://creativecommons.org/licenses/by/3.0/igo/
+Derived changes: editor properties, hierarchical IDs and interior label points.
+Source polygon coordinates are retained.
+
+Chinese modern administrative context
+-------------------------------------
+cn-atlas by Amll, version 0.1.2, commit
+6e83a19923e39f2c0e58a0a7ad29b349b2a71b9f declares the ISC license.
+https://github.com/BarbarossaWang/cn-atlas
+The repository does not provide a separate copyright-year notice.
+
+ISC permission and disclaimer:
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+cn-atlas derives data from CTAmap by Rui Cheng:
+https://github.com/ruiduobao/shengshixian.com
+The upstream repository's LICENSE is retained verbatim below.
+
+MIT License
+
+Copyright (c) 2019-present gaoyi(Evan) Xu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+County polygons: National Administration of Surveying, Mapping and
+Geoinformation / Revolutionary GIS via geoBoundaries gbOpen CHN ADM2 (2017).
+License: Open Data Commons Public Domain Dedication and License 1.0
+https://opendatacommons.org/licenses/pddl/1-0/
+https://www.geoboundaries.org/
+Derived changes: selection by interior label location, editor properties,
+and spatially associated prefecture parents. No county geometry is split.
+The combined modern view dissolves the three source provincial outlines.
+These are not traditional Greater Tibet boundaries or a resolution of
+disputed sovereignty; source editions and coverage are not current registers.
