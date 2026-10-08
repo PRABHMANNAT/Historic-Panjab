@@ -155,6 +155,13 @@
       "state_lgd": 27,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 1
+    },
+    {
+      "id": "in-manipur",
+      "name": "Manipur",
+      "state_lgd": 14,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -441,6 +448,21 @@
     "in-maharashtra-tehsil": {
       "count": 360,
       "sha256": "4d17584b22dd4eb5224abe5914e919cbd9b94597e6b6af2637236b75c91eda5b",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-manipur-region": {
+      "count": 1,
+      "sha256": "6d783ddf1ba97c1b89dfa25320df0c38cb50869b4a668e6235851f05ba4de98d",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-manipur-district": {
+      "count": 16,
+      "sha256": "c30c37cb859f94bf00e8afc164908d2a065ee63599577e9966877a850388f15b",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-manipur-tehsil": {
+      "count": 39,
+      "sha256": "cdc2d176ebf3fa7b82f71834974192ff5760ca5aa28aacf652d1d29086a7cda9",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
