@@ -99,6 +99,13 @@
       "state_lgd": 10,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-chhattisgarh",
+      "name": "Chhattisgarh",
+      "state_lgd": 22,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -265,6 +272,21 @@
     "in-bihar-tehsil": {
       "count": 533,
       "sha256": "bf50467414bead0991aa96a046d0fd75571950f2c1a536ba5764f91b66846d8f",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-chhattisgarh-region": {
+      "count": 1,
+      "sha256": "a3925a0026ccbb78591c75f6511561bf357329fd18943793325424eebd70794c",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-chhattisgarh-district": {
+      "count": 33,
+      "sha256": "a8c0b3334bc1dd7d254f451519c605ad41aa9e9f4a403859f0a7ff25d5f846dc",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-chhattisgarh-tehsil": {
+      "count": 164,
+      "sha256": "dbc244cc0f4b1eb52fa848d78a1e175c5be54dc71c95afce14cfa6d7a531d128",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
