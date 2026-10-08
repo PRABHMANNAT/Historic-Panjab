@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {loadLocalModule} from './load-map-model.mjs';
+import {loadLocalModule,loadMapModel} from './load-map-model.mjs';
 
 const app=new URL('../app/',import.meta.url);
 const catalog=JSON.parse(await fs.readFile(new URL('catalog.json',app),'utf8'));
@@ -49,4 +49,24 @@ assert.deepEqual(ids(scope.scopeGeometryAreas({...doc,countryView:'np-nepal'})),
 assert.deepEqual(ids(scope.scopeGeometryAreas({...doc,countryView:'tibet-modern-three'})),['tibet-modern-three']);
 assert.equal(scope.scopeAreaAllowed(byId.get('kashmir-united'),single),false,'combined Kashmir cannot leak into a single-state map');
 assert.equal(scope.scopeAreaAllowed(byId.get('tibet-modern-three'),single),false,'combined Tibetan context cannot leak into Delhi');
+
+// Explore's custom picker uses the existing combination preset. Exercise the
+// complete saved document and renderer visibility with the advertised example.
+const model=await loadMapModel();
+const before={...model.initial,...scope.scopePreset(model.initial,'single',{scopeRegion:'in-delhi'}),fills:{'in-d-608':{color:'#123456',pattern:'dots'}},basemap:'satellite',rivers:true,mountains:true};
+const chosen=['in-punjab','in-haryana','in-delhi'];
+const together={...before,...scope.scopePreset(before,'combination',{scopeRegions:chosen})};
+assert.deepEqual(ids(scope.scopeGeometryAreas(together)),[...chosen].sort(alphabetical));
+assert.deepEqual([...new Set(model.areas.filter(area=>model.visible(area,together)).map(area=>area.region))].sort(alphabetical),[...chosen].sort(alphabetical),'only the chosen regions and their enabled detail are visible');
+const expectedBounds=chosen.map(id=>byId.get(id).bbox).reduce((b,a)=>[Math.min(b[0],a[0]),Math.min(b[1],a[1]),Math.max(b[2],a[2]),Math.max(b[3],a[3])],[180,90,-180,-90]);
+assert.deepEqual(scope.scopeFocusBounds(together),expectedBounds,'the camera fits the full three-region group');
+for(const key of ['fills','basemap','rivers','mountains'])assert.deepEqual(together[key],before[key],key+' carries over');
+for(const id of chosen){assert.equal(together.regions[id].show,true);for(const level of ['province','district','tehsil','division','uc'])assert.equal(together.regions[id][level],before.regions[id][level],id+' keeps '+level+' preference');}
+const restored=model.validate(JSON.parse(JSON.stringify(together)));
+assert.equal(restored.mapScope,'combination');assert.deepEqual(restored.scopeRegions,chosen);
+assert.deepEqual(ids(scope.scopeGeometryAreas(restored)),[...chosen].sort(alphabetical),'Save/Load and autosave keep the custom combination');
+const removed={...together,...scope.scopePreset(together,'combination',{scopeRegions:chosen.filter(id=>id!=='in-delhi')})};
+assert.ok(!model.areas.some(area=>area.region==='in-delhi'&&model.visible(area,removed)),'removing Delhi removes its outline and detail');
+const arbitrary={...before,...scope.scopePreset(before,'combination',{scopeRegions:['in-maharashtra','in-andaman-nicobar','np-nepal']})};
+assert.deepEqual(ids(scope.scopeGeometryAreas(arbitrary)),['in-andaman-nicobar','in-maharashtra','np-nepal'],'custom choices support distant states, islands and countries');
 console.log(`Verified ${scope.scopeRegions.length} selectable regions, full/single/custom scope migration, detail preservation, Tricity hierarchy, Historic Punjab qualification and geographic source keys.`);

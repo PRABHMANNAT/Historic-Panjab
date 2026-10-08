@@ -24,6 +24,17 @@ source dates vary; the detailed notes below explain what each layer represents.
 - **Add context:** cities, Delhi metro lines and 100 curated gurdwaras, with 57 verified photographs.
 - **Keep and share your work:** local autosave, undo/redo, settings files, and PNG, SVG or JPG exports.
 
+### View multiple states or territories together
+
+Open **Explore a region… → Combine states & territories…** above the map.
+Search and check any available states, territories or countries, then click
+**Show regions together**. The **Punjab + Haryana + Delhi** preset selects
+Indian Punjab, Haryana and Delhi NCT in one click. Remove selected chips or use
+**Clear selection** to build another combination; changes apply when you click
+Show. Reopen the same option to edit your group. Colors, natural layers and
+detail settings carry over, and the combination is included in autosave and
+Save/Load. Use **Layers** to adjust district and subdivision detail.
+
 ## An open-source alternative to MapChart and paid map makers
 
 OpenCarto is a **free, open-source MapChart alternative for South Asia map
