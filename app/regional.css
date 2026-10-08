@@ -7,3 +7,15 @@
 .quick-jumps select{max-width:170px;min-width:130px;border:1px solid #dce4ed;background:#fff;color:#264158;border-radius:6px;padding:6px;font:inherit;font-size:12px}
 .regional .area-row{content-visibility:auto;contain-intrinsic-size:auto 62px}
 .region-card>.coverage-warning{color:#8a5d21;font-size:11px;line-height:1.5}
+.delhi-controls {border-bottom:1px solid #dce4eb;padding-bottom:18px}
+.delhi-controls input[type=checkbox] {accent-color:#2764d8;width:15px;height:15px;margin-right:7px}
+.metro-stations {display:flex;align-items:center;font-size:12px;margin:12px 0}
+.metro-line-list {display:grid;gap:7px;margin-bottom:10px}
+.metro-line-control {display:flex;align-items:center;justify-content:space-between;gap:8px}
+.metro-line-control label {display:flex;align-items:center;font-size:12px;flex:1;cursor:pointer}
+.metro-line-control small {display:block;color:#7a8b9c;font-size:10px}
+.metro-line-control input[type=color] {width:32px;height:25px;padding:1px;border:1px solid #dce4eb;border-radius:4px}
+.metro-map-key {position:absolute;right:12px;top:82px;max-height:230px;overflow:auto;background:#fffffff0;border:1px solid #dce4eb;border-radius:8px;padding:9px 12px;font-size:10px;pointer-events:auto}
+.metro-map-key div {display:flex;align-items:center;gap:7px;line-height:18px}
+.metro-map-key i {width:19px;height:4px;border:1px solid #0002;display:inline-block;border-radius:3px}
+@media(max-width:650px){.metro-map-key {top:94px;max-height:135px;max-width:165px;font-size:9px}}
