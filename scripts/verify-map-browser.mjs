@@ -1,3 +1,4 @@
+import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createRequire} from 'node:module';
@@ -47,7 +48,7 @@ try {
   const expectedFills=(await saved()).fills;
   await page.getByRole('tab',{name:'Layers',exact:true}).click();
   const combinedResponse=page.waitForResponse(r=>r.url().endsWith('/data/kashmir-united-region.geojson') && r.ok());
-  await page.getByLabel('Kashmir boundary view').selectOption('combined');
+  await openLayerGroup(page,'Kashmir boundary view');await page.getByLabel('Kashmir boundary view').selectOption('combined');
   await combinedResponse;
   await page.waitForLoadState('networkidle');
   await page.waitForFunction(()=>document.querySelector('.gl-host')?.getAttribute('aria-busy')==='false',{timeout:120000});
@@ -55,17 +56,17 @@ try {
   assert.equal((await saved()).regions['in-ladakh'].tehsil,false);
   assert.ok(await page.locator('.map-title').innerText().then(t=>t.includes('Indian claimed extent')));
   await page.screenshot({path:'outputs/combined-kashmir.png'});
-  await page.getByRole('button',{name:'SVG',exact:true}).click();
+  await configureExport(page,{format:'SVG'});
   const svgEvent=page.waitForEvent('download');
-  await page.getByRole('button',{name:'Export map',exact:true}).click();
+  await triggerExport(page);
   await (await svgEvent).saveAs('outputs/combined-kashmir.svg');
   const svg=await fs.readFile('outputs/combined-kashmir.svg','utf8');
   for(const name of ['Gilgit-Baltistan','Azad Jammu &amp; Kashmir (PoK)','Aksai Chin','Shaksgam Valley','Indian claimed extent','data-area="kashmir-united"'])assert.ok(svg.includes(name),name+' in export');
   assert.ok(!svg.includes('data-area="in-jammu-kashmir"'),'No separate J&K outline in combined export');
   assert.ok(!svg.includes('data-area="in-ladakh"'),'No separate Ladakh outline in combined export');
-  await page.getByRole('button',{name:'PNG',exact:true}).click();
+  await configureExport(page,{format:'PNG'});
   const pngEvent=page.waitForEvent('download',{timeout:120000});
-  await page.getByRole('button',{name:'Export map',exact:true}).click();
+  await triggerExport(page);
   await (await pngEvent).saveAs('outputs/combined-kashmir.png-export.png');
   assert.ok(Buffer.byteLength(svg)<50000000,'Current-view SVG excludes off-screen geometry');
   const png=await fs.readFile('outputs/combined-kashmir.png-export.png');
@@ -77,7 +78,7 @@ try {
   await page.getByRole('button',{name:'Save',exact:true}).click();
   await (await saveEvent).saveAs('outputs/expanded-map-settings.json');
   const settings=await fs.readFile('outputs/expanded-map-settings.json');
-  await page.getByLabel('Kashmir boundary view').selectOption('separate');
+  await openLayerGroup(page,'Kashmir boundary view');await page.getByLabel('Kashmir boundary view').selectOption('separate');
   assert.equal((await saved()).kashmirView,'separate');
   await page.getByRole('button',{name:'Undo',exact:true}).click();
   assert.equal((await saved()).kashmirView,'combined','Mode participates in undo');

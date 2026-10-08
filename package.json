@@ -13,6 +13,7 @@
     "check:boundaries": "node scripts/check-indian-regions.mjs && node scripts/check-kashmir-view.mjs && node scripts/check-delhi-layers.mjs && node scripts/check-neighbour-countries.mjs && node scripts/check-pakistan-divisions.mjs",
     "check:atlas": "node scripts/check-map-scopes.mjs && node scripts/check-atlas-overlays.mjs && node scripts/check-gurdwaras.mjs",
     "check:atlas-browser": "node scripts/verify-atlas-presets.mjs",
+    "check:workspace-browser": "node scripts/verify-workspace-ui.mjs",
     "check:pakistan-browser": "node scripts/verify-pakistan-divisions.mjs",
     "data:pakistan-divisions": "node scripts/build-pakistan-divisions.mjs",
     "data:atlas-overlays": "node scripts/build-atlas-overlays.mjs",

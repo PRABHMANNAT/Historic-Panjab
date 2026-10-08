@@ -1,3 +1,4 @@
+import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createRequire} from 'node:module';
@@ -79,9 +80,9 @@ try {
       await page.screenshot({path: 'outputs/state-layers/' + id + '.png'});
       // Small and large-state SVG exports exercise both ends of the added atlas.
       if (['in-goa', 'in-odisha', 'in-sikkim', 'in-tamil-nadu', 'in-puducherry'].includes(id)) {
-        await page.getByRole('button', {name: 'SVG', exact: true}).click();
+        await configureExport(page,{format:'SVG'});
         const download = page.waitForEvent('download', {timeout: 120000});
-        await page.getByRole('button', {name: 'Export map', exact: true}).click();
+        await triggerExport(page);
         const file = 'outputs/state-layers/' + id + '.svg';
         await (await download).saveAs(file);
         const svg = await fs.readFile(file, 'utf8');
@@ -96,6 +97,7 @@ try {
       assert.deepEqual((await saved()).fills, expectedFills, id + ' colors survive reload');
       assert.ok((await saved()).regions[id].tehsil, id + ' detail survives reload');
       await page.getByRole('tab', {name: 'Layers', exact: true}).click();
+      await openLayerGroup(page,'Regions & boundaries');
       const card = page.locator('.region-card').filter({has: page.locator('label[for="reg-' + id + '"]')});
       const detail = card.locator('.region-buttons button').nth(1);
       await detail.click();

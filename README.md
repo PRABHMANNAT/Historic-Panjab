@@ -9,7 +9,22 @@ Requires Node.js 22.13 or newer.
     npm ci
     npm run dev -- --port 4545 --host 127.0.0.1
 
-Open [localhost:4545](http://localhost:4545/). Select a state from **More regions** to enable district and tehsil detail and fit its extent. Layers can also be toggled independently. The Tehsils tab groups source subdistrict units, including tehsils, mandals, taluks, talukas, circles, and other state-specific units. Andhra Pradesh's subdistricts are mandals. Area names appear at closer zooms. Tehsils inherit district colors unless painted individually.
+Open [localhost:4545](http://localhost:4545/). Select a state from **Explore a region** to enable district and tehsil detail and fit its extent. Layers can also be toggled independently. The Tehsils tab groups source subdistrict units, including tehsils, mandals, taluks, talukas, circles, and other state-specific units. Andhra Pradesh's subdistricts are mandals. Area names appear at closer zooms. Tehsils inherit district colors unless painted individually.
+
+## Workspace controls
+
+The map occupies the available screen height. Use the navigation rail to open:
+
+- **Layers:** geographic views, countries, Delhi/NCR, region boundaries, Kashmir views, and border visibility. Expand a control group when needed. Search **Regions & boundaries** by name or filter to enabled regions.
+- **Style:** paint colors and patterns, opacity, map appearance, and legend settings. The floating tool palette also includes a quick paint color picker.
+- **Areas:** search and filter individual areas, then color, focus, or hide them.
+- **Overlays:** cities, rivers, historic gurdwaras, and administrative labels.
+
+Hide the inspector with the panel button for a wider map; selecting any rail section reopens it. On small screens, controls open below the map and can be closed to recover map space. **Quick views** contains the regional shortcuts, and the background selector at the upper right contains Political, Satellite, Physical, Rivers, Streets, and Cities.
+
+**Export map** opens format, extent, and resolution settings. Choose PNG, SVG, or JPG, then Download. Save/Load, local auto-save, history, keyboard shortcuts, and the existing map editing behavior are retained. **Guide** contains coverage notes and source attribution.
+
+Run `npm run check:workspace-browser` with the app on port 4545 for the workspace layout/navigation regression. The existing geographic browser checks also use the new navigation and export dialog.
 
 ## Indian boundary coverage
 
@@ -58,7 +73,7 @@ Provenance, download URLs, coverage gaps, counts, and SHA-256 hashes are in app/
 
 ## Delhi explorer, finer detail and metro
 
-The **Delhi explorer** at the top of Layers offers Delhi NCT, Old Delhi / New Delhi city focuses, north/east/south/west source district contexts, NDMC, Cantonment, Noida, Gurugram and NCR. City-focus boxes only move the camera; they do not introduce a new boundary. The 2024 revenue source has 11 districts and 34 named subdivision records. [Delhi's government confirms reorganization into 13 districts in December 2025](https://dmnorthwest.delhi.gov.in/); this app does not invent polygons for that newer arrangement. Old Delhi city focus is not the 2026 Old Delhi district.
+The **Delhi explorer** in **Layers → Delhi & NCR** offers Delhi NCT, Old Delhi / New Delhi city focuses, north/east/south/west source district contexts, NDMC, Cantonment, Noida, Gurugram and NCR. City-focus boxes only move the camera; they do not introduce a new boundary. The 2024 revenue source has 11 districts and 34 named subdivision records. [Delhi's government confirms reorganization into 13 districts in December 2025](https://dmnorthwest.delhi.gov.in/); this app does not invent polygons for that newer arrangement. Old Delhi city focus is not the 2026 Old Delhi district.
 
 **Boundary detail → Fine municipal detail** adds 289 named historical areas: 272 MCD wards, 9 NDMC charges and 8 Cantonment charges, from [OpenCity via Bharatlas](https://bharatlas.com/view/wards_delhi), **CC BY-SA 4.0**. One unnamed polygon is excluded. This is not today's 250-ward MCD map, and municipal wards are not revenue subdivisions. Municipal filters, colors, visibility and save/load work independently of revenue layers. Retain the attribution and share-alike license when redistributing this derived layer.
 
@@ -167,7 +182,7 @@ Sources, individual crosswalks, qualifications and hashes are in
 app/pakistan-division-sources.json. Province, division, district and tehsil controls
 are independent; the Areas tab exposes all 36 named division outlines.
 
-**Cities, rivers & Sikh heritage** adds 447 Natural Earth settlement points and 155
+**Overlays → Cities, rivers & Sikh heritage** adds 447 Natural Earth settlement points and 155
 generalized river records (public domain). By default 353 source major/capital
 points qualify before geographic filtering. Set a population threshold, show all
 source settlements, use automatic city marker colors or a custom highlight.

@@ -1,3 +1,4 @@
+import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -15,11 +16,11 @@ const output='outputs/pakistan-divisions';await fs.mkdir(output,{recursive:true}
 const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('punjab-studio-regional-v2')));
 const idle=async()=>{await page.waitForLoadState('networkidle');await page.waitForFunction(()=>document.querySelector('.gl-host')?.getAttribute('aria-busy')==='false',null,{timeout:120000});};
 const level=kind=>page.locator('.area-levels').getByRole('button',{name:kind==='province'?'Provinces / regional units':kind==='district'?'Districts':kind==='tehsil'?'Tehsils':'Divisions',exact:true}).click();
-const exportSvg=async name=>{await page.getByRole('button',{name:'SVG',exact:true}).click();await page.getByRole('button',{name:'Full map',exact:true}).click();const download=page.waitForEvent('download',{timeout:120000});await page.getByRole('button',{name:'Export map',exact:true}).click();const path=output+'/'+name+'.svg';await(await download).saveAs(path);return fs.readFile(path,'utf8');};
+const exportSvg=async name=>{await configureExport(page,{format:'SVG'});await configureExport(page,{extent:'Full map'});const download=page.waitForEvent('download',{timeout:120000});await triggerExport(page);const path=output+'/'+name+'.svg';await(await download).saveAs(path);return fs.readFile(path,'utf8');};
 try{
  await page.goto(process.env.MAP_TEST_URL||'http://localhost:4545/',{waitUntil:'networkidle',timeout:60000});await page.waitForFunction(()=>!document.querySelector('button.primary')?.disabled,null,{timeout:60000});
- await page.getByLabel('Country map view',{exact:true}).selectOption('pk-country');await page.getByRole('checkbox',{name:'Country tehsil layer',exact:true}).check();
- const card=page.locator('.region-card').filter({has:page.locator('label[for="reg-pk-country"]')});await card.getByRole('button',{name:'Divisions',exact:true}).click();await idle();
+ await openLayerGroup(page,'Countries & territories');await page.getByLabel('Country map view',{exact:true}).selectOption('pk-country');await page.getByRole('checkbox',{name:'Country tehsil layer',exact:true}).check();
+ await openLayerGroup(page,'Regions & boundaries');const card=page.locator('.region-card').filter({has:page.locator('label[for="reg-pk-country"]')});await card.getByRole('button',{name:'Divisions',exact:true}).click();await idle();
  assert.equal((await saved()).regions['pk-country'].division,true);
  for(const kind of ['province','district','tehsil','division'])for(const suffix of ['','-labels'])assert.ok(loaded.has('/data/pk-country-'+kind+suffix+'.geojson'),'Pakistan '+kind+' source loaded');
  await page.getByRole('tab',{name:'Areas',exact:true}).click();

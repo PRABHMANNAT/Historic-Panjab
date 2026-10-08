@@ -1,3 +1,4 @@
+import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -32,15 +33,15 @@ try{
    return page.evaluate(async encoded=>{const im=new Image();im.src='data:image/png;base64,'+encoded;await im.decode();const c=document.createElement('canvas');c.width=im.width;c.height=im.height;const ctx=c.getContext('2d');ctx.drawImage(im,0,0);const p=ctx.getImageData(0,0,c.width,c.height).data;let n=0;for(let i=0;i<p.length;i+=4)if(p[i]===39&&p[i+1]===100&&p[i+2]===216)n++;return n;},png.toString('base64'));
   };
   const exportFile=async format=>{
-   await page.getByRole('button',{name:format.toUpperCase(),exact:true}).click();
+   await configureExport(page,{format:format.toUpperCase()});
    const event=page.waitForEvent('download',{timeout:120000});
-   await page.getByRole('button',{name:'Export map',exact:true}).click();
+   await triggerExport(page);
    const file='outputs/countries/'+id+'.'+format;await(await event).saveAs(file);return file;
   };
   try{
    await page.goto(process.env.MAP_TEST_URL||'http://localhost:4545/',{waitUntil:'networkidle',timeout:60000});
    await page.waitForFunction(()=>!document.querySelector('button.primary')?.disabled,null,{timeout:60000});
-   await page.getByLabel('Country map view').selectOption(id);
+   await openLayerGroup(page,'Countries & territories');await page.getByLabel('Country map view').selectOption(id);
    if(counts.tehsil)await page.getByRole('checkbox',{name:'Country tehsil layer',exact:true}).check();
    else assert.equal(await page.getByRole('checkbox',{name:'Country tehsil layer',exact:true}).count(),0);
    if(!counts.province)assert.equal(await page.getByRole('checkbox',{name:'Country province layer',exact:true}).count(),0);
@@ -78,18 +79,18 @@ try{
    await chooseLevel(child.level);await page.getByLabel('Find an area').fill(child.name);
    await childRow.locator('.area-name').click();await paintSaved(child.id,true);
    await page.screenshot({path:'outputs/countries/'+id+'.png'});
-   await page.getByRole('button',{name:'Full map',exact:true}).click();
+   await configureExport(page,{extent:'Full map'});
    const svg=await fs.readFile(await exportFile('svg'),'utf8');
    assert.ok(svg.includes('data-area="'+child.id+'"'));assert.ok(svg.includes('#2764d8'));assert.ok(/<path[^>]*fill="#2764d8"/.test(svg));
    assert.ok(svg.includes('Regional sources:'));
    assert.ok(svg.includes(source?.iso==='chn'||view?'ISC/MIT':'CC BY-IGO'),'Export attribution');
    if(view){assert.ok(svg.includes('not traditional Greater Tibet'));assert.ok(svg.includes('data-area="'+view.id+'"'));}
    if(['np-nepal','mv-maldives','tibet-modern-three'].includes(id)){
-    await page.getByLabel('Export width in pixels').fill('1200');
+    await configureExport(page,{width:1200});
     const png=await fs.readFile(await exportFile('png'));assert.equal(png.subarray(1,4).toString(),'PNG');
     const event=page.waitForEvent('download');await page.getByRole('button',{name:'Save',exact:true}).click();
     const file='outputs/countries/'+id+'-settings.json';await(await event).saveAs(file);const expected=await saved();
-    await page.getByRole('tab',{name:'Layers',exact:true}).click();await page.getByLabel('Country map view').selectOption('');
+    await page.getByRole('tab',{name:'Layers',exact:true}).click();await openLayerGroup(page,'Countries & territories');await page.getByLabel('Country map view').selectOption('');
     await page.locator('input[type=file]').setInputFiles(file);await page.waitForFunction(id=>JSON.parse(localStorage.getItem('punjab-studio-regional-v2')).countryView===id,id);await idle();
     assert.deepEqual((await saved()).fills,expected.fills);
    }

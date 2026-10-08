@@ -1,3 +1,4 @@
+import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -17,20 +18,20 @@ const saved = () => page.evaluate(() => JSON.parse(localStorage.getItem('punjab-
 const idle = async () => {await page.waitForLoadState('networkidle');await page.waitForFunction(() => document.querySelector('.gl-host')?.getAttribute('aria-busy') === 'false', null, {timeout: 60000});};
 const setting = async (key, value) => page.waitForFunction(([key, value]) => JSON.parse(localStorage.getItem('punjab-studio-regional-v2'))[key] === value, [key, value]);
 const areaView = page.getByLabel('Delhi area view'), detail = page.getByLabel('Delhi detail level');
-const exportFile = async (format, name) => {await page.getByRole('button', {name: format.toUpperCase(), exact: true}).click();const event = page.waitForEvent('download', {timeout: 120000});await page.getByRole('button', {name: 'Export map', exact: true}).click();const file = 'outputs/delhi/' + name + '.' + format;await (await event).saveAs(file);return file;};
+const exportFile = async (format, name) => {await configureExport(page,{format:format.toUpperCase()});const event = page.waitForEvent('download', {timeout: 120000});await triggerExport(page);const file = 'outputs/delhi/' + name + '.' + format;await (await event).saveAs(file);return file;};
 try {
   await page.goto(process.env.MAP_TEST_URL || 'http://localhost:4545/', {waitUntil: 'networkidle', timeout: 60000});
   await page.waitForFunction(() => !document.querySelector('button.primary')?.disabled, null, {timeout: 60000});await idle();
-  await areaView.selectOption('nct');await detail.selectOption('subdivisions');await idle();
+  await openLayerGroup(page,'Delhi & NCR');await areaView.selectOption('nct');await openLayerGroup(page,'Delhi & NCR');await detail.selectOption('subdivisions');await idle();
   assert.ok((await saved()).regions['in-delhi'].tehsil);
   await page.getByRole('tab', {name: 'Areas', exact: true}).click();await page.getByLabel('Filter areas by region').selectOption('in-delhi');await page.locator('.area-levels').getByRole('button', {name: 'Tehsils', exact: true}).click();assert.equal(await page.locator('.area-row').count(), 34);
   await page.locator('.area-name').first().click();const paints = (await saved()).fills;assert.equal(Object.keys(paints).length, 1);
-  await page.getByRole('tab', {name: 'Layers', exact: true}).click();await detail.selectOption('wards');await idle();
+  await page.getByRole('tab', {name: 'Layers', exact: true}).click();await openLayerGroup(page,'Delhi & NCR');await detail.selectOption('wards');await idle();
   await page.getByRole('tab', {name: 'Areas', exact: true}).click();await page.locator('.area-levels').getByRole('button', {name: 'UCs / wards', exact: true}).click();assert.equal(await page.locator('.area-row').count(), 289);
   await page.getByRole('tab', {name: 'Layers', exact: true}).click();
-  for (const [mode, count] of [['ndmc', 9], ['cantt', 8]]) {await areaView.selectOption(mode);await idle();await page.getByRole('tab', {name: 'Areas', exact: true}).click();assert.equal(await page.locator('.area-row').count(), count);await page.getByRole('tab', {name: 'Layers', exact: true}).click();}
-  for (const mode of ['old-delhi', 'new-delhi', 'north', 'east', 'south', 'west', 'noida', 'gurugram', 'nct']) {await areaView.selectOption(mode);await setting('delhiView', mode);await idle();}
-  await detail.selectOption('subdivisions');await page.getByRole('checkbox', {name: 'Show metro lines', exact: true}).check();await setting('delhiMetro', true);await page.getByRole('button', {name: 'Fit metro', exact: true}).click();await idle();
+  for (const [mode, count] of [['ndmc', 9], ['cantt', 8]]) {await openLayerGroup(page,'Delhi & NCR');await areaView.selectOption(mode);await idle();await page.getByRole('tab', {name: 'Areas', exact: true}).click();assert.equal(await page.locator('.area-row').count(), count);await page.getByRole('tab', {name: 'Layers', exact: true}).click();}
+  for (const mode of ['old-delhi', 'new-delhi', 'north', 'east', 'south', 'west', 'noida', 'gurugram', 'nct']) {await openLayerGroup(page,'Delhi & NCR');await areaView.selectOption(mode);await setting('delhiView', mode);await idle();}
+  await openLayerGroup(page,'Delhi & NCR');await detail.selectOption('subdivisions');await page.getByRole('checkbox', {name: 'Show metro lines', exact: true}).check();await setting('delhiMetro', true);await page.getByRole('button', {name: 'Fit metro', exact: true}).click();await idle();
   assert.equal(await page.locator('.metro-line-control').count(), 11);assert.equal(await page.locator('.metro-map-key div').count(), 11);
   const red = sources.metro.lines.find(l => l.name === 'Red Line'), blue = sources.metro.lines.find(l => l.name === 'Blue Line');
   await page.getByLabel('Red Line color', {exact: true}).evaluate(input => {Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(input, '#ff2200');input.dispatchEvent(new Event('input', {bubbles: true}));input.dispatchEvent(new Event('change', {bubbles: true}));});
@@ -49,11 +50,11 @@ try {
   const saveEvent = page.waitForEvent('download');await page.getByRole('button', {name: 'Save', exact: true}).click();const file = 'outputs/delhi/settings.json';await (await saveEvent).saveAs(file);const expected = await saved();
   await page.getByRole('checkbox', {name: 'Show metro lines', exact: true}).uncheck();await page.locator('input[type=file]').setInputFiles(file);await setting('delhiMetro', true);assert.deepEqual((await saved()).metroLines, expected.metroLines);
   await page.reload({waitUntil: 'networkidle'});await idle();assert.equal((await saved()).delhiMetro, true);assert.deepEqual((await saved()).metroLines, expected.metroLines);assert.equal((await saved()).metroStations, false);
-  await areaView.selectOption('ncr');await idle();assert.equal((await saved()).delhiView, 'ncr');assert.deepEqual((await saved()).fills, paints);
+  await openLayerGroup(page,'Delhi & NCR');await areaView.selectOption('ncr');await idle();assert.equal((await saved()).delhiView, 'ncr');assert.deepEqual((await saved()).fills, paints);
   const ncrSvg = await fs.readFile(await exportFile('svg', 'ncr'), 'utf8');assert.ok(ncrSvg.includes('data-area="delhi-ncr"'));assert.ok(ncrSvg.includes('NCR · source reconstruction'));assert.ok(!ncrSvg.includes('data-area="in-haryana-d-58"'));
   await page.reload({waitUntil: 'networkidle'});await idle();assert.equal((await saved()).delhiView, 'ncr');assert.ok(Number((await page.locator('.zoom-controls span').innerText()).replace('z ', '')) > 6, 'Saved NCR view restores its camera focus');
-  await page.getByRole('button', {name: 'All regions', exact: true}).click();await setting('delhiView', 'none');assert.deepEqual((await saved()).fills, paints);await idle();
-  await areaView.selectOption('old-delhi');await idle();await page.screenshot({path: 'outputs/delhi/desktop.png'});
+  await page.locator('.quick-view-menu > summary').click();await page.getByRole('button', {name: 'All regions', exact: true}).click();await setting('delhiView', 'none');assert.deepEqual((await saved()).fills, paints);await idle();
+  await openLayerGroup(page,'Delhi & NCR');await areaView.selectOption('old-delhi');await idle();await page.screenshot({path: 'outputs/delhi/desktop.png'});
   await page.setViewportSize({width: 390, height: 844});await page.screenshot({path: 'outputs/delhi/mobile.png', fullPage: true});assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), 'No mobile horizontal overflow');
   await page.getByRole('button', {name: 'Guide & sources', exact: true}).click();const guide = await page.getByRole('dialog').innerText();assert.ok(guide.includes('December 2025'));assert.ok(guide.includes('289') || guide.includes('272 MCD'));assert.ok(guide.includes('ODbL-1.0'));
   assert.ok(!(await page.locator('.statusbar output').innerText()).includes('Map resource:'), 'No renderer resource error');

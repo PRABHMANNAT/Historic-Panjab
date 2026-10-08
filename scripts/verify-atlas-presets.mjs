@@ -1,3 +1,4 @@
+import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -35,12 +36,12 @@ async function setup(name){
  const saved=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('punjab-studio-regional-v2')));
  const idle=async()=>{await page.waitForLoadState('networkidle');await page.waitForFunction(()=>document.querySelector('.gl-host')?.getAttribute('aria-busy')==='false',null,{timeout:120000});};
  const setting=(key,value)=>page.waitForFunction(([k,v])=>JSON.parse(localStorage.getItem('punjab-studio-regional-v2'))[k]===v,[key,value]);
- const choose=async value=>{await page.getByLabel('Geographic map scope',{exact:true}).selectOption(value);await setting('mapScope',value);await idle();};
+ const choose=async value=>{await openLayerGroup(page,'Geographic view');await page.getByLabel('Geographic map scope',{exact:true}).selectOption(value);await setting('mapScope',value);await idle();};
  const exportFile=async (format,suffix)=>{
-  await page.getByRole('button',{name:format.toUpperCase(),exact:true}).click();
-  await page.getByRole('button',{name:'Full map',exact:true}).click();
+  await configureExport(page,{format:format.toUpperCase()});
+  await configureExport(page,{extent:'Full map'});
   const download=page.waitForEvent('download',{timeout:120000});
-  await page.getByRole('button',{name:'Export map',exact:true}).click();
+  await triggerExport(page);
   const file=output+'/'+name+'-'+suffix+'.'+format;await(await download).saveAs(file);return file;
  };
  const svg=async suffix=>fs.readFile(await exportFile('svg',suffix),'utf8');
@@ -99,7 +100,7 @@ try{
  }
  {
   const t=await setup('overlays');await t.choose('single');await t.page.getByLabel('Individual map region',{exact:true}).selectOption('in-delhi');await t.idle();
-  await t.page.getByRole('checkbox',{name:'Show major cities',exact:true}).check();await t.page.getByLabel('City selection',{exact:true}).selectOption('major');
+  await t.page.getByRole('tab',{name:'Overlays',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show major cities',exact:true}).check();await t.page.getByLabel('City selection',{exact:true}).selectOption('major');
   await t.page.getByRole('checkbox',{name:'Auto-color city markers',exact:true}).uncheck();await colorInput(t.page,'City highlight color','#ed1736');await t.setting('cityColor','#ed1736');await t.idle();
   const cityPixels=await pixelCount(t.page,await canvas(t.page,'delhi-cities'),'#ed1736');assert.ok(cityPixels>12,'Custom major-city highlights render in WebGL');
   const delhiRegions=await read('public/data/in-delhi-region.geojson'),citySvg=await t.svg('delhi-cities');const cityIds=overlayIds(citySvg,'city');assert.ok(cityIds.length>0,'Selected Delhi contains major cities');
@@ -112,17 +113,17 @@ try{
   await t.page.getByRole('checkbox',{name:'Show rivers',exact:true}).check();await colorInput(t.page,'River color','#00c2a8');await t.setting('riverColor','#00c2a8');await t.idle();
   const riverPixels=await pixelCount(t.page,await canvas(t.page,'delhi-rivers'),'#00c2a8');assert.ok(riverPixels>20,'Custom river color renders on the canvas');
   const riverSvg=await t.svg('delhi-rivers');assert.ok(overlayIds(riverSvg,'river').length>0&&riverSvg.includes('#00c2a8'));
-  await t.page.getByRole('checkbox',{name:'Show major cities',exact:true}).uncheck();await t.page.getByRole('checkbox',{name:'Show rivers',exact:true}).uncheck();
-  await t.choose('full');await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).check();assert.equal(await t.page.getByLabel('Find a gurdwara',{exact:true}).locator('option').count(),101,'Picker includes all 100 curated sites plus placeholder');
+  await t.page.getByRole('tab',{name:'Overlays',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show major cities',exact:true}).uncheck();await t.page.getByRole('checkbox',{name:'Show rivers',exact:true}).uncheck();
+  await t.choose('full');await t.page.getByRole('tab',{name:'Overlays',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).check();assert.equal(await t.page.getByLabel('Find a gurdwara',{exact:true}).locator('option').count(),101,'Picker includes all 100 curated sites plus placeholder');
   await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('takht');await t.page.getByRole('checkbox',{name:'Show gurdwara names',exact:true}).uncheck();await t.page.getByRole('button',{name:'Fit shown gurdwaras',exact:true}).click();await t.idle();
   const takhtSvg=await t.svg('five-takhts');assert.deepEqual(overlayIds(takhtSvg,'gurdwara').sort((a,b)=>a.localeCompare(b)),[...takhtIds].sort((a,b)=>a.localeCompare(b)));assert.equal([...takhtSvg.matchAll(/data-gurdwara-tier="takht"/g)].length,5);
-  const withShrines=await canvas(t.page,'five-takhts');await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).uncheck();await t.idle();const withoutShrines=await canvas(t.page,'without-takhts');const shrinePixels=await changedPixels(t.page,withoutShrines,withShrines);assert.ok(shrinePixels>100,'Dedicated Takht sprites actually affect the WebGL map');
-  await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).check();await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('featured');await t.idle();const featured=await t.svg('featured-fifteen');assert.deepEqual(overlayIds(featured,'gurdwara').sort((a,b)=>a.localeCompare(b)),[...featuredIds].sort((a,b)=>a.localeCompare(b)));assert.ok(featured.includes('gs-harmandir-sahib')&&featured.includes('gs-fatehgarh-sahib')&&featured.includes('gs-jyoti-sarup-sahib'));
+  const withShrines=await canvas(t.page,'five-takhts');await t.page.getByRole('tab',{name:'Overlays',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).uncheck();await t.idle();const withoutShrines=await canvas(t.page,'without-takhts');const shrinePixels=await changedPixels(t.page,withoutShrines,withShrines);assert.ok(shrinePixels>100,'Dedicated Takht sprites actually affect the WebGL map');
+  await t.page.getByRole('tab',{name:'Overlays',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).check();await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('featured');await t.idle();const featured=await t.svg('featured-fifteen');assert.deepEqual(overlayIds(featured,'gurdwara').sort((a,b)=>a.localeCompare(b)),[...featuredIds].sort((a,b)=>a.localeCompare(b)));assert.ok(featured.includes('gs-harmandir-sahib')&&featured.includes('gs-fatehgarh-sahib')&&featured.includes('gs-jyoti-sarup-sahib'));
   await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('special');await t.idle();assert.equal(overlayIds(await t.svg('twenty-special-sites'),'gurdwara').length,20);
   await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('all');await t.page.getByRole('checkbox',{name:'Show gurdwara names',exact:true}).check();await t.idle();const allSites=await t.svg('all-shrines');const expectedSites=gurdwaras.filter(g=>inFullGeography(g.coordinates)).map(g=>g.id).sort((a,b)=>a.localeCompare(b));assert.deepEqual(overlayIds(allSites,'gurdwara').sort((a,b)=>a.localeCompare(b)),expectedSites,'All—and only—catalog sites inside supplied geographic outlines are exported');assert.ok(/SGPC|Shiromani|gurdwara-sources|Curated/i.test(allSites),'Shrine provenance is retained in exports');
-  await t.page.getByLabel('Export width in pixels',{exact:true}).fill('1200');const png=await fs.readFile(await t.exportFile('png','all-shrines'));assert.equal(png.subarray(1,4).toString(),'PNG');
+  await configureExport(t.page,{width:1200});const png=await fs.readFile(await t.exportFile('png','all-shrines'));assert.equal(png.subarray(1,4).toString(),'PNG');
   const download=t.page.waitForEvent('download');await t.page.getByRole('button',{name:'Save',exact:true}).click();const file=output+'/overlay-settings.json';await(await download).saveAs(file);const expected=await t.saved();
-  await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).uncheck();await t.page.locator('input[type=file]').setInputFiles(file);await t.setting('gurdwaras',true);await t.idle();const restored=await t.saved();
+  await t.page.getByRole('tab',{name:'Overlays',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).uncheck();await t.page.locator('input[type=file]').setInputFiles(file);await t.setting('gurdwaras',true);await t.idle();const restored=await t.saved();
   for(const key of ['mapScope','fullDetail','cities','cityMode','cityAutoColors','cityColor','rivers','riverColor','gurdwaras','gurdwaraFilter','gurdwaraLabels'])assert.equal(restored[key],expected[key],'Settings Load restores '+key);
   await t.page.reload({waitUntil:'networkidle'});await t.idle();const reloaded=await t.saved();for(const key of ['mapScope','cityColor','riverColor','gurdwaras','gurdwaraFilter'])assert.equal(reloaded[key],expected[key]);assert.deepEqual(reloaded.fills,expected.fills);
   await t.success({scopedMajorCities:cityIds.length,cityPixels,cityDistrictAutoColor:true,undoRedo:true,riverPixels,gurdwaraCatalog:100,sitesInsideSuppliedMap:expectedSites.length,takhts:5,featured:15,special:20,shrinePixels,pngSvg:true,saveLoadReload:true});
