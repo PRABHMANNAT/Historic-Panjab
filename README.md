@@ -1,8 +1,9 @@
-# Prabh Map Studio
+# OpenCarto
 
-![Prabh Map Studio — South Asia research atlas, developed and created by Prabhmannat Singh](docs/images/prabh-map-studio-banner.svg)
+![OpenCarto — South Asia research atlas, developed and created by Prabhmannat Singh](docs/images/prabh-map-studio-banner.svg)
 
-**Open-source mapping software for South Asia research.**
+**Open-source map design software for South Asia.**
+Create, style, and export custom maps for research and education.
 Developed and created by **Prabhmannat Singh (Prabh)**.
 
 Explore real administrative boundaries, build regional comparisons, style maps,
@@ -23,7 +24,7 @@ source dates vary; the detailed notes below explain what each layer represents.
 
 ## A map made with the studio
 
-![Regional map of Punjab in India and Pakistan, Haryana, Himachal Pradesh and Chandigarh, exported by Prabh Map Studio with district boundaries and a legend](docs/images/research-map.png)
+![Regional map of Punjab in India and Pakistan, Haryana, Himachal Pradesh and Chandigarh, exported by OpenCarto with district boundaries and a legend](docs/images/research-map.png)
 
 *An actual application export, rendered as a PNG for this README. Colors illustrate
 regional groupings; they do not encode a statistical measurement. Source credits
@@ -92,15 +93,14 @@ for the complete state/UT table and source qualifications.
 
 **Developed and created by Prabhmannat Singh — Prabh.**
 
-Prabh Map Studio is an independent open-source project for research, learning,
+OpenCarto is an independent open-source project for research, learning,
 and exploring South Asia through maps.
 
 - Developer: [Prabhmannat Singh on GitHub](https://github.com/PRABHMANNAT)
-- Source code: [PRABHMANNAT/Historic-Panjab](https://github.com/PRABHMANNAT/Historic-Panjab)
-- Feedback and contributions: [GitHub issues](https://github.com/PRABHMANNAT/Historic-Panjab/issues)
+- Source code: [PRABHMANNAT/OpenCarto](https://github.com/PRABHMANNAT/OpenCarto)
+- Feedback and contributions: [GitHub issues](https://github.com/PRABHMANNAT/OpenCarto/issues)
 
-The repository keeps its existing `Historic-Panjab` URL. The application is named
-**Prabh Map Studio**. Select the logo or open **Guide** in the app for developer
+The project and repository are named **OpenCarto**. Select the logo or open **Guide** in the app for developer
 information, usage notes, and source attribution.
 
 ## License
