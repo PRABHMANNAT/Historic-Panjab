@@ -246,6 +246,13 @@
       "state_lgd": 7,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-lakshadweep",
+      "name": "Lakshadweep",
+      "state_lgd": 31,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -727,6 +734,21 @@
     "in-delhi-tehsil": {
       "count": 34,
       "sha256": "933feff71537e1115ad0b7da93a5be131c1a243882eea0c004eedf592dcc485d",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-lakshadweep-region": {
+      "count": 1,
+      "sha256": "03d06c83dac11bf63baa82fa2d0fc12315c53bb3177aabe8255537adc31ede50",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-lakshadweep-district": {
+      "count": 1,
+      "sha256": "f5358b38e627ea679d63e5fddd5dfbd2fed5293241a72bdcb92d07daff5f5295",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-lakshadweep-tehsil": {
+      "count": 10,
+      "sha256": "8dea3668dd32bd8612e77b4ade9efc22b629e1eed3224bc6cbc9d1e9c1bdc9ab",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
