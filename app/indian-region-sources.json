@@ -92,6 +92,13 @@
       "state_lgd": 18,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-bihar",
+      "name": "Bihar",
+      "state_lgd": 10,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -243,6 +250,21 @@
     "in-assam-tehsil": {
       "count": 172,
       "sha256": "ed34c4e7b4f336b8aec44d566d7d719d6c7f52dc7dc8738476fc6cb8badaae1b",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-bihar-region": {
+      "count": 1,
+      "sha256": "bdf53c80707d9d8f1ae8d23c1c5d6ef137e5045b056ba21bc7c108491e2d1fba",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-bihar-district": {
+      "count": 38,
+      "sha256": "082b612c7608470b322c1fd0fb67aca643cc16cccb90500e15572269afcf53d2",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-bihar-tehsil": {
+      "count": 533,
+      "sha256": "bf50467414bead0991aa96a046d0fd75571950f2c1a536ba5764f91b66846d8f",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
