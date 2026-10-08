@@ -106,6 +106,13 @@
       "state_lgd": 22,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-goa",
+      "name": "Goa",
+      "state_lgd": 30,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -287,6 +294,21 @@
     "in-chhattisgarh-tehsil": {
       "count": 164,
       "sha256": "dbc244cc0f4b1eb52fa848d78a1e175c5be54dc71c95afce14cfa6d7a531d128",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-goa-region": {
+      "count": 1,
+      "sha256": "73582260382af23c47e4fbaf75f63f645af4a25aa3fa9b45ffaeac187996826f",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-goa-district": {
+      "count": 2,
+      "sha256": "3bfe41bf36511e490d1fade37cf9565319f949f6e1ae14ac23fff2b6e13ce5c6",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-goa-tehsil": {
+      "count": 12,
+      "sha256": "03169c0ef864b0f795cc408dd0c8043e6aee3c069f1ae20b88cd1d6e2c600a5e",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
