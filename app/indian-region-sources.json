@@ -197,6 +197,13 @@
       "state_lgd": 11,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-tamil-nadu",
+      "name": "Tamil Nadu",
+      "state_lgd": 33,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -573,6 +580,21 @@
     "in-sikkim-tehsil": {
       "count": 9,
       "sha256": "5e0f8ac0c15cfbaa3f1a5c55556e07b57c22949cef0c2d35c13a9121835bc3b8",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-tamil-nadu-region": {
+      "count": 1,
+      "sha256": "224b0a2e008247ba819ffd230b598ec1cbca0ace3051cfeba1053bef6967ccc2",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-tamil-nadu-district": {
+      "count": 38,
+      "sha256": "bef8392d89bd5b2b8acf9b3aeac75b5e78153599bf6a72f99c75483a24b8856c",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-tamil-nadu-tehsil": {
+      "count": 300,
+      "sha256": "a85b094c6db61ed58961b8cab82278a3fdbbabedf0422891b76c987239795609",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
