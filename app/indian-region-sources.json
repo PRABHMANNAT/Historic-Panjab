@@ -162,6 +162,13 @@
       "state_lgd": 14,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-meghalaya",
+      "name": "Meghalaya",
+      "state_lgd": 17,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -463,6 +470,21 @@
     "in-manipur-tehsil": {
       "count": 39,
       "sha256": "cdc2d176ebf3fa7b82f71834974192ff5760ca5aa28aacf652d1d29086a7cda9",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-meghalaya-region": {
+      "count": 1,
+      "sha256": "ebb59e216abe2657e71ac3deaba66ff367652be9566bd527aa7b3892a12de8bb",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-meghalaya-district": {
+      "count": 12,
+      "sha256": "acd00033d6cb112c960da00b306783512daec686975f3fb54d956e547f146330",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-meghalaya-tehsil": {
+      "count": 39,
+      "sha256": "a19fb7af9a3241e9a26d81e5da98f86379d4d84a956891046b5e3f9c5e19dfe3",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
