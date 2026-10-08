@@ -232,6 +232,13 @@
       "state_lgd": 35,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-dnh-dd",
+      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "state_lgd": 38,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -683,6 +690,21 @@
     "in-andaman-nicobar-tehsil": {
       "count": 9,
       "sha256": "726da184aa2c185700527361f79144913470feea8ee2c2e5fad6353f249be5d0",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-dnh-dd-region": {
+      "count": 1,
+      "sha256": "1c187794d67ce68151526c5ad22a5bce649f28e3284650660f14aa111892397e",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-dnh-dd-district": {
+      "count": 3,
+      "sha256": "1ed57a1281bf08c3ced930dc59ecf22f61935388b4259bf2634f67f752de05eb",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-dnh-dd-tehsil": {
+      "count": 3,
+      "sha256": "fbbe5463f5c64c3bfee116e479d97239db8be3e0eb21bab1bd7842b0231d0657",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
