@@ -225,6 +225,13 @@
       "state_lgd": 19,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-andaman-nicobar",
+      "name": "Andaman and Nicobar Islands",
+      "state_lgd": 35,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -661,6 +668,21 @@
     "in-west-bengal-tehsil": {
       "count": 368,
       "sha256": "975e5c819fefc527c6499de3b70c91ab2f37409cd4b039b729afce6a49bafb6f",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-andaman-nicobar-region": {
+      "count": 1,
+      "sha256": "47b1ebad1488ff9968c65829afb5e5164cfb18299bfa7283489b10568704f96c",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-andaman-nicobar-district": {
+      "count": 3,
+      "sha256": "89e63913148f021dc97b9995191891a3cd99d8fc5525c28b20cc98548442968e",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-andaman-nicobar-tehsil": {
+      "count": 9,
+      "sha256": "726da184aa2c185700527361f79144913470feea8ee2c2e5fad6353f249be5d0",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
