@@ -46,9 +46,14 @@ export default defineConfig(async () => {
 
   return {
     css: { postcss: { plugins: [tailwindcss()] } },
-    server: isCodexSeatbeltSandbox
-      ? { watch: { useFsEvents: false, usePolling: true } }
-      : undefined,
+    server: {
+      watch: {
+        // Downloads and generated build artifacts are not HMR inputs. Watching
+        // large exports can raise EBUSY and terminate the Windows dev server.
+        ignored: ['**/outputs/**', '**/work/**', '**/dist-vercel/**', '**/.wrangler/**'],
+        ...(isCodexSeatbeltSandbox ? {useFsEvents: false, usePolling: true} : {}),
+      },
+    },
     plugins: [
       vinext(),
       sites(),

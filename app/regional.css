@@ -5,3 +5,5 @@
 /* Match the area-region filter to the existing editor fields. */
 .regional .field select{width:100%;border:1px solid #dce4ed;border-radius:6px;background:#fff;padding:9px 10px;color:#264158;font:inherit;margin-top:6px}
 .quick-jumps select{max-width:170px;min-width:130px;border:1px solid #dce4ed;background:#fff;color:#264158;border-radius:6px;padding:6px;font:inherit;font-size:12px}
+.regional .area-row{content-visibility:auto;contain-intrinsic-size:auto 62px}
+.region-card>.coverage-warning{color:#8a5d21;font-size:11px;line-height:1.5}

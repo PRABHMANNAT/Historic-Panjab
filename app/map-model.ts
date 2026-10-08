@@ -4,10 +4,16 @@ export type Level='region'|'division'|'district'|'tehsil'|'uc';
 export type Area={id:string;name:string;region:string;level:Level;parent:string;center:number[];bbox:number[];source:string;district?:string;town?:string};
 export const areas=raw as Area[];
 export const areaById=new Map(areas.map(a=>[a.id,a]));
-const snapshotCoverage=(id:string)=>`${areas.filter(a=>a.region===id&&a.level==='district').length} districts · ${areas.filter(a=>a.region===id&&a.level==='tehsil').length} tehsil / sub-tehsil areas · LGD 2024`;
+// Static indexes keep layer updates linear in the loaded areas, not the full atlas per layer.
+export const areasByLayer=new Map<string,Area[]>();
+for(const a of areas){const key=a.region+'-'+a.level;const list=areasByLayer.get(key);if(list)list.push(a);else areasByLayer.set(key,[a])}
+export const ucParents=new Set(areas.filter(a=>a.level==='uc').map(a=>a.parent));
+export const divisionRegions=new Set(areas.filter(a=>a.level==='division').map(a=>a.region));
+const snapshotCoverage=(id:string)=>`${areasByLayer.get(id+'-district')?.length||0} districts · ${areasByLayer.get(id+'-tehsil')?.length||0} ${id==='in-andhra'?'mandal areas':'tehsil / sub-tehsil areas'} · LGD 2024`;
 export const regions=[{id:'in-punjab',name:'Punjab · India',date:'23 districts · 79 tehsil polygons'},...indianSources.regions.map(r=>({id:r.id,name:r.name,date:snapshotCoverage(r.id)})),{id:'pk-punjab',name:'Punjab · Pakistan',date:'36 districts · 147 tehsil polygons'},{id:'pk-kp',name:'Selected KP divisions',date:'20 districts · 72 tehsil polygons'},{id:'islamabad',name:'Islamabad',date:'Capital territory · 1 source subdivision'},{id:'chandigarh',name:'Chandigarh',date:'Union territory · 28 historical wards'}];
+export const regionById=new Map(regions.map(r=>[r.id,r]));
 export const levels:Level[]=['region','district','tehsil','uc','division'];
-export const layerKeys=[...new Set(areas.map(a=>a.region+'-'+a.level))];
+export const layerKeys=[...areasByLayer.keys()];
 export type Paint={color:string;pattern:string};
 export type RegionState={show:boolean;district:boolean;tehsil:boolean;uc:boolean;division:boolean};
 export type MapDoc={kashmirView:'separate'|'combined';basemap:string;cities:boolean;rivers:boolean;opacity:number;fills:Record<string,Paint>;groups:Record<string,string>;regions:Record<string,RegionState>;hidden:string[];title:string;legendTitle:string;bg:string;uncolored:string;border:string;names:boolean;borders:boolean;districtBorders:boolean;tehsilBorders:boolean;divisionBorders:boolean;detailBorders:boolean;width:number;labelSize:number;legend:boolean;legendX:number;legendY:number};
