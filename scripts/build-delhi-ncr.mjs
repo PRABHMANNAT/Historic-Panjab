@@ -8,13 +8,13 @@ const haryana = [60, 62, 604, 73, 75, 72, 64, 71, 619, 59, 701, 69, 65, 67].map(
 const up = [169, 145, 144, 134, 124, 661, 660, 172].map(id => `in-uttar-pradesh-d-${id}`);
 const rajasthan = [87, 91].map(id => `in-rajasthan-d-${id}`);
 const selections = [
-  ['in-delhi-region.geojson', f => f.id === 'in-delhi'],
-  ['in-haryana-district.geojson', f => haryana.includes(f.id)],
-  ['in-uttar-pradesh-district.geojson', f => up.includes(f.id)],
-  ['in-rajasthan-tehsil.geojson', f => rajasthan.includes(f.properties.parent)],
+  {file: 'in-delhi-region.geojson', choose: f => f.id === 'in-delhi'},
+  {file: 'in-haryana-district.geojson', choose: f => haryana.includes(f.id)},
+  {file: 'in-uttar-pradesh-district.geojson', choose: f => up.includes(f.id)},
+  {file: 'in-rajasthan-tehsil.geojson', choose: f => rajasthan.includes(f.properties.parent)},
 ];
 const inputs = [], parts = [];
-for (const [file, choose] of selections) {
+for (const {file, choose} of selections) {
   const features = (await read(`public/data/${file}`)).features.filter(choose);
   if (!features.length) throw Error(`No constituent geometry: ${file}`);
   inputs.push({file, ids: features.map(f => f.id), sha256: await hash(`public/data/${file}`)});

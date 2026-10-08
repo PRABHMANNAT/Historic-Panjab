@@ -7,6 +7,7 @@ const browser = await chromium.launch({channel: process.env.MAP_BROWSER_CHANNEL 
 const page = await browser.newPage({viewport: {width: 1600, height: 1100}, acceptDownloads: true});
 const errors = [], failures = [], loaded = new Set();
 page.on('pageerror', e => errors.push(e.message));
+page.on('console', message => {if (message.type() === 'error') errors.push(message.text());});
 page.on('response', r => {if(r.status() >= 400)failures.push(`${r.status()} ${r.url()}`);if(r.ok() && r.url().includes('/data/'))loaded.add(new URL(r.url()).pathname)});
 const saved = () => page.evaluate(() => JSON.parse(localStorage.getItem('punjab-studio-regional-v2')));
 const regions = [['in-andhra',26,671],['in-rajasthan',50,314],['in-uttar-pradesh',75,316],['in-uttarakhand',13,80],['in-jammu-kashmir',20,75],['in-ladakh',2,6]];

@@ -2,7 +2,7 @@ import {cached, collection, hash, record, write} from './delhi-source-utils.mjs'
 
 const endpoint = id => `https://www.openstreetmap.org/api/0.6/relation/${id}.json`;
 const network = await cached('work/delhi-metro-network.json', endpoint(2536305));
-const sourceIds = [...network.elements[0].members.filter(m => m.type === 'relation').map(m => m.ref), 9256785];
+const sourceIds = [...new Set([...network.elements[0].members.filter(m => m.type === 'relation').map(m => m.ref), 9256785])];
 const inputs = [], lines = [], features = [], stations = [];
 const inactive = tags => ['proposed', 'construction', 'disused', 'abandoned'].includes(tags?.state) || !!tags?.['proposed:route'] || !!tags?.['construction:route'];
 const hex = color => /^#[0-9a-f]{6}$/i.test(color || '') ? color.toUpperCase() : ({gray: '#808080', aqua: '#00FFFF'}[color] || null);

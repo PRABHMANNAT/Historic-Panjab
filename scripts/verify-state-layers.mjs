@@ -6,7 +6,8 @@ const require = createRequire(import.meta.url);
 const {chromium} = require(process.env.MAP_PLAYWRIGHT_PATH || 'playwright');
 const manifest = JSON.parse(await fs.readFile(new URL('../app/indian-region-sources.json', import.meta.url), 'utf8'));
 const catalog = JSON.parse(await fs.readFile(new URL('../app/catalog.json', import.meta.url), 'utf8'));
-const requested = ['in-andhra', 'in-arunachal', 'in-assam', 'in-bihar', 'in-chhattisgarh', 'in-goa', 'in-gujarat', 'in-haryana', 'in-himachal', 'in-jharkhand', 'in-karnataka', 'in-kerala', 'in-madhya-pradesh', 'in-maharashtra', 'in-manipur', 'in-meghalaya', 'in-mizoram', 'in-nagaland', 'in-odisha'];
+const requested = process.env.MAP_STATE_IDS?.split(',').filter(Boolean) || manifest.regions.map(r => r.id);
+assert.ok(requested.every(id => manifest.regions.some(r => r.id === id)), 'Known state IDs required');
 const seed = {fills: {}, regions: Object.fromEntries([...manifest.regions.map(r => r.id), 'in-punjab', 'pk-punjab', 'pk-kp', 'islamabad', 'chandigarh'].map(id => [id, {show: false, district: false, tehsil: false, uc: false, division: false}]))};
 const browser = await chromium.launch({channel: process.env.MAP_BROWSER_CHANNEL || 'chrome', headless: true, args: ['--enable-unsafe-swiftshader']});
 await fs.mkdir('outputs/state-layers', {recursive: true});
@@ -20,6 +21,7 @@ try {
     }, seed);
     const page = await context.newPage(), errors = [], failures = [], loaded = new Set();
     page.on('pageerror', error => errors.push(error.message));
+    page.on('console', message => {if (message.type() === 'error') errors.push(message.text());});
     page.on('response', response => {
       if (response.status() >= 400) failures.push(response.status() + ' ' + response.url());
       if (response.ok() && response.url().includes('/data/')) loaded.add(new URL(response.url()).pathname);
@@ -76,7 +78,7 @@ try {
       }
       await page.screenshot({path: 'outputs/state-layers/' + id + '.png'});
       // Small and large-state SVG exports exercise both ends of the added atlas.
-      if (['in-goa', 'in-odisha'].includes(id)) {
+      if (['in-goa', 'in-odisha', 'in-sikkim', 'in-tamil-nadu', 'in-puducherry'].includes(id)) {
         await page.getByRole('button', {name: 'SVG', exact: true}).click();
         const download = page.waitForEvent('download', {timeout: 120000});
         await page.getByRole('button', {name: 'Export map', exact: true}).click();
@@ -101,7 +103,7 @@ try {
       await detail.click();
       assert.equal((await saved()).regions[id].tehsil, true);
       if (['in-arunachal', 'in-maharashtra'].includes(id)) assert.ok((await card.locator('.coverage-warning').innerText()).length > 20);
-      if (id === 'in-odisha') {
+      if (id === 'in-odisha' || id === 'in-puducherry') {
         await page.getByRole('button', {name: 'Guide & sources', exact: true}).click();
         const guide = page.getByRole('dialog');
         for (const region of manifest.regions) assert.ok((await guide.innerText()).includes(region.name), region.name + ' guide coverage');
@@ -122,7 +124,7 @@ try {
       await context.close();
     }
   }
-  console.log(JSON.stringify({result: 'passed', requestedStates: verified, boundaryResources: verified * 6, isolatedContexts: true, svgExports: ['Goa', 'Odisha'], mobile: true}));
+  console.log(JSON.stringify({result: 'passed', requestedStates: verified, boundaryResources: verified * 6, isolatedContexts: true, svgExports: requested.filter(id => ['in-goa', 'in-odisha', 'in-sikkim', 'in-tamil-nadu', 'in-puducherry'].includes(id))}));
 } finally {
   await browser.close();
 }
