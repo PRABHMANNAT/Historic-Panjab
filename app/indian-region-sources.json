@@ -1,0 +1,53 @@
+{
+  "retrieved": "2026-10-08",
+  "snapshot": "2024",
+  "license": "CC0-1.0 (Bharatlas catalogue)",
+  "attribution": "LGD via Bharatlas · 2024 snapshot",
+  "catalogUrl": "https://bharatlas.com/view/lgd_subdistricts",
+  "coverage": "All district and subdistrict polygons supplied for Haryana and Himachal Pradesh by this LGD snapshot. Subdistricts include tehsils and sub-tehsils; later administrative changes may be absent.",
+  "coordinateProcessing": "Original source coordinates retained; label points derived inside the largest polygon. Two Loharu records with the same LGD code are grouped into one multipart feature.",
+  "regions": [
+    {
+      "id": "in-haryana",
+      "name": "Haryana",
+      "state_lgd": 6
+    },
+    {
+      "id": "in-himachal",
+      "name": "Himachal Pradesh",
+      "state_lgd": 2
+    }
+  ],
+  "layers": {
+    "in-haryana-region": {
+      "count": 1,
+      "sha256": "be705adf2a401bc348936372e8802cc76542dd515500b31d2049cb8501f898f7",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-haryana-district": {
+      "count": 22,
+      "sha256": "11ebcc1dde10300ab9a9ccebf5bd7cc13be8cb91337191c9cdaea28ec989c1bd",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-haryana-tehsil": {
+      "count": 81,
+      "sha256": "b16907178afca25c7475caee06d155397ed665eff98ed1c21fc74ec53f5d9ecc",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-himachal-region": {
+      "count": 1,
+      "sha256": "152677eae6398a4fbcb9c60bbf2461377ff6c12f4d2506a386da6da564473e34",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-himachal-district": {
+      "count": 12,
+      "sha256": "1b7edd37daa8c17cc5880a8f83888aa8c0fd94d4044c42c4d4ae5ce70d1b0908",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-himachal-tehsil": {
+      "count": 123,
+      "sha256": "e7346abd9e671ffbc0bf16a9ea1c2de86cbfc6c13ff09e6402c4707c0f4956a3",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# Keep boundary provenance hashes consistent across Windows and Unix checkouts.
+public/data/*.geojson text eol=lf

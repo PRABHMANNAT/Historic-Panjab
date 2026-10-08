@@ -10,6 +10,8 @@
     "build": "vinext build",
     "build:vercel": "vite build --config vite.vercel.config.ts",
     "preview:vercel": "vite preview --config vite.vercel.config.ts",
+    "check:boundaries": "node scripts/check-indian-regions.mjs",
+    "data:indian-regions": "node scripts/import-indian-regions.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt"
