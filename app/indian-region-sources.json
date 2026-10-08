@@ -4,8 +4,8 @@
   "license": "CC0-1.0 (Bharatlas catalogue)",
   "attribution": "LGD via Bharatlas · 2024 snapshot",
   "catalogUrl": "https://bharatlas.com/view/lgd_subdistricts",
-  "coverage": "All district and subdistrict polygons supplied for Haryana and Himachal Pradesh by this LGD snapshot. Subdistricts include tehsils and sub-tehsils; later administrative changes may be absent.",
-  "coordinateProcessing": "Original source coordinates retained; label points derived inside the largest polygon. Two Loharu records with the same LGD code are grouped into one multipart feature.",
+  "coverage": "Named district and subdistrict polygons from the LGD 2024 snapshot. Subdistricts include tehsils, taluks, mandals and sub-tehsils. Later administrative changes may be absent. Rajasthan has 50 district polygons but tehsil parent codes predate that reorganisation. Jammu & Kashmir and Ladakh state outlines depict the Indian claimed extent, including disputed territories. Unnamed extent fillers and zero-LGD claimed districts are not presented as administrative tehsils or districts.",
+  "coordinateProcessing": "Original source coordinates retained; interior label points derived. Same-code, same-parent fragments (Loharu and Bhopalsagar) are grouped as multipart areas. Kanth has conflicting source parent codes and is retained as two separate source records. Named records with missing LGD codes get stable source-object IDs, without inventing LGD codes.",
   "regions": [
     {
       "id": "in-haryana",
@@ -16,6 +16,38 @@
       "id": "in-himachal",
       "name": "Himachal Pradesh",
       "state_lgd": 2
+    },
+    {
+      "id": "in-andhra",
+      "name": "Andhra Pradesh",
+      "state_lgd": 28,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-rajasthan",
+      "name": "Rajasthan",
+      "state_lgd": 8,
+      "districtsWithoutLinkedTehsils": [
+        "Sanchor",
+        "Salumbar",
+        "Shahpura",
+        "Balotra",
+        "Phalodi",
+        "Jodhpur Gramin",
+        "Beawar",
+        "Kekri",
+        "Didwana Kuchaman",
+        "Dudu",
+        "Anoopgarh",
+        "Neem Ka Thana",
+        "Kotputli-Behror",
+        "Khairthal-Tijara",
+        "Deeg",
+        "Jaipur Gramin",
+        "Gangapurcity"
+      ],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -47,6 +79,36 @@
     "in-himachal-tehsil": {
       "count": 123,
       "sha256": "e7346abd9e671ffbc0bf16a9ea1c2de86cbfc6c13ff09e6402c4707c0f4956a3",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-andhra-region": {
+      "count": 1,
+      "sha256": "61e42d3cc4021984dc110cc8dc2ac8d866b8d9ac68a633c0e8e7292d4c871dac",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-andhra-district": {
+      "count": 26,
+      "sha256": "640de4ea409d5410890c9bf7deafb8a0ff188bb430939a431f7f6e564e131150",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-andhra-tehsil": {
+      "count": 671,
+      "sha256": "429b5630802a4a3c452602d80e8e6aa57c956015896029272c820bf3fc980099",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-rajasthan-region": {
+      "count": 1,
+      "sha256": "c8df7fb48a7ce1fcb1592df29841666f1ec44f93f805518124d4989004f93f8e",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-rajasthan-district": {
+      "count": 50,
+      "sha256": "af0329e8d86e7d5e57c57e2e0dd170c45f389ad9d03efd1c3923caa8853800a5",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-rajasthan-tehsil": {
+      "count": 314,
+      "sha256": "7b1baf7bd2c45be426b1d70402d558c04b322e176b569beaa478b4fd474627ef",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }

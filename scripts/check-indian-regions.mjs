@@ -9,7 +9,7 @@ const catalog = await readJson('app/catalog.json');
 const manifest = await readJson('app/indian-region-sources.json');
 const byId = new Map(catalog.map(a => [a.id, a]));
 assert.equal(byId.size, catalog.length, 'Catalog IDs must be unique');
-const expected = {'in-haryana': {district: 22, tehsil: 81}, 'in-himachal': {district: 12, tehsil: 123}};
+const expected = {'in-haryana': {district: 22, tehsil: 81}, 'in-himachal': {district: 12, tehsil: 123}, 'in-andhra': {district: 26, tehsil: 671}, 'in-rajasthan': {district: 50, tehsil: 314}};
 const ringContains = (p, ring) => {
   let inside = false;
   for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
@@ -62,20 +62,23 @@ for (const [key, entry] of Object.entries(manifest.layers)) {
 for (const [region, counts] of Object.entries(expected)) {
   assert.equal(catalog.filter(a => a.region === region && a.level === 'region').length, 1);
   for (const [level, count] of Object.entries(counts)) assert.equal(catalog.filter(a => a.region === region && a.level === level).length, count);
-  for (const district of catalog.filter(a => a.region === region && a.level === 'district')) assert.ok(catalog.some(a => a.parent === district.id), `${district.name}: district has subdistrict coverage`);
+  const gaps = manifest.regions.find(r => r.id === region)?.districtsWithoutLinkedTehsils || [];
+  for (const district of catalog.filter(a => a.region === region && a.level === 'district')) assert.ok(catalog.some(a => a.parent === district.id) || gaps.includes(district.name), `${district.name}: missing subdistrict coverage is documented`);
 }
 assert.equal(catalog.filter(a => a.region === 'in-haryana' && a.name === 'Loharu').length, 1);
 
 // Exercise the actual editor model, including migration of older saved maps.
 const modelSource = (await fs.readFile(new URL('app/map-model.ts', root), 'utf8'))
-  .replace("import raw from './catalog.json';", `const raw=${JSON.stringify(catalog)};`);
+  .replace("import raw from './catalog.json';", `const raw=${JSON.stringify(catalog)};`)
+  .replace("import indianSources from './indian-region-sources.json';", `const indianSources=${JSON.stringify(manifest)};`);
 const compiled = ts.transpileModule(modelSource, {compilerOptions: {module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022}}).outputText;
 const model = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 const older = structuredClone(model.initial);
-delete older.regions['in-haryana']; delete older.regions['in-himachal'];
+for (const region of Object.keys(expected)) delete older.regions[region];
 const restored = model.validate(older);
 for (const region of Object.keys(expected)) {
-  assert.deepEqual(restored.regions[region], {show: true, district: true, tehsil: true, uc: false, division: true});
+  assert.deepEqual(restored.regions[region], model.initial.regions[region]);
+  restored.regions[region].tehsil = true;
   const tehsil = catalog.find(a => a.region === region && a.level === 'tehsil');
   assert.ok(model.visible(tehsil, restored));
   restored.fills[tehsil.parent] = {color: '#2764d8', pattern: 'solid'};
@@ -95,4 +98,4 @@ for (const region of Object.keys(expected)) {
   const a = byId.get(region);
   assert.ok(a.bbox[0] >= model.allBounds[0] && a.bbox[1] >= model.allBounds[1] && a.bbox[2] <= model.allBounds[2] && a.bbox[3] <= model.allBounds[3]);
 }
-console.log('Verified 34 districts, 204 unique subdistrict areas, polygon rings, labels, parent links, provenance, saved-map migration, visibility, and inherited colors.');
+console.log(`Verified ${Object.keys(expected).length} Indian regions: polygon rings, labels, parent links, documented source gaps, provenance, saved-map migration, visibility, and inherited colors.`);

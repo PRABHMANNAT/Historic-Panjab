@@ -1,10 +1,11 @@
 import raw from './catalog.json';
+import indianSources from './indian-region-sources.json';
 export type Level='region'|'division'|'district'|'tehsil'|'uc';
 export type Area={id:string;name:string;region:string;level:Level;parent:string;center:number[];bbox:number[];source:string;district?:string;town?:string};
 export const areas=raw as Area[];
 export const areaById=new Map(areas.map(a=>[a.id,a]));
 const snapshotCoverage=(id:string)=>`${areas.filter(a=>a.region===id&&a.level==='district').length} districts · ${areas.filter(a=>a.region===id&&a.level==='tehsil').length} tehsil / sub-tehsil areas · LGD 2024`;
-export const regions=[{id:'in-punjab',name:'Punjab · India',date:'23 districts · 79 tehsil polygons'},{id:'in-haryana',name:'Haryana',date:snapshotCoverage('in-haryana')},{id:'in-himachal',name:'Himachal Pradesh',date:snapshotCoverage('in-himachal')},{id:'pk-punjab',name:'Punjab · Pakistan',date:'36 districts · 147 tehsil polygons'},{id:'pk-kp',name:'Selected KP divisions',date:'20 districts · 72 tehsil polygons'},{id:'islamabad',name:'Islamabad',date:'Capital territory · 1 source subdivision'},{id:'chandigarh',name:'Chandigarh',date:'Union territory · 28 historical wards'}];
+export const regions=[{id:'in-punjab',name:'Punjab · India',date:'23 districts · 79 tehsil polygons'},...indianSources.regions.map(r=>({id:r.id,name:r.name,date:snapshotCoverage(r.id)})),{id:'pk-punjab',name:'Punjab · Pakistan',date:'36 districts · 147 tehsil polygons'},{id:'pk-kp',name:'Selected KP divisions',date:'20 districts · 72 tehsil polygons'},{id:'islamabad',name:'Islamabad',date:'Capital territory · 1 source subdivision'},{id:'chandigarh',name:'Chandigarh',date:'Union territory · 28 historical wards'}];
 export const levels:Level[]=['region','district','tehsil','uc','division'];
 export const layerKeys=[...new Set(areas.map(a=>a.region+'-'+a.level))];
 export type Paint={color:string;pattern:string};
