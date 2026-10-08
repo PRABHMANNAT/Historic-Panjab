@@ -183,6 +183,13 @@
       "state_lgd": 13,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-odisha",
+      "name": "Odisha",
+      "state_lgd": 21,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -529,6 +536,21 @@
     "in-nagaland-tehsil": {
       "count": 112,
       "sha256": "60a4ceff585d90f3482671a75799916c3f55e6687080abef0d9f4a66cf266a75",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-odisha-region": {
+      "count": 1,
+      "sha256": "4233d46931d778a605fad53fd32526fd7dd6fceb1114230e9b9026b4e45784de",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-odisha-district": {
+      "count": 30,
+      "sha256": "08aa3627b8279caa0f63f368d5ee790ac6f4de0b1343bcf720d5b43b60173b06",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-odisha-tehsil": {
+      "count": 476,
+      "sha256": "0c5383e792a849a5985c330add88b9f5ae5021c1c62c7810ac47ffc33231ff63",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
