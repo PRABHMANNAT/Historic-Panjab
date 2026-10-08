@@ -1,6 +1,6 @@
 # OpenCarto
 
-![OpenCarto — South Asia research atlas, developed and created by Prabhmannat Singh](docs/images/prabh-map-studio-banner.svg)
+![OpenCarto — Your world. Your map. Open-source map design software by Prabhmannat Singh](docs/images/opencarto-banner.png)
 
 **Open-source map design software for South Asia.**
 Create, style, and export custom maps for research and education.
@@ -23,6 +23,24 @@ source dates vary; the detailed notes below explain what each layer represents.
 - **Inspect and measure:** area source information, approximate path distances, and shape tools for coloring, clearing or hiding areas.
 - **Add context:** cities, Delhi metro lines and 100 curated gurdwaras, with 57 verified photographs.
 - **Keep and share your work:** local autosave, undo/redo, settings files, and PNG, SVG or JPG exports.
+
+## An open-source alternative to MapChart and paid map makers
+
+OpenCarto is a **free, open-source MapChart alternative for South Asia map
+design**. Use it to create political maps, color administrative areas, combine
+territories, add natural features, and export maps for research and education.
+[MapChart](https://www.mapchart.net/) also offers free map-making tools, with
+additional features available through [MapChart Plus](https://www.mapchart.net/plus.html).
+
+For South Asia map styling and static exports, OpenCarto can also serve as an
+alternative to paid mapping tools such as
+[Scribble Maps Pro](https://help.scribblemaps.com/hc/en-us/articles/6798561696269-Features-Comparison)
+and [Mapme](https://mapme.com/pricing/). OpenCarto includes editable regional
+groupings, local project saves, and PNG, SVG and JPG exports without a software
+subscription. Its source code is available under the [MIT License](LICENSE).
+
+These comparisons focus on map design and static exports. Geographic coverage,
+hosted publishing, collaboration and analysis capabilities differ by product.
 
 ## Political maps with natural features
 
