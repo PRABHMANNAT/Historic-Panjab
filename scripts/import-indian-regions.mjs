@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import {createReadStream} from 'node:fs';
 import path from 'node:path';
 import {Readable} from 'node:stream';
 import {createInterface} from 'node:readline';
@@ -21,6 +22,22 @@ const availableDefinitions = [
   {id: 'in-uttarakhand', name: 'Uttarakhand', code: 5, districts: 13},
   {id: 'in-jammu-kashmir', name: 'Jammu & Kashmir', code: 1, districts: 20},
   {id: 'in-ladakh', name: 'Ladakh', code: 37, districts: 2},
+  {id: 'in-arunachal', name: 'Arunachal Pradesh', code: 12, districts: 26},
+  {id: 'in-assam', name: 'Assam', code: 18, districts: 35},
+  {id: 'in-bihar', name: 'Bihar', code: 10, districts: 38},
+  {id: 'in-chhattisgarh', name: 'Chhattisgarh', code: 22, districts: 33},
+  {id: 'in-goa', name: 'Goa', code: 30, districts: 2},
+  {id: 'in-gujarat', name: 'Gujarat', code: 24, districts: 33},
+  {id: 'in-jharkhand', name: 'Jharkhand', code: 20, districts: 24},
+  {id: 'in-karnataka', name: 'Karnataka', code: 29, districts: 31},
+  {id: 'in-kerala', name: 'Kerala', code: 32, districts: 14},
+  {id: 'in-madhya-pradesh', name: 'Madhya Pradesh', code: 23, districts: 52},
+  {id: 'in-maharashtra', name: 'Maharashtra', code: 27, districts: 36},
+  {id: 'in-manipur', name: 'Manipur', code: 14, districts: 16},
+  {id: 'in-meghalaya', name: 'Meghalaya', code: 17, districts: 12},
+  {id: 'in-mizoram', name: 'Mizoram', code: 15, districts: 11},
+  {id: 'in-nagaland', name: 'Nagaland', code: 13, districts: 16},
+  {id: 'in-odisha', name: 'Odisha', code: 21, districts: 30},
 ];
 const requested = process.argv.find(arg => arg.startsWith('--regions='))?.slice('--regions='.length).split(',');
 const definitions = requested ? availableDefinitions.filter(r => requested.includes(r.id)) : availableDefinitions;
@@ -42,16 +59,25 @@ async function readSource(level) {
       if (definitions.every(r => features.some(f => Number(f.properties.state_lgd ?? f.properties.State_LGD) === r.code))) return features;
     } catch (error) {if (error.code !== 'ENOENT') throw error;}
   }
-  console.log(`Downloading ${sourceFiles[level]}…`);
-  const response = await fetch(`${base}/${sourceFiles[level]}`, {signal: AbortSignal.timeout(300000)});
-  if (!response.ok || !response.body) throw Error(`Source download failed: ${response.status}`);
-  const lines = createInterface({input: Readable.fromWeb(response.body), crlfDelay: Infinity});
+  const rawDir = process.argv.find(arg => arg.startsWith('--raw-dir='))?.slice('--raw-dir='.length);
+  let input;
+  if (rawDir) {
+    console.log(`Reading downloaded ${level} source…`);
+    input = createReadStream(path.resolve(root, rawDir, `${level}.geojson`));
+  } else {
+    console.log(`Downloading ${sourceFiles[level]}…`);
+    const response = await fetch(`${base}/${sourceFiles[level]}`, {signal: AbortSignal.timeout(600000)});
+    if (!response.ok || !response.body) throw Error(`Source download failed: ${response.status}`);
+    input = Readable.fromWeb(response.body);
+  }
+  const lines = createInterface({input, crlfDelay: Infinity});
   const selected = [];
   let total = 0;
   for await (const line of lines) {
     const text = line.trim().replace(/,$/, '');
     if (!/^\{\s*"type"\s*:\s*"Feature"\s*,/.test(text)) continue;
     const feature = JSON.parse(text); total++;
+    if (total % 1000 === 0) console.log(`${level}: processed ${total} features…`);
     const code = Number(feature.properties.state_lgd ?? feature.properties.State_LGD);
     if (availableDefinitions.some(region => region.code === code)) selected.push(feature);
   }
@@ -63,6 +89,14 @@ async function readSource(level) {
 
 await fs.mkdir(cacheDir, {recursive: true});
 const [states, districts, rawTehsils] = await Promise.all(['region', 'district', 'tehsil'].map(readSource));
+if (process.argv.includes('--cache-only')) {
+  for (const r of availableDefinitions) {
+    const ds = districts.filter(f => Number(f.properties.state_lgd) === r.code && Number(f.properties.dist_lgd) > 0);
+    const ts = rawTehsils.filter(f => Number(f.properties.state_lgd) === r.code && f.properties.sdtname?.trim());
+    console.log(JSON.stringify({id: r.id, districts: ds.length, namedSubdistricts: ts.length, missingParents: ts.filter(t => !ds.some(d => Number(d.properties.dist_lgd) === Number(t.properties.dist_lgd))).map(t => ({name: t.properties.sdtname, parent: t.properties.dist_lgd}))}));
+  }
+  process.exit(0);
+}
 // Loharu has two source records with the same LGD code. Keep both geometries
 // in one multipart area, so searching, coloring, and labels use one tehsil ID.
 const tehsilGroups = new Map();
@@ -91,7 +125,7 @@ for (const region of definitions) {
   const stateCode = f => Number(f.properties.state_lgd ?? f.properties.State_LGD);
   const districtList = districts.filter(f => stateCode(f) === region.code && Number(f.properties.dist_lgd) > 0);
   const tehsilList = tehsils.filter(f => stateCode(f) === region.code);
-  if (districtList.length !== region.districts) throw Error(`${region.name}: expected ${region.districts} districts, got ${districtList.length}`);
+  if (!districtList.length || (region.districts !== undefined && districtList.length !== region.districts)) throw Error(`${region.name}: expected ${region.districts || 'nonempty'} districts, got ${districtList.length}`);
   const names = new Map(districtList.map(f => [Number(f.properties.dist_lgd), f.properties.dtname]));
   for (const [level, raw] of [['region', states.filter(f => stateCode(f) === region.code)], ['district', districtList], ['tehsil', tehsilList]]) {
     if (level === 'region' && raw.length !== 1) throw Error(`Expected one state outline for ${region.name}`);
