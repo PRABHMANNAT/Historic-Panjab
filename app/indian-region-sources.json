@@ -176,6 +176,13 @@
       "state_lgd": 15,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-nagaland",
+      "name": "Nagaland",
+      "state_lgd": 13,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -507,6 +514,21 @@
     "in-mizoram-tehsil": {
       "count": 26,
       "sha256": "64b0b2da50ad7a06aa31bac04c65fc25099f22c13778dd95ebc619e45f34674d",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-nagaland-region": {
+      "count": 1,
+      "sha256": "918ee08d89833f408f8aa2ec90a208dd6c3be1f037ebf4fb9ea2ffca360a979d",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-nagaland-district": {
+      "count": 16,
+      "sha256": "c7958fcf3a60f48609248b620d5e5ac43845e18e2d0f34519ef7972a4d79195b",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-nagaland-tehsil": {
+      "count": 112,
+      "sha256": "60a4ceff585d90f3482671a75799916c3f55e6687080abef0d9f4a66cf266a75",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
