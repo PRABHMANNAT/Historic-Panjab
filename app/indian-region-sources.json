@@ -113,6 +113,13 @@
       "state_lgd": 30,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-gujarat",
+      "name": "Gujarat",
+      "state_lgd": 24,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -309,6 +316,21 @@
     "in-goa-tehsil": {
       "count": 12,
       "sha256": "03169c0ef864b0f795cc408dd0c8043e6aee3c069f1ae20b88cd1d6e2c600a5e",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-gujarat-region": {
+      "count": 1,
+      "sha256": "765dd384dd07e4c627a1cac8bd3840cbda7fcbeefa646fc68acf74de6bf7dd67",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-gujarat-district": {
+      "count": 33,
+      "sha256": "c64a5dc8e57c55df588878612aa60c6a2a922953d5070a89a5f17a9636dc0885",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-gujarat-tehsil": {
+      "count": 252,
+      "sha256": "342255e176dab6d248a9e360d775b121083c21bf80125dc68f5a938077c62c8c",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
