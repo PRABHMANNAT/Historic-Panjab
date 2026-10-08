@@ -204,6 +204,13 @@
       "state_lgd": 33,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-telangana",
+      "name": "Telangana",
+      "state_lgd": 36,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -595,6 +602,21 @@
     "in-tamil-nadu-tehsil": {
       "count": 300,
       "sha256": "a85b094c6db61ed58961b8cab82278a3fdbbabedf0422891b76c987239795609",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-telangana-region": {
+      "count": 1,
+      "sha256": "f4848c48702b1c1196e2961f06653148f2a4715965b8387375732061928403ec",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-telangana-district": {
+      "count": 33,
+      "sha256": "81160852891fef9f1ea44b82a81f8128098fc72a3834be48a5aa0b64c5b2b2b3",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-telangana-tehsil": {
+      "count": 587,
+      "sha256": "b6e3326c2cb52154cd25e3d156cceecac382913ad620d79e25630945422d3480",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
