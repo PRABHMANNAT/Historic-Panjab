@@ -239,6 +239,13 @@
       "state_lgd": 38,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-delhi",
+      "name": "Delhi (National Capital Territory)",
+      "state_lgd": 7,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -705,6 +712,21 @@
     "in-dnh-dd-tehsil": {
       "count": 3,
       "sha256": "fbbe5463f5c64c3bfee116e479d97239db8be3e0eb21bab1bd7842b0231d0657",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-delhi-region": {
+      "count": 1,
+      "sha256": "bc8a3f46379c4fefde2949842b8c4f665b52de3f81e65f481f34f3cb2c12284a",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-delhi-district": {
+      "count": 11,
+      "sha256": "6c4860e8c5845b12c759377d14ba327c73e4ced56d6d0ddef5236bb204ac4b20",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-delhi-tehsil": {
+      "count": 34,
+      "sha256": "933feff71537e1115ad0b7da93a5be131c1a243882eea0c004eedf592dcc485d",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
