@@ -127,6 +127,13 @@
       "state_lgd": 20,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-karnataka",
+      "name": "Karnataka",
+      "state_lgd": 29,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -353,6 +360,21 @@
     "in-jharkhand-tehsil": {
       "count": 270,
       "sha256": "a1a6965b2e45ce076beec83c346d12e4cc1aff5df7cd3f3b7f86d910e2790893",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-karnataka-region": {
+      "count": 1,
+      "sha256": "3f56270c2207d783c1494632b431e84eb291680580667dfd5b0282a8fb9d0444",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-karnataka-district": {
+      "count": 31,
+      "sha256": "476282c2848c0b253ef7287745876198369d2b27b6403a952d90cdfc7b59cb87",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-karnataka-tehsil": {
+      "count": 234,
+      "sha256": "15fa4d491ef401df3400c12842c51c7bec76772c70c94c89602ba47dd0325f1b",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
