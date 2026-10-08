@@ -6,7 +6,6 @@ const read=async file=>JSON.parse(await fs.readFile(new URL('../'+file,import.me
 const manifest=await read('app/atlas-overlay-sources.json');
 const {containsPoint,pointInMasks,clipRiver,scopedPoints}=await loadLocalModule(new URL('../app/spatial-overlays.ts',import.meta.url));
 const {overlayDefaults,majorCity,cityPaintColor,validateOverlaySettings}=await loadLocalModule(new URL('../app/overlay-model.ts',import.meta.url));
-const {gurdwaraIcon}=await loadLocalModule(new URL('../app/gurdwara-icons.ts',import.meta.url));
 for(const output of manifest.outputs){
  const bytes=await fs.readFile(new URL('../public/data/'+output.file,import.meta.url));
  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),output.sha256);
@@ -28,8 +27,6 @@ const points={type:'FeatureCollection',features:[[2,5],[5,5],[12,5]].map((coordi
 assert.deepEqual(scopedPoints(points,masks).features.map(f=>f.id),[0]);
 assert.ok(majorCity({capital:true,population:1},overlayDefaults));assert.ok(!majorCity({population:99999},overlayDefaults));assert.equal(cityPaintColor({capital:true},overlayDefaults),'#ce3e45');
 assert.equal(validateOverlaySettings({gurdwaraScale:9,riverWidth:-1,cityColor:'javascript:bad'}).gurdwaraScale,2);assert.equal(validateOverlaySettings({riverWidth:-1}).riverWidth,.5);
-const icons=[...Array.from({length:5},(_,i)=>gurdwaraIcon('takht',i)),...Array.from({length:15},(_,i)=>gurdwaraIcon('featured',i)),gurdwaraIcon('historic')];
-assert.equal(new Set(icons).size,21);for(const icon of icons){assert.ok(icon.startsWith('<svg'));assert.ok(!/script|href|onload/i.test(icon));}
 const model=await loadMapModel(),old=model.validate({fills:{}});assert.equal(old.gurdwaras,false);assert.equal(old.cityAutoColors,true);assert.equal(old.mapScope,'atlas');
 const cities=await read('public/data/cities.geojson');assert.equal(cities.features.filter(f=>majorCity(f.properties,overlayDefaults)).length,353);
-console.log('Verified447 city points,155 river records, source hashes/unchanged geometry, exact hole-aware display clipping,21 distinct shrine icons and safe old-map migration.');
+console.log('Verified 447 city points, 155 river records, source hashes/unchanged geometry, exact hole-aware display clipping and safe old-map migration. Shrine photographs have a dedicated check.');

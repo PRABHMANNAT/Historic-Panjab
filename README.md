@@ -197,9 +197,14 @@ Provenance and hashes are in app/atlas-overlay-sources.json.
 **Show historic gurdwaras** displays 100 curated named shrines: the 5 Takhts,
 15 additional editorial featured sites (including Harmandir/Golden Temple,
 Fatehgarh Sahib and Jyoti Sarup Sahib), and 80 other historic/notable sites.
-Filter tiers, change label visibility and symbol size/color, or locate a shrine
-with the 100-site picker. The 5 Takhts and15 featured sites have distinctive original
-building symbols; these are stylized designs, not exact architectural replicas.
+Filter tiers, change label visibility and photo marker size/frame color, or locate
+a shrine with the 100-site picker. The 5 Takhts, all 15 featured sites, and additional
+historic sites use photographs in rounded frames. Click a marker for its full photo
+and source credits. Sites without a verified reusable photograph have an explicit
+"Photo unavailable" badge. Photographs are stored locally and embedded in exports;
+authors, individual licenses, source links and file hashes are recorded in
+`app/gurdwara-photo-sources.json` and linked from the Guide. Run
+`npm run check:gurdwara-photos` to verify the assets and photo marker rendering.
 The collection is not an objective ranking or a complete global register.
 Published OSM/Wikidata representative points are not surveyed entrances.
 Geographic scope still applies to shrines. Identity references, coordinate evidence,

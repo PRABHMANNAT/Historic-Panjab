@@ -113,6 +113,17 @@
 .premium-studio .shrine-symbol-key {flex-wrap: wrap; gap: 8px; padding: 8px; background: #f3f6ef; border-radius: 6px;}
 .premium-studio .shrine-symbol-key span {font-size: 10px;}
 .premium-studio .shrine-symbol-key svg {width: 28px; height: 28px;}
+.shrine-photo-preview {display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 12px; margin: 15px 0; background: #f2f5ee; border: 1px solid #e0e8db; border-radius: 10px;}
+.shrine-photo-preview > img {width: 48px; height: 48px; border: 2px solid white; border-radius: 9px; object-fit: cover; box-shadow: 0 2px 6px #25412b18;}
+.shrine-photo-preview > span {width: 100%; margin-top: 6px; color: #52684d; font-size: 11px; font-weight: 600; line-height: 1.7;}
+.shrine-photo-preview small {font-weight: 400; font-size: 10px; color: #70816a;}
+.premium-studio .maplibregl-popup-content:has(.shrine-photo-popup) {padding: 8px; border-radius: 13px; box-shadow: 0 8px 32px #193b3030;}
+.shrine-photo-popup {max-width: 280px; font-family: 'Segoe UI', sans-serif; color: #294232; padding-bottom: 7px;}
+.shrine-popup-image {display: block; width: 100%; max-height: 210px; object-fit: contain; border-radius: 8px; margin-bottom: 12px; background: #f4f6ef;}
+.shrine-photo-popup > strong {display: block; padding: 0 8px; font-size: 14px; line-height: 1.5;}
+.shrine-photo-popup > p {padding: 0 8px; margin: 5px 0 10px; color: #6c7f66; font-size: 11px; line-height: 1.6;}
+.shrine-photo-popup > small, .shrine-photo-credit {display: block; margin: 0 8px; font-size: 9px; line-height: 1.6; color: #647d56;}
+.premium-studio .maplibregl-popup-close-button {width: 25px; height: 25px; right: 11px; top: 11px; background: #fffffff0; border-radius: 50%; color: #344f30; box-shadow: 0 1px 5px #203f2420; font-size: 17px;}
 .premium-studio .country-detail-controls {font-size: 11px; gap: 12px;}
 .premium-studio .color-picker {border-color: #dce5da; background: #fff; padding: 8px; border-radius: 9px;}
 .premium-studio .color-picker strong {font-size: 12px; font-family: ui-monospace, monospace;}
