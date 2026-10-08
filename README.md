@@ -16,11 +16,57 @@ source dates vary; the detailed notes below explain what each layer represents.
 
 ## What you can do
 
-- **Explore regions:** country, state, district, subdistrict and selected local layers.
+- **Explore regions:** isolate a country, state/province, division, district or subdivision; combine territories with a searchable geographic picker.
 - **Build research views:** individual regions, custom combinations, Tricity and editable Historic Punjab context.
 - **Style your map:** colors, patterns, labels, borders, legends and map backgrounds.
-- **Add context:** cities, rivers, Delhi metro lines and 100 curated gurdwaras, with 57 verified photographs.
+- **Add nature:** 232,370 regional river reaches, mountain ranges, plateaus and a 2021 tree-cover overview over political maps.
+- **Inspect and measure:** area source information, approximate path distances, and shape tools for coloring, clearing or hiding areas.
+- **Add context:** cities, Delhi metro lines and 100 curated gurdwaras, with 57 verified photographs.
 - **Keep and share your work:** local autosave, undo/redo, settings files, and PNG, SVG or JPG exports.
+
+## Political maps with natural features
+
+![Maharashtra political map with rivers, mountain ranges, plateaus and 2021 tree cover](docs/images/maharashtra-nature.png)
+
+*An actual studio export with all four natural layers enabled. Administrative
+boundaries remain visible above the shading; natural features are clipped to the
+selected state. Mountain and plateau outlines are approximate, and tree cover is
+an overview rather than a current forest inventory.*
+
+1. Open **Layers → Geographic view**. Choose a country, then a state/province,
+   division, district or local subdivision where the source provides that level.
+2. Click **Show only this**, or **Add to group** to combine territories. Search
+   by name and remove selection chips to refine the group. Use the detail buttons
+   for province, division, district, subdivision and ward layers.
+3. Open **Nature**, choose **Political + nature** or toggle individual features.
+   Set colors, shading opacity, names and river density. **River study** enables
+   the denser tributary view. Your existing area colors are retained.
+4. Export SVG, PNG or JPG. SVG retains vector rivers/landforms and embeds the
+   tree-cover image with geographic clipping and attribution.
+
+| Natural layer | Coverage and source |
+| --- | --- |
+| Rivers / tributaries | **232,370 unique RiverATLAS v1 reaches** intersect the bundled atlas extent. Regional uses Strahler order 5+; More tributaries uses order 3+. Derived at ~500 m; smaller streams and canals are incomplete. Major names use Natural Earth. [RiverATLAS, Linke et al. (2019)](https://www.hydrosheds.org/hydroatlas), **CC BY 4.0**. |
+| Mountains and plateaus | **39 Natural Earth physical regions**, clipped to selected boundaries. These are approximate named ranges, foothills and plateaus, not terrain contours or surveyed limits. [Source](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-physical-labels/), **public domain**. |
+| Forests / tree cover | Cartographic **ESA WorldCover 2021** WMS overview at ~1.3 km map pixels. Includes some plantations; small woods/mixed pixels may be absent. Not the analytical 10 m product and not suitable for forest-area measurement. [Source](https://esa-worldcover.org/en/data-access), **CC BY 4.0**. |
+
+Tree cover attribution: **© ESA WorldCover project 2021 / Contains modified
+Copernicus Sentinel data (2021) processed by ESA WorldCover consortium**.
+[River provenance and hashes](app/river-network-sources.json) ·
+[Landform and tree-cover provenance](app/nature-sources.json) ·
+[Nature data licenses](NATURE-DATA-LICENSES.md).
+
+The datasets are bundled locally. River tiles load for the selected geography;
+a worker performs network and landform clipping. A feature is absent when the
+source has no coverage in that selection. All settings support autosave,
+Save/Load and undo/redo. Existing source boundary coordinates are unchanged.
+
+**Editing tools:** Inspect (`I`) shows an area's source and offers fit/isolate/hide.
+Measure (`M`) sums approximate geodesic segments, not road or terrain distances;
+measurements are temporary and excluded from exports. Shape tools select area
+label points and offer **Color**, **Clear colors**, or **Hide**. Finish a polygon
+with the check button or Enter; Escape cancels. Painting, picking and navigation
+retain their existing shortcuts.
 
 ## A map made with the studio
 
@@ -141,7 +187,8 @@ The map occupies the available screen height. Use the navigation rail to open:
 - **Layers:** geographic views, countries, Delhi/NCR, region boundaries, Kashmir views, and border visibility. Expand a control group when needed. Search **Regions & boundaries** by name or filter to enabled regions.
 - **Style:** paint colors and patterns, opacity, map appearance, and legend settings. The floating tool palette also includes a quick paint color picker.
 - **Areas:** search and filter individual areas, then color, focus, or hide them.
-- **Overlays:** cities, rivers, historic gurdwaras, and administrative labels.
+- **Nature:** rivers and tributaries, mountains, plateaus, forests/tree cover, colors, opacity and physical labels.
+- **Places:** cities, historic gurdwaras, and administrative labels.
 
 Hide the inspector with the panel button for a wider map; selecting any rail section reopens it. On small screens, controls open below the map and can be closed to recover map space. **Quick views** contains the regional shortcuts, and the background selector at the upper right contains Political, Satellite, Physical, Rivers, Streets, and Cities.
 
@@ -305,8 +352,9 @@ Sources, individual crosswalks, qualifications and hashes are in
 app/pakistan-division-sources.json. Province, division, district and tehsil controls
 are independent; the Areas tab exposes all 36 named division outlines.
 
-**Overlays → Cities, rivers & Sikh heritage** adds 447 Natural Earth settlement points and 155
-generalized river records (public domain). By default 353 source major/capital
+**Places → Cities & Sikh heritage** adds 447 Natural Earth settlement points.
+**Nature** includes the 155 generalized Natural Earth river records (public domain)
+and the denser RiverATLAS network described below. By default 353 source major/capital
 points qualify before geographic filtering. Set a population threshold, show all
 source settlements, use automatic city marker colors or a custom highlight.
 **Auto-color major-city districts** changes only the containing visible districts;
@@ -346,6 +394,7 @@ The derived outline and context-label provenance are recorded in app/kashmir-vie
 
     npm run check:boundaries
     npm run check:atlas
+    npm run check:nature
     npx tsc --noEmit --incremental false
     npx oxlint app/map-model.ts app/map-view.tsx app/extended-editor.tsx app/export-map.ts scripts
     npm run build:vercel

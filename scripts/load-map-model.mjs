@@ -1,25 +1,28 @@
-import fs from 'node:fs/promises';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
+import vm from 'node:vm';
 import ts from 'typescript';
 
-// Exercise the actual editor model offline, embedding all of its static JSON
-// imports. New source manifests therefore do not silently bypass model tests.
+// Exercise actual TS modules with shared instances and installed dependencies.
+// This avoids recursively expanding the large catalog into nested data URLs.
 export async function loadLocalModule(entry){
  const cache=new Map();
- async function moduleUrl(file){
-  if(cache.has(file.href))return cache.get(file.href);
-  let source=await fs.readFile(file,'utf8');
-  for(const match of source.matchAll(/^import (\w+) from '(\.\/[^']+\.json)';$/gm)){
-   const value=JSON.parse(await fs.readFile(new URL(match[2],file),'utf8'));
-   source=source.replace(match[0],`const ${match[1]}=${JSON.stringify(value)};`);
-  }
-  let compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
-  for(const match of compiled.matchAll(/from ['"](\.\/[^'"]+)['"]/g)){
-   const dependency=await moduleUrl(new URL(match[1].endsWith('.ts')?match[1]:match[1]+'.ts',file));
-   compiled=compiled.replace(match[0],`from '${dependency}'`);
-  }
-  const url=`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`;
-  cache.set(file.href,url);return url;
+ function load(file){
+  if(cache.has(file))return cache.get(file).exports;
+  if(file.endsWith('.json')){const value=JSON.parse(fs.readFileSync(file,'utf8'));cache.set(file,{exports:value});return value;}
+  const module={exports:{}};cache.set(file,module);
+  const nativeRequire=createRequire(file);
+  const require=id=>{
+   if(!id.startsWith('.'))return nativeRequire(id);
+   const base=path.resolve(path.dirname(file),id),target=path.extname(base)?base:base+'.ts';
+   return load(target);
+  };
+  const source=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;
+  vm.runInThisContext('(function(require,module,exports){'+source+'\n})',{filename:file})(require,module,module.exports);
+  return module.exports;
  }
- return import(await moduleUrl(entry));
+ return load(fileURLToPath(entry));
 }
 export const loadMapModel=()=>loadLocalModule(new URL('../app/map-model.ts',import.meta.url));

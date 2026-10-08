@@ -1,13 +1,14 @@
 import raw from './catalog.json';
+import pakistanDivisions from './pakistan-division-areas.json';
 import type {Area,MapDoc} from './map-model';
 
-export const scopeModes=['atlas','full','single','combination','tricity','historic-punjab'] as const;
+export const scopeModes=['atlas','full','single','combination','tricity','historic-punjab','selection'] as const;
 export type ScopeMode=typeof scopeModes[number];
-export type ScopeSettings={mapScope:ScopeMode;scopeRegion:string;scopeRegions:string[];historicRegions:string[];fullDetail:boolean};
+export type ScopeSettings={mapScope:ScopeMode;scopeRegion:string;scopeRegions:string[];historicRegions:string[];fullDetail:boolean;scopeAreas:string[]};
 export type ScopeDocument=Pick<MapDoc,'regions'|'countryView'|'delhiView'|'kashmirView'>&Partial<ScopeSettings>;
 export const defaultHistoricRegions=['in-punjab','pk-punjab','in-haryana','in-himachal','chandigarh'];
-export const scopeDefaults:ScopeSettings={mapScope:'atlas',scopeRegion:'in-delhi',scopeRegions:['in-punjab','pk-punjab'],historicRegions:[...defaultHistoricRegions],fullDetail:false};
-const catalog=raw as Area[];
+export const scopeDefaults:ScopeSettings={mapScope:'atlas',scopeRegion:'in-delhi',scopeRegions:['in-punjab','pk-punjab'],historicRegions:[...defaultHistoricRegions],fullDetail:false,scopeAreas:[]};
+const catalog=[...raw,...pakistanDivisions] as Area[];
 const byId=new Map(catalog.map(a=>[a.id,a]));
 const syntheticRegions=new Set(['delhi-ncr','kashmir-united','tibet-modern-three']);
 export const scopeRegions=catalog.filter(a=>a.level==='region'&&!syntheticRegions.has(a.region)).map(a=>({id:a.region,name:a.name,bbox:a.bbox}));
@@ -16,6 +17,24 @@ export const tricityAreaIds=['chandigarh','in-d-608','in-haryana-d-70'];
 const tricityParents=new Set(tricityAreaIds);
 const tibetRegions=['cn-tibet','cn-qinghai','cn-sichuan'];
 const pakistanLegacyRegions=['pk-punjab','pk-kp','islamabad'];
+// Division membership follows the existing source unions, not bounding boxes.
+const districtDivisions=new Map<string,string[]>();
+for(const division of pakistanDivisions){
+ for(const id of division.districtIds)districtDivisions.set(id,[...(districtDivisions.get(id)||[]),division.id]);
+ const legacy=catalog.find(a=>a.level==='division'&&a.region!=='pk-country'&&a.name===division.name+' Division');
+ if(legacy)for(const id of division.sourceDistrictCodes)if(byId.has(id))districtDivisions.set(id,[...(districtDivisions.get(id)||[]),legacy.id]);
+}
+const ancestors=new Map<string,Set<string>>();
+for(const a of catalog){
+ const ids=new Set([a.id,a.region]);let current:Area|undefined=a;
+ while(current){for(const division of districtDivisions.get(current.id)||[])ids.add(division);if(!current.parent||ids.has(current.parent))break;ids.add(current.parent);current=byId.get(current.parent);}
+ ancestors.set(a.id,ids);
+}
+export const areaBelongsTo=(a:Area,id:string)=>ancestors.get(a.id)?.has(id)||false;
+export function selectionAreas(d:ScopeDocument){
+ const selected=(d.scopeAreas||[]).map(id=>byId.get(id)).filter((a):a is Area=>!!a);
+ return selected.filter(a=>!selected.some(parent=>parent.id!==a.id&&areaBelongsTo(a,parent.id)));
+}
 export const scopeQualifications={
  tricity:'Chandigarh + S A S Nagar (Mohali) district + Panchkula district. This is a union of the supplied administrative areas, not an exact urban, municipal or planning boundary of the Tricity.',
  historicPunjab:'User-editable modern administrative context. The initial selection uses Indian Punjab, Pakistani Punjab, Haryana, Himachal Pradesh and Chandigarh. It is not a surveyed historical Punjab boundary, a dated British province or the Sikh Empire.',
@@ -28,10 +47,11 @@ export const scopeSources={tricity:{url:'https://sasnagar.punjabpolice.gov.in/ab
 export function validateScopeSettings(value:unknown):ScopeSettings{
  const x=value&&typeof value==='object'?value as Partial<ScopeSettings>:{};
  const clean=(list:unknown,fallback:string[])=>Array.isArray(list)?[...new Set(list.filter((id):id is string=>typeof id==='string'&&regionIds.has(id)))]:[...fallback];
- return {mapScope:scopeModes.includes(x.mapScope as ScopeMode)?x.mapScope!:'atlas',scopeRegion:typeof x.scopeRegion==='string'&&regionIds.has(x.scopeRegion)?x.scopeRegion:scopeDefaults.scopeRegion,scopeRegions:clean(x.scopeRegions,scopeDefaults.scopeRegions),historicRegions:clean(x.historicRegions,defaultHistoricRegions),fullDetail:typeof x.fullDetail==='boolean'?x.fullDetail:false};
+ return {mapScope:scopeModes.includes(x.mapScope as ScopeMode)?x.mapScope!:'atlas',scopeRegion:typeof x.scopeRegion==='string'&&regionIds.has(x.scopeRegion)?x.scopeRegion:scopeDefaults.scopeRegion,scopeRegions:clean(x.scopeRegions,scopeDefaults.scopeRegions),historicRegions:clean(x.historicRegions,defaultHistoricRegions),fullDetail:typeof x.fullDetail==='boolean'?x.fullDetail:false,scopeAreas:Array.isArray(x.scopeAreas)?[...new Set(x.scopeAreas.filter(id=>typeof id==='string'&&byId.has(id)&&!syntheticRegions.has(id)))]:[]};
 }
 export function selectedScopeRegions(d:ScopeDocument){
  switch(d.mapScope||'atlas'){
+  case 'selection':return [...new Set((d.scopeAreas||[]).map(id=>byId.get(id)?.region).filter((id):id is string=>!!id))];
   case 'full':return scopeRegions.map(r=>r.id);
   case 'single':return [d.scopeRegion||scopeDefaults.scopeRegion];
   case 'combination':return d.scopeRegions||scopeDefaults.scopeRegions;
@@ -57,12 +77,12 @@ function inTricity(a:Area){
 }
 // Geographic filtering is separate from layer visibility: overlay markers can
 // use the same selected polygon union without depending on a detail checkbox.
-export function scopeAreaAllowed(a:Area,d:ScopeDocument){return (d.mapScope==='tricity'?inTricity(a):scopeRegionAllowed(a.region,d));}
+export function scopeAreaAllowed(a:Area,d:ScopeDocument){return d.mapScope==='selection'?(d.scopeAreas||[]).some(id=>areaBelongsTo(a,id)):(d.mapScope==='tricity'?inTricity(a):scopeRegionAllowed(a.region,d));}
 export function scopeLevelAllowed(a:Area,d:ScopeDocument){return d.mapScope!=='full'||!!d.fullDetail||a.level==='region';}
 // The two district polygons serve as Tricity context outlines even when a
 // previously saved district-detail checkbox was off. Child details still use
 // the user's normal layer flags.
-export function scopePrimaryArea(a:Area,d:ScopeDocument){return d.mapScope==='tricity'&&tricityParents.has(a.id);}
+export function scopePrimaryArea(a:Area,d:ScopeDocument){return d.mapScope==='selection'?(d.scopeAreas||[]).includes(a.id):d.mapScope==='tricity'&&tricityParents.has(a.id);}
 export function scopePreset(d:ScopeDocument,mode:ScopeMode,settings:Partial<ScopeSettings>={}):Partial<MapDoc>&ScopeSettings{
  const validated=validateScopeSettings({...d,...settings,mapScope:mode}),nextRegions={...d.regions};
  const selected=selectedScopeRegions({...d,...validated});
@@ -72,6 +92,7 @@ export function scopePreset(d:ScopeDocument,mode:ScopeMode,settings:Partial<Scop
 
 export function scopeGeometryAreas(d:ScopeDocument):Area[]{
  const mode=d.mapScope||'atlas';
+ if(mode==='selection')return selectionAreas(d);
  if(mode==='tricity')return tricityAreaIds.map(id=>byId.get(id)!).filter(Boolean);
  if(mode==='atlas'){
   if(d.delhiView==='ncr')return [byId.get('delhi-ncr')!].filter(Boolean);
@@ -95,6 +116,7 @@ export function scopeFocusBounds(d:ScopeDocument){
 export function scopeQualification(d:ScopeDocument){return d.mapScope==='tricity'?scopeQualifications.tricity:d.mapScope==='historic-punjab'?scopeQualifications.historicPunjab:d.mapScope==='full'?scopeQualifications.full:'';}
 export function scopeLabel(d:ScopeDocument){
  switch(d.mapScope||'atlas'){
+  case 'selection':{const selected=selectionAreas(d);return selected.length===1?selected[0].name:selected.length+' selected territories';}
   case 'full':return 'Full available map';
   case 'single':return scopeRegions.find(r=>r.id===(d.scopeRegion||scopeDefaults.scopeRegion))?.name||'Individual region';
   case 'combination':return 'Custom region combination';

@@ -1,16 +1,18 @@
 export type OverlaySettings={
  cityMode:'major'|'all';cityAutoColors:boolean;cityColor:string;cityMinPopulation:number;
- riverColor:string;riverLabels:boolean;riverWidth:number;
+ riverColor:string;riverLabels:boolean;riverWidth:number;riverDetail:'major'|'regional'|'tributaries';
+ mountains:boolean;plateaus:boolean;forests:boolean;landformLabels:boolean;mountainColor:string;plateauColor:string;forestColor:string;natureOpacity:number;
  gurdwaras:boolean;gurdwaraFilter:'all'|'takht'|'featured'|'special';gurdwaraLabels:boolean;gurdwaraColor:string;gurdwaraScale:number;
 };
-export const overlayDefaults:OverlaySettings={cityMode:'major',cityAutoColors:true,cityColor:'#e76b35',cityMinPopulation:100000,riverColor:'#148bd1',riverLabels:true,riverWidth:2,gurdwaras:false,gurdwaraFilter:'all',gurdwaraLabels:true,gurdwaraColor:'#237e94',gurdwaraScale:1};
+export const overlayDefaults:OverlaySettings={cityMode:'major',cityAutoColors:true,cityColor:'#e76b35',cityMinPopulation:100000,riverColor:'#148bd1',riverLabels:true,riverWidth:2,riverDetail:'regional',mountains:false,plateaus:false,forests:false,landformLabels:true,mountainColor:'#987e62',plateauColor:'#d4b479',forestColor:'#38845b',natureOpacity:.4,gurdwaras:false,gurdwaraFilter:'all',gurdwaraLabels:true,gurdwaraColor:'#237e94',gurdwaraScale:1};
 export function validateOverlaySettings(value:unknown):OverlaySettings{
  const x=value&&typeof value==='object'?value as Partial<OverlaySettings>:{},next={...overlayDefaults};
- for(const key of ['cityAutoColors','riverLabels','gurdwaras','gurdwaraLabels'] as const)if(typeof x[key]==='boolean')next[key]=x[key]!;
- for(const key of ['cityColor','riverColor','gurdwaraColor'] as const)if(typeof x[key]==='string'&&/^#[0-9a-f]{6}$/i.test(x[key]!))next[key]=x[key]!;
+ for(const key of ['cityAutoColors','riverLabels','gurdwaras','gurdwaraLabels','mountains','plateaus','forests','landformLabels'] as const)if(typeof x[key]==='boolean')next[key]=x[key]!;
+ for(const key of ['cityColor','riverColor','gurdwaraColor','mountainColor','plateauColor','forestColor'] as const)if(typeof x[key]==='string'&&/^#[0-9a-f]{6}$/i.test(x[key]!))next[key]=x[key]!;
+ if(['major','regional','tributaries'].includes(x.riverDetail||''))next.riverDetail=x.riverDetail!;
  if(x.cityMode==='all')next.cityMode='all';
  if(['all','takht','featured','special'].includes(x.gurdwaraFilter||''))next.gurdwaraFilter=x.gurdwaraFilter!;
- for(const [key,min,max] of [['cityMinPopulation',0,5000000],['riverWidth',.5,6],['gurdwaraScale',.6,2]] as const)if(Number.isFinite(x[key]))next[key]=Math.max(min,Math.min(max,x[key]!));
+ for(const [key,min,max] of [['cityMinPopulation',0,5000000],['riverWidth',.5,6],['gurdwaraScale',.6,2],['natureOpacity',.1,.85]] as const)if(Number.isFinite(x[key]))next[key]=Math.max(min,Math.min(max,x[key]!));
  return next;
 }
 export type CityProperties={id?:string;name?:string;population?:number;capital?:boolean};

@@ -28,10 +28,12 @@ try {
   assert.ok(await page.getByLabel('Selected color', {exact: true}).isVisible());
   await page.getByRole('tab', {name: 'Areas', exact: true}).click();
   assert.ok(await page.getByLabel('Find an area').isVisible());
-  await page.getByRole('tab', {name: 'Overlays', exact: true}).click();
-  for (const name of ['Show major cities', 'Show rivers', 'Show gurdwaras', 'Show administrative area names']) {
+  await page.getByRole('tab', {name: 'Places', exact: true}).click();
+  for (const name of ['Show major cities', 'Show gurdwaras', 'Show administrative area names']) {
     assert.ok(await page.getByRole('checkbox', {name, exact: true}).isVisible());
   }
+  await page.getByRole('tab', {name: 'Nature', exact: true}).click();
+  for (const name of ['Show rivers','Show mountains','Show plateaus','Show forests']) assert.ok(await page.getByRole('checkbox', {name, exact:true}).isVisible());
   await page.getByRole('tab', {name: 'Layers', exact: true}).click();
   assert.ok(await page.getByLabel('Search region layers').isVisible(), 'Open layer groups survive tab changes');
   await page.getByLabel('Search region layers').fill('');
@@ -62,7 +64,7 @@ try {
       await page.getByRole('button', {name: 'Hide controls', exact: true}).click();
       assert.ok(!(await page.getByRole('complementary', {name: 'Map inspector'}).isVisible()));
       assert.ok((await page.locator('.regional-map-area').boundingBox()).height > height * .6);
-      await page.getByRole('tab', {name: 'Overlays', exact: true}).click();
+      await page.getByRole('tab', {name: 'Places', exact: true}).click();
       assert.ok(await page.getByRole('checkbox', {name: 'Show gurdwaras', exact: true}).isVisible());
     }
     await page.screenshot({path: `outputs/workspace/viewport-${width}.png`});

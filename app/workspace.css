@@ -1,4 +1,4 @@
-/* Workspace chrome only. Map geometry, canvas styling and document values live elsewhere. */
+/* Workspace chrome. Geographic and editing behavior lives in the map modules. */
 .premium-studio {
   --ink: #203431;
   --subtle: #6d7c78;
@@ -19,6 +19,69 @@
 .premium-studio button, .premium-studio select, .premium-studio input {font-family: inherit;}
 .premium-studio button {font-size: 12px; border-color: var(--line); color: var(--ink); transition: background .15s, color .15s, border-color .15s;}
 .premium-studio button:hover {background: #edf3ef;}
+.geography-picker {display: grid; gap: 12px; margin-bottom: 22px;}
+.geography-picker .field {margin: 0;}
+.geography-actions {display: grid; grid-template-columns: 1fr 1fr; gap: 6px;}
+.geography-actions button {display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 39px;}
+.geography-results {max-height: 240px; overflow-y: auto; border: 1px solid var(--line); border-radius: 10px;}
+.geography-results > div {display: flex; border-bottom: 1px solid var(--line);}
+.geography-results button {border: 0; background: transparent;}
+.geography-results button:first-child {flex: 1; text-align: left; padding: 10px;}
+.geography-results strong, .geography-results small {display: block;}
+.geography-results small {color: var(--subtle); font-size: 10px; margin-top: 3px;}
+.geography-selection {padding: 13px; background: #f1f6f2; border-radius: 11px;}
+.geography-selection > strong {font-size: 11px;}
+.geography-chips {display: flex; flex-wrap: wrap; gap: 5px; max-height: 155px; overflow-y: auto; margin: 10px 0;}
+.geography-chips > span {display: inline-flex; gap: 4px; align-items: center; padding: 4px 7px; border: 1px solid #ceded4; border-radius: 6px; background: white; font-size: 11px;}
+.geography-chips button {display: flex; border: 0; padding: 3px; background: none;}
+.scope-detail-levels {display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px;}
+.scope-detail-levels button[aria-pressed=true] {color: #145d50; border-color: #93b9a5; background: #e0eee5;}
+.nature-intro {background: #f0f5ef; padding: 16px; border-radius: 12px; margin-bottom: 14px;}
+.nature-intro p {margin: 8px 0; line-height: 1.6;}
+.nature-intro small {color: #577161;}
+.nature-presets {display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 18px;}
+.nature-layer {border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px; overflow: hidden;}
+.nature-layer-heading {display: flex; align-items: center; padding: 14px 12px; gap: 10px; cursor: pointer;}
+.nature-layer-heading > svg {color: #4d7964; flex-shrink: 0;}
+.nature-layer-heading > span {flex: 1;}
+.nature-layer-heading strong, .nature-layer-heading small {display: block;}
+.nature-layer-heading strong {font-weight: 600; font-size: 13px;}
+.nature-layer-heading small {font-size: 10px; color: var(--subtle); margin-top: 4px;}
+.nature-layer-heading input, .nature-controls input[type=checkbox] {accent-color: #187467; width: 16px; height: 16px;}
+.nature-layer-options {padding: 0 13px 12px; border-top: 1px solid #edf0ec;}
+.nature-layer-options .field {margin-top: 13px;}
+.nature-controls input[type=range] {accent-color: #187467; padding: 0; border: 0; height: 22px;}
+.nature-controls .overlay-color {margin-top: 12px;}
+.nature-sources {border-top: 1px solid var(--line); padding-top: 15px; margin-top: 22px; font-size: 11px;}
+.nature-sources summary {cursor: pointer; color: #345f4c;}
+.nature-map-legend {position: absolute; z-index: 2; top: 87px; right: 18px; border: 1px solid #dfe7df; border-radius: 10px; background: #fffffff0; padding: 11px 13px; min-width: 155px; font-size: 10px;}
+.nature-map-legend summary {font-size: 11px; font-weight: 600; cursor: pointer;}
+.nature-map-legend > div {display: flex; gap: 7px; align-items: center; margin-top: 9px; color: #677d6e;}
+.nature-map-legend i {display: block; width: 11px; height: 11px; border-radius: 3px;}
+.premium-studio .map-toolbar button:nth-child(4), .premium-studio .map-toolbar button:nth-child(7) {border-top: 1px solid #dce5dc; border-radius: 0 0 7px 7px;}
+.map-tool-options {position: absolute; z-index: 3; left: 78px; bottom: 82px; width: min(250px, calc(100% - 98px)); padding: 11px 13px; border: 1px solid #dfe7df; border-radius: 10px; background: #fffffff0; box-shadow: 0 3px 15px #183d350c;}
+.map-tool-options > strong {font-size: 11px;}
+.map-tool-options p {font-size: 10px; line-height: 1.5; color: #718177; margin: 4px 0 0;}
+.selection-action {display: flex; gap: 5px; margin-top: 9px; align-items: end;}
+.selection-action label {flex: 1; font-size: 10px; color: #617368;}
+.selection-action select {display: block; width: 100%; background: #f4f7f3; padding: 6px; border: 1px solid #dae4db; border-radius: 5px; margin-top: 3px; font-size: 11px;}
+.selection-action button {padding: 7px; display: flex;}
+.area-inspector {position: absolute; z-index: 5; right: 18px; top: 87px; width: min(260px, calc(100% - 90px)); padding: 17px; background: #fffffff5; border: 1px solid #dce5dc; border-radius: 12px; box-shadow: 0 5px 24px #183d3517;}
+.area-inspector h3 {font-size: 18px; font-weight: 600; margin: 6px 20px 8px 0;}
+.area-inspector p {font-size: 10px; line-height: 1.6; color: #6b7e73;}
+.area-inspector > div {display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px;}
+.area-inspector > div button {display: flex; align-items: center; gap: 5px;}
+.area-inspector-close {position: absolute; right: 8px; top: 8px; padding: 5px; background: transparent; border: 0;}
+.measurement-readout {position: absolute; left: 78px; bottom: 174px; z-index: 3; width: 230px; background: #183d35; color: #fff; border-radius: 10px; padding: 12px 14px;}
+.measurement-readout strong {display: block; font-size: 22px; font-weight: 500; font-variant-numeric: tabular-nums;}
+.measurement-readout span {display: block; font-size: 9px; color: #b6d4c6; margin-top: 3px;}
+.premium-studio .measurement-readout button {background: #ffffff15; color: #fff; border-color: #ffffff30; font-size: 10px; margin-top: 9px;}
+@media (max-width: 700px) {
+ .map-tool-options {left: 59px; bottom: 82px; width: min(220px, calc(100% - 76px)); padding: 9px;}
+ .measurement-readout {left: 59px; bottom: 195px; width: min(220px, calc(100% - 76px));}
+ .area-inspector {right: 10px; top: 118px;}
+ .mobile-inspector-open :is(.map-tool-options,.area-inspector,.measurement-readout) {display: none;}
+}
 .premium-studio button:disabled {opacity: .4;}
 .premium-studio :is(button, input, select, summary):focus-visible, .export-dialog :is(button, input):focus-visible {outline: 2px solid #399b89; outline-offset: 3px;}
 .premium-studio .primary, .export-dialog .primary {background: #187467; border-color: #187467; color: #fff; font-weight: 600;}

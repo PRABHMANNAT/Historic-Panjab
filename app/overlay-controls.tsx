@@ -10,7 +10,7 @@ export default function OverlayControls({doc,onChange,onFit,onAutoColor,busy}:Pr
  const selected=gurdwaras.filter(g=>shrineTierAllowed(g.tier,doc));
  function fitShrines(){if(!selected.length)return;const b=selected.reduce((b,g)=>[Math.min(b[0],g.coordinates[0]),Math.min(b[1],g.coordinates[1]),Math.max(b[2],g.coordinates[0]),Math.max(b[3],g.coordinates[1])],[180,90,-180,-90]);onFit(b);}
  return <section className="overlay-controls" aria-labelledby="overlay-heading">
-  <h2 id="overlay-heading">Cities, rivers & Sikh heritage</h2>
+  <h2 id="overlay-heading">Cities & Sikh heritage</h2>
   <label className="overlay-toggle"><input type="checkbox" aria-label="Show major cities" checked={doc.cities} onChange={e=>onChange({cities:e.target.checked})}/> Show major cities</label>
   {doc.cities&&<>
    <label className="field">City selection<select aria-label="City selection" value={doc.cityMode} onChange={e=>onChange({cityMode:e.target.value as MapDoc['cityMode']})}><option value="major">Major cities & national capitals</option><option value="all">All source settlement points</option></select></label>
@@ -20,8 +20,6 @@ export default function OverlayControls({doc,onChange,onFit,onAutoColor,busy}:Pr
    <button disabled={busy} onClick={onAutoColor}>{busy?'Finding city districts…':'Auto-color major-city districts'}</button>
    <p className="muted">Markers highlight approximate Natural Earth city centers. Red: national capitals; orange: source population ≥1 million; teal: other selected cities. Population is an archival source estimate, not a current census. Auto-color applies to containing visible districts, not municipal city limits; existing colors are replaced only in those districts and can be undone.</p>
   </>}
-  <label className="overlay-toggle"><input type="checkbox" aria-label="Show rivers" checked={doc.rivers} onChange={e=>onChange({rivers:e.target.checked})}/> Show rivers</label>
-  {doc.rivers&&<><label className="overlay-color"><input type="color" aria-label="River color" value={doc.riverColor} onChange={e=>onChange({riverColor:e.target.value})}/> River color</label><label className="overlay-toggle"><input type="checkbox" checked={doc.riverLabels} onChange={e=>onChange({riverLabels:e.target.checked})}/> Show river names</label><label className="field">River width<input type="number" aria-label="River width" min={.5} max={6} step={.5} value={doc.riverWidth} onChange={e=>onChange({riverWidth:Math.max(.5,Math.min(6,+e.target.value||.5))})}/></label><p className="muted">Generalized major rivers from Natural Earth, not detailed channel surveying. Rivers and place markers follow the selected source geography.</p></>}
   <label className="overlay-toggle"><input type="checkbox" aria-label="Show gurdwaras" checked={doc.gurdwaras} onChange={e=>onChange({gurdwaras:e.target.checked})}/> Show historic gurdwaras</label>
   {doc.gurdwaras&&<>
    <label className="field">Heritage selection<select aria-label="Gurdwara selection" value={doc.gurdwaraFilter} onChange={e=>onChange({gurdwaraFilter:e.target.value as MapDoc['gurdwaraFilter']})}><option value="all">100 curated historic / important shrines</option><option value="takht">Five Takhts</option><option value="featured">15 featured important shrines</option><option value="special">Five Takhts + 15 featured shrines</option></select></label>

@@ -1,0 +1,5 @@
+export function distanceKm(points:number[][]){
+ const rad=Math.PI/180;
+ return points.slice(1).reduce((sum,b,i)=>{const a=points[i],dLat=(b[1]-a[1])*rad,dLon=(b[0]-a[0])*rad,h=Math.sin(dLat/2)**2+Math.cos(a[1]*rad)*Math.cos(b[1]*rad)*Math.sin(dLon/2)**2;return sum+6371.0088*2*Math.atan2(Math.sqrt(h),Math.sqrt(Math.max(0,1-h)));},0);
+}
+export const toolGuides:Record<string,string>={paint:'Click an area to color. Shift-click clears its color.',erase:'Click an area to remove its own color.',pick:'Click an area to sample its color and pattern.',pan:'Drag to move. Scroll or pinch to zoom.',inspect:'Click an area for its source, focus and isolation options.',measure:'Click points to measure a path. Distances are approximate; not terrain or road distances.',rect:'Drag a rectangle to apply the selected action to area label points.',ellipse:'Drag an ellipse to apply the selected action to area label points.',polygon:'Click to add vertices. Finish with Enter or the check button. Escape cancels.'};

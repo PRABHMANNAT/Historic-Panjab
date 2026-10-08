@@ -1,13 +1,10 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import ts from 'typescript';
+import {loadLocalModule} from './load-map-model.mjs';
 
 const app=new URL('../app/',import.meta.url);
 const catalog=JSON.parse(await fs.readFile(new URL('catalog.json',app),'utf8'));
-let source=await fs.readFile(new URL('scope-model.ts',app),'utf8');
-source=source.replace("import raw from './catalog.json';",`const raw=${JSON.stringify(catalog)};`);
-const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
-const scope=await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
+const scope=await loadLocalModule(new URL('scope-model.ts',app));
 const byId=new Map(catalog.map(a=>[a.id,a]));
 const doc={...scope.scopeDefaults,countryView:'',delhiView:'none',kashmirView:'separate',regions:Object.fromEntries(scope.scopeRegions.map(r=>[r.id,{show:r.id==='in-punjab',province:true,district:false,tehsil:true,uc:false,division:false}])),fills:{'in-d-608':{color:'#ff0000',pattern:'solid'}}};
 const alphabetical=(a,b)=>a.localeCompare(b);

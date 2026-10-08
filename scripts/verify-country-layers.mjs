@@ -54,7 +54,10 @@ try{
    }
    if(view)for(const suffix of ['','-labels'])assert.ok(loaded.has('/data/'+id+'-region'+suffix+'.geojson'));
    const parent=catalog.find(a=>ids.includes(a.region)&&a.level===(counts.province?'province':'district'));
-   await page.getByLabel('Focus a province or regional unit').selectOption(parent.id);await idle();
+   await page.getByLabel('Isolate a province or regional unit').selectOption(parent.id);await idle();
+   assert.equal((await saved()).mapScope,'selection');assert.deepEqual((await saved()).scopeAreas,[parent.id]);
+   // Restore the country/context to exercise the original whole-country checks.
+   await page.getByLabel('Country map view').selectOption(id);await idle();
    await page.getByRole('tab',{name:'Areas',exact:true}).click();
    for(const level of ['province','district','tehsil']){await chooseLevel(level);assert.equal(await page.locator('.area-row').count(),counts[level],id+' '+level+' list');}
    await chooseLevel(parent.level);
