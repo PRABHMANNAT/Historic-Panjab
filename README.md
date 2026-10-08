@@ -31,11 +31,26 @@ are retained in the image. This is a regional example of the wider atlas.*
 
 ## Map gallery
 
-These maps are exported from the studio's bundled boundary layers. Click an image
+The administrative maps are exported from the studio's bundled boundary layers. Click an image
 to open the full-size version. Colors distinguish administrative areas and do not
 represent population or another statistical measure. All available source areas
 for each illustrated detail level are included; source gaps and historical
 editions are retained. [Gallery counts and provenance](docs/images/gallery-provenance.json).
+
+### Satellite view — Delhi
+
+[![Satellite view of Delhi with the NCT outline in gold and 11 source district boundaries in white, using Esri World Imagery](docs/images/delhi-satellite.jpg)](docs/images/delhi-satellite.jpg)
+
+*Satellite imagery with the studio's Delhi boundary data. This documentation
+illustration uses the same **Esri World Imagery** service as the app's Satellite
+background. Gold marks the NCT outline; white lines mark the 11 districts in the
+LGD-derived 2024 source, before the 2025 reorganization. Imagery dates vary;
+this is not a live view.*
+
+Imagery: **Esri, Vantor, Earthstar Geographics, and the GIS User Community**.
+[Imagery source and terms](https://goto.arcgisonline.com/maps/World_Imagery) ·
+[Map provenance](docs/images/gallery-provenance.json).
+In the app, choose **Satellite** in the map-background selector to explore this view.
 
 ### Delhi — administrative divisions and municipal detail
 

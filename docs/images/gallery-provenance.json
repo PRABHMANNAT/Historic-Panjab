@@ -1,5 +1,5 @@
 {
-  "generator": "Actual Prabh Map Studio exportMap function, rasterized from its SVG output. No source geometry changes. Colors distinguish areas and do not encode measurements.",
+  "generator": "Administrative examples: actual Prabh Map Studio exportMap function, rasterized from SVG. Satellite example: static GIS composition using the same imagery service and local boundary files as the app. No source geometry changes.",
   "examples": [
     {
       "file": "delhi-administrative.png",
@@ -55,6 +55,30 @@
         "tehsil": 9
       },
       "note": "LGD 2024 source: 3 districts and 9 named subdistrict areas. Actual geographic positions and relative scale are retained."
+    },
+    {
+      "file": "delhi-satellite.jpg",
+      "title": "Delhi · satellite and district boundaries",
+      "counts": {
+        "district": 11
+      },
+      "generator": "Esri World Imagery export in Web Mercator; local GeoJSON boundaries projected into the exact returned image extent. Documentation illustration, not a browser screenshot.",
+      "imageryService": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+      "exportRequest": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=76.8389109%2C28.4046676%2C77.3475705%2C28.8834996&bboxSR=4326&imageSR=3857&size=1600%2C1000&format=jpg&dpi=96&f=json",
+      "extent": {
+        "xmin": 8533390.775092626,
+        "ymin": 3300089.580095013,
+        "xmax": 8630569.821561925,
+        "ymax": 3360826.484138325,
+        "spatialReference": {
+          "wkid": 102100,
+          "latestWkid": 3857
+        }
+      },
+      "imageryCredit": "Source: Esri, Vantor, Earthstar Geographics, and the GIS User Community",
+      "retrieved": "2026-10-08",
+      "terms": "https://goto.arcgisonline.com/maps/World_Imagery",
+      "note": "LGD 2024 Delhi NCT and district outlines via Bharatlas. Predates the 2025 reorganization. Imagery capture dates vary; retrieval date is not an acquisition date. Imagery retains provider terms and is not MIT licensed."
     }
   ]
 }

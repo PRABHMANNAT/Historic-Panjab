@@ -26,6 +26,12 @@ following third-party materials. Existing copyright notices remain applicable.
   coverage and source-edition notes. Geographic-source credits remain embedded.
   `delhi-municipal.png` uses OpenCity/Bharatlas historical ward data under
   **CC BY-SA 4.0**; that license and attribution continue to apply to this preview.
+- `docs/images/delhi-satellite.jpg`: a static documentation map composed from
+  Esri World Imagery and the app's LGD 2024 Delhi boundary files. Imagery credit:
+  **Esri, Vantor, Earthstar Geographics, and the GIS User Community**. Imagery
+  remains subject to the [provider's terms](https://goto.arcgisonline.com/maps/World_Imagery)
+  and is not relicensed under MIT. The image includes visible attribution;
+  service URL, returned extent and retrieval date are in the gallery provenance.
 
 Keep the relevant data and photo credits when sharing exports or redistributing
 assets. Research use is the project's focus; the MIT software license does not
