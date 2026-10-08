@@ -85,6 +85,13 @@
         "Itanagar capital complex"
       ],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-assam",
+      "name": "Assam",
+      "state_lgd": 18,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -221,6 +228,21 @@
     "in-arunachal-tehsil": {
       "count": 185,
       "sha256": "865d079bccc2bb3e6b2ad271bdd62ea4ebd32bb08ab13eb3f32c4215476da1a2",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-assam-region": {
+      "count": 1,
+      "sha256": "79ac64c0d6a380948172ae260faf90b16bbe0d2c2de0bf510e24c0615a2ba2ec",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-assam-district": {
+      "count": 35,
+      "sha256": "921868d2e60917f64143a4288f46a480f56adda07ce9f7fe62048c8a857d7f82",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-assam-tehsil": {
+      "count": 172,
+      "sha256": "ed34c4e7b4f336b8aec44d566d7d719d6c7f52dc7dc8738476fc6cb8badaae1b",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }
