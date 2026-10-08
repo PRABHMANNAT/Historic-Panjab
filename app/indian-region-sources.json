@@ -190,6 +190,13 @@
       "state_lgd": 21,
       "districtsWithoutLinkedTehsils": [],
       "omittedUnnamedTehsilRecords": 0
+    },
+    {
+      "id": "in-sikkim",
+      "name": "Sikkim",
+      "state_lgd": 11,
+      "districtsWithoutLinkedTehsils": [],
+      "omittedUnnamedTehsilRecords": 0
     }
   ],
   "layers": {
@@ -551,6 +558,21 @@
     "in-odisha-tehsil": {
       "count": 476,
       "sha256": "0c5383e792a849a5985c330add88b9f5ae5021c1c62c7810ac47ffc33231ff63",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
+    },
+    "in-sikkim-region": {
+      "count": 1,
+      "sha256": "cb88ad77dd6559b885c73d2e9a11aefbe1778566023ad677e336c4d7f1b46bb6",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/states/LGD_States.geojson"
+    },
+    "in-sikkim-district": {
+      "count": 6,
+      "sha256": "0eebcf37c106b7419554972738adedc5b42d20e36d55efa7e3399c0196f9736d",
+      "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson"
+    },
+    "in-sikkim-tehsil": {
+      "count": 9,
+      "sha256": "5e0f8ac0c15cfbaa3f1a5c55556e07b57c22949cef0c2d35c13a9121835bc3b8",
       "sourceUrl": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/subdistricts/LGD_Subdistricts.geojson"
     }
   }

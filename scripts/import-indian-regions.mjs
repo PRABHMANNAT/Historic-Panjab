@@ -38,6 +38,16 @@ const availableDefinitions = [
   {id: 'in-mizoram', name: 'Mizoram', code: 15, districts: 11},
   {id: 'in-nagaland', name: 'Nagaland', code: 13, districts: 16},
   {id: 'in-odisha', name: 'Odisha', code: 21, districts: 30},
+  {id: 'in-sikkim', name: 'Sikkim', code: 11, districts: 6},
+  {id: 'in-tamil-nadu', name: 'Tamil Nadu', code: 33, districts: 38},
+  {id: 'in-telangana', name: 'Telangana', code: 36, districts: 33},
+  {id: 'in-tripura', name: 'Tripura', code: 16, districts: 8},
+  {id: 'in-west-bengal', name: 'West Bengal', code: 19, districts: 23},
+  {id: 'in-andaman-nicobar', name: 'Andaman and Nicobar Islands', code: 35, districts: 3},
+  {id: 'in-dnh-dd', name: 'Dadra and Nagar Haveli and Daman and Diu', code: 38, districts: 3},
+  {id: 'in-delhi', name: 'Delhi (National Capital Territory)', code: 7, districts: 11},
+  {id: 'in-lakshadweep', name: 'Lakshadweep', code: 31, districts: 1},
+  {id: 'in-puducherry', name: 'Puducherry', code: 34, districts: 4},
 ];
 const requested = process.argv.find(arg => arg.startsWith('--regions='))?.slice('--regions='.length).split(',');
 const definitions = requested ? availableDefinitions.filter(r => requested.includes(r.id)) : availableDefinitions;
