@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
 import {loadMapModel,loadLocalModule} from './load-map-model.mjs';
-import {configureExport,triggerExport} from './workspace-ui.mjs';
+import {configureExport,triggerExport,setPaintColor} from './workspace-ui.mjs';
 const model=await loadMapModel(),scope=await loadLocalModule(new URL('../app/scope-model.ts',import.meta.url));
 const baseline=process.env.MAP_SEAM_BASELINE==='1',output='outputs/border-seams/'+(baseline?'before':'after'),probe=[74.64067038262698,31.439573915693014];
 await fs.mkdir(output,{recursive:true});
@@ -35,7 +35,7 @@ try{
  const districtSvg=await checkView('districts');
  if(!baseline){
   const bounds=metadata(districtSvg).scope.bounds,box=await page.locator('.gl-host').boundingBox();
-  await page.getByLabel('Quick paint color',{exact:true}).fill('#d54c70');
+  await setPaintColor(page,'#d54c70');
   await page.mouse.click(box.x+(probe[0]-bounds[0])/(bounds[2]-bounds[0])*box.width,box.y+(merc(bounds[3])-merc(probe[1]))/(merc(bounds[3])-merc(bounds[1]))*box.height);
   await page.waitForFunction(()=>JSON.parse(localStorage.getItem('punjab-studio-regional-v2')).fills.PK617?.color==='#d54c70');
   await idle();await checkView('gap-painted');

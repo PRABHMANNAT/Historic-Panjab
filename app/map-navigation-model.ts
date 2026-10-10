@@ -1,6 +1,6 @@
 import {initial,visible,type MapDoc,type Area} from './map-model';
 import {scopeNavigation,scopePreset} from './scope-model';
-import {caseStudyPreset,caseStudyAreaIds} from './case-study-model';
+import {caseStudyPreset,caseStudyCompleteView,isCaseStudyMap} from './case-study-model';
 import {empirePreset} from './empire-model';
 import {showArea} from './area-search-model';
 
@@ -15,7 +15,7 @@ function restore(before:unknown,applied:unknown,current:unknown):unknown{
 }
 const snapshot=(doc:MapDoc)=>structuredClone({...doc,historyReturn:null});
 const legacyTemplate={...initial,...caseStudyPreset(initial)};
-const legacyCase=(doc:MapDoc)=>doc.caseStudyId==='sikh-heritage-core'||doc.title===legacyTemplate.title&&doc.legendTitle===legacyTemplate.legendTitle||doc.mapScope==='selection'&&caseStudyAreaIds.every(id=>doc.scopeAreas.includes(id));
+const legacyCase=isCaseStudyMap;
 export const historyActive=(doc:MapDoc)=>doc.empireId!=='none'||legacyCase(doc)||!!doc.historyReturn;
 function legacyNormalMap(doc:MapDoc):MapDoc{
  const cleaned=legacyCase(doc)?restore(initial,legacyTemplate,doc) as MapDoc:doc;
@@ -27,7 +27,8 @@ export function recordHistoryChange(doc:MapDoc,patch:Partial<MapDoc>):Partial<Ma
  const before=doc.historyReturn?.before||snapshot(historyActive(doc)?legacyNormalMap(doc):doc);
  const baseline=doc.historyReturn?.applied||before;
  const template=activeCase?caseStudyPreset(baseline):empirePreset(baseline,patch.empireId!,patch.empireDetail);
- return {...patch,viewReturn:null,historyReturn:{before,applied:snapshot({...baseline,...template,viewReturn:null})}};
+ const viewReturn=activeCase?patch.viewReturn||null:null;
+ return {...patch,viewReturn,historyReturn:{before,applied:snapshot({...baseline,...template,viewReturn:null})}};
 }
 export function normalMapPatch(doc:MapDoc):Partial<MapDoc>{
  if(!doc.historyReturn)return historyActive(doc)?legacyNormalMap(doc):{empireId:'none',caseStudyId:'none'};
@@ -41,7 +42,7 @@ export function normalMapPatch(doc:MapDoc):Partial<MapDoc>{
  return structuredClone({...merged,...geography,regions:merged.regions,areaDetails:merged.areaDetails,hidden,empireId:'none',caseStudyId:'none',historyReturn:null,viewReturn:before.viewReturn});
 }
 export function completeMapPatch(doc:MapDoc):Partial<MapDoc>{
- return {...scopePreset(doc,'full',{fullDetail:doc.empireId!=='none'}),hidden:[],areaDetails:{},viewReturn:doc.viewReturn||scopeNavigation(doc)};
+ return {...(isCaseStudyMap(doc)?caseStudyCompleteView(doc):scopePreset(doc,'full',{fullDetail:doc.empireId!=='none'})),hidden:[],areaDetails:{},viewReturn:doc.viewReturn||scopeNavigation(doc)};
 }
 export function selectedMapPatch(doc:MapDoc):Partial<MapDoc>{
  if(doc.viewReturn)return {...doc.viewReturn,viewReturn:null};

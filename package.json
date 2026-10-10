@@ -48,7 +48,10 @@
     "check:punjab-seams": "node scripts/check-punjab-seams.mjs",
     "check:punjab-seams-browser": "node scripts/verify-punjab-seams-browser.mjs",
     "check:map-navigation": "node scripts/check-map-navigation.mjs",
-    "check:map-navigation-browser": "node scripts/verify-map-navigation-browser.mjs"
+    "check:map-navigation-browser": "node scripts/verify-map-navigation-browser.mjs",
+    "check:paint-palette": "node scripts/check-paint-palette.mjs",
+    "check:paint-palette-browser": "node scripts/verify-paint-palette-browser.mjs",
+    "check:paint-interactions-browser": "node scripts/verify-paint-interactions-browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

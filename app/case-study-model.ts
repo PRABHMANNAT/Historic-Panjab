@@ -1,11 +1,26 @@
 import study from './case-study-data.json';
-import {areas,areaById,paintKey,type MapDoc,type Paint} from './map-model';
-import {areaBelongsTo,scopePreset} from './scope-model';
+import {areas,areaById,areasByLayer,paintKey,type MapDoc,type Paint} from './map-model';
+import {areaBelongsTo,scopePreset,scopeNavigation,scopeRegions} from './scope-model';
 
 export const caseStudy=study;
 export type CaseStudySettings={caseStudyId:'none'|'sikh-heritage-core'};
 export const caseStudyDefaults:CaseStudySettings={caseStudyId:'none'};
 export const caseStudyAreaIds=study.groups.flatMap(g=>g.areaIds);
+export const isCaseStudyMap=(doc:Partial<MapDoc>)=>doc.empireId!=='none'?doc.caseStudyId==='sikh-heritage-core':doc.caseStudyId==='sikh-heritage-core'||doc.title==='United Punjab · Sikh military & heritage core'&&doc.legendTitle==='Case study key'||doc.mapScope==='selection'&&caseStudyAreaIds.every(id=>doc.scopeAreas?.includes(id));
+export const caseStudyIncludes=(area:Parameters<typeof areaBelongsTo>[0])=>caseStudyAreaIds.some(id=>areaBelongsTo(area,id));
+// Show the retained core over all available state/province outlines. Keep full
+// Pakistan's province coverage, while the legacy core units remain editable.
+export function caseStudyCompleteView(doc:MapDoc):Partial<MapDoc>{
+ const coreRegions=new Set(caseStudyAreaIds.map(id=>areaById.get(id)?.region));
+ const patch=scopePreset(doc,'full',{fullDetail:true}),regions={...patch.regions};
+ for(const region of scopeRegions){const detail=coreRegions.has(region.id);regions[region.id]={...regions[region.id],show:true,province:areasByLayer.has(region.id+'-province'),district:detail,tehsil:detail,division:false,uc:false};}
+ regions['pk-lahore-study']={...regions['pk-lahore-study'],show:true,district:false,tehsil:true,division:false,uc:false};
+ return {...patch,regions,hidden:[],areaDetails:{}};
+}
+export function caseStudyLoadPreset(doc:MapDoc):Partial<MapDoc>{
+ const core={...doc,...caseStudyPreset(doc)};
+ return {...core,...caseStudyCompleteView(core),viewReturn:scopeNavigation(core),historyReturn:null};
+}
 export function caseStudyPreset(doc:MapDoc):Partial<MapDoc>{
  const belongs=(id:string)=>{const a=areaById.get(id);return !!a&&caseStudyAreaIds.some(root=>areaBelongsTo(a,root));};
  const fills:Record<string,Paint>=Object.fromEntries(Object.entries(doc.fills).filter(([id])=>!belongs(id)));

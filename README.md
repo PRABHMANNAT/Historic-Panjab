@@ -233,9 +233,9 @@ Save/Load and undo/redo. Existing source boundary coordinates are unchanged.
 
 **Editing tools:** Inspect (`I`) shows an area's source and offers fit/isolate/hide.
 Measure (`M`) sums approximate geodesic segments, not road or terrain distances;
-measurements are temporary and excluded from exports. Shape tools select area
-label points and offer **Color**, **Clear colors**, or **Hide**. Finish a polygon
-with the check button or Enter; Escape cancels. Painting, picking and navigation
+measurements are temporary and excluded from exports. The single rectangle tool
+selects area label points and offers **Color**, **Clear colors**, or **Hide**.
+Escape cancels. Painting, picking and navigation
 retain their existing shortcuts.
 
 ## A map made with the studio
@@ -373,6 +373,27 @@ Sliver ownership uses nearest existing boundary samples at approximately 28 m.
 Run `npm run check:punjab-seams` and `npm run check:punjab-seams-browser`
 with the app on localhost:4545. The browser check includes real gap pixels,
 exports and Hide/Unhide.
+
+## Paint colors and automatic palette
+
+Use **Hex** on the floating toolbar or **Style → Color areas**. The editable hex
+field comes first and accepts pasted codes with or without `#` (three or six
+digits). The default palette contains the supplied 45 named colors, starting
+with Sage `#AFC7B1`. **Next color after painting** is enabled by default. One
+paint action, including a rectangle selection, uses one color and then advances;
+erasing or an empty selection does not advance. After Aqua it repeats at Sage.
+Turn the checkbox off to keep the current color.
+
+Open **Paste or upload colors**, paste a text/Markdown/CSV list or upload a text
+file, and use its hex codes in their listed order. Up to 256 entries are kept;
+files must be under 1 MB. Invalid lists leave your existing palette intact.
+Palette, current color, advance setting and position persist in autosave, named
+custom maps and settings downloads. Paint and advancement undo together.
+
+The Sikh military & heritage case study now opens with all available states and
+provinces around its colored core, including the full Pakistan province layer.
+**View → Selected map** focuses the original core; **Complete map** restores the
+context without recoloring your work. Normal map restores the earlier map.
 
 ## Saved custom maps
 

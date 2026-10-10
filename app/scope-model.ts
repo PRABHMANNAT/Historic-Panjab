@@ -6,7 +6,7 @@ import type {Area,MapDoc} from './map-model';
 export const scopeModes=['atlas','full','single','combination','tricity','historic-punjab','selection'] as const;
 export type ScopeMode=typeof scopeModes[number];
 export type ScopeSettings={mapScope:ScopeMode;scopeRegion:string;scopeRegions:string[];historicRegions:string[];fullDetail:boolean;scopeAreas:string[]};
-export type ScopeDocument=Pick<MapDoc,'regions'|'countryView'|'delhiView'|'kashmirView'>&Partial<ScopeSettings>;
+export type ScopeDocument=Pick<MapDoc,'regions'|'countryView'|'delhiView'|'kashmirView'>&Partial<ScopeSettings>&Partial<Pick<MapDoc,'caseStudyId'>>;
 export type ScopeNavigation=ScopeSettings&Pick<MapDoc,'regions'|'countryView'|'delhiView'|'kashmirView'|'hidden'|'areaDetails'>;
 export function scopeNavigation(doc:MapDoc):ScopeNavigation{
  const {mapScope,scopeRegion,scopeRegions,historicRegions,fullDetail,scopeAreas,regions,countryView,delhiView,kashmirView,hidden,areaDetails}=doc;
@@ -68,6 +68,7 @@ export function selectedScopeRegions(d:ScopeDocument){
 }
 export function scopeRegionAllowed(id:string,d:ScopeDocument){
  const mode=d.mapScope||'atlas';
+ if(id==='pk-lahore-study'&&mode==='full'&&d.fullDetail&&d.regions[id]?.show)return true;
  if(mode==='atlas')return true;
  const ids=selectedScopeRegions(d);
  if(id==='kashmir-united')return ids.includes('in-jammu-kashmir')&&ids.includes('in-ladakh');

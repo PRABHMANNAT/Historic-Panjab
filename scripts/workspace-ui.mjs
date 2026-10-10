@@ -1,3 +1,12 @@
+export async function setPaintColor(page,color) {
+  await page.getByRole('button',{name:'Paint color and palette',exact:true}).click();
+  const popup=page.locator('.paint-palette-popup');
+  await popup.getByLabel('Paint hex code',{exact:true}).fill(color);
+  await popup.getByLabel('Next color after painting',{exact:true}).uncheck();
+  await page.keyboard.press('Escape');
+  await popup.waitFor({state:'hidden'});
+}
+
 // Shared navigation for the workspace UI. Geographic assertions stay in each test.
 export async function openLayerGroup(page, title) {
   await page.getByRole('tab', {name: 'Layers', exact: true}).click();

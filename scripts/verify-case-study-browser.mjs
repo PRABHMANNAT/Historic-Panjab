@@ -19,7 +19,7 @@ try{
  await page.goto(process.env.MAP_TEST_URL||'http://localhost:4545/',{waitUntil:'networkidle',timeout:60000});await idle();
  await page.getByRole('tab',{name:'History',exact:true}).click();await page.getByLabel('History case study').selectOption('sikh-heritage-core');await idle();
  assert.equal(await page.getByLabel('Jump to a region').locator('option[value="pk-lahore-study"]').count(),0);
- const loaded=await saved();assert.deepEqual(loaded.scopeAreas,study.caseStudyAreaIds);assert.equal(loaded.caseStudyId,'sikh-heritage-core');assert.equal(loaded.areaNames.PK609,'Maharaja Ranjit Singh');
+ const loaded=await saved();assert.equal(loaded.mapScope,'full');assert.equal(loaded.regions['pk-country'].province,true);assert.deepEqual(loaded.scopeAreas,study.caseStudyAreaIds);assert.equal(loaded.caseStudyId,'sikh-heritage-core');assert.equal(loaded.areaNames.PK609,'Maharaja Ranjit Singh');
  assert.ok(await page.getByLabel('History case study caption').isVisible());assert.equal(await page.locator('.floating-legend>div').count(),4);
  await page.screenshot({path:'outputs/case-study/heritage-core.png'});
  await page.getByRole('button',{name:'Focus Lahore selection',exact:true}).click();await idle();
@@ -41,7 +41,7 @@ try{
  await page.getByRole('button',{name:'Rename selected area',exact:true}).click();await inspector.waitFor();await page.screenshot({path:'outputs/case-study/rename-area.png'});
  const before=await saved(),download=page.waitForEvent('download');await downloadSettings(page);await (await download).saveAs('outputs/case-study/settings.json');
  await inspector.getByRole('button',{name:'Reset name',exact:true}).click();await idle();assert.ok(!(await saved()).areaNames.PK609);assert.equal(await inspector.getByLabel('Area display name').inputValue(),'Gujranwala');
- await page.locator('input[type=file]').setInputFiles('outputs/case-study/settings.json');await idle();assert.deepEqual(await saved(),before);
+ await page.locator('input[type=file]').first().setInputFiles('outputs/case-study/settings.json');await idle();assert.deepEqual(await saved(),before);
  await page.reload({waitUntil:'networkidle'});await idle();assert.deepEqual(await saved(),before);
  await page.setViewportSize({width:390,height:844});await search('Lahore City');const city=page.locator('.area-search-card[data-area="case-lahore-city"]');await city.waitFor();await city.getByRole('button',{name:'Rename Lahore City',exact:true}).click();await inspector.waitFor();
  assert.ok(await inspector.getByLabel('Area display name').isVisible(),'Mobile Rename exposes the editor');await inspector.getByLabel('Area display name').fill('Lahore heritage city');await inspector.getByRole('button',{name:'Save name',exact:true}).click();await idle();

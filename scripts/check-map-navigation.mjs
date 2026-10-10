@@ -23,7 +23,7 @@ assert.equal(normal.areaNames.PK617,'My Lahore');assert.equal(normal.areaNames.P
 assert.ok(normal.hidden.includes('PK609'));assert.ok(normal.hidden.includes('PK614'));
 assert.equal(normal.width,2);assert.equal(normal.mapScope,'combination');assert.deepEqual(normal.scopeRegions,seed.scopeRegions);
 const full={...edited,...nav.completeMapPatch(edited)};
-assert.equal(full.mapScope,'full');assert.equal(full.fullDetail,false);assert.deepEqual(full.hidden,[]);
+assert.equal(full.mapScope,'full');assert.equal(full.fullDetail,true);assert.deepEqual(full.hidden,[]);
 assert.equal(full.fills,edited.fills);assert.equal(full.areaNames,edited.areaNames);
 assert.deepEqual({...full,...nav.selectedMapPatch(full)},edited,'Complete map → Selected map restores exact selection/detail/visibility');
 assert.deepEqual({...full,...nav.normalMapPatch(full)},{...edited,...nav.normalMapPatch(edited)},'Normal map from overview also restores the original geography');
