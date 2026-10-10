@@ -24,6 +24,56 @@ source dates vary; the detailed notes below explain what each layer represents.
 - **Add context:** cities, Delhi metro lines, a 300-entry gurdwara directory, 123 sourced shrine map locations and 65 credited photographs.
 - **Keep and share your work:** local autosave, undo/redo, settings files, and PNG, SVG or JPG exports.
 
+### Search the atlas and manage visibility
+
+Click **Search map** above the map or open **Areas**. Search all existing source
+areas across countries: states/territories, provinces, divisions, districts,
+tehsils/subdivisions and local wards. Area type and region filters narrow the
+results, while parent names distinguish repeated place names. **Add** keeps the
+current geographic selections and enables the result's detail level; **Only
+this** isolates it. A selected parent includes its children.
+
+Use **Hide / Unhide** on any result, **Hidden areas only** to recover hidden
+selections, or **Unhide all areas**. Hiding a parent also hides its descendants.
+Unhiding a child restores its hidden ancestors. Hidden polygons are removed from
+parent fills, natural/point overlay masks and vector exports. Paints are retained.
+Selections, visibility, undo/redo, local autosave and Save/Load work together.
+
+### Demographics and community shrines
+
+Open **People**, beside **Nature**, to display the largest reported mother-tongue
+group, largest religious group, population, literacy (age 7+) or urban population
+share. The bundled **2011 Census of India** profiles cover **32 Indian state/UT
+regions**, derived from official C-16, C-01 and Primary Census Abstract tables.
+Records include counts, source URLs, table hashes, year and boundary notes.
+Largest-group maps show a plurality, which can be below 50%; language is reported
+mother tongue, not official-language status. Derived language remainders are
+excluded from largest-group ranking.
+
+Data is attached only to matching whole-region polygons, never assigned as a
+state average to an isolated district or tehsil. Neighbouring-country demographics
+and the later Andhra Pradesh/Telangana and Jammu & Kashmir/Ladakh splits remain
+unshaded. Dadra & Nagar Haveli and Daman & Diu combine the two 2011 UT totals.
+The map's later boundary editions can differ from census geography. These are
+historical aggregates, not current estimates or descriptions of every resident.
+
+**Community shrines** adds representative Hindu, Muslim, Buddhist, Jain, Christian
+and Sikh sites with searchable cards, photo pins, community filters, popups and
+**Show on map**. The existing 300-entry Sikh directory remains in **Places**.
+Photo authors, licenses, identity/location sources and capture dates when known
+are retained in `app/community-shrines.json` and `app/gurdwara-photo-sources.json`.
+Photos are bundled locally and embedded with attribution metadata in SVG exports.
+The collection is selected, not a census of religious sites. Census choropleths,
+legends and shrine photos carry into PNG/JPG/SVG exports and saved map settings.
+
+Run `npm run check:demographics` for source/data/model checks and
+`npm run check:demographics-browser` with the app on port 4545 for browser checks.
+To reproduce the Census values, install `openpyxl` and `xlrd` for Python, then run
+`python scripts/import-demographic-census.py --input-dir work/census-2011 --download`.
+The importer verifies the three pinned workbook hashes and reconciles language
+and religion totals before replacing the JSON. Later source editions require
+reviewing the manifest rather than silently accepting changed inputs.
+
 ### View multiple states or territories together
 
 Open **Explore a region… → Combine states & territories…** above the map.

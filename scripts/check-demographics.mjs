@@ -1,0 +1,61 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
+import {loadLocalModule,loadMapModel} from './load-map-model.mjs';
+const app=new URL('../app/',import.meta.url);
+const model=await loadMapModel();
+const search=await loadLocalModule(new URL('area-search-model.ts',app));
+const scope=await loadLocalModule(new URL('scope-model.ts',app));
+const people=await loadLocalModule(new URL('demographic-model.ts',app));
+const visibility=await loadLocalModule(new URL('visibility-geometry.ts',app));
+const spatial=await loadLocalModule(new URL('spatial-overlays.ts',app));
+const shrine=await loadLocalModule(new URL('community-shrine-model.ts',app));
+const shrineManifest=JSON.parse(await fs.readFile(new URL('community-shrines.json',app),'utf8'));
+const census=JSON.parse(await fs.readFile(new URL('demographic-data.json',app),'utf8'));
+assert.equal(new Set(census.records.map(r=>r.regionId)).size,census.records.length);
+assert.equal(census.records.length,32);
+for(const record of census.records){
+ assert.ok(model.areaById.has(record.regionId));assert.equal(record.year,2011);
+ assert.ok(record.population>0);assert.ok(record.literacy>=0&&record.literacy<=100);assert.ok(record.urbanShare>=0&&record.urbanShare<=100);
+ for(const values of [record.languages,record.religions]){assert.ok(Math.abs(values.reduce((n,v)=>n+v.share,0)-100)<.1);for(const v of values)assert.ok(v.share>=0&&v.share<=100);}
+ for(const id of record.sourceIds)assert.ok(census.sources.some(s=>s.id===id&&s.url.startsWith('https://censusindia.gov.in/')));
+ assert.notEqual(people.demographicValue(record,'language').label,'Other reported mother tongues');
+}
+assert.equal(people.demographicById.get('in-punjab').population,27743338);
+assert.equal(people.demographicValue(people.demographicById.get('in-punjab'),'religion').label,'Sikh');
+for(const id of ['in-andhra','in-telangana','in-jammu-kashmir','in-ladakh'])assert.ok(!people.demographicById.has(id),'changed geography is not assigned legacy totals');
+assert.deepEqual(people.validateDemographicSettings({}),people.demographicDefaults);
+assert.equal(people.validateDemographicSettings({demographicMode:'invented',demographicOpacity:99,shrineCommunity:'unknown'}).demographicMode,'none');
+assert.equal(people.validateDemographicSettings({demographicOpacity:99}).demographicOpacity,1);
+const district=model.areas.find(a=>a.name==='Amritsar'&&a.level==='district');
+const tehsil=model.areas.find(a=>a.parent===district.id&&a.level==='tehsil');
+assert.ok(search.findAreas('Amritsar').some(a=>a.id===district.id));
+assert.ok(search.findAreas('Nepal','region').some(a=>a.id==='np-nepal'));
+const isolated={...model.initial,...search.addArea(model.initial,district.id,true)};
+assert.equal(isolated.mapScope,'selection');assert.deepEqual(isolated.scopeAreas,[district.id]);assert.ok(model.visible(district,isolated));
+const combined={...isolated,...search.addArea(isolated,'np-nepal')};
+assert.deepEqual(combined.scopeAreas,[district.id,'np-nepal']);assert.equal(combined.regions['np-nepal'].show,true);
+assert.deepEqual(model.validate(JSON.parse(JSON.stringify(combined))).scopeAreas,combined.scopeAreas);
+const hidden={...isolated,hidden:[district.id]};assert.ok(search.hiddenArea(tehsil,hidden));assert.ok(!model.visible(tehsil,hidden));assert.deepEqual(search.revealArea(tehsil,hidden),[]);
+assert.equal(people.scopeDemographics({...isolated,demographicMode:'language'}).length,0,'district selection is not assigned state averages');
+const whole={...model.initial,...scope.scopePreset(model.initial,'single',{scopeRegion:'in-punjab'}),demographicMode:'religion'};
+assert.deepEqual(people.scopeDemographics(whole).map(r=>r.regionId),['in-punjab']);
+assert.equal(model.validate({...whole,communityShrines:true,shrineCommunity:'Muslim'}).shrineCommunity,'Muslim');
+const square={type:'Polygon',coordinates:[[[0,0],[10,0],[10,10],[0,10],[0,0]]]};
+const cut={id:'cut',bbox:[2,2,4,4],geometry:{type:'Polygon',coordinates:[[[2,2],[4,2],[4,4],[2,4],[2,2]]]}};
+const clipped=visibility.subtractHidden(square,[0,0,10,10],[cut]);
+assert.ok(spatial.containsPoint(clipped,[1,1]));assert.ok(!spatial.containsPoint(clipped,[3,3]),'hidden area is a hole in the parent fill');
+assert.equal(visibility.subtractHidden(square,[0,0,10,10],[{...cut,bbox:[0,0,10,10],geometry:square}]),undefined);
+for(const community of ['Sikh','Hindu','Muslim','Buddhist','Jain','Christian'])assert.ok(shrine.communityShrines.some(site=>site.community===community));
+for(const site of shrine.communityShrines){assert.ok(site.coordinates.length===2&&site.coordinates.every(Number.isFinite));assert.ok(model.areaById.has(site.regionId),site.name+' region');assert.ok(site.sourceUrl.startsWith('https://'));if(site.photo?.file)assert.ok((await fs.stat(new URL('../public'+site.photo.file,import.meta.url))).size>1000);}
+for(const site of shrineManifest.sites){const image=await fs.readFile(new URL('../public'+site.photo.file,import.meta.url));assert.equal(image.length,site.photo.bytes);assert.equal(crypto.createHash('sha256').update(image).digest('hex'),site.photo.sha256);assert.ok(site.photo.author&&site.photo.license&&site.photo.licenseUrl&&site.photo.sourceUrl);assert.ok(site.coordinateSource.includes('/wiki/Q'));}
+const punjabGeo=JSON.parse(await fs.readFile(new URL('../public/data/in-punjab-region.geojson',import.meta.url),'utf8'));
+const districtGeo=JSON.parse(await fs.readFile(new URL('../public/data/in-punjab-district.geojson',import.meta.url),'utf8'));
+const actualMasks=visibility.hiddenMasks({...whole,hidden:[district.id]},{'in-punjab-region':punjabGeo,'in-punjab-district':districtGeo});
+const clippedPunjab=visibility.visibleBoundaries(punjabGeo,{...whole,hidden:[district.id]},actualMasks);
+assert.ok(!spatial.containsPoint(clippedPunjab.features[0].geometry,district.center),'actual hidden district leaves a hole in the parent region');
+assert.equal(visibility.visibleBoundaries(punjabGeo,{...whole,hidden:[]},[]),punjabGeo,'unhide restores original source geometry');
+const missingProvince=model.areas.find(a=>a.level==='province'&&a.region==='pk-country');
+const division=model.areas.find(a=>a.level==='division'&&a.region==='pk-country');
+assert.ok(search.findAreas(division.name,'division').some(a=>a.id===division.id));assert.ok(search.findAreas(missingProvince.name,'province').some(a=>a.id===missingProvince.id));
+console.log('Verified global search, mixed selections, recursive hide/unhide, geometry holes, saved settings, 32 Census profiles, exact coverage, and six-community shrine provenance.');

@@ -19,6 +19,7 @@ export async function configureExport(page, {format, extent, width} = {}) {
   if (extent) await dialog.getByRole('button', {name: extent, exact: true}).click();
   if (width) await dialog.getByLabel('Export width in pixels', {exact: true}).fill(String(width));
   await dialog.getByRole('button', {name: 'Close', exact: true}).click();
+  await dialog.waitFor({state: 'hidden'});
 }
 
 export async function triggerExport(page) {
@@ -26,4 +27,5 @@ export async function triggerExport(page) {
   await dialog.getByRole('button', {name: /^Download (PNG|SVG|JPG)$/}).click();
   await dialog.getByRole('button', {name: /^Download (PNG|SVG|JPG)$/}).waitFor({timeout: 120000});
   await dialog.getByRole('button', {name: 'Close', exact: true}).click();
+  await dialog.waitFor({state: 'hidden'});
 }

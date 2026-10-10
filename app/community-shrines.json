@@ -1,0 +1,396 @@
+{
+  "retrieved": "2026-10-11",
+  "coverage": "Eleven representative sacred sites in India and Nepal across Hindu, Muslim, Buddhist, Jain and Christian communities. Sikh sites are maintained separately in the existing gurdwara catalogue. This is a curated sample, not an exhaustive list or a measure of community population.",
+  "coordinateSystem": "WGS84; coordinates ordered [longitude, latitude].",
+  "sources": [
+    {
+      "id": "wikidata",
+      "title": "Wikidata: shrine identities and coordinate claims",
+      "url": "https://www.wikidata.org/",
+      "note": "Site records link their specific Wikidata entity. Structured data licensed CC0. Coordinates are community-maintained; they are not survey measurements."
+    },
+    {
+      "id": "commons",
+      "title": "Wikimedia Commons: real shrine photographs",
+      "url": "https://commons.wikimedia.org/",
+      "note": "Each photo records its file page, photographer, exact reuse license, original URL, and display changes. Photographs are downloaded locally. Individual licenses govern the images."
+    },
+    {
+      "id": "heritage-source-1",
+      "title": "UNESCO World Heritage Centre: Kathmandu Valley",
+      "url": "https://whc.unesco.org/en/list/121"
+    },
+    {
+      "id": "heritage-source-2",
+      "title": "Shri Mata Vaishno Devi Shrine Board",
+      "url": "https://www.maavaishnodevi.org/"
+    },
+    {
+      "id": "heritage-source-3",
+      "title": "UNESCO World Heritage Centre: Mahabodhi Temple Complex at Bodh Gaya",
+      "url": "https://whc.unesco.org/en/list/1056"
+    },
+    {
+      "id": "heritage-source-4",
+      "title": "Rajasthan Tourism: Ajmer and Ajmer Sharif Dargah",
+      "url": "https://www.tourism.rajasthan.gov.in/ajmer.html"
+    },
+    {
+      "id": "heritage-source-5",
+      "title": "Haji Ali Dargah: official site",
+      "url": "https://www.hajialidargah.in/"
+    },
+    {
+      "id": "heritage-source-6",
+      "title": "UNESCO World Heritage Centre: Churches and Convents of Goa",
+      "url": "https://whc.unesco.org/en/list/234"
+    },
+    {
+      "id": "heritage-source-7",
+      "title": "Rajasthan Tourism: Mount Abu and Dilwara Jain Temples",
+      "url": "https://www.tourism.rajasthan.gov.in/mount-abu.html"
+    }
+  ],
+  "sites": [
+    {
+      "id": "kashi-vishwanath",
+      "name": "Kashi Vishwanath Temple",
+      "community": "Hindu",
+      "city": "Varanasi",
+      "country": "India",
+      "regionId": "in-uttar-pradesh",
+      "coordinates": [
+        83.010613888889,
+        25.310775
+      ],
+      "sourceUrl": "https://www.wikidata.org/wiki/Q3675",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3675",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q3675",
+      "description": "A Hindu temple dedicated to Shiva in Varanasi, Uttar Pradesh.",
+      "photo": {
+        "file": "/community-shrines/kashi-vishwanath.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/20220519159L2022071406593520220714082601.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/20220519159L2022071406593520220714082601.jpg",
+        "author": "Das740724",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20220519159L2022071406593520220714082601.jpg",
+        "commonsFilename": "20220519159L2022071406593520220714082601.jpg",
+        "changes": "Original photograph downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "24 February 2023",
+        "sha256": "85d86aeca1537a9be00923a3d64a8f89cd721ab09da34863952cd255e92739d1",
+        "bytes": 61598
+      }
+    },
+    {
+      "id": "pashupatinath",
+      "name": "Pashupatinath Temple",
+      "community": "Hindu",
+      "city": "Kathmandu",
+      "country": "Nepal",
+      "regionId": "np-nepal",
+      "coordinates": [
+        85.348645,
+        27.710495
+      ],
+      "sourceUrl": "https://whc.unesco.org/en/list/121",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q380384",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q380384",
+      "description": "Hindu temple precinct in Kathmandu, included in the Kathmandu Valley World Heritage property.",
+      "photo": {
+        "file": "/community-shrines/pashupatinath.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/2023_January_night_aarti_at_Pashupatinath_Temple%2C_Kathmandu_02.jpg/960px-2023_January_night_aarti_at_Pashupatinath_Temple%2C_Kathmandu_02.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/2023_January_night_aarti_at_Pashupatinath_Temple%2C_Kathmandu_02.jpg",
+        "author": "Chainwit.",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_January_night_aarti_at_Pashupatinath_Temple%2C_Kathmandu_02.jpg",
+        "commonsFilename": "2023 January night aarti at Pashupatinath Temple, Kathmandu 02.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "29 January 2023, 19:42:17",
+        "sha256": "efbdd7ebbed895fada54d0faa422ecd8488bc5054773d8d0834bbd435ad6a810",
+        "bytes": 239213
+      }
+    },
+    {
+      "id": "vaishno-devi",
+      "name": "Vaishno Devi Temple",
+      "community": "Hindu",
+      "city": "Katra",
+      "country": "India",
+      "regionId": "in-jammu-kashmir",
+      "coordinates": [
+        74.94805555555556,
+        33.03
+      ],
+      "sourceUrl": "https://www.maavaishnodevi.org/",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q611371",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q611371",
+      "description": "Hindu pilgrimage shrine in the Trikuta hills near Katra, administered by the Shri Mata Vaishno Devi Shrine Board.",
+      "photo": {
+        "file": "/community-shrines/vaishno-devi.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Vaishno_Devi_Bhavan.jpg/960px-Vaishno_Devi_Bhavan.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Vaishno_Devi_Bhavan.jpg",
+        "author": "Abhishek Chandra",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Copyright_tags#Public_domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vaishno_Devi_Bhavan.jpg",
+        "commonsFilename": "Vaishno Devi Bhavan.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "sha256": "8e5d423bfb48ab8bf891f0eb3d7b6ca5a9b45fac9c77396ba0be3bc87b44406d",
+        "bytes": 254522
+      }
+    },
+    {
+      "id": "mahabodhi",
+      "name": "Mahabodhi Temple",
+      "community": "Buddhist",
+      "city": "Bodh Gaya",
+      "country": "India",
+      "regionId": "in-bihar",
+      "coordinates": [
+        84.991358,
+        24.696004
+      ],
+      "sourceUrl": "https://whc.unesco.org/en/list/1056",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q4513",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q4513",
+      "description": "Buddhist temple complex at Bodh Gaya associated with the enlightenment of the Buddha; a UNESCO World Heritage property.",
+      "photo": {
+        "file": "/community-shrines/mahabodhi.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Mahabodhitemple.jpg/500px-Mahabodhitemple.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Mahabodhitemple.jpg",
+        "author": "Bpilgrim",
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mahabodhitemple.jpg",
+        "commonsFilename": "Mahabodhitemple.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "27 February 2007",
+        "sha256": "0ad954d85948edc95e90d5a7a4d40a35a2f54d89d24a857d8c9cbe2d6744eafd",
+        "bytes": 120360
+      }
+    },
+    {
+      "id": "swayambhunath",
+      "name": "Swayambhunath",
+      "community": "Buddhist",
+      "city": "Kathmandu",
+      "country": "Nepal",
+      "regionId": "np-nepal",
+      "coordinates": [
+        85.29,
+        27.715
+      ],
+      "sourceUrl": "https://whc.unesco.org/en/list/121",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q12946982",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q12946982",
+      "description": "Buddhist stupa and religious ensemble in Kathmandu, part of the Kathmandu Valley World Heritage property.",
+      "photo": {
+        "file": "/community-shrines/swayambhunath.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Swayambhu%2C_Kathmandu%2C_Nepal.jpg/960px-Swayambhu%2C_Kathmandu%2C_Nepal.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Swayambhu%2C_Kathmandu%2C_Nepal.jpg",
+        "author": "Vyacheslav Argenberg",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Swayambhu%2C_Kathmandu%2C_Nepal.jpg",
+        "commonsFilename": "Swayambhu, Kathmandu, Nepal.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "5 December 2007, 15:25:57",
+        "sha256": "d5ad95faa4d74559097e7149beb7ffadbf2e079e226b7c65985f67886e52cb0e",
+        "bytes": 161588
+      }
+    },
+    {
+      "id": "ajmer-sharif",
+      "name": "Ajmer Sharif Dargah",
+      "community": "Muslim",
+      "city": "Ajmer",
+      "country": "India",
+      "regionId": "in-rajasthan",
+      "coordinates": [
+        74.6271856,
+        26.4572829
+      ],
+      "sourceUrl": "https://www.tourism.rajasthan.gov.in/ajmer.html",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q5222593",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q5222593",
+      "description": "Sufi shrine of Khwaja Moinuddin Chishti in Ajmer, Rajasthan, visited by people of several faiths.",
+      "photo": {
+        "file": "/community-shrines/ajmer-sharif.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Ajmer_dargah.jpg/960px-Ajmer_dargah.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Ajmer_dargah.jpg",
+        "author": "Kritika17",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ajmer_dargah.jpg",
+        "commonsFilename": "Ajmer dargah.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "8 September 2015, 13:56:23",
+        "sha256": "9fe02318db4942310a5a35fc7e13a369b18ae0f91aced7135e88425548728dce",
+        "bytes": 237617
+      }
+    },
+    {
+      "id": "haji-ali",
+      "name": "Haji Ali Dargah",
+      "community": "Muslim",
+      "city": "Mumbai",
+      "country": "India",
+      "regionId": "in-maharashtra",
+      "coordinates": [
+        72.8088,
+        18.9825
+      ],
+      "sourceUrl": "https://www.hajialidargah.in/",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q542756",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q542756",
+      "description": "Dargah and mosque off the Mumbai coast containing the tomb of Pir Haji Ali Shah Bukhari.",
+      "photo": {
+        "file": "/community-shrines/haji-ali.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Mumbai_03-2016_13_Haji_Ali_Dargah.jpg/500px-Mumbai_03-2016_13_Haji_Ali_Dargah.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Mumbai_03-2016_13_Haji_Ali_Dargah.jpg",
+        "author": "A.Savin",
+        "license": "FAL",
+        "licenseUrl": "http://artlibre.org/licence/lal/en",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mumbai_03-2016_13_Haji_Ali_Dargah.jpg",
+        "commonsFilename": "Mumbai 03-2016 13 Haji Ali Dargah.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "13 March 2016",
+        "sha256": "9f8e8a58625a989345e027bc584d9d5f1ce44d701dc2b635d67d51972a886494",
+        "bytes": 127011
+      }
+    },
+    {
+      "id": "bom-jesus",
+      "name": "Basilica of Bom Jesus",
+      "community": "Christian",
+      "city": "Old Goa",
+      "country": "India",
+      "regionId": "in-goa",
+      "coordinates": [
+        73.91159057,
+        15.50086809
+      ],
+      "sourceUrl": "https://whc.unesco.org/en/list/234",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q391123",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q391123",
+      "description": "Christian basilica in Old Goa associated with St Francis Xavier, within the Churches and Convents of Goa World Heritage property.",
+      "photo": {
+        "file": "/community-shrines/bom-jesus.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Exterior_view_of_the_Basilica_of_Bom_Jesus%2C_Old_Goa.jpg/960px-Exterior_view_of_the_Basilica_of_Bom_Jesus%2C_Old_Goa.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Exterior_view_of_the_Basilica_of_Bom_Jesus%2C_Old_Goa.jpg",
+        "author": "RoyenFernandes",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Exterior_view_of_the_Basilica_of_Bom_Jesus%2C_Old_Goa.jpg",
+        "commonsFilename": "Exterior view of the Basilica of Bom Jesus, Old Goa.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "25 September 2021, 12:13:00",
+        "sha256": "22ea3b2aae81c01b891eb3ebe5f88632eb0e3359ac8a5941b18a50219c7374da",
+        "bytes": 139289
+      }
+    },
+    {
+      "id": "velankanni",
+      "name": "Basilica of Our Lady of Good Health",
+      "community": "Christian",
+      "city": "Velankanni",
+      "country": "India",
+      "regionId": "in-tamil-nadu",
+      "coordinates": [
+        79.84962,
+        10.68031
+      ],
+      "sourceUrl": "https://www.wikidata.org/wiki/Q3038877",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3038877",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q3038877",
+      "description": "Christian pilgrimage basilica at Velankanni in Tamil Nadu, also known as the shrine of Our Lady of Good Health.",
+      "photo": {
+        "file": "/community-shrines/velankanni.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Vailankanni_Basilica1.jpg/500px-Vailankanni_Basilica1.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Vailankanni_Basilica1.jpg",
+        "author": "Tiven Gonsalves",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vailankanni_Basilica1.jpg",
+        "commonsFilename": "Vailankanni Basilica1.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "4 September 2017",
+        "sha256": "185e35bbb90b2b3639606d316c7c737d6f223f3cadbbf15ca53b5c60e7d215f0",
+        "bytes": 134579
+      }
+    },
+    {
+      "id": "dilwara",
+      "name": "Dilwara Jain Temples",
+      "community": "Jain",
+      "city": "Mount Abu",
+      "country": "India",
+      "regionId": "in-rajasthan",
+      "coordinates": [
+        72.72305556,
+        24.60930556
+      ],
+      "sourceUrl": "https://www.tourism.rajasthan.gov.in/mount-abu.html",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2712405",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q2712405",
+      "description": "A group of Jain temples near Mount Abu, Rajasthan, known for their intricately carved white-marble interiors.",
+      "photo": {
+        "file": "/community-shrines/dilwara.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Dilwara_Temple_-_Luna_Vasahi.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Dilwara_Temple_-_Luna_Vasahi.jpg",
+        "author": "Akshat patni",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dilwara_Temple_-_Luna_Vasahi.jpg",
+        "commonsFilename": "Dilwara Temple - Luna Vasahi.jpg",
+        "changes": "Original photograph downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "10 August 2016",
+        "sha256": "2e251bbdc0ead2659037caced7fce696f253e8e3a3f35c7bc32ff263bb3d7af3",
+        "bytes": 231114
+      }
+    },
+    {
+      "id": "palitana",
+      "name": "Palitana Jain Temples",
+      "community": "Jain",
+      "city": "Palitana",
+      "country": "India",
+      "regionId": "in-gujarat",
+      "coordinates": [
+        71.794,
+        21.483
+      ],
+      "sourceUrl": "https://www.wikidata.org/wiki/Q2800980",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2800980",
+      "coordinateProvenance": "Wikidata P625 coordinate claim, retrieved 2026-10-11. Point marks the listed site or temple complex, not an administrative centroid.",
+      "wikidataId": "Q2800980",
+      "description": "Jain temple complex on Shatrunjaya hill near Palitana in Gujarat.",
+      "photo": {
+        "file": "/community-shrines/palitana.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Palitana_temples_08.jpg/500px-Palitana_temples_08.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Palitana_temples_08.jpg",
+        "author": "Bernard Gagnon",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palitana_temples_08.jpg",
+        "commonsFilename": "Palitana temples 08.jpg",
+        "changes": "Wikimedia-generated thumbnail downloaded unchanged; displayed with responsive cropping.",
+        "captureDate": "24 November 2013",
+        "sha256": "32ff1b9d79538e0ca626e60e72b042f8ec15c32f8ef894dcb4dc59e8c249c85f",
+        "bytes": 141850
+      }
+    }
+  ]
+}

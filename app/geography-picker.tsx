@@ -1,7 +1,8 @@
 'use client';
 import {useState} from 'react';
+import {findAreas,addArea,areaContext} from './area-search-model';
 import {Search,Plus,MapPinned,X} from 'lucide-react';
-import {areas,areaById,areasByLayer,countries,layerLabel,type Area,type MapDoc} from './map-model';
+import {areaById,areasByLayer,countries,layerLabel,type Area,type MapDoc} from './map-model';
 import {scopeRegions,scopePreset,scopeFocusBounds,selectionAreas,areaBelongsTo,scopeGeometryAreas,scopeLabel} from './scope-model';
 
 const india=scopeRegions.filter(r=>r.id.startsWith('in-')||r.id==='chandigarh').map(r=>r.id);
@@ -21,7 +22,8 @@ export default function GeographyPicker({doc,onChange,onFit}:Props){
  const target=local||district||division||province||regionId;
  const targetIds=target?[target]:group.regions;
  const selected=doc.mapScope==='selection'?selectionAreas(doc):scopeGeometryAreas(doc);
- const results=query.trim().length>=2?areas.filter(a=>group.regions.includes(a.region)&&(a.name+' '+a.province+' '+a.district).toLowerCase().includes(query.trim().toLowerCase())).slice(0,35):[];
+ const results=query.trim().length>=2?findAreas(query).slice(0,35):[];
+ function searchApply(a:Area,only=false){const patch=addArea(doc,a.id,only);onChange(patch);const b=scopeFocusBounds({...doc,...patch});if(b)onFit(b);}
  function apply(ids:string[],add=false){
   const requested=add?[...selected.map(a=>a.id),...ids]:ids;
   const patch=scopePreset(doc,'selection',{scopeAreas:requested});
@@ -39,8 +41,8 @@ export default function GeographyPicker({doc,onChange,onFit}:Props){
   {selectField('District / second-level unit',district,districts,id=>{setDistrict(id);setLocal('');},'All districts')}
   {selectField('Local subdivision',local,locals,setLocal,'All subdivisions')}
   <div className="geography-actions"><button className="primary" onClick={()=>apply(targetIds)}><MapPinned size={14}/> Show only this</button><button onClick={()=>apply(targetIds,true)}><Plus size={14}/> Add to group</button></div>
-  <div className="search"><Search size={14}/><input aria-label="Search geographic areas" placeholder="Search this country…" value={query} onChange={e=>setQuery(e.target.value)}/></div>
-  {query.trim().length>=2&&<div className="geography-results" aria-label="Geographic search results">{results.map(a=><div key={a.id}><button onClick={()=>apply([a.id])}><strong>{a.name}</strong><small>{a.level} · {areaById.get(a.region)?.name}</small></button><button aria-label={'Add '+a.name+' to group'} onClick={()=>apply([a.id],true)}><Plus size={14}/></button></div>)}{!results.length&&<p>No matching source areas.</p>}{results.length===35&&<p className="muted">Showing the first 35 matches. Refine your search.</p>}</div>}
+  <div className="search"><Search size={14}/><input aria-label="Search geographic areas" placeholder="Search the whole atlas…" value={query} onChange={e=>setQuery(e.target.value)}/></div>
+  {query.trim().length>=2&&<div className="geography-results" aria-label="Geographic search results">{results.map(a=><div key={a.id}><button onClick={()=>searchApply(a,true)}><strong>{a.name}</strong><small>{a.level} · {areaContext(a)}</small></button><button aria-label={'Add '+a.name+' to group'} onClick={()=>searchApply(a)}><Plus size={14}/></button></div>)}{!results.length&&<p>No matching source areas.</p>}{results.length===35&&<p className="muted">Showing the first 35 matches. Refine your search.</p>}</div>}
   {doc.mapScope==='selection'&&<div className="geography-selection"><strong>On your map · {selected.length}</strong><div className="geography-chips">{selected.map(a=><span key={a.id}>{a.name}<button aria-label={'Remove '+a.name+' from selection'} onClick={()=>apply(selected.filter(v=>v.id!==a.id).map(v=>v.id))}><X size={12}/></button></span>)}</div>{!selected.length&&<p className="muted">Choose an area above to begin.</p>}
    <div className="scope-detail-levels">{(['province','division','district','tehsil','uc'] as const).map(level=>{const ids=[...new Set(selected.map(a=>a.region))].filter(id=>areasByLayer.has(id+'-'+level));if(!ids.length)return null;const on=ids.every(id=>doc.regions[id][level]);return <button key={level} aria-pressed={on} onClick={()=>onChange({regions:{...doc.regions,...Object.fromEntries(ids.map(id=>[id,{...doc.regions[id],[level]:!on}]))}})}>{level==='division'?'Divisions':level==='uc'?'Local wards':ids.length===1?layerLabel(ids[0],level):level==='province'?'Provinces':level==='district'?'Districts':'Subdivisions'}</button>;})}</div>
    <button onClick={()=>onChange({title:selected.length===1?selected[0].name:'Selected territories'})}>Use selection as map title</button>

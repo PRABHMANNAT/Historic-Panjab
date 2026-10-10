@@ -1,0 +1,3127 @@
+{
+  "year": 2011,
+  "retrieved": "2026-10-11",
+  "coverage": "32 present-day Indian state/UT regions whose 2011 census totals can be mapped without splitting districts. Andhra Pradesh, Telangana, Jammu & Kashmir and Ladakh are deliberately not colored: 2011 source states predate their later splits. No coverage for neighbouring countries or below-state demographics.",
+  "omittedRegions": [
+    {
+      "regionId": "in-andhra",
+      "reason": "2011 Andhra Pradesh included Telangana; no present-boundary split is applied."
+    },
+    {
+      "regionId": "in-telangana",
+      "reason": "Telangana was part of Andhra Pradesh in 2011; no present-boundary split is applied."
+    },
+    {
+      "regionId": "in-jammu-kashmir",
+      "reason": "2011 Jammu & Kashmir included Ladakh; no present-boundary split is applied."
+    },
+    {
+      "regionId": "in-ladakh",
+      "reason": "Ladakh was part of Jammu & Kashmir in 2011; no present-boundary split is applied."
+    }
+  ],
+  "sources": [
+    {
+      "id": "census-2011-pca",
+      "title": "Census of India 2011: Primary Census Abstract, India & States/UTs, state and district level",
+      "url": "https://censusindia.gov.in/nada/index.php/catalog/6191",
+      "downloadUrl": "https://censusindia.gov.in/nada/index.php/catalog/6191/download/9268/DDW_PCA0000_2011_Indiastatedist.xlsx",
+      "year": 2011,
+      "note": "Office of the Registrar General & Census Commissioner, India. Total population TOT_P; urban share Urban TOT_P / Total TOT_P; age-7+ literacy P_LIT / (TOT_P - P_06). Percentages computed from final counts, rounded to two decimals.",
+      "sha256": "7a8f70d46c43b5dd30eefe920f251752f69f6af8589594c21ac06499074646f5"
+    },
+    {
+      "id": "census-2011-c16",
+      "title": "Census of India 2011: C-16, Population by mother tongue, India",
+      "url": "https://censusindia.gov.in/nada/index.php/catalog/10191",
+      "downloadUrl": "https://censusindia.gov.in/nada/index.php/catalog/10191/download/13303/DDW-C16-STMT-MDDS-0000.XLSX",
+      "year": 2011,
+      "note": "Individual mother-tongue rows (not language-group subtotals), state total persons. Six largest named mother tongues and a derived remainder. Includes terminal unclassified OTHERS in the remainder. Not official-language status or second-language proficiency.",
+      "sha256": "b800cd544d7196c9bbc3c88ec1814138b8b7c8d4ccb7a5a2263a84e4bbf28f83"
+    },
+    {
+      "id": "census-2011-c01",
+      "title": "Census of India 2011: C-01, Population by religious community, India",
+      "url": "https://censusindia.gov.in/nada/index.php/catalog/11361",
+      "downloadUrl": "https://censusindia.gov.in/nada/index.php/catalog/11361/download/14474/DDW00C-01%20MDDS.XLS",
+      "year": 2011,
+      "note": "Eight Census categories including other religions and religion not stated; total persons. Religious identity is self-reported at Census.",
+      "sha256": "c3fee2bb235f4ef511d9aaeceaf5f8026b48908f813c6d1cc06413a6c8a0d9cd"
+    }
+  ],
+  "records": [
+    {
+      "regionId": "in-himachal",
+      "year": 2011,
+      "population": 6864602,
+      "literacy": 82.8,
+      "urbanShare": 10.03,
+      "languages": [
+        {
+          "name": "Pahari",
+          "share": 31.9,
+          "population": 2190065
+        },
+        {
+          "name": "Kangri",
+          "share": 16.25,
+          "population": 1115383
+        },
+        {
+          "name": "Hindi",
+          "share": 15.68,
+          "population": 1076700
+        },
+        {
+          "name": "Mandeali",
+          "share": 9.05,
+          "population": 621400
+        },
+        {
+          "name": "Punjabi",
+          "share": 4.42,
+          "population": 303375
+        },
+        {
+          "name": "Bilaspuri Kahluri",
+          "share": 4.31,
+          "population": 295762
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 18.38,
+          "population": 1261917,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 95.17,
+          "population": 6532765
+        },
+        {
+          "name": "Muslim",
+          "share": 2.18,
+          "population": 149881
+        },
+        {
+          "name": "Sikh",
+          "share": 1.16,
+          "population": 79896
+        },
+        {
+          "name": "Buddhist",
+          "share": 1.15,
+          "population": 78659
+        },
+        {
+          "name": "Christian",
+          "share": 0.18,
+          "population": 12646
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.12,
+          "population": 8094
+        },
+        {
+          "name": "Jain",
+          "share": 0.03,
+          "population": 1805
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 856
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "02"
+      ]
+    },
+    {
+      "regionId": "in-punjab",
+      "year": 2011,
+      "population": 27743338,
+      "literacy": 75.84,
+      "urbanShare": 37.48,
+      "languages": [
+        {
+          "name": "Punjabi",
+          "share": 89.82,
+          "population": 24917725
+        },
+        {
+          "name": "Hindi",
+          "share": 7.85,
+          "population": 2179066
+        },
+        {
+          "name": "Bagri Rajasthani",
+          "share": 0.84,
+          "population": 233555
+        },
+        {
+          "name": "Bhojpuri",
+          "share": 0.22,
+          "population": 60271
+        },
+        {
+          "name": "Haryanvi",
+          "share": 0.13,
+          "population": 36675
+        },
+        {
+          "name": "Rajasthani",
+          "share": 0.11,
+          "population": 31084
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 1.03,
+          "population": 284962,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Sikh",
+          "share": 57.69,
+          "population": 16004754
+        },
+        {
+          "name": "Hindu",
+          "share": 38.49,
+          "population": 10678138
+        },
+        {
+          "name": "Muslim",
+          "share": 1.93,
+          "population": 535489
+        },
+        {
+          "name": "Christian",
+          "share": 1.26,
+          "population": 348230
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.32,
+          "population": 87564
+        },
+        {
+          "name": "Jain",
+          "share": 0.16,
+          "population": 45040
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.12,
+          "population": 33237
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.04,
+          "population": 10886
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "03"
+      ]
+    },
+    {
+      "regionId": "chandigarh",
+      "year": 2011,
+      "population": 1055450,
+      "literacy": 86.05,
+      "urbanShare": 97.25,
+      "languages": [
+        {
+          "name": "Hindi",
+          "share": 67.76,
+          "population": 715131
+        },
+        {
+          "name": "Punjabi",
+          "share": 22.02,
+          "population": 232427
+        },
+        {
+          "name": "Bhojpuri",
+          "share": 2.27,
+          "population": 23994
+        },
+        {
+          "name": "Haryanvi",
+          "share": 1.06,
+          "population": 11138
+        },
+        {
+          "name": "Urdu",
+          "share": 1.0,
+          "population": 10556
+        },
+        {
+          "name": "Pahari",
+          "share": 0.93,
+          "population": 9800
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 4.97,
+          "population": 52404,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 80.78,
+          "population": 852574
+        },
+        {
+          "name": "Sikh",
+          "share": 13.11,
+          "population": 138329
+        },
+        {
+          "name": "Muslim",
+          "share": 4.87,
+          "population": 51447
+        },
+        {
+          "name": "Christian",
+          "share": 0.83,
+          "population": 8720
+        },
+        {
+          "name": "Jain",
+          "share": 0.19,
+          "population": 1960
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.11,
+          "population": 1160
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.1,
+          "population": 1014
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.02,
+          "population": 246
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "04"
+      ]
+    },
+    {
+      "regionId": "in-uttarakhand",
+      "year": 2011,
+      "population": 10086292,
+      "literacy": 78.82,
+      "urbanShare": 30.23,
+      "languages": [
+        {
+          "name": "Hindi",
+          "share": 43.37,
+          "population": 4373951
+        },
+        {
+          "name": "Garhwali",
+          "share": 23.03,
+          "population": 2322406
+        },
+        {
+          "name": "Kumauni",
+          "share": 19.94,
+          "population": 2011286
+        },
+        {
+          "name": "Urdu",
+          "share": 4.22,
+          "population": 425461
+        },
+        {
+          "name": "Punjabi",
+          "share": 2.61,
+          "population": 263258
+        },
+        {
+          "name": "Bengali",
+          "share": 1.5,
+          "population": 150893
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 5.34,
+          "population": 539037,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 82.97,
+          "population": 8368636
+        },
+        {
+          "name": "Muslim",
+          "share": 13.95,
+          "population": 1406825
+        },
+        {
+          "name": "Sikh",
+          "share": 2.34,
+          "population": 236340
+        },
+        {
+          "name": "Christian",
+          "share": 0.37,
+          "population": 37781
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.15,
+          "population": 14926
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.12,
+          "population": 11608
+        },
+        {
+          "name": "Jain",
+          "share": 0.09,
+          "population": 9183
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 993
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "05"
+      ]
+    },
+    {
+      "regionId": "in-haryana",
+      "year": 2011,
+      "population": 25351462,
+      "literacy": 75.55,
+      "urbanShare": 34.88,
+      "languages": [
+        {
+          "name": "Hindi",
+          "share": 47.96,
+          "population": 12158233
+        },
+        {
+          "name": "Haryanvi",
+          "share": 37.17,
+          "population": 9423007
+        },
+        {
+          "name": "Punjabi",
+          "share": 7.36,
+          "population": 1865482
+        },
+        {
+          "name": "Bagri",
+          "share": 2.11,
+          "population": 534263
+        },
+        {
+          "name": "Mewati",
+          "share": 1.66,
+          "population": 421905
+        },
+        {
+          "name": "Urdu",
+          "share": 1.48,
+          "population": 374188
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 2.27,
+          "population": 574384,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 87.46,
+          "population": 22171128
+        },
+        {
+          "name": "Muslim",
+          "share": 7.03,
+          "population": 1781342
+        },
+        {
+          "name": "Sikh",
+          "share": 4.91,
+          "population": 1243752
+        },
+        {
+          "name": "Jain",
+          "share": 0.21,
+          "population": 52613
+        },
+        {
+          "name": "Christian",
+          "share": 0.2,
+          "population": 50353
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.17,
+          "population": 42212
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.03,
+          "population": 7514
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 2548
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "06"
+      ]
+    },
+    {
+      "regionId": "in-delhi",
+      "year": 2011,
+      "population": 16787941,
+      "literacy": 86.21,
+      "urbanShare": 97.5,
+      "languages": [
+        {
+          "name": "Hindi",
+          "share": 81.27,
+          "population": 13642944
+        },
+        {
+          "name": "Punjabi",
+          "share": 5.2,
+          "population": 873305
+        },
+        {
+          "name": "Urdu",
+          "share": 5.16,
+          "population": 866879
+        },
+        {
+          "name": "Bhojpuri",
+          "share": 1.35,
+          "population": 226103
+        },
+        {
+          "name": "Bengali",
+          "share": 1.29,
+          "population": 215818
+        },
+        {
+          "name": "Maithili",
+          "share": 0.72,
+          "population": 120783
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 5.02,
+          "population": 842109,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 81.68,
+          "population": 13712100
+        },
+        {
+          "name": "Muslim",
+          "share": 12.86,
+          "population": 2158684
+        },
+        {
+          "name": "Sikh",
+          "share": 3.4,
+          "population": 570581
+        },
+        {
+          "name": "Jain",
+          "share": 0.99,
+          "population": 166231
+        },
+        {
+          "name": "Christian",
+          "share": 0.87,
+          "population": 146093
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.11,
+          "population": 18449
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.08,
+          "population": 13606
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 2197
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "07"
+      ]
+    },
+    {
+      "regionId": "in-rajasthan",
+      "year": 2011,
+      "population": 68548437,
+      "literacy": 66.11,
+      "urbanShare": 24.87,
+      "languages": [
+        {
+          "name": "Rajasthani",
+          "share": 36.88,
+          "population": 25279304
+        },
+        {
+          "name": "Hindi",
+          "share": 27.34,
+          "population": 18742450
+        },
+        {
+          "name": "Marwari",
+          "share": 9.05,
+          "population": 6201702
+        },
+        {
+          "name": "Mewari",
+          "share": 6.1,
+          "population": 4179940
+        },
+        {
+          "name": "Wagdi",
+          "share": 4.94,
+          "population": 3387133
+        },
+        {
+          "name": "Hara/Harauti",
+          "share": 4.3,
+          "population": 2944228
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 11.4,
+          "population": 7813680,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 88.49,
+          "population": 60657103
+        },
+        {
+          "name": "Muslim",
+          "share": 9.07,
+          "population": 6215377
+        },
+        {
+          "name": "Sikh",
+          "share": 1.27,
+          "population": 872930
+        },
+        {
+          "name": "Jain",
+          "share": 0.91,
+          "population": 622023
+        },
+        {
+          "name": "Christian",
+          "share": 0.14,
+          "population": 96430
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.1,
+          "population": 67713
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.02,
+          "population": 12185
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 4676
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "08"
+      ]
+    },
+    {
+      "regionId": "in-uttar-pradesh",
+      "year": 2011,
+      "population": 199812341,
+      "literacy": 67.68,
+      "urbanShare": 22.27,
+      "languages": [
+        {
+          "name": "Hindi",
+          "share": 80.16,
+          "population": 160159977
+        },
+        {
+          "name": "Bhojpuri",
+          "share": 10.93,
+          "population": 21844783
+        },
+        {
+          "name": "Urdu",
+          "share": 5.4,
+          "population": 10793391
+        },
+        {
+          "name": "Awadhi",
+          "share": 1.9,
+          "population": 3801743
+        },
+        {
+          "name": "Bundeli/Bundel khandi",
+          "share": 0.65,
+          "population": 1303940
+        },
+        {
+          "name": "Brajbhasha",
+          "share": 0.36,
+          "population": 713572
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 0.6,
+          "population": 1194935,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 79.73,
+          "population": 159312654
+        },
+        {
+          "name": "Muslim",
+          "share": 19.26,
+          "population": 38483967
+        },
+        {
+          "name": "Sikh",
+          "share": 0.32,
+          "population": 643500
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.29,
+          "population": 582622
+        },
+        {
+          "name": "Christian",
+          "share": 0.18,
+          "population": 356448
+        },
+        {
+          "name": "Jain",
+          "share": 0.11,
+          "population": 213267
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.1,
+          "population": 206285
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 13598
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "09"
+      ]
+    },
+    {
+      "regionId": "in-bihar",
+      "year": 2011,
+      "population": 104099452,
+      "literacy": 61.8,
+      "urbanShare": 11.29,
+      "languages": [
+        {
+          "name": "Hindi",
+          "share": 25.54,
+          "population": 26590625
+        },
+        {
+          "name": "Bhojpuri",
+          "share": 24.86,
+          "population": 25881691
+        },
+        {
+          "name": "Maithili",
+          "share": 12.41,
+          "population": 12918324
+        },
+        {
+          "name": "Magadhi/Magahi",
+          "share": 10.87,
+          "population": 11316313
+        },
+        {
+          "name": "Urdu",
+          "share": 8.42,
+          "population": 8769007
+        },
+        {
+          "name": "Surjapuri",
+          "share": 1.78,
+          "population": 1857930
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 16.11,
+          "population": 16765562,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 82.69,
+          "population": 86078686
+        },
+        {
+          "name": "Muslim",
+          "share": 16.87,
+          "population": 17557809
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.24,
+          "population": 252127
+        },
+        {
+          "name": "Christian",
+          "share": 0.12,
+          "population": 129247
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.02,
+          "population": 25453
+        },
+        {
+          "name": "Sikh",
+          "share": 0.02,
+          "population": 23779
+        },
+        {
+          "name": "Jain",
+          "share": 0.02,
+          "population": 18914
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 13437
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "10"
+      ]
+    },
+    {
+      "regionId": "in-sikkim",
+      "year": 2011,
+      "population": 610577,
+      "literacy": 81.42,
+      "urbanShare": 25.15,
+      "languages": [
+        {
+          "name": "Nepali",
+          "share": 62.59,
+          "population": 382171
+        },
+        {
+          "name": "Bhotia",
+          "share": 6.85,
+          "population": 41844
+        },
+        {
+          "name": "Lepcha",
+          "share": 6.27,
+          "population": 38313
+        },
+        {
+          "name": "Limbu",
+          "share": 5.92,
+          "population": 36120
+        },
+        {
+          "name": "Hindi",
+          "share": 5.58,
+          "population": 34052
+        },
+        {
+          "name": "Sherpa",
+          "share": 2.24,
+          "population": 13681
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 10.55,
+          "population": 64396,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 57.76,
+          "population": 352662
+        },
+        {
+          "name": "Buddhist",
+          "share": 27.39,
+          "population": 167216
+        },
+        {
+          "name": "Christian",
+          "share": 9.91,
+          "population": 60522
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 2.67,
+          "population": 16300
+        },
+        {
+          "name": "Muslim",
+          "share": 1.62,
+          "population": 9867
+        },
+        {
+          "name": "Sikh",
+          "share": 0.31,
+          "population": 1868
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.3,
+          "population": 1828
+        },
+        {
+          "name": "Jain",
+          "share": 0.05,
+          "population": 314
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "11"
+      ]
+    },
+    {
+      "regionId": "in-arunachal",
+      "year": 2011,
+      "population": 1383727,
+      "literacy": 65.38,
+      "urbanShare": 22.94,
+      "languages": [
+        {
+          "name": "Nissi/Dafla",
+          "share": 20.72,
+          "population": 286770
+        },
+        {
+          "name": "Adi",
+          "share": 7.6,
+          "population": 105158
+        },
+        {
+          "name": "Nepali",
+          "share": 6.89,
+          "population": 95308
+        },
+        {
+          "name": "Talgalo",
+          "share": 4.97,
+          "population": 68828
+        },
+        {
+          "name": "Tagin",
+          "share": 4.53,
+          "population": 62729
+        },
+        {
+          "name": "Bhotia",
+          "share": 4.48,
+          "population": 61923
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 50.81,
+          "population": 703011,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Christian",
+          "share": 30.26,
+          "population": 418732
+        },
+        {
+          "name": "Hindu",
+          "share": 29.04,
+          "population": 401876
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 26.2,
+          "population": 362553
+        },
+        {
+          "name": "Buddhist",
+          "share": 11.77,
+          "population": 162815
+        },
+        {
+          "name": "Muslim",
+          "share": 1.95,
+          "population": 27045
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.48,
+          "population": 6648
+        },
+        {
+          "name": "Sikh",
+          "share": 0.24,
+          "population": 3287
+        },
+        {
+          "name": "Jain",
+          "share": 0.06,
+          "population": 771
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "12"
+      ]
+    },
+    {
+      "regionId": "in-nagaland",
+      "year": 2011,
+      "population": 1978502,
+      "literacy": 79.55,
+      "urbanShare": 28.86,
+      "languages": [
+        {
+          "name": "Konyak",
+          "share": 12.34,
+          "population": 244135
+        },
+        {
+          "name": "Lotha",
+          "share": 8.97,
+          "population": 177488
+        },
+        {
+          "name": "Ao",
+          "share": 5.79,
+          "population": 114588
+        },
+        {
+          "name": "Chakru/Chokri",
+          "share": 4.6,
+          "population": 91010
+        },
+        {
+          "name": "Sangtam",
+          "share": 3.82,
+          "population": 75530
+        },
+        {
+          "name": "Bengali",
+          "share": 3.77,
+          "population": 74561
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 60.71,
+          "population": 1201190,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Christian",
+          "share": 87.93,
+          "population": 1739651
+        },
+        {
+          "name": "Hindu",
+          "share": 8.75,
+          "population": 173054
+        },
+        {
+          "name": "Muslim",
+          "share": 2.47,
+          "population": 48963
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.34,
+          "population": 6759
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.16,
+          "population": 3214
+        },
+        {
+          "name": "Jain",
+          "share": 0.13,
+          "population": 2655
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.12,
+          "population": 2316
+        },
+        {
+          "name": "Sikh",
+          "share": 0.1,
+          "population": 1890
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "13"
+      ]
+    },
+    {
+      "regionId": "in-manipur",
+      "year": 2011,
+      "population": 2855794,
+      "literacy": 76.94,
+      "urbanShare": 29.21,
+      "languages": [
+        {
+          "name": "Manipuri",
+          "share": 53.3,
+          "population": 1522132
+        },
+        {
+          "name": "Thado",
+          "share": 7.81,
+          "population": 223171
+        },
+        {
+          "name": "Tangkhul",
+          "share": 6.41,
+          "population": 183091
+        },
+        {
+          "name": "Paola",
+          "share": 4.74,
+          "population": 135349
+        },
+        {
+          "name": "Mao",
+          "share": 3.12,
+          "population": 89011
+        },
+        {
+          "name": "Nepali",
+          "share": 2.23,
+          "population": 63756
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 22.39,
+          "population": 639284,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 41.39,
+          "population": 1181876
+        },
+        {
+          "name": "Christian",
+          "share": 41.29,
+          "population": 1179043
+        },
+        {
+          "name": "Muslim",
+          "share": 8.4,
+          "population": 239836
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 8.19,
+          "population": 233767
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.38,
+          "population": 10969
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.25,
+          "population": 7084
+        },
+        {
+          "name": "Jain",
+          "share": 0.06,
+          "population": 1692
+        },
+        {
+          "name": "Sikh",
+          "share": 0.05,
+          "population": 1527
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "14"
+      ]
+    },
+    {
+      "regionId": "in-mizoram",
+      "year": 2011,
+      "population": 1097206,
+      "literacy": 91.33,
+      "urbanShare": 52.11,
+      "languages": [
+        {
+          "name": "Lushai/Mizo",
+          "share": 72.72,
+          "population": 797839
+        },
+        {
+          "name": "Chakma",
+          "share": 8.46,
+          "population": 92850
+        },
+        {
+          "name": "Mara",
+          "share": 3.48,
+          "population": 38177
+        },
+        {
+          "name": "Pawi",
+          "share": 2.61,
+          "population": 28624
+        },
+        {
+          "name": "Paite",
+          "share": 2.02,
+          "population": 22190
+        },
+        {
+          "name": "Hmar",
+          "share": 1.64,
+          "population": 17981
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 9.07,
+          "population": 99545,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Christian",
+          "share": 87.16,
+          "population": 956331
+        },
+        {
+          "name": "Buddhist",
+          "share": 8.51,
+          "population": 93411
+        },
+        {
+          "name": "Hindu",
+          "share": 2.75,
+          "population": 30136
+        },
+        {
+          "name": "Muslim",
+          "share": 1.35,
+          "population": 14832
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.09,
+          "population": 1026
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.07,
+          "population": 808
+        },
+        {
+          "name": "Jain",
+          "share": 0.03,
+          "population": 376
+        },
+        {
+          "name": "Sikh",
+          "share": 0.03,
+          "population": 286
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "15"
+      ]
+    },
+    {
+      "regionId": "in-tripura",
+      "year": 2011,
+      "population": 3673917,
+      "literacy": 87.22,
+      "urbanShare": 26.17,
+      "languages": [
+        {
+          "name": "Bengali",
+          "share": 63.43,
+          "population": 2330452
+        },
+        {
+          "name": "Kokbarak",
+          "share": 24.15,
+          "population": 887336
+        },
+        {
+          "name": "Chakma",
+          "share": 2.29,
+          "population": 84269
+        },
+        {
+          "name": "Hindi",
+          "share": 1.54,
+          "population": 56696
+        },
+        {
+          "name": "Mogh",
+          "share": 0.97,
+          "population": 35722
+        },
+        {
+          "name": "Reang",
+          "share": 0.91,
+          "population": 33529
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 6.69,
+          "population": 245913,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 83.4,
+          "population": 3063903
+        },
+        {
+          "name": "Muslim",
+          "share": 8.6,
+          "population": 316042
+        },
+        {
+          "name": "Christian",
+          "share": 4.35,
+          "population": 159882
+        },
+        {
+          "name": "Buddhist",
+          "share": 3.41,
+          "population": 125385
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.14,
+          "population": 5261
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.04,
+          "population": 1514
+        },
+        {
+          "name": "Sikh",
+          "share": 0.03,
+          "population": 1070
+        },
+        {
+          "name": "Jain",
+          "share": 0.02,
+          "population": 860
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "16"
+      ]
+    },
+    {
+      "regionId": "in-meghalaya",
+      "year": 2011,
+      "population": 2966889,
+      "literacy": 74.43,
+      "urbanShare": 20.07,
+      "languages": [
+        {
+          "name": "Khasi",
+          "share": 33.6,
+          "population": 996733
+        },
+        {
+          "name": "Garo",
+          "share": 31.37,
+          "population": 930619
+        },
+        {
+          "name": "Pnar/Synteng",
+          "share": 10.68,
+          "population": 316863
+        },
+        {
+          "name": "Bengali",
+          "share": 6.43,
+          "population": 190882
+        },
+        {
+          "name": "Nepali",
+          "share": 1.84,
+          "population": 54716
+        },
+        {
+          "name": "War",
+          "share": 1.73,
+          "population": 51418
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 14.35,
+          "population": 425658,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Christian",
+          "share": 74.59,
+          "population": 2213027
+        },
+        {
+          "name": "Hindu",
+          "share": 11.53,
+          "population": 342078
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 8.71,
+          "population": 258271
+        },
+        {
+          "name": "Muslim",
+          "share": 4.4,
+          "population": 130399
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.33,
+          "population": 9864
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.32,
+          "population": 9578
+        },
+        {
+          "name": "Sikh",
+          "share": 0.1,
+          "population": 3045
+        },
+        {
+          "name": "Jain",
+          "share": 0.02,
+          "population": 627
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "17"
+      ]
+    },
+    {
+      "regionId": "in-assam",
+      "year": 2011,
+      "population": 31205576,
+      "literacy": 72.19,
+      "urbanShare": 14.1,
+      "languages": [
+        {
+          "name": "Assamese",
+          "share": 46.82,
+          "population": 14609227
+        },
+        {
+          "name": "Bengali",
+          "share": 28.16,
+          "population": 8786827
+        },
+        {
+          "name": "Bodo/Boro",
+          "share": 4.51,
+          "population": 1407711
+        },
+        {
+          "name": "Hindi",
+          "share": 3.21,
+          "population": 1001993
+        },
+        {
+          "name": "Sadan/Sadri",
+          "share": 2.29,
+          "population": 715180
+        },
+        {
+          "name": "Miri/Mishing",
+          "share": 1.98,
+          "population": 619197
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 13.03,
+          "population": 4065441,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 61.47,
+          "population": 19180759
+        },
+        {
+          "name": "Muslim",
+          "share": 34.22,
+          "population": 10679345
+        },
+        {
+          "name": "Christian",
+          "share": 3.74,
+          "population": 1165867
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.18,
+          "population": 54993
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.16,
+          "population": 50873
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.09,
+          "population": 27118
+        },
+        {
+          "name": "Jain",
+          "share": 0.08,
+          "population": 25949
+        },
+        {
+          "name": "Sikh",
+          "share": 0.07,
+          "population": 20672
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "18"
+      ]
+    },
+    {
+      "regionId": "in-west-bengal",
+      "year": 2011,
+      "population": 91276115,
+      "literacy": 76.26,
+      "urbanShare": 31.87,
+      "languages": [
+        {
+          "name": "Bengali",
+          "share": 85.62,
+          "population": 78151766
+        },
+        {
+          "name": "Hindi",
+          "share": 5.0,
+          "population": 4565554
+        },
+        {
+          "name": "Santali",
+          "share": 2.65,
+          "population": 2421666
+        },
+        {
+          "name": "Urdu",
+          "share": 1.82,
+          "population": 1661941
+        },
+        {
+          "name": "Nepali",
+          "share": 1.27,
+          "population": 1155372
+        },
+        {
+          "name": "Sadan/Sadri",
+          "share": 0.81,
+          "population": 741528
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 2.82,
+          "population": 2578288,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 70.54,
+          "population": 64385546
+        },
+        {
+          "name": "Muslim",
+          "share": 27.01,
+          "population": 24654825
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 1.03,
+          "population": 942297
+        },
+        {
+          "name": "Christian",
+          "share": 0.72,
+          "population": 658618
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.31,
+          "population": 282898
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.25,
+          "population": 228267
+        },
+        {
+          "name": "Sikh",
+          "share": 0.07,
+          "population": 63523
+        },
+        {
+          "name": "Jain",
+          "share": 0.07,
+          "population": 60141
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "19"
+      ]
+    },
+    {
+      "regionId": "in-jharkhand",
+      "year": 2011,
+      "population": 32988134,
+      "literacy": 66.41,
+      "urbanShare": 24.05,
+      "languages": [
+        {
+          "name": "Khortha/Khotta",
+          "share": 23.46,
+          "population": 7738960
+        },
+        {
+          "name": "Hindi",
+          "share": 21.4,
+          "population": 7059131
+        },
+        {
+          "name": "Bengali",
+          "share": 9.74,
+          "population": 3212831
+        },
+        {
+          "name": "Santali",
+          "share": 8.78,
+          "population": 2895764
+        },
+        {
+          "name": "Urdu",
+          "share": 5.96,
+          "population": 1965438
+        },
+        {
+          "name": "Sadan/Sadri",
+          "share": 4.93,
+          "population": 1627083
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 25.73,
+          "population": 8488927,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 67.83,
+          "population": 22376051
+        },
+        {
+          "name": "Muslim",
+          "share": 14.53,
+          "population": 4793994
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 12.84,
+          "population": 4235786
+        },
+        {
+          "name": "Christian",
+          "share": 4.3,
+          "population": 1418608
+        },
+        {
+          "name": "Sikh",
+          "share": 0.22,
+          "population": 71422
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.21,
+          "population": 68343
+        },
+        {
+          "name": "Jain",
+          "share": 0.05,
+          "population": 14974
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.03,
+          "population": 8956
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "20"
+      ]
+    },
+    {
+      "regionId": "in-odisha",
+      "year": 2011,
+      "population": 41974218,
+      "literacy": 72.87,
+      "urbanShare": 16.69,
+      "languages": [
+        {
+          "name": "Odia",
+          "share": 75.06,
+          "population": 31507158
+        },
+        {
+          "name": "Sambalpuri",
+          "share": 6.26,
+          "population": 2629495
+        },
+        {
+          "name": "Kui",
+          "share": 2.24,
+          "population": 939177
+        },
+        {
+          "name": "Santali",
+          "share": 2.05,
+          "population": 859947
+        },
+        {
+          "name": "Urdu",
+          "share": 1.6,
+          "population": 670409
+        },
+        {
+          "name": "Telugu",
+          "share": 1.59,
+          "population": 666842
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 11.2,
+          "population": 4701190,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 93.63,
+          "population": 39300341
+        },
+        {
+          "name": "Christian",
+          "share": 2.77,
+          "population": 1161708
+        },
+        {
+          "name": "Muslim",
+          "share": 2.17,
+          "population": 911670
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 1.14,
+          "population": 478317
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.18,
+          "population": 76919
+        },
+        {
+          "name": "Sikh",
+          "share": 0.05,
+          "population": 21991
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.03,
+          "population": 13852
+        },
+        {
+          "name": "Jain",
+          "share": 0.02,
+          "population": 9420
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "21"
+      ]
+    },
+    {
+      "regionId": "in-chhattisgarh",
+      "year": 2011,
+      "population": 25545198,
+      "literacy": 70.28,
+      "urbanShare": 23.24,
+      "languages": [
+        {
+          "name": "Chhattisgarhi",
+          "share": 61.9,
+          "population": 15812522
+        },
+        {
+          "name": "Hindi",
+          "share": 10.61,
+          "population": 2710116
+        },
+        {
+          "name": "Surgujia",
+          "share": 6.8,
+          "population": 1737224
+        },
+        {
+          "name": "Gondi",
+          "share": 3.95,
+          "population": 1009692
+        },
+        {
+          "name": "Halabi",
+          "share": 2.76,
+          "population": 706281
+        },
+        {
+          "name": "Odia",
+          "share": 2.68,
+          "population": 684658
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 11.29,
+          "population": 2884705,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 93.25,
+          "population": 23819789
+        },
+        {
+          "name": "Muslim",
+          "share": 2.02,
+          "population": 514998
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 1.94,
+          "population": 494594
+        },
+        {
+          "name": "Christian",
+          "share": 1.92,
+          "population": 490542
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.28,
+          "population": 70467
+        },
+        {
+          "name": "Sikh",
+          "share": 0.27,
+          "population": 70036
+        },
+        {
+          "name": "Jain",
+          "share": 0.24,
+          "population": 61510
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.09,
+          "population": 23262
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "22"
+      ]
+    },
+    {
+      "regionId": "in-madhya-pradesh",
+      "year": 2011,
+      "population": 72626809,
+      "literacy": 69.32,
+      "urbanShare": 27.63,
+      "languages": [
+        {
+          "name": "Hindi",
+          "share": 67.96,
+          "population": 49353587
+        },
+        {
+          "name": "Malvi",
+          "share": 6.44,
+          "population": 4680239
+        },
+        {
+          "name": "Bundeli/Bundel khandi",
+          "share": 5.92,
+          "population": 4300436
+        },
+        {
+          "name": "Bagheli/Baghel Khandi",
+          "share": 3.63,
+          "population": 2634542
+        },
+        {
+          "name": "Nimadi",
+          "share": 3.16,
+          "population": 2293841
+        },
+        {
+          "name": "Bhili/Bhilodi",
+          "share": 2.5,
+          "population": 1815889
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 10.39,
+          "population": 7548275,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 90.89,
+          "population": 66007121
+        },
+        {
+          "name": "Muslim",
+          "share": 6.57,
+          "population": 4774695
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.83,
+          "population": 599594
+        },
+        {
+          "name": "Jain",
+          "share": 0.78,
+          "population": 567028
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.3,
+          "population": 216052
+        },
+        {
+          "name": "Christian",
+          "share": 0.29,
+          "population": 213282
+        },
+        {
+          "name": "Sikh",
+          "share": 0.21,
+          "population": 151412
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.13,
+          "population": 97625
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "23"
+      ]
+    },
+    {
+      "regionId": "in-gujarat",
+      "year": 2011,
+      "population": 60439692,
+      "literacy": 78.03,
+      "urbanShare": 42.6,
+      "languages": [
+        {
+          "name": "Gujarati",
+          "share": 85.93,
+          "population": 51937867
+        },
+        {
+          "name": "Hindi",
+          "share": 6.07,
+          "population": 3670047
+        },
+        {
+          "name": "Marathi",
+          "share": 1.52,
+          "population": 915771
+        },
+        {
+          "name": "Kachchhi",
+          "share": 1.43,
+          "population": 861976
+        },
+        {
+          "name": "Urdu",
+          "share": 0.79,
+          "population": 478952
+        },
+        {
+          "name": "Sindhi",
+          "share": 0.53,
+          "population": 321031
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 3.73,
+          "population": 2254048,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 88.57,
+          "population": 53533988
+        },
+        {
+          "name": "Muslim",
+          "share": 9.67,
+          "population": 5846761
+        },
+        {
+          "name": "Jain",
+          "share": 0.96,
+          "population": 579654
+        },
+        {
+          "name": "Christian",
+          "share": 0.52,
+          "population": 316178
+        },
+        {
+          "name": "Sikh",
+          "share": 0.1,
+          "population": 58246
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.1,
+          "population": 57902
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.05,
+          "population": 30483
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.03,
+          "population": 16480
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "24"
+      ]
+    },
+    {
+      "regionId": "in-maharashtra",
+      "year": 2011,
+      "population": 112374333,
+      "literacy": 82.34,
+      "urbanShare": 45.22,
+      "languages": [
+        {
+          "name": "Marathi",
+          "share": 68.84,
+          "population": 77357905
+        },
+        {
+          "name": "Hindi",
+          "share": 9.7,
+          "population": 10901790
+        },
+        {
+          "name": "Urdu",
+          "share": 6.71,
+          "population": 7534783
+        },
+        {
+          "name": "Gujarati",
+          "share": 2.06,
+          "population": 2320191
+        },
+        {
+          "name": "Ahirani",
+          "share": 1.42,
+          "population": 1597606
+        },
+        {
+          "name": "Banjari",
+          "share": 1.14,
+          "population": 1284345
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 10.12,
+          "population": 11377713,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 79.83,
+          "population": 89703057
+        },
+        {
+          "name": "Muslim",
+          "share": 11.54,
+          "population": 12971152
+        },
+        {
+          "name": "Buddhist",
+          "share": 5.81,
+          "population": 6531200
+        },
+        {
+          "name": "Jain",
+          "share": 1.25,
+          "population": 1400349
+        },
+        {
+          "name": "Christian",
+          "share": 0.96,
+          "population": 1080073
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.25,
+          "population": 286290
+        },
+        {
+          "name": "Sikh",
+          "share": 0.2,
+          "population": 223247
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.16,
+          "population": 178965
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "27"
+      ]
+    },
+    {
+      "regionId": "in-karnataka",
+      "year": 2011,
+      "population": 61095297,
+      "literacy": 75.36,
+      "urbanShare": 38.67,
+      "languages": [
+        {
+          "name": "Kannada",
+          "share": 66.49,
+          "population": 40622836
+        },
+        {
+          "name": "Urdu",
+          "share": 10.83,
+          "population": 6617850
+        },
+        {
+          "name": "Telugu",
+          "share": 5.84,
+          "population": 3565618
+        },
+        {
+          "name": "Tamil",
+          "share": 3.44,
+          "population": 2101032
+        },
+        {
+          "name": "Marathi",
+          "share": 3.29,
+          "population": 2013090
+        },
+        {
+          "name": "Tulu",
+          "share": 2.61,
+          "population": 1592915
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 7.5,
+          "population": 4581956,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 84.0,
+          "population": 51317472
+        },
+        {
+          "name": "Muslim",
+          "share": 12.92,
+          "population": 7893065
+        },
+        {
+          "name": "Christian",
+          "share": 1.87,
+          "population": 1142647
+        },
+        {
+          "name": "Jain",
+          "share": 0.72,
+          "population": 440280
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.27,
+          "population": 166087
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.16,
+          "population": 95710
+        },
+        {
+          "name": "Sikh",
+          "share": 0.05,
+          "population": 28773
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.02,
+          "population": 11263
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "29"
+      ]
+    },
+    {
+      "regionId": "in-goa",
+      "year": 2011,
+      "population": 1458545,
+      "literacy": 88.7,
+      "urbanShare": 62.17,
+      "languages": [
+        {
+          "name": "Konkani",
+          "share": 66.09,
+          "population": 963980
+        },
+        {
+          "name": "Marathi",
+          "share": 10.88,
+          "population": 158757
+        },
+        {
+          "name": "Hindi",
+          "share": 8.64,
+          "population": 126020
+        },
+        {
+          "name": "Kannada",
+          "share": 4.65,
+          "population": 67837
+        },
+        {
+          "name": "Urdu",
+          "share": 2.82,
+          "population": 41145
+        },
+        {
+          "name": "Malayalam",
+          "share": 0.89,
+          "population": 12975
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 6.02,
+          "population": 87831,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 66.08,
+          "population": 963877
+        },
+        {
+          "name": "Christian",
+          "share": 25.1,
+          "population": 366130
+        },
+        {
+          "name": "Muslim",
+          "share": 8.33,
+          "population": 121564
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.21,
+          "population": 3039
+        },
+        {
+          "name": "Sikh",
+          "share": 0.1,
+          "population": 1473
+        },
+        {
+          "name": "Jain",
+          "share": 0.08,
+          "population": 1109
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.08,
+          "population": 1095
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.02,
+          "population": 258
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "30"
+      ]
+    },
+    {
+      "regionId": "in-lakshadweep",
+      "year": 2011,
+      "population": 64473,
+      "literacy": 91.85,
+      "urbanShare": 78.07,
+      "languages": [
+        {
+          "name": "Malayalam",
+          "share": 84.17,
+          "population": 54264
+        },
+        {
+          "name": "Tamil",
+          "share": 0.56,
+          "population": 364
+        },
+        {
+          "name": "Bengali",
+          "share": 0.22,
+          "population": 140
+        },
+        {
+          "name": "Hindi",
+          "share": 0.21,
+          "population": 133
+        },
+        {
+          "name": "Telugu",
+          "share": 0.07,
+          "population": 42
+        },
+        {
+          "name": "Odia",
+          "share": 0.06,
+          "population": 39
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 14.72,
+          "population": 9491,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Muslim",
+          "share": 96.58,
+          "population": 62268
+        },
+        {
+          "name": "Hindu",
+          "share": 2.77,
+          "population": 1788
+        },
+        {
+          "name": "Christian",
+          "share": 0.49,
+          "population": 317
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.1,
+          "population": 64
+        },
+        {
+          "name": "Jain",
+          "share": 0.02,
+          "population": 11
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.02,
+          "population": 10
+        },
+        {
+          "name": "Sikh",
+          "share": 0.01,
+          "population": 8
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 7
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "31"
+      ]
+    },
+    {
+      "regionId": "in-kerala",
+      "year": 2011,
+      "population": 33406061,
+      "literacy": 94.0,
+      "urbanShare": 47.7,
+      "languages": [
+        {
+          "name": "Malayalam",
+          "share": 96.97,
+          "population": 32393324
+        },
+        {
+          "name": "Tamil",
+          "share": 1.49,
+          "population": 498938
+        },
+        {
+          "name": "Tulu",
+          "share": 0.37,
+          "population": 124256
+        },
+        {
+          "name": "Kannada",
+          "share": 0.23,
+          "population": 78067
+        },
+        {
+          "name": "Konkani",
+          "share": 0.21,
+          "population": 68595
+        },
+        {
+          "name": "Hindi",
+          "share": 0.14,
+          "population": 45817
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 0.59,
+          "population": 197064,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 54.73,
+          "population": 18282492
+        },
+        {
+          "name": "Muslim",
+          "share": 26.56,
+          "population": 8873472
+        },
+        {
+          "name": "Christian",
+          "share": 18.38,
+          "population": 6141269
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.26,
+          "population": 88155
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.02,
+          "population": 7618
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.01,
+          "population": 4752
+        },
+        {
+          "name": "Jain",
+          "share": 0.01,
+          "population": 4489
+        },
+        {
+          "name": "Sikh",
+          "share": 0.01,
+          "population": 3814
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "32"
+      ]
+    },
+    {
+      "regionId": "in-tamil-nadu",
+      "year": 2011,
+      "population": 72147030,
+      "literacy": 80.09,
+      "urbanShare": 48.4,
+      "languages": [
+        {
+          "name": "Tamil",
+          "share": 88.35,
+          "population": 63743847
+        },
+        {
+          "name": "Telugu",
+          "share": 5.87,
+          "population": 4234216
+        },
+        {
+          "name": "Urdu",
+          "share": 1.75,
+          "population": 1264412
+        },
+        {
+          "name": "Kannada",
+          "share": 1.58,
+          "population": 1141976
+        },
+        {
+          "name": "Malayalam",
+          "share": 1.0,
+          "population": 718977
+        },
+        {
+          "name": "Hindi",
+          "share": 0.46,
+          "population": 331057
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 0.99,
+          "population": 712545,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 87.58,
+          "population": 63188168
+        },
+        {
+          "name": "Christian",
+          "share": 6.12,
+          "population": 4418331
+        },
+        {
+          "name": "Muslim",
+          "share": 5.86,
+          "population": 4229479
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.26,
+          "population": 188586
+        },
+        {
+          "name": "Jain",
+          "share": 0.12,
+          "population": 89265
+        },
+        {
+          "name": "Sikh",
+          "share": 0.02,
+          "population": 14601
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.02,
+          "population": 11186
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 7414
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "33"
+      ]
+    },
+    {
+      "regionId": "in-puducherry",
+      "year": 2011,
+      "population": 1247953,
+      "literacy": 85.85,
+      "urbanShare": 68.33,
+      "languages": [
+        {
+          "name": "Tamil",
+          "share": 88.22,
+          "population": 1100976
+        },
+        {
+          "name": "Telugu",
+          "share": 5.96,
+          "population": 74347
+        },
+        {
+          "name": "Malayalam",
+          "share": 3.84,
+          "population": 47973
+        },
+        {
+          "name": "Urdu",
+          "share": 0.69,
+          "population": 8626
+        },
+        {
+          "name": "Hindi",
+          "share": 0.47,
+          "population": 5848
+        },
+        {
+          "name": "Odia",
+          "share": 0.15,
+          "population": 1910
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 0.66,
+          "population": 8273,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 87.3,
+          "population": 1089409
+        },
+        {
+          "name": "Christian",
+          "share": 6.29,
+          "population": 78550
+        },
+        {
+          "name": "Muslim",
+          "share": 6.05,
+          "population": 75556
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.17,
+          "population": 2122
+        },
+        {
+          "name": "Jain",
+          "share": 0.11,
+          "population": 1400
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.04,
+          "population": 451
+        },
+        {
+          "name": "Sikh",
+          "share": 0.02,
+          "population": 297
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.01,
+          "population": 168
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "34"
+      ]
+    },
+    {
+      "regionId": "in-andaman-nicobar",
+      "year": 2011,
+      "population": 380581,
+      "literacy": 86.63,
+      "urbanShare": 37.7,
+      "languages": [
+        {
+          "name": "Bengali",
+          "share": 28.49,
+          "population": 108431
+        },
+        {
+          "name": "Tamil",
+          "share": 15.2,
+          "population": 57830
+        },
+        {
+          "name": "Telugu",
+          "share": 13.24,
+          "population": 50394
+        },
+        {
+          "name": "Hindi",
+          "share": 12.91,
+          "population": 49134
+        },
+        {
+          "name": "Nicobarese",
+          "share": 7.6,
+          "population": 28912
+        },
+        {
+          "name": "Malayalam",
+          "share": 7.22,
+          "population": 27470
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 15.35,
+          "population": 58410,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 69.45,
+          "population": 264296
+        },
+        {
+          "name": "Christian",
+          "share": 21.28,
+          "population": 80984
+        },
+        {
+          "name": "Muslim",
+          "share": 8.52,
+          "population": 32413
+        },
+        {
+          "name": "Sikh",
+          "share": 0.34,
+          "population": 1286
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.18,
+          "population": 669
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.15,
+          "population": 564
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.09,
+          "population": 338
+        },
+        {
+          "name": "Jain",
+          "share": 0.01,
+          "population": 31
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred.",
+      "censusStateCodes": [
+        "35"
+      ]
+    },
+    {
+      "regionId": "in-dnh-dd",
+      "year": 2011,
+      "population": 586956,
+      "literacy": 80.85,
+      "urbanShare": 58.51,
+      "languages": [
+        {
+          "name": "Gujarati",
+          "share": 33.49,
+          "population": 196588
+        },
+        {
+          "name": "Hindi",
+          "share": 23.8,
+          "population": 139672
+        },
+        {
+          "name": "Varli",
+          "share": 16.73,
+          "population": 98170
+        },
+        {
+          "name": "Marathi",
+          "share": 5.88,
+          "population": 34493
+        },
+        {
+          "name": "Bhojpuri",
+          "share": 4.33,
+          "population": 25386
+        },
+        {
+          "name": "Kokna/Kokni/Kukna",
+          "share": 3.37,
+          "population": 19801
+        },
+        {
+          "name": "Other reported mother tongues",
+          "share": 12.41,
+          "population": 72846,
+          "isRemainder": true
+        }
+      ],
+      "religions": [
+        {
+          "name": "Hindu",
+          "share": 92.51,
+          "population": 543007
+        },
+        {
+          "name": "Muslim",
+          "share": 5.49,
+          "population": 32199
+        },
+        {
+          "name": "Christian",
+          "share": 1.35,
+          "population": 7933
+        },
+        {
+          "name": "Jain",
+          "share": 0.25,
+          "population": 1473
+        },
+        {
+          "name": "Buddhist",
+          "share": 0.14,
+          "population": 851
+        },
+        {
+          "name": "Religion not stated",
+          "share": 0.12,
+          "population": 732
+        },
+        {
+          "name": "Sikh",
+          "share": 0.07,
+          "population": 389
+        },
+        {
+          "name": "Other religions and persuasions",
+          "share": 0.06,
+          "population": 372
+        }
+      ],
+      "sourceIds": [
+        "census-2011-pca",
+        "census-2011-c16",
+        "census-2011-c01"
+      ],
+      "note": "2011 Census counts for the state/UT as enumerated in 2011; mapped at whole-region level. Language shares use individual reported mother tongues, not combined language families. Literacy is for persons aged 7 and above. No district or tehsil estimates are inferred. The present union territory is the exact sum of the 2011 Daman & Diu and Dadra & Nagar Haveli state totals (merged in 2020).",
+      "censusStateCodes": [
+        "25",
+        "26"
+      ]
+    }
+  ]
+}
