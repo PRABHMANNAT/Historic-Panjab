@@ -1,5 +1,6 @@
-import {areas,areaById,regionById,type Area,type MapDoc} from './map-model';
-import {areaBelongsTo,scopeGeometryAreas,scopePreset,selectionAreas} from './scope-model';
+import {areas,areaById,regionById,visible,type Area,type MapDoc} from './map-model';
+import {areaBelongsTo,scopeGeometryAreas,scopePreset,selectionAreas,scopeAreaAllowed} from './scope-model';
+import {areaDetailVisibility} from './area-visibility-model';
 
 export const areaLevelNames:Record<Area['level'],string>={region:'Country / state / territory',province:'Province',division:'Division',district:'District',tehsil:'Tehsil / subdivision',uc:'Ward / union council'};
 export const searchableAreas=areas.filter(a=>!['delhi-ncr','kashmir-united','tibet-modern-three'].includes(a.region));
@@ -24,4 +25,15 @@ export function addArea(doc:MapDoc,id:string,only=false):Partial<MapDoc>{
  // Adding an existing child also enables its detail and clears hidden ancestors.
  const regions={...patch.regions,[area.region]:{...doc.regions[area.region],show:true,...(area.level==='region'?{}:{[area.level]:true})}};
  return {...patch,regions,hidden:revealArea(area,doc)};
+}
+
+// Show a result without enabling the same detail across neighbouring districts.
+export function showArea(doc:MapDoc,area:Area):Partial<MapDoc>{
+ let patch:Partial<MapDoc>={hidden:revealArea(area,doc),regions:{...doc.regions,[area.region]:{...doc.regions[area.region],show:true}},...(doc.mapScope==='full'?{fullDetail:true}:{})};
+ let next={...doc,...patch};
+ if(!visible(area,next)&&area.level!=='region'&&!(areaDetailVisibility(area,next)??next.regions[area.region]?.[area.level])){patch.areaDetails={...next.areaDetails,[area.id]:next.areaDetails[area.id]||'none'};next={...next,areaDetails:patch.areaDetails};}
+ if(!scopeAreaAllowed(area,next)||!visible(area,next)){patch={...patch,...addArea(next,area.id)};next={...doc,...patch};}
+ // Avoid overlapping Pakistan snapshots when a legacy source area is requested.
+ if(['pk-punjab','pk-kp','islamabad'].includes(area.region)&&next.regions['pk-country']?.show)patch.regions={...next.regions,'pk-country':{...next.regions['pk-country'],show:false}};
+ return patch;
 }

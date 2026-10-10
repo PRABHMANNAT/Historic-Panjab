@@ -39,7 +39,9 @@
     "check:history-religion": "node scripts/check-history-religion.mjs",
     "check:history-religion-browser": "node scripts/verify-history-religion-browser.mjs",
     "check:case-study": "node scripts/check-case-study.mjs",
-    "check:case-study-browser": "node scripts/verify-case-study-browser.mjs"
+    "check:case-study-browser": "node scripts/verify-case-study-browser.mjs",
+    "check:visibility": "node scripts/check-area-visibility.mjs",
+    "check:visibility-browser": "node scripts/verify-area-visibility-browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

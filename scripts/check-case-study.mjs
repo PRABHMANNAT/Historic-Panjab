@@ -9,9 +9,10 @@ const naming=await loadLocalModule(new URL('../app/area-name-model.ts',import.me
 const search=await loadLocalModule(new URL('../app/area-search-model.ts',import.meta.url));
 const spatial=await loadLocalModule(new URL('../app/spatial-overlays.ts',import.meta.url));
 const amritsar=model.areas.find(a=>a.name==='Amritsar'&&a.level==='district'&&a.region==='in-punjab');
-const seed={...model.initial,fills:{'np-nepal':{color:'#123456',pattern:'solid'},[amritsar.id]:{color:'#654321',pattern:'dots'}},areaNames:{[amritsar.id]:'Amritsar heritage'},hidden:['PK614','case-lahore-city']};
+const seed={...model.initial,fills:{'np-nepal':{color:'#123456',pattern:'solid'},[amritsar.id]:{color:'#654321',pattern:'dots'}},areaNames:{[amritsar.id]:'Amritsar heritage'},areaDetails:{'in-punjab':'none','np-nepal':'province'},hidden:['PK614','case-lahore-city']};
 const doc={...seed,...study.caseStudyPreset(seed)};
 assert.ok(!scope.scopeRegions.some(r=>r.id==='pk-lahore-study'),'Case-study context is excluded from ordinary region presets');
+assert.equal(doc.areaDetails['in-punjab'],undefined);assert.equal(doc.areaDetails['np-nepal'],'province');
 assert.equal(doc.mapScope,'selection');assert.equal(doc.caseStudyId,'sikh-heritage-core');assert.equal(doc.empireId,'none');assert.equal(doc.demographicMode,'none');
 assert.deepEqual(doc.scopeAreas,study.caseStudyAreaIds);assert.equal(new Set(doc.scopeAreas).size,doc.scopeAreas.length);
 assert.equal(doc.areaNames[amritsar.id],'Amritsar heritage');assert.equal(doc.areaNames.PK609,'Maharaja Ranjit Singh');

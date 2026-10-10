@@ -28,7 +28,7 @@ try{
  const child=page.locator('.area-search-card[data-area="'+tehsil.id+'"]');await child.waitFor();
  await child.getByRole('button',{name:'Unhide '+tehsil.name,exact:true}).click();await idle();assert.deepEqual((await saved()).hidden,[]);
  await page.getByLabel('Hidden areas only').uncheck();await page.getByLabel('Find an area',{exact:true}).fill('Nepal');
- await page.locator('.area-search-card[data-area="np-nepal"]').getByRole('button',{name:'Add Nepal to map',exact:true}).click();await idle();
+ await page.locator('.area-search-card[data-area="np-nepal"]').getByRole('button',{name:'Show Nepal',exact:true}).click();await idle();
  assert.deepEqual((await saved()).scopeAreas,[district.id,'np-nepal']);
  await page.getByRole('button',{name:'Undo',exact:true}).click();await idle();assert.deepEqual((await saved()).scopeAreas,[district.id]);
  await page.getByRole('button',{name:'Redo',exact:true}).click();await idle();assert.deepEqual((await saved()).scopeAreas,[district.id,'np-nepal']);

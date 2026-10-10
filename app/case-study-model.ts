@@ -13,9 +13,11 @@ export function caseStudyPreset(doc:MapDoc):Partial<MapDoc>{
   // Some source districts have no parent ID. Paint these roots so their linked tehsils inherit the regional template color.
   for(const area of areas)if(group.areaIds.includes(area.region)&&(!area.parent||!areaById.has(area.parent)))fills[area.id]=paint;
  }
+ const selectedRegions=new Set(caseStudyAreaIds.map(id=>areaById.get(id)?.region));
+ const areaDetails=Object.fromEntries(Object.entries(doc.areaDetails).filter(([id])=>!selectedRegions.has(areaById.get(id)?.region)));
  const patch=scopePreset(doc,'selection',{scopeAreas:caseStudyAreaIds}),regions={...patch.regions};
  for(const id of new Set(caseStudyAreaIds.map(id=>areaById.get(id)?.region).filter((id):id is string=>!!id)))regions[id]={...regions[id],show:true,province:false,division:false,district:true,tehsil:true,uc:false};
- return {...patch,regions,fills,groups,areaNames:{...study.areaNames,...doc.areaNames},hidden:doc.hidden.filter(id=>!belongs(id)&&!caseStudyAreaIds.some(root=>{const a=areaById.get(root);return !!a&&areaBelongsTo(a,id);})),caseStudyId:study.id as CaseStudySettings['caseStudyId'],empireId:'none',demographicMode:'none',basemap:'political',rivers:true,riverDetail:'major',riverColor:'#89bfd1',gurdwaras:false,communityShrines:false,cities:false,title:'United Punjab · Sikh military & heritage core',legendTitle:'Case study key',bg:'#f7f5f0',uncolored:'#f7f5f0',border:'#526477',width:.8,labelSize:11,names:true,legend:true,legendX:73,legendY:27};
+ return {...patch,regions,areaDetails,fills,groups,areaNames:{...study.areaNames,...doc.areaNames},hidden:doc.hidden.filter(id=>!belongs(id)&&!caseStudyAreaIds.some(root=>{const a=areaById.get(root);return !!a&&areaBelongsTo(a,id);})),caseStudyId:study.id as CaseStudySettings['caseStudyId'],empireId:'none',demographicMode:'none',basemap:'political',rivers:true,riverDetail:'major',riverColor:'#89bfd1',gurdwaras:false,communityShrines:false,cities:false,title:'United Punjab · Sikh military & heritage core',legendTitle:'Case study key',bg:'#f7f5f0',uncolored:'#f7f5f0',border:'#526477',width:.8,labelSize:11,names:true,legend:true,legendX:73,legendY:27};
 }
 export const caseStudyNotice=(doc:MapDoc)=>doc.caseStudyId==='sikh-heritage-core'?study.qualification+' '+study.boundaryNote:'';
 export const validateCaseStudySettings=(value:unknown):CaseStudySettings=>({caseStudyId:value&&typeof value==='object'&&(value as Partial<CaseStudySettings>).caseStudyId===study.id?'sikh-heritage-core':'none'});

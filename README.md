@@ -26,18 +26,28 @@ source dates vary; the detailed notes below explain what each layer represents.
 
 ### Search the atlas and manage visibility
 
-Click **Search map** above the map or open **Areas**. Search all existing source
-areas across countries: states/territories, provinces, divisions, districts,
-tehsils/subdivisions and local wards. Area type and region filters narrow the
-results, while parent names distinguish repeated place names. **Add** keeps the
-current geographic selections and enables the result's detail level; **Only
-this** isolates it. A selected parent includes its children.
+Open **Layers**, **Areas**, or **Search map** above the map. The shared **Map
+detail** controls let you apply one level to the **Visible map** (your selected
+geography, regardless of zoom) or **All regions** (including regions shown later).
+Choose outlines only, provinces/states, districts, tehsils/subdivisions, divisions
+or wards/union councils. Detail is limited to the source levels available.
 
-Use **Hide / Unhide** on any result, **Hidden areas only** to recover hidden
-selections, or **Unhide all areas**. Hiding a parent also hides its descendants.
-Unhiding a child restores its hidden ancestors. Hidden polygons are removed from
-parent fills, natural/point overlay masks and vector exports. Paints are retained.
-Selections, visibility, undo/redo, local autosave and Save/Load work together.
+Search an existing country, state, district or subdivision and use **Show / Hide**.
+**Show** adds an out-of-scope area without losing your existing selections;
+**Only this** isolates it. **Inside this area** changes only that parent's detail:
+choose tehsils in one district, **Area only** to hide its subdivisions, or **Use
+map setting** to remove its override. Area type and region filters distinguish
+repeated names. No missing source geometry is invented.
+
+Use the compact **Borders** switches for state/country, district and tehsil lines;
+**More border levels** offers province, division and ward/UC lines. These switches
+apply to the whole map and leave fills visible. Advanced controls remain below.
+
+**Hidden areas only** helps recover hidden selections; **Unhide all areas** removes
+manual hides. Hiding a parent also hides its descendants. Showing a child restores
+its hidden ancestors. Hidden polygons are removed from parent fills, overlay masks
+and exports. Paints, names, local detail and borders persist through undo/redo,
+autosave, Save/Load and PNG/SVG/JPG exports.
 
 ### Historical empire views
 
@@ -344,9 +354,9 @@ Open [localhost:4545](http://localhost:4545/). Select a state from **Explore a r
 
 The map occupies the available screen height. Use the navigation rail to open:
 
-- **Layers:** geographic views, countries, Delhi/NCR, region boundaries, Kashmir views, and border visibility. Expand a control group when needed. Search **Regions & boundaries** by name or filter to enabled regions.
+- **Layers:** shared Map detail and border controls, plus Find & show areas. Geographic views, countries, Delhi/NCR and specialist boundary controls remain in expandable groups. Map detail starts collapsed on phones.
 - **Style:** paint colors and patterns, opacity, map appearance, and legend settings. The floating tool palette also includes a quick paint color picker.
-- **Areas:** search and filter individual areas, then color, focus, or hide them.
+- **Areas:** the same Map detail controls and searchable Show/Hide cards, with Inside this area for per-parent detail, Only this and Rename.
 - **Nature:** rivers and tributaries, mountains, plateaus, forests/tree cover, colors, opacity and physical labels.
 - **Places:** cities, historic gurdwaras, and administrative labels.
 

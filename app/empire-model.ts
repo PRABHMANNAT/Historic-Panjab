@@ -25,7 +25,7 @@ export function empirePreset(doc:MapDoc,id:string,detail=doc.empireDetail):Parti
  const matched=empireAreas(id),regions={...doc.regions};
  const matchedRegions=new Set(areas.filter(a=>(a.level==='district'||a.level==='tehsil')&&matched.has(a.id)).map(a=>a.region));
  for(const region of Object.keys(regions))regions[region]={...regions[region],show:region!=='pk-lahore-study',province:false,district:matchedRegions.has(region)&&areasByLayer.has(region+'-district'),tehsil:detail==='tehsil'&&matchedRegions.has(region)&&areasByLayer.has(region+'-tehsil'),division:false,uc:false};
- return {...scopePreset(doc,'full',{fullDetail:true}),regions,empireId:id,empireDetail:detail,empireColor:doc.empireId===id?doc.empireColor:empire.color,demographicMode:'none',caseStudyId:'none'};
+ return {...scopePreset(doc,'full',{fullDetail:true}),regions,areaDetails:{},empireId:id,empireDetail:detail,empireColor:doc.empireId===id?doc.empireColor:empire.color,demographicMode:'none',caseStudyId:'none'};
 }
 export function empireCount(doc:MapDoc,level:Area['level']){return areas.filter(a=>a.level===level&&empireAreas(doc.empireId).has(a.id)&&visible(a,doc)).length;}
 export function empireBounds(id:string){const e=empireById.get(id);if(!e)return undefined;const points=e.geometry.type==='Polygon'?e.geometry.coordinates.flat():e.geometry.coordinates.flat(2);return points.reduce((b,p)=>[Math.min(b[0],p[0]),Math.min(b[1],p[1]),Math.max(b[2],p[0]),Math.max(b[3],p[1])],[180,90,-180,-90]);}

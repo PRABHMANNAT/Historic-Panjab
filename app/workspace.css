@@ -583,3 +583,33 @@
 @media(max-width:700px){.premium-studio .rail-tabs button,.premium-studio .rail-bottom button {min-width:38px;padding:4px;font-size:7px;}.premium-studio .rail-tabs {gap:0;}.premium-studio .navigation-rail {gap:1px;}.demographic-map-legend {right:10px;bottom:85px;padding:8px;max-width:190px;max-height:35%;}.demographic-map-legend summary {font-size:9px;}.premium-studio .atlas-search-launch {padding:5px;}}
 @media(max-width:700px){.empire-map-legend {left:55px;bottom:80px;max-width:190px;padding:8px;}.empire-map-legend summary {font-size:10px;}.empire-map-legend p {font-size:9px;}.mobile-inspector-open .empire-map-legend {display:none;}}
 @media(max-width:700px){.map-left-overlays {left:59px;width:min(220px,calc(100% - 76px));gap:6px;}.mobile-inspector-open .map-left-overlays {display:none;}}
+
+/* Shared, compact map detail controls in Layers, Areas and atlas search. */
+.premium-studio .map-detail-controls {background:#f0f5ee;border:1px solid #dce7d7;border-radius:10px;padding:12px;margin:2px 0 16px;}
+.map-detail-controls > summary {font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px;cursor:pointer;list-style:none;}
+.map-detail-controls[open] > summary {margin-bottom:10px;}
+.map-detail-controls > summary > svg:last-child {margin-left:auto;transition:transform .15s;}
+.map-detail-controls[open] > summary > svg:last-child {transform:rotate(180deg);}
+.detail-fields {display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.detail-fields label,.area-detail-field {display:grid;gap:5px;font-size:10px;font-weight:600;color:#52634e;}
+.detail-fields select,.area-detail-field select {width:100%;min-width:0;min-height:34px;background:#fff;border:1px solid #d4dfce;border-radius:6px;padding:6px 8px;font-size:11px;color:#203a2e;}
+.premium-studio .map-detail-controls p {font-size:10px;line-height:1.5;color:#667460;margin:9px 0 12px;}
+.detail-border-heading {display:flex;align-items:center;justify-content:space-between;font-size:11px;gap:8px;}
+.detail-border-heading label {display:flex;align-items:center;gap:6px;font-weight:600;}
+.detail-border-heading small {font-size:9px;color:#71806d;}
+.detail-border-buttons {display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;}
+.premium-studio .detail-border-buttons button {font-size:10px;padding:6px 8px;min-height:31px;border-color:#d6e2d0;}
+.premium-studio .detail-border-buttons button[aria-pressed=true],.premium-studio .area-visibility-button[aria-pressed=true] {color:#246650;background:#dfeeda;border-color:#bdd4b2;}
+.detail-more-borders {margin-top:10px;font-size:10px;color:#62715b;}
+.detail-more-borders summary {cursor:pointer;}
+.area-search-filters {grid-template-columns:1fr 1fr;gap:8px;}
+.area-search-filters .field {min-width:0;}
+.area-search-filters select {width:100%;min-width:0;font-size:10px;}
+.area-detail-field {margin:5px 0 6px;}
+.premium-studio .area-result-actions button {min-height:32px;}
+.detail-fields select:focus-visible,.area-detail-field select:focus-visible {outline:2px solid #27745e;outline-offset:2px;}
+
+.premium-studio .atlas-area-search > .muted:first-child {font-size:10px;line-height:1.5;margin:0 0 9px;}
+.premium-studio .atlas-area-search {padding-top:0;}
+.premium-studio .area-search-filters .field {font-size:10px;gap:4px;margin:7px 0;}
+.premium-studio .area-search-filters .field select {font-size:10px;padding:7px 6px;}

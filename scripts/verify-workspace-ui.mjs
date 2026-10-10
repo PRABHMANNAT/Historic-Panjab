@@ -17,9 +17,11 @@ try {
   assert.ok(mapBefore.height > 720, 'Map uses most of the desktop height');
   assert.ok(mapBefore.width >= 1000, 'Map retains a broad desktop workspace');
   assert.equal(await page.locator('.export-panel').count(), 0, 'No permanent export footer');
+  assert.ok(await page.getByLabel('Show administrative detail').isVisible(), 'Simple map detail is directly available');
+  assert.equal(await page.getByLabel('Find an area').count(), 1, 'Layer search is directly available');
   await page.screenshot({path: 'outputs/workspace/desktop.png'});
 
-  for (const title of ['Countries & territories', 'Delhi & NCR', 'Regions & boundaries', 'Kashmir boundary view', 'Border visibility']) {
+  for (const title of ['Geographic view', 'Countries & territories', 'Delhi & NCR', 'Regions & boundaries', 'Kashmir boundary view', 'Border visibility']) {
     await openLayerGroup(page, title);
   }
   await page.getByLabel('Search region layers').fill('Haryana');

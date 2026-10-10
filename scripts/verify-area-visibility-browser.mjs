@@ -1,0 +1,52 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {chromium} from 'playwright';
+import {loadMapModel,loadLocalModule} from './load-map-model.mjs';
+import {configureExport,triggerExport} from './workspace-ui.mjs';
+const model=await loadMapModel(),detail=await loadLocalModule(new URL('../app/area-visibility-model.ts',import.meta.url)),scope=await loadLocalModule(new URL('../app/scope-model.ts',import.meta.url));
+const amritsar=model.areas.find(a=>a.name==='Amritsar'&&a.level==='district'&&a.region==='in-punjab'),gurdaspur=model.areas.find(a=>a.name==='Gurdaspur'&&a.level==='district'&&a.region==='in-punjab');
+const child=model.areas.find(a=>a.parent===amritsar.id&&a.level==='tehsil'),neighbourChild=model.areas.find(a=>a.parent===gurdaspur.id&&a.level==='tehsil');
+let seed={...model.initial,...scope.scopePreset(model.initial,'single',{scopeRegion:'in-punjab'}),fills:{[amritsar.id]:{color:'#123456',pattern:'solid'}},areaNames:{[amritsar.id]:'Amritsar heritage'}};seed={...seed,...detail.setMapDetail(seed,'district','visible')};
+const browser=await chromium.launch({channel:process.env.MAP_BROWSER_CHANNEL||'chrome',headless:true,args:['--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});page.setDefaultTimeout(30000);
+const errors=[],failed=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().includes('localhost')&&r.status()>=400)failed.push(r.status()+' '+r.url());});
+const key='punjab-studio-regional-v2';await page.addInitScript(({key,seed})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(seed));},{key,seed});
+const saved=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
+const idle=()=>page.waitForFunction(()=>document.querySelector('.gl-host')?.getAttribute('aria-busy')==='false',null,{timeout:120000});
+const card=id=>page.locator('.area-search-card[data-area="'+id+'"]');
+async function search(query){await page.getByLabel('Find an area',{exact:true}).fill(query);}
+async function exported(path){await configureExport(page,{format:'svg',width:1600,extent:'Full map'});const event=page.waitForEvent('download',{timeout:120000});await triggerExport(page);await (await event).saveAs(path);return fs.readFile(path,'utf8');}
+await fs.mkdir('outputs/area-visibility',{recursive:true});
+try{
+ await page.goto(process.env.MAP_TEST_URL||'http://localhost:4545/',{waitUntil:'networkidle',timeout:60000});await page.locator('.gl-host').waitFor({timeout:15000});await idle();
+ console.log('Loaded visibility controls.');
+ assert.equal(await page.getByLabel('Show administrative detail').inputValue(),'district');assert.equal(await page.getByLabel('Find an area').count(),1);
+ await search('Amritsar');await card(amritsar.id).getByLabel('Detail inside Amritsar',{exact:true}).selectOption('tehsil');await idle();
+ let doc=await saved();assert.ok(model.visible(child,doc));assert.ok(!model.visible(neighbourChild,doc));assert.equal(await page.getByLabel('Show administrative detail').inputValue(),'mixed');assert.ok((await card(amritsar.id).innerText()).includes('Amritsar heritage'));
+ await card(amritsar.id).getByLabel('Detail inside Amritsar').scrollIntoViewIfNeeded();await page.screenshot({path:'outputs/area-visibility/layers-desktop.png'});console.log('Layer search and local tehsil detail verified.');
+ await card(amritsar.id).getByRole('button',{name:'Hide Amritsar',exact:true}).click();await idle();assert.ok((await saved()).hidden.includes(amritsar.id));assert.ok(!model.visible(child,await saved()));
+ await page.getByRole('tab',{name:'Areas',exact:true}).click();await search('Amritsar');await page.getByLabel('Hidden areas only').check();await card(amritsar.id).getByRole('button',{name:'Unhide Amritsar',exact:true}).click();await idle();await page.getByLabel('Hidden areas only').uncheck();assert.ok(model.visible(child,await saved()));
+ await card(amritsar.id).getByLabel('Detail inside Amritsar',{exact:true}).selectOption('none');await idle();assert.ok(!model.visible(child,await saved()));
+ await page.getByRole('button',{name:'Undo',exact:true}).click();await idle();assert.ok(model.visible(child,await saved()));await page.getByRole('button',{name:'Redo',exact:true}).click();await idle();assert.ok(!model.visible(child,await saved()));
+ await card(amritsar.id).getByRole('button',{name:'Show only Amritsar',exact:true}).click();await idle();
+ await page.getByLabel('Apply map detail to').selectOption('visible');await page.getByLabel('Show administrative detail').selectOption('tehsil');await idle();doc=await saved();assert.deepEqual(doc.scopeAreas,[amritsar.id]);assert.ok(model.visible(child,doc));
+ await search('Gurdaspur');await card(gurdaspur.id).getByRole('button',{name:'Show Gurdaspur',exact:true}).click();await idle();doc=await saved();assert.ok(model.visible(gurdaspur,doc));assert.ok(!model.visible(neighbourChild,doc));assert.ok(model.visible(child,doc));
+ console.log('Hide/show, undo/redo and selected-area detail verified.');
+ await page.getByLabel('Apply map detail to').selectOption('all');await page.getByLabel('Show administrative detail').selectOption('tehsil');await idle();doc=await saved();assert.ok(doc.regions['np-nepal'].tehsil);assert.equal(doc.regions['np-nepal'].show,false);assert.ok(model.visible(neighbourChild,doc));
+ await page.getByRole('tab',{name:'Layers',exact:true}).click();assert.equal(await page.getByLabel('Apply map detail to').inputValue(),'all');assert.equal(await page.getByLabel('Show administrative detail').inputValue(),'tehsil');assert.equal(await page.getByLabel('Find an area').count(),1);
+ await page.locator('.map-detail-controls').getByLabel('District borders',{exact:true}).click();await page.locator('.map-detail-controls').getByLabel('Tehsil borders',{exact:true}).click();await idle();doc=await saved();assert.equal(doc.districtBorders,false);assert.equal(doc.tehsilBorders,false);assert.ok(model.visible(child,doc));
+ const noInner=(await exported('outputs/area-visibility/outer-border.svg'));assert.ok(noInner.includes('data-area="'+child.id+'"'));assert.ok(!noInner.includes('data-area-border="'+child.id+'"'));assert.ok(!noInner.includes('data-area-border="'+amritsar.id+'"'));assert.ok(noInner.includes('areaDetails'));assert.ok(noInner.includes('#123456'));
+ await page.getByLabel('Show map borders').uncheck();await idle();const noBorders=await exported('outputs/area-visibility/no-borders.svg');assert.ok(!noBorders.includes('data-area-border='));assert.ok(noBorders.includes('data-area="'+child.id+'"'));
+ await page.getByLabel('Show map borders').check();await page.locator('.map-detail-controls').getByLabel('District borders',{exact:true}).click();await page.locator('.map-detail-controls').getByLabel('Tehsil borders',{exact:true}).click();await idle();
+ console.log('Visible/all region detail and border exports verified.');
+ const before=await saved(),download=page.waitForEvent('download');await page.getByRole('button',{name:'Save',exact:true}).click();await(await download).saveAs('outputs/area-visibility/settings.json');
+ await page.getByLabel('Show administrative detail').selectOption('none');await idle();assert.ok(!model.visible(child,await saved()));await page.locator('input[type=file]').setInputFiles('outputs/area-visibility/settings.json');await idle();assert.deepEqual(await saved(),before);
+ await page.reload({waitUntil:'networkidle'});await idle();assert.deepEqual(await saved(),before);
+ await page.getByRole('button',{name:'Search and add areas',exact:true}).click();assert.equal(await page.getByLabel('Find an area').count(),1);await search('Amritsar');assert.equal(await card(amritsar.id).getByLabel('Detail inside Amritsar').inputValue(),'inherit');
+ await page.setViewportSize({width:390,height:844});await page.locator('.map-detail-controls').waitFor();assert.equal(await page.locator('.map-detail-controls').getAttribute('open'),null);await page.locator('.map-detail-controls>summary').click();assert.ok(await page.getByLabel('Show administrative detail').isVisible());await page.locator('.map-detail-controls>summary').click();await page.getByRole('button',{name:'Search and add areas',exact:true}).click();await search('Amritsar');await card(amritsar.id).getByLabel('Detail inside Amritsar',{exact:true}).selectOption('none');await idle();assert.ok(!model.visible(child,await saved()));
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await card(amritsar.id).getByLabel('Detail inside Amritsar').scrollIntoViewIfNeeded();await page.screenshot({path:'outputs/area-visibility/areas-mobile.png'});
+ await card(amritsar.id).getByRole('button',{name:'Hide Amritsar',exact:true}).click();await idle();await card(amritsar.id).getByRole('button',{name:'Unhide Amritsar',exact:true}).click();await idle();assert.ok(model.visible(amritsar,await saved()));
+ await page.getByRole('tab',{name:'Layers',exact:true}).click();await search('Punjab');await card('in-punjab').getByLabel('Detail inside Punjab · India',{exact:true}).selectOption('tehsil');await idle();assert.ok(model.visible(child,await saved()));assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:'outputs/area-visibility/layers-mobile.png'});
+ assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
+ console.log('Verified Layers/Areas/Search shared controls, district-specific detail, Show/Hide, visible-vs-all map settings, borders in SVG, paints/names, undo/redo, Save/Load/reload and desktop/mobile UI.');
+}catch(e){console.error('Page errors:',errors,'HTTP errors:',failed);console.error('Status:',await page.locator('.statusbar').innerText({timeout:3000}).catch(()=>''));await page.screenshot({path:'outputs/area-visibility/failure.png'}).catch(()=>{});throw e;}finally{await browser.close();}
