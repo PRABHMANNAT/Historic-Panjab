@@ -350,6 +350,26 @@ unavailable on your machine.
 
 Open [localhost:4545](http://localhost:4545/). Select a state from **Explore a region** to enable district and tehsil detail and fit its extent. Layers can also be toggled independently. The Tehsils tab groups source subdistrict units, including tehsils, mandals, taluks, talukas, circles, and other state-specific units. Andhra Pradesh's subdistricts are mandals. Area names appear at closer zooms. Tehsils inherit district colors unless painted individually.
 
+## Saved custom maps
+
+Choose **Save** (or Ctrl/Cmd+S), enter a map name, and choose **Save map**.
+**My maps** keeps a searchable library of your maps. Choose **Open** to return to
+a saved map, then **Save changes** to update it or **Save as new map** to keep a
+separate version. Each entry can be renamed and downloaded. Duplicate names
+are rejected rather than replacing another map.
+
+Saved maps retain colors, custom area labels, hidden areas, region/detail and
+border settings, demographics/history/nature layers, legends and the saved
+map view. The library uses browser storage on the same device and site address;
+it persists across reloads independently of the working draft's local autosave.
+Use **Download current settings** in My maps for a JSON backup, and **Load** to
+restore it or move it to another device. Loading a file starts an unnamed map
+so saving it cannot overwrite the previously opened map.
+
+Run `npm run check:custom-maps` and `npm run check:custom-maps-browser`
+(with the app on port 4545) to verify snapshots, saving, copies, updates,
+reopening, rename, duplicate handling, reload persistence, backups and mobile UI.
+
 ## Workspace controls
 
 The map occupies the available screen height. Use the navigation rail to open:

@@ -41,7 +41,9 @@
     "check:case-study": "node scripts/check-case-study.mjs",
     "check:case-study-browser": "node scripts/verify-case-study-browser.mjs",
     "check:visibility": "node scripts/check-area-visibility.mjs",
-    "check:visibility-browser": "node scripts/verify-area-visibility-browser.mjs"
+    "check:visibility-browser": "node scripts/verify-area-visibility-browser.mjs",
+    "check:custom-maps": "node scripts/check-custom-maps.mjs",
+    "check:custom-maps-browser": "node scripts/verify-custom-maps-browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

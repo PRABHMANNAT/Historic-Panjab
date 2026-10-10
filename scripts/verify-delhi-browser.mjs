@@ -1,4 +1,4 @@
-import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
+import {configureExport,triggerExport,openLayerGroup,downloadSettings} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -47,7 +47,7 @@ try {
   const svg = await fs.readFile(await exportFile('svg', 'metro'), 'utf8');assert.ok(svg.includes('data-metro-line="' + red.id + '"'));assert.ok(!svg.includes('data-metro-line="' + blue.id + '"'));assert.ok(svg.includes('stroke="#ff2200"'));assert.ok(svg.includes('data-metro-station='));assert.ok(svg.includes('OpenStreetMap contributors'));assert.ok(svg.includes('ODbL-1.0'));
   await page.getByRole('checkbox', {name: 'Show metro stations', exact: true}).uncheck();const noStations = await fs.readFile(await exportFile('svg', 'no-stations'), 'utf8');assert.ok(!noStations.includes('data-metro-station='));
   await exportFile('png', 'metro');
-  const saveEvent = page.waitForEvent('download');await page.getByRole('button', {name: 'Save', exact: true}).click();const file = 'outputs/delhi/settings.json';await (await saveEvent).saveAs(file);const expected = await saved();
+  const saveEvent = page.waitForEvent('download');await downloadSettings(page);const file = 'outputs/delhi/settings.json';await (await saveEvent).saveAs(file);const expected = await saved();
   await page.getByRole('checkbox', {name: 'Show metro lines', exact: true}).uncheck();await page.locator('input[type=file]').setInputFiles(file);await setting('delhiMetro', true);assert.deepEqual((await saved()).metroLines, expected.metroLines);
   await page.reload({waitUntil: 'networkidle'});await idle();assert.equal((await saved()).delhiMetro, true);assert.deepEqual((await saved()).metroLines, expected.metroLines);assert.equal((await saved()).metroStations, false);
   await openLayerGroup(page,'Delhi & NCR');await areaView.selectOption('ncr');await idle();assert.equal((await saved()).delhiView, 'ncr');assert.deepEqual((await saved()).fills, paints);

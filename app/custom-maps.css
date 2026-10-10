@@ -1,0 +1,42 @@
+.custom-maps-dialog {width:620px;max-width:calc(100% - 32px);max-height:85dvh;display:flex;flex-direction:column;gap:16px;padding:24px;background:#fffdf8;color:#203a2e;border-radius:16px;overflow:auto;font-family:inherit;}
+.custom-maps-heading {display:flex;align-items:center;gap:12px;padding-right:20px;}
+.custom-maps-icon {display:grid;place-items:center;width:46px;height:46px;flex-shrink:0;border-radius:12px;background:#e6efdf;color:#33705b;}
+.custom-maps-heading [data-slot=dialog-title] {font-size:22px;font-weight:650;line-height:1.3;margin:0;}
+.custom-maps-heading [data-slot=dialog-description] {font-size:12px;color:#697562;margin-top:4px;}
+.custom-maps-dialog p {margin:0;line-height:1.6;}
+.custom-maps-storage {font-size:11px;color:#71806b;}
+.custom-maps-error {padding:10px 12px;border:1px solid #ebc8bb;background:#fff0e8;color:#8c3920;border-radius:8px;font-size:12px;}
+.custom-maps-dialog button {display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:34px;border:1px solid #d7e0d1;border-radius:7px;padding:7px 10px;background:#fffdf8;font-family:inherit;font-size:11px;font-weight:550;color:#365442;cursor:pointer;}
+.custom-maps-dialog button:hover {background:#edf3e8;}
+.custom-maps-dialog button:disabled {opacity:.5;cursor:default;}
+.custom-maps-dialog button.map-save-primary {background:#27654f;border-color:#27654f;color:#fff;}
+.custom-maps-dialog button.map-save-primary:hover {background:#1e513e;}
+.custom-maps-dialog :is(button,input):focus-visible {outline:2px solid #27745e;outline-offset:3px;}
+.custom-map-working {display:flex;justify-content:space-between;gap:14px;padding:14px;background:#eef4e7;border:1px solid #dce6d4;border-radius:10px;}
+.custom-map-working>div:first-child {display:grid;gap:4px;min-width:0;align-content:center;}
+.custom-map-working small {font-size:9px;letter-spacing:1px;color:#6b7e5f;}
+.custom-map-working strong {font-size:14px;overflow-wrap:anywhere;}
+.custom-map-working span {font-size:10px;color:#6b7a62;}
+.custom-map-working-actions {display:flex;flex-direction:column;gap:6px;flex-shrink:0;}
+.custom-maps-search {display:flex;align-items:center;gap:8px;border:1px solid #d9e1d4;background:#fff;border-radius:8px;padding:0 11px;color:#8a9783;}
+.custom-maps-search input {width:100%;min-width:0;padding:10px 0;font-size:12px;background:transparent;border:0;color:#203a2e;}
+.custom-maps-search span {font-size:11px;background:#edf2e8;border-radius:5px;padding:2px 6px;}
+.custom-map-list {min-height:80px;max-height:320px;overflow-y:auto;flex-shrink:1;}
+.custom-map-list ul {list-style:none;margin:0;padding:0;display:grid;gap:8px;}
+.custom-map-list li {display:flex;align-items:center;gap:11px;padding:13px 11px;border:1px solid #e0e6d9;border-radius:10px;background:#fff;}
+.custom-map-card-icon {display:grid;place-items:center;flex-shrink:0;width:36px;height:42px;border-radius:8px;background:#f2f5ed;color:#749166;}
+.custom-map-card-copy {flex:1;min-width:0;display:grid;gap:4px;}
+.custom-map-card-copy strong {font-size:13px;overflow-wrap:anywhere;}
+.custom-map-card-copy strong small {display:inline-block;font-size:8px;font-weight:500;margin-left:7px;background:#e5efdc;color:#578046;padding:2px 5px;border-radius:4px;vertical-align:middle;}
+.custom-map-card-copy span,.custom-map-card-copy time {font-size:10px;color:#7b8774;}
+.custom-map-card-actions {display:flex;gap:4px;flex-shrink:0;}
+.custom-map-card-actions button:has(svg) {padding:7px;}
+.custom-maps-empty {padding:22px 10px;text-align:center;font-size:12px;color:#87927f;}
+.custom-maps-footer {border-top:1px solid #e1e8da;padding-top:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.custom-maps-footer span {display:block;width:100%;color:#87927f;font-size:10px;line-height:1.5;}
+.custom-map-name-form {display:grid;gap:9px;}
+.custom-map-name-form label {font-size:12px;font-weight:600;}
+.custom-map-name-form input {width:100%;padding:11px 12px;border:1px solid #cad8c2;border-radius:8px;background:#fff;color:#203a2e;font-size:14px;}
+.custom-map-name-form p {font-size:11px;color:#7b8774;}
+.custom-map-form-actions {display:flex;justify-content:space-between;gap:8px;margin-top:10px;}
+@media(max-width:700px){.custom-maps-dialog {padding:20px;gap:13px;}.custom-map-list li {flex-wrap:wrap;gap:8px;}.custom-map-card-actions {margin-left:auto;}.custom-map-card-copy {flex-basis:calc(100% - 52px);}.custom-map-working {flex-direction:column;gap:10px;}.custom-map-working-actions {flex-direction:row;flex-wrap:wrap;}.custom-maps-heading [data-slot=dialog-title] {font-size:20px;}.custom-map-form-actions {flex-wrap:wrap;}}

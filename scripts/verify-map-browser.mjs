@@ -1,4 +1,4 @@
-import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
+import {configureExport,triggerExport,openLayerGroup,downloadSettings} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createRequire} from 'node:module';
@@ -75,7 +75,7 @@ try {
   assert.equal((await saved()).kashmirView,'combined','Combined mode survives reload');
   assert.deepEqual((await saved()).fills,expectedFills,'New-region colors and canvas painting survive reload');
   const saveEvent=page.waitForEvent('download');
-  await page.getByRole('button',{name:'Save',exact:true}).click();
+  await downloadSettings(page);
   await (await saveEvent).saveAs('outputs/expanded-map-settings.json');
   const settings=await fs.readFile('outputs/expanded-map-settings.json');
   await openLayerGroup(page,'Kashmir boundary view');await page.getByLabel('Kashmir boundary view').selectOption('separate');

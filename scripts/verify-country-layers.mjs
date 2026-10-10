@@ -1,4 +1,4 @@
-import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
+import {configureExport,triggerExport,openLayerGroup,downloadSettings} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -91,7 +91,7 @@ try{
    if(['np-nepal','mv-maldives','tibet-modern-three'].includes(id)){
     await configureExport(page,{width:1200});
     const png=await fs.readFile(await exportFile('png'));assert.equal(png.subarray(1,4).toString(),'PNG');
-    const event=page.waitForEvent('download');await page.getByRole('button',{name:'Save',exact:true}).click();
+    const event=page.waitForEvent('download');await downloadSettings(page);
     const file='outputs/countries/'+id+'-settings.json';await(await event).saveAs(file);const expected=await saved();
     await page.getByRole('tab',{name:'Layers',exact:true}).click();await openLayerGroup(page,'Countries & territories');await page.getByLabel('Country map view').selectOption('');
     await page.locator('input[type=file]').setInputFiles(file);await page.waitForFunction(id=>JSON.parse(localStorage.getItem('punjab-studio-regional-v2')).countryView===id,id);await idle();

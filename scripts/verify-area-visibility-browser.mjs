@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
 import {loadMapModel,loadLocalModule} from './load-map-model.mjs';
-import {configureExport,triggerExport} from './workspace-ui.mjs';
+import {configureExport,triggerExport,downloadSettings} from './workspace-ui.mjs';
 const model=await loadMapModel(),detail=await loadLocalModule(new URL('../app/area-visibility-model.ts',import.meta.url)),scope=await loadLocalModule(new URL('../app/scope-model.ts',import.meta.url));
 const amritsar=model.areas.find(a=>a.name==='Amritsar'&&a.level==='district'&&a.region==='in-punjab'),gurdaspur=model.areas.find(a=>a.name==='Gurdaspur'&&a.level==='district'&&a.region==='in-punjab');
 const child=model.areas.find(a=>a.parent===amritsar.id&&a.level==='tehsil'),neighbourChild=model.areas.find(a=>a.parent===gurdaspur.id&&a.level==='tehsil');
@@ -39,7 +39,7 @@ try{
  await page.getByLabel('Show map borders').uncheck();await idle();const noBorders=await exported('outputs/area-visibility/no-borders.svg');assert.ok(!noBorders.includes('data-area-border='));assert.ok(noBorders.includes('data-area="'+child.id+'"'));
  await page.getByLabel('Show map borders').check();await page.locator('.map-detail-controls').getByLabel('District borders',{exact:true}).click();await page.locator('.map-detail-controls').getByLabel('Tehsil borders',{exact:true}).click();await idle();
  console.log('Visible/all region detail and border exports verified.');
- const before=await saved(),download=page.waitForEvent('download');await page.getByRole('button',{name:'Save',exact:true}).click();await(await download).saveAs('outputs/area-visibility/settings.json');
+ const before=await saved(),download=page.waitForEvent('download');await downloadSettings(page);await(await download).saveAs('outputs/area-visibility/settings.json');
  await page.getByLabel('Show administrative detail').selectOption('none');await idle();assert.ok(!model.visible(child,await saved()));await page.locator('input[type=file]').setInputFiles('outputs/area-visibility/settings.json');await idle();assert.deepEqual(await saved(),before);
  await page.reload({waitUntil:'networkidle'});await idle();assert.deepEqual(await saved(),before);
  await page.getByRole('button',{name:'Search and add areas',exact:true}).click();assert.equal(await page.getByLabel('Find an area').count(),1);await search('Amritsar');assert.equal(await card(amritsar.id).getByLabel('Detail inside Amritsar').inputValue(),'inherit');

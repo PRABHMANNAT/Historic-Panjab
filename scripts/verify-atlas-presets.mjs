@@ -1,4 +1,4 @@
-import {configureExport,triggerExport,openLayerGroup} from './workspace-ui.mjs';
+import {configureExport,triggerExport,openLayerGroup,downloadSettings} from './workspace-ui.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -122,7 +122,7 @@ try{
   await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('special');await t.idle();assert.equal(overlayIds(await t.svg('special-sites'),'gurdwara').length,takhtIds.length+featuredIds.length);
   await t.page.getByLabel('Gurdwara selection',{exact:true}).selectOption('all');await t.page.getByRole('checkbox',{name:'Show gurdwara names',exact:true}).check();await t.idle();const allSites=await t.svg('all-shrines');const expectedSites=gurdwaras.filter(g=>inFullGeography(g.coordinates)).map(g=>g.id).sort((a,b)=>a.localeCompare(b));assert.deepEqual(overlayIds(allSites,'gurdwara').sort((a,b)=>a.localeCompare(b)),expectedSites,'All—and only—catalog sites inside supplied geographic outlines are exported');assert.ok(/SGPC|Shiromani|gurdwara-sources|Curated/i.test(allSites),'Shrine provenance is retained in exports');
   await configureExport(t.page,{width:1200});const png=await fs.readFile(await t.exportFile('png','all-shrines'));assert.equal(png.subarray(1,4).toString(),'PNG');
-  const download=t.page.waitForEvent('download');await t.page.getByRole('button',{name:'Save',exact:true}).click();const file=output+'/overlay-settings.json';await(await download).saveAs(file);const expected=await t.saved();
+  const download=t.page.waitForEvent('download');await downloadSettings(t.page);const file=output+'/overlay-settings.json';await(await download).saveAs(file);const expected=await t.saved();
   await t.page.getByRole('tab',{name:'Places',exact:true}).click();await t.page.getByRole('checkbox',{name:'Show gurdwaras',exact:true}).uncheck();await t.page.locator('input[type=file]').setInputFiles(file);await t.setting('gurdwaras',true);await t.idle();const restored=await t.saved();
   for(const key of ['mapScope','fullDetail','cities','cityMode','cityAutoColors','cityColor','rivers','riverColor','gurdwaras','gurdwaraFilter','gurdwaraLabels'])assert.equal(restored[key],expected[key],'Settings Load restores '+key);
   await t.page.reload({waitUntil:'networkidle'});await t.idle();const reloaded=await t.saved();for(const key of ['mapScope','cityColor','riverColor','gurdwaras','gurdwaraFilter'])assert.equal(reloaded[key],expected[key]);assert.deepEqual(reloaded.fills,expected.fills);

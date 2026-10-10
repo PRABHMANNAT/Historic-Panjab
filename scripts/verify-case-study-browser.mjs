@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
 import {loadMapModel,loadLocalModule} from './load-map-model.mjs';
-import {configureExport,triggerExport} from './workspace-ui.mjs';
+import {configureExport,triggerExport,downloadSettings} from './workspace-ui.mjs';
 const model=await loadMapModel(),study=await loadLocalModule(new URL('../app/case-study-model.ts',import.meta.url));
 const browser=await chromium.launch({channel:process.env.MAP_BROWSER_CHANNEL||'chrome',headless:true,args:['--enable-unsafe-swiftshader']});
 const page=await browser.newPage({viewport:{width:1440,height:900},acceptDownloads:true});
@@ -39,7 +39,7 @@ try{
  const svg=(await exported('svg','outputs/case-study/renamed.svg')).toString();assert.ok(svg.includes('Khalsa District &lt;West&gt; &amp; East'));assert.ok(svg.includes('areaNames'));assert.ok(!svg.includes('<West>'),'Custom names are escaped as text');
  for(const format of ['png','jpg']){const bytes=await exported(format,'outputs/case-study/renamed.'+format);assert.ok(bytes.length>10000);if(format==='png')assert.equal(bytes.subarray(1,4).toString(),'PNG');else assert.equal(bytes.subarray(0,2).toString('hex'),'ffd8');}
  await page.getByRole('button',{name:'Rename selected area',exact:true}).click();await inspector.waitFor();await page.screenshot({path:'outputs/case-study/rename-area.png'});
- const before=await saved(),download=page.waitForEvent('download');await page.getByRole('button',{name:'Save',exact:true}).click();await (await download).saveAs('outputs/case-study/settings.json');
+ const before=await saved(),download=page.waitForEvent('download');await downloadSettings(page);await (await download).saveAs('outputs/case-study/settings.json');
  await inspector.getByRole('button',{name:'Reset name',exact:true}).click();await idle();assert.ok(!(await saved()).areaNames.PK609);assert.equal(await inspector.getByLabel('Area display name').inputValue(),'Gujranwala');
  await page.locator('input[type=file]').setInputFiles('outputs/case-study/settings.json');await idle();assert.deepEqual(await saved(),before);
  await page.reload({waitUntil:'networkidle'});await idle();assert.deepEqual(await saved(),before);

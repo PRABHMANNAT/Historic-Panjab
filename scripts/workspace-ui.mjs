@@ -29,3 +29,11 @@ export async function triggerExport(page) {
   await dialog.getByRole('button', {name: 'Close', exact: true}).click();
   await dialog.waitFor({state: 'hidden'});
 }
+
+export async function downloadSettings(page) {
+  await page.getByRole('button', {name: 'My maps', exact: true}).click();
+  const dialog = page.getByRole('dialog').filter({has: page.getByText('My maps', {exact: true})});
+  await dialog.getByRole('button', {name: 'Download current settings', exact: true}).click();
+  await dialog.getByRole('button', {name: 'Close', exact: true}).click();
+  await dialog.waitFor({state: 'hidden'});
+}

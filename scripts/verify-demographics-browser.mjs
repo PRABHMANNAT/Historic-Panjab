@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from 'playwright';
 import {loadMapModel,loadLocalModule} from './load-map-model.mjs';
-import {configureExport,triggerExport} from './workspace-ui.mjs';
+import {configureExport,triggerExport,downloadSettings} from './workspace-ui.mjs';
 const model=await loadMapModel(),scope=await loadLocalModule(new URL('../app/scope-model.ts',import.meta.url));
 const seed={...model.initial,...scope.scopePreset(model.initial,'single',{scopeRegion:'in-punjab'})};
 const district=model.areas.find(a=>a.name==='Amritsar'&&a.level==='district');
@@ -50,7 +50,7 @@ try{
  await configureExport(page,{format:'svg',extent:'Full map',width:1600});const svgDownload=page.waitForEvent('download',{timeout:120000}).catch(()=>null);await triggerExport(page);const downloaded=await svgDownload;assert.ok(downloaded,'SVG export completes: '+await page.locator('.statusbar output').innerText());await downloaded.saveAs('outputs/demographics/community.svg');
  const svg=await fs.readFile('outputs/demographics/community.svg','utf8');assert.ok(svg.includes('data-community-shrine'));assert.ok(svg.includes('data:image/jpeg;base64,')||svg.includes('data:image/png;base64,'));assert.ok(svg.includes('demographic-key'));assert.ok(svg.includes('Census 2011'));assert.ok(svg.includes('data-demographic='));
  for(const format of ['png','jpg']){await configureExport(page,{format,width:1000});const download=page.waitForEvent('download',{timeout:120000}).catch(()=>null);await triggerExport(page);const file=await download;assert.ok(file,format+' export succeeds');await file.saveAs('outputs/demographics/community.'+format);const bytes=await fs.readFile('outputs/demographics/community.'+format);assert.ok(bytes.length>10000,format+' contains rendered map and photographs');}
- const saveDownload=page.waitForEvent('download');await page.getByRole('button',{name:'Save',exact:true}).click();await (await saveDownload).saveAs('outputs/demographics/settings.json');
+ const saveDownload=page.waitForEvent('download');await downloadSettings(page);await (await saveDownload).saveAs('outputs/demographics/settings.json');
  const exported=JSON.parse(await fs.readFile('outputs/demographics/settings.json','utf8'));assert.equal(exported.demographicMode,'religion');
  await page.reload({waitUntil:'networkidle'});await idle();assert.deepEqual(await saved(),exported,'autosave reload retains all demographic and shrine settings');
  await page.getByRole('tab',{name:'People',exact:true}).click();await page.getByLabel('Demographic map layer').selectOption('none');
