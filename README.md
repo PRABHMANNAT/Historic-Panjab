@@ -350,6 +350,30 @@ unavailable on your machine.
 
 Open [localhost:4545](http://localhost:4545/). Select a state from **Explore a region** to enable district and tehsil detail and fit its extent. Layers can also be toggled independently. The Tehsils tab groups source subdistrict units, including tehsils, mandals, taluks, talukas, circles, and other state-specific units. Andhra Pradesh's subdistricts are mandals. Area names appear at closer zooms. Tehsils inherit district colors unless painted individually.
 
+## Punjab border display
+
+The Pakistani and Indian Punjab source outlines previously left 59 enclosed
+unassigned gaps along their shared frontier. Sparse display overrides align
+that frontier with Indian Punjab's dissolved Esri IAB2024 district outline,
+remove duplicate overlaps and assign gap slivers to existing adjoining areas.
+Indian Punjab tehsil outlines use the same state edge. Original downloaded
+GeoJSON, catalog IDs, label points, census joins and saved settings are retained.
+
+The live map, selections, Hide/Unhide, demographic overlays and SVG/PNG/JPG
+exports use the same display geometry. The alignment also covers the full
+Pakistan view and the retained Lahore case-study units. It preserves partial
+UC coverage and the case study's Model Town/Raiwind exclusions. This is a
+cartographic reconciliation of source editions, not a new boundary survey.
+
+Provenance, input/override hashes and affected IDs are in
+`app/punjab-seam-sources.json`; sparse geometry files are under
+`public/data/boundary-seams/`. Regenerate with
+`python scripts/build-punjab-seams.py` using numpy and shapely==2.1.2.
+Sliver ownership uses nearest existing boundary samples at approximately 28 m.
+Run `npm run check:punjab-seams` and `npm run check:punjab-seams-browser`
+with the app on localhost:4545. The browser check includes real gap pixels,
+exports and Hide/Unhide.
+
 ## Saved custom maps
 
 Choose **Save** (or Ctrl/Cmd+S), enter a map name, and choose **Save map**.

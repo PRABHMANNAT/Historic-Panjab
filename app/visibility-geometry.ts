@@ -6,7 +6,7 @@ import type {Mask} from './geometry-clip';
 
 export const hiddenGeometryKeys=(doc:MapDoc)=>[...new Set(doc.hidden.map(id=>areaById.get(id)).filter(Boolean).map(a=>a!.region+'-'+a!.level))];
 export function hiddenMasks(doc:MapDoc,data:Record<string,FeatureCollection>):Mask[]{
- return doc.hidden.flatMap(id=>{const a=areaById.get(id);if(!a)return [];const f=data[a.region+'-'+a.level]?.features.find(f=>String(f.id)===id);return f&&(f.geometry.type==='Polygon'||f.geometry.type==='MultiPolygon')?[{id,bbox:a.bbox,geometry:f.geometry}]:[];});
+ return doc.hidden.flatMap(id=>{const a=areaById.get(id);if(!a)return [];const f=data[a.region+'-'+a.level]?.features.find(f=>String(f.id)===id);return f&&(f.geometry.type==='Polygon'||f.geometry.type==='MultiPolygon')?[{id,bbox:f.bbox||a.bbox,geometry:f.geometry}]:[];});
 }
 const overlaps=(a:number[],b:number[])=>a[0]<=b[2]&&a[2]>=b[0]&&a[1]<=b[3]&&a[3]>=b[1];
 const shapeCache=new WeakMap<Polygon|MultiPolygon,{cuts:Mask[];geometry:Polygon|MultiPolygon|undefined}>();
@@ -29,6 +29,6 @@ export function visibleBoundaries(geo:FeatureCollection,doc:MapDoc,hidden:Mask[]
   const a=areaById.get(String(f.id));if(!a)return [f];
   if(hidden.some(mask=>areaBelongsTo(a,mask.id)))return [];
   if(f.geometry.type!=='Polygon'&&f.geometry.type!=='MultiPolygon')return [f];
-  const geometry=subtractHidden(f.geometry,a.bbox,hidden);return geometry?[{...f,geometry}]:[];
+  const geometry=subtractHidden(f.geometry,f.bbox||a.bbox,hidden);return geometry?[{...f,geometry}]:[];
  })};cache.set(geo,{key,cuts:hidden,result});return result;
 }

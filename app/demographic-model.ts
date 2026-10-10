@@ -68,7 +68,7 @@ export function demographicGeoJSON(doc:MapDoc,data:Record<string,FeatureCollecti
   const area=areaById.get(recordAreaId(r))!;
   const f=data[area.region+'-'+area.level]?.features.find(f=>String(f.id)===area.id);
   if(!f||(f.geometry.type!=='Polygon'&&f.geometry.type!=='MultiPolygon'))return [];
-  const geometry=subtractHidden(f.geometry,area.bbox,hidden);return geometry?[{...f,geometry,properties:{id:area.id,name:areaDisplayName(area,doc),displayColor:demographicColor(r,doc.demographicMode,doc),displayValue:value.text,year:r.year}}]:[];
+  const geometry=subtractHidden(f.geometry,f.bbox||area.bbox,hidden);return geometry?[{...f,geometry,properties:{id:area.id,name:areaDisplayName(area,doc),displayColor:demographicColor(r,doc.demographicMode,doc),displayValue:value.text,year:r.year}}]:[];
  })};
 }
 export function validateDemographicSettings(value:unknown):DemographicSettings{

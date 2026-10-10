@@ -43,7 +43,10 @@
     "check:visibility": "node scripts/check-area-visibility.mjs",
     "check:visibility-browser": "node scripts/verify-area-visibility-browser.mjs",
     "check:custom-maps": "node scripts/check-custom-maps.mjs",
-    "check:custom-maps-browser": "node scripts/verify-custom-maps-browser.mjs"
+    "check:custom-maps-browser": "node scripts/verify-custom-maps-browser.mjs",
+    "data:punjab-seams": "python scripts/build-punjab-seams.py",
+    "check:punjab-seams": "node scripts/check-punjab-seams.mjs",
+    "check:punjab-seams-browser": "node scripts/verify-punjab-seams-browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
