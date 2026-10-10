@@ -1,4 +1,5 @@
 import raw from './catalog.json';
+import caseStudyAreas from './case-study-area-data.json';
 import pakistanDivisions from './pakistan-division-areas.json';
 import type {Area,MapDoc} from './map-model';
 
@@ -8,9 +9,9 @@ export type ScopeSettings={mapScope:ScopeMode;scopeRegion:string;scopeRegions:st
 export type ScopeDocument=Pick<MapDoc,'regions'|'countryView'|'delhiView'|'kashmirView'>&Partial<ScopeSettings>;
 export const defaultHistoricRegions=['in-punjab','pk-punjab','in-haryana','in-himachal','chandigarh'];
 export const scopeDefaults:ScopeSettings={mapScope:'atlas',scopeRegion:'in-delhi',scopeRegions:['in-punjab','pk-punjab'],historicRegions:[...defaultHistoricRegions],fullDetail:false,scopeAreas:[]};
-const catalog=[...raw,...pakistanDivisions] as Area[];
+const catalog=[...raw,...pakistanDivisions,...caseStudyAreas] as Area[];
 const byId=new Map(catalog.map(a=>[a.id,a]));
-const syntheticRegions=new Set(['delhi-ncr','kashmir-united','tibet-modern-three']);
+const syntheticRegions=new Set(['delhi-ncr','kashmir-united','tibet-modern-three','pk-lahore-study']);
 export const scopeRegions=catalog.filter(a=>a.level==='region'&&!syntheticRegions.has(a.region)).map(a=>({id:a.region,name:a.name,bbox:a.bbox}));
 const regionIds=new Set(scopeRegions.map(r=>r.id));
 export const tricityAreaIds=['chandigarh','in-d-608','in-haryana-d-70'];

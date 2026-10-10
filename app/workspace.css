@@ -548,11 +548,27 @@
 .religion-share-table small {grid-column:2 / 4;text-align:right;color:#87917f;font-size:9px;}
 .inspected-religion {margin:12px 0;font-size:11px;}
 .inspected-religion summary {font-weight:600;cursor:pointer;}
+.area-name-editor {padding:10px 0;border-block:1px solid #e4eadf;margin:10px 0;}
+.area-name-editor .field {font-size:11px;display:grid;gap:5px;}
+.area-name-editor input {width:100%;min-width:0;padding:8px;border:1px solid #d4dfce;border-radius:6px;background:white;font-size:12px;}
+.area-name-editor small,.area-name-editor p {display:block;font-size:10px;line-height:1.5;color:#708266;margin:7px 0;}
+.area-name-editor>div {display:flex;gap:7px;margin:8px 0;}
+.area-result-actions {flex-wrap:wrap;}
 .area-inspector {max-height:calc(100% - 170px);overflow-y:auto;}
 .empire-controls>p,.empire-source p {font-size:11px;line-height:1.7;color:#708266;}
 .empire-controls>button {font-size:11px;margin:5px 0 12px;}
 .empire-color {display:flex;align-items:center;justify-content:space-between;}
 .empire-source {font-size:11px;margin:12px 0;}
+.case-study-controls {border-top:1px solid #e1e8dd;padding-top:20px;margin-top:20px;}
+.case-study-controls p,.case-study-controls small {font-size:11px;line-height:1.7;color:#708266;}
+.case-study-controls details {font-size:11px;margin-top:15px;}
+.case-study-controls summary {cursor:pointer;font-weight:600;}
+.case-study-controls img {display:block;width:100%;height:auto;border-radius:7px;margin:12px 0;}
+.case-study-qualification {padding:10px;border:1px solid #dccfa6;border-radius:7px;background:#fcf9eb;}
+.case-study-area-group {margin-top:12px;}
+.case-study-area-group i {display:inline-block;width:10px;height:10px;margin-right:6px;}
+.case-study-map-caption {border:1px solid #dccfa6;border-radius:9px;background:#fffdf4ef;padding:10px 12px;font-size:10px;line-height:1.5;}
+.case-study-map-caption strong,.case-study-map-caption span {display:block;}
 .empire-map-legend {position:absolute;left:80px;bottom:42px;z-index:3;max-width:250px;background:#ffffffed;border:1px solid #dce7d7;border-radius:9px;padding:10px 12px;font-size:10px;box-shadow:0 3px 18px #24411912;}
 .empire-map-legend summary {display:flex;align-items:center;gap:7px;font-weight:600;cursor:pointer;font-size:12px;}
 .empire-map-legend i {display:inline-block;width:12px;height:12px;}

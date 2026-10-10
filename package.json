@@ -37,7 +37,9 @@
     "check:demographics": "node scripts/check-demographics.mjs",
     "check:demographics-browser": "node scripts/verify-demographics-browser.mjs",
     "check:history-religion": "node scripts/check-history-religion.mjs",
-    "check:history-religion-browser": "node scripts/verify-history-religion-browser.mjs"
+    "check:history-religion-browser": "node scripts/verify-history-religion-browser.mjs",
+    "check:case-study": "node scripts/check-case-study.mjs",
+    "check:case-study-browser": "node scripts/verify-case-study-browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

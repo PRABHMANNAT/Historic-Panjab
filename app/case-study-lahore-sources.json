@@ -1,0 +1,120 @@
+{
+  "title": "Lahore case-study selection: City, Shalimar and Cantonment",
+  "retrieved": "2026-10-10T21:11:20.848Z",
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "reference": {
+    "file": "United_Punjab_Sikh_Heritage_Priority_Core_Map_4K (4).png",
+    "register": "United_Punjab_Final_Tehsil_Register.csv",
+    "snapshotDate": "2026-08-16",
+    "selection": "Lahore City + Shalimar + Lahore Cantonment; Model Town and Raiwind excluded",
+    "framing": "Hypothetical / alternate-history administrative case study; not a current political or legal boundary map"
+  },
+  "sources": [
+    {
+      "id": 16108409,
+      "name": "Lahore Cantonment",
+      "sourceUrl": "https://www.openstreetmap.org/relation/16108409",
+      "bbox": [
+        74.3360853,
+        31.3293953,
+        74.6546712,
+        31.5788208
+      ],
+      "geometryType": "Polygon",
+      "areaKm2": 438.7388615785301,
+      "areaId": "case-lahore-cantonment",
+      "version": 5,
+      "timestamp": "2026-10-02T11:34:10Z",
+      "adminLevel": "7",
+      "snapshotDate": "2026-10-10",
+      "license": "ODbL-1.0"
+    },
+    {
+      "id": 16117507,
+      "name": "Lahore City",
+      "sourceUrl": "https://www.openstreetmap.org/relation/16117507",
+      "bbox": [
+        74.1736881,
+        31.4400447,
+        74.390378,
+        31.669884
+      ],
+      "geometryType": "Polygon",
+      "areaKm2": 211.70539388453642,
+      "areaId": "case-lahore-city",
+      "version": 7,
+      "timestamp": "2026-10-02T11:34:10Z",
+      "adminLevel": "7",
+      "snapshotDate": "2026-10-10",
+      "license": "ODbL-1.0"
+    },
+    {
+      "id": 16320537,
+      "name": "Shalimar",
+      "sourceUrl": "https://www.openstreetmap.org/relation/16320537",
+      "bbox": [
+        74.3184477,
+        31.5052808,
+        74.6187535,
+        31.7134238
+      ],
+      "geometryType": "Polygon",
+      "areaKm2": 296.4471789431613,
+      "areaId": "case-lahore-shalimar",
+      "version": 2,
+      "timestamp": "2023-09-16T18:51:52Z",
+      "adminLevel": "7",
+      "snapshotDate": "2026-10-10",
+      "license": "ODbL-1.0"
+    }
+  ],
+  "downloads": {
+    "lookupUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=R16108409,R16117507,R16320537&format=geojson&polygon_geojson=1",
+    "relationMetadataUrl": "https://api.openstreetmap.org/api/0.6/relations?relations=16108409,16117507,16320537",
+    "rawGeoJSONSha256": "6b0c0cf38fa85377cc09ad084c484d74e44212b5f6d68c1e39ba77fa07b85d45"
+  },
+  "method": "Preserved the three OSM/Nominatim tehsil polygon coordinate arrays without simplification. The case-study region is their polygon-clipping union, not the whole Lahore district. Label points were derived by an interior grid search; labels do not modify boundaries.",
+  "differenceFromAttachment": "Current OSM/Nominatim geometry was retrieved after the supplied August 2026 snapshot. City and Cantonment relation metadata have October 2026 edits; Shalimar relation metadata is unchanged since September 2023. These are the same relation identities named by the companion register, but not a recovered byte-identical copy of the attachment snapshot. OSM ways can also change independently of relation metadata.",
+  "areaCheck": {
+    "approximateSphericalUnionAreaKm2": 946.8914344060111,
+    "referenceRegisterAreaKm2": 946.1,
+    "note": "Different area methods and/or snapshot updates can account for the small difference. This comparison verifies the scale and intended footprint; it does not certify boundary identity."
+  },
+  "heritagePointChecks": [
+    {
+      "name": "Ranjit Singh Samadhi",
+      "coordinates": [
+        74.3112867,
+        31.5892866
+      ],
+      "containedBy": [
+        "Lahore City"
+      ],
+      "coordinateProvenance": "United_Punjab_Final_Heritage_Index.csv supplied alongside the reference map"
+    },
+    {
+      "name": "Dera Sahib",
+      "coordinates": [
+        74.3117799,
+        31.5896458
+      ],
+      "containedBy": [
+        "Lahore City"
+      ],
+      "coordinateProvenance": "United_Punjab_Final_Heritage_Index.csv supplied alongside the reference map"
+    },
+    {
+      "name": "Badshahi Mosque",
+      "coordinates": [
+        74.3094525,
+        31.588163
+      ],
+      "containedBy": [
+        "Lahore City"
+      ],
+      "coordinateProvenance": "Approximate inspection point near the mosque; not a surveyed monument coordinate"
+    }
+  ]
+}

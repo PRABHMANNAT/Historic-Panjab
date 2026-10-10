@@ -12,7 +12,7 @@ export type EmpireSettings={empireId:string;empireDetail:'district'|'tehsil';emp
 export const empireDefaults:EmpireSettings={empireId:'none',empireDetail:'district',empireColor:'#b98737'};
 const membership=new Map<string,Set<string>>();
 export function empireAreas(id:string){
- if(!membership.has(id)){const e=empireById.get(id);membership.set(id,new Set(e?areas.filter(a=>!['delhi-ncr','kashmir-united','tibet-modern-three'].includes(a.region)&&containsPoint(e.geometry,a.center)).map(a=>a.id):[]));}
+ if(!membership.has(id)){const e=empireById.get(id);membership.set(id,new Set(e?areas.filter(a=>!['delhi-ncr','kashmir-united','tibet-modern-three','pk-lahore-study'].includes(a.region)&&containsPoint(e.geometry,a.center)).map(a=>a.id):[]));}
  return membership.get(id)!;
 }
 // Region outlines provide context. Coloring is assigned independently to each
@@ -24,8 +24,8 @@ export function empirePreset(doc:MapDoc,id:string,detail=doc.empireDetail):Parti
  const empire=empireById.get(id);if(!empire)return {empireId:'none'};
  const matched=empireAreas(id),regions={...doc.regions};
  const matchedRegions=new Set(areas.filter(a=>(a.level==='district'||a.level==='tehsil')&&matched.has(a.id)).map(a=>a.region));
- for(const region of Object.keys(regions))regions[region]={...regions[region],show:true,province:false,district:matchedRegions.has(region)&&areasByLayer.has(region+'-district'),tehsil:detail==='tehsil'&&matchedRegions.has(region)&&areasByLayer.has(region+'-tehsil'),division:false,uc:false};
- return {...scopePreset(doc,'full',{fullDetail:true}),regions,empireId:id,empireDetail:detail,empireColor:doc.empireId===id?doc.empireColor:empire.color,demographicMode:'none'};
+ for(const region of Object.keys(regions))regions[region]={...regions[region],show:region!=='pk-lahore-study',province:false,district:matchedRegions.has(region)&&areasByLayer.has(region+'-district'),tehsil:detail==='tehsil'&&matchedRegions.has(region)&&areasByLayer.has(region+'-tehsil'),division:false,uc:false};
+ return {...scopePreset(doc,'full',{fullDetail:true}),regions,empireId:id,empireDetail:detail,empireColor:doc.empireId===id?doc.empireColor:empire.color,demographicMode:'none',caseStudyId:'none'};
 }
 export function empireCount(doc:MapDoc,level:Area['level']){return areas.filter(a=>a.level===level&&empireAreas(doc.empireId).has(a.id)&&visible(a,doc)).length;}
 export function empireBounds(id:string){const e=empireById.get(id);if(!e)return undefined;const points=e.geometry.type==='Polygon'?e.geometry.coordinates.flat():e.geometry.coordinates.flat(2);return points.reduce((b,p)=>[Math.min(b[0],p[0]),Math.min(b[1],p[1]),Math.max(b[2],p[0]),Math.max(b[3],p[1])],[180,90,-180,-90]);}

@@ -59,6 +59,41 @@ John Walker's map of territory at Ranjit Singh's death. Their assumptions differ
 Turning History off restores the user's retained paints. Census overlays also
 retain those paints while showing their own colors on a neutral background.
 
+### Sikh military & heritage case study
+
+In **History → Case study**, load **Sikh military & heritage · United Punjab core**.
+It reproduces the supplied scenario’s selection and colors: all 23 Indian Punjab
+districts and Chandigarh, selected Pakistani Punjab districts and partial tehsils,
+and twelve specific KP frontier tehsils. The panel lists included units and
+exclusions and shows the supplied reference image. **Focus Lahore selection**
+zooms to City, Shalimar and Cantonment; Model Town and Raiwind are excluded.
+
+This is an editable **hypothetical / alternate-history administrative case study**,
+not a dated Sikh Empire frontier or a current political or legal boundary.
+Military and heritage labels are commemorative scenario names. Existing atlas
+boundary editions are retained; the three Lahore polygons are from OpenStreetMap,
+retrieved 10 October 2026 UTC (11 October in India), newer than the reference’s
+August snapshot. The [case-study manifest](app/case-study-data.json) records the
+selection and image hash; [Lahore provenance](app/case-study-lahore-sources.json)
+records relation IDs, versions, coordinates, dates and **ODbL-1.0** attribution.
+The reference image retains its supplied source terms.
+
+The preset loads ordinary editable paints and display names. Undo restores the
+previous map. Its caption and boundary qualification carry into exports.
+
+### Custom area names
+
+Use **Areas → Rename** on any district, tehsil, subdivision, region or other source
+area. You can also select an area on the map and use the **pencil** in the vertical
+editing toolbar. Enter **Name on your map** and choose **Save name**.
+**Reset name**, a blank name or the original name restores the source label.
+Search finds both custom and original names.
+
+Display names appear on the map, in inspection and searches, and in SVG/PNG/JPG
+exports. They survive autosave, Save/Load and undo/redo. Renaming leaves boundary
+IDs, parent links and census records unchanged; the original source name remains
+visible in the name editor.
+
 ### Demographics and community shrines
 
 Open **People**, beside **Nature**, to display the largest reported mother-tongue

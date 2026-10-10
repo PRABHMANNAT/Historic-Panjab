@@ -1,0 +1,126 @@
+{
+  "id": "sikh-heritage-core",
+  "name": "Sikh military & heritage · United Punjab core",
+  "referenceTitle": "United Punjab – Sikh Heritage Priority Core",
+  "image": "/case-studies/sikh-heritage-core.png",
+  "imageSha256": "458bdbf834aaef115369f75bdb856c4db65055786720344a8544d1af7c8745bd",
+  "summary": "Complete Indian Punjab and Chandigarh, selected Pakistani Punjab districts and tehsils, and limited KP frontier units. Military and heritage names follow the supplied reference.",
+  "qualification": "Hypothetical / alternate-history administrative case study. The selection and commemorative labels are an editable scenario, not a dated empire frontier or a current political or legal boundary.",
+  "boundaryNote": "Existing atlas boundary editions are used for Punjab and KP. Lahore uses three named OpenStreetMap tehsil polygons retrieved in October 2026, newer than the reference map’s August 2026 snapshot. Geometry can differ from the image.",
+  "groups": [
+    {
+      "id": "india",
+      "label": "Complete Punjab · India",
+      "color": "#92b997",
+      "areaIds": [
+        "in-punjab"
+      ]
+    },
+    {
+      "id": "chandigarh",
+      "label": "Chandigarh capital enclave",
+      "color": "#caa34d",
+      "areaIds": [
+        "chandigarh"
+      ]
+    },
+    {
+      "id": "pakistan",
+      "label": "Retained Punjab · Pakistan",
+      "color": "#ce8e78",
+      "areaIds": [
+        "PK620",
+        "PK610",
+        "PK631",
+        "PK613",
+        "PK625",
+        "PK609",
+        "PK624",
+        "PK608",
+        "PK633",
+        "PK634",
+        "PK60501",
+        "PK60502",
+        "PK60503",
+        "PK61401",
+        "PK61402",
+        "PK61403",
+        "PK61601",
+        "PK61603",
+        "PK61604",
+        "PK61503",
+        "PK61504",
+        "PK60101",
+        "PK60102",
+        "PK60103",
+        "PK60106",
+        "PK63007",
+        "PK63501",
+        "PK63503",
+        "case-lahore-cantonment",
+        "case-lahore-city",
+        "case-lahore-shalimar"
+      ]
+    },
+    {
+      "id": "frontier",
+      "label": "Provisional KP frontier units",
+      "color": "#9787b3",
+      "areaIds": [
+        "PK51302",
+        "PK52801",
+        "PK52802",
+        "PK52803",
+        "PK52804",
+        "PK52601",
+        "PK52602",
+        "PK50101",
+        "PK50102",
+        "PK51101",
+        "PK51102",
+        "PK52202"
+      ]
+    }
+  ],
+  "areaNames": {
+    "PK620": "Sher Singh Attariwala",
+    "PK610": "Guru Hargobind Sahib",
+    "PK631": "Harappa",
+    "PK613": "Chowa Sahib",
+    "PK625": "Kartarpur Sahib",
+    "PK609": "Maharaja Ranjit Singh",
+    "PK608": "Pagri Sambhal Jatta",
+    "PK633": "Sacha Sauda",
+    "PK60501": "Katas Raj",
+    "PK61402": "Bulleh Shah",
+    "PK61601": "Singh Sabha Khushab",
+    "PK61503": "Makhdoom Pur Sahib",
+    "PK60103": "Panja Sahib",
+    "PK52801": "Peshawar–Jamrud",
+    "PK52601": "Akali Phula Singh",
+    "PK51102": "Hari Singh Nalwa–Hazara",
+    "in-d-36": "Kartar Singh Sarabha",
+    "in-d-38": "Dina Sahib",
+    "in-d-28": "Damdama Sahib",
+    "in-d-605": "Baba Ala Singh",
+    "in-d-43": "Mastuana Sahib",
+    "in-d-608": "Sahibzada Ajit Singh Nagar",
+    "in-d-42": "Rupnagar · Anandpur Sahib",
+    "in-d-32": "Dera Baba Nanak"
+  },
+  "exclusions": [
+    "Talagang",
+    "Pattoki",
+    "Naushera (Khushab)",
+    "Jahanian",
+    "Kabirwala",
+    "Kamalia",
+    "Pir Mahal",
+    "Hazro",
+    "Jand",
+    "Other Rawalpindi tehsils except Taxila",
+    "Other KP tehsils outside the listed frontier units",
+    "Lahore Model Town and Raiwind"
+  ],
+  "notes": "Reference labels identify military figures, commemorative areas and heritage places. They are map labels supplied by the user, not verified official administrative renamings. No population, religion or military-control inference is made from the scenario."
+}

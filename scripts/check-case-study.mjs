@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
+import {loadMapModel,loadLocalModule} from './load-map-model.mjs';
+const model=await loadMapModel();
+const study=await loadLocalModule(new URL('../app/case-study-model.ts',import.meta.url));
+const scope=await loadLocalModule(new URL('../app/scope-model.ts',import.meta.url));
+const naming=await loadLocalModule(new URL('../app/area-name-model.ts',import.meta.url));
+const search=await loadLocalModule(new URL('../app/area-search-model.ts',import.meta.url));
+const spatial=await loadLocalModule(new URL('../app/spatial-overlays.ts',import.meta.url));
+const amritsar=model.areas.find(a=>a.name==='Amritsar'&&a.level==='district'&&a.region==='in-punjab');
+const seed={...model.initial,fills:{'np-nepal':{color:'#123456',pattern:'solid'},[amritsar.id]:{color:'#654321',pattern:'dots'}},areaNames:{[amritsar.id]:'Amritsar heritage'},hidden:['PK614','case-lahore-city']};
+const doc={...seed,...study.caseStudyPreset(seed)};
+assert.ok(!scope.scopeRegions.some(r=>r.id==='pk-lahore-study'),'Case-study context is excluded from ordinary region presets');
+assert.equal(doc.mapScope,'selection');assert.equal(doc.caseStudyId,'sikh-heritage-core');assert.equal(doc.empireId,'none');assert.equal(doc.demographicMode,'none');
+assert.deepEqual(doc.scopeAreas,study.caseStudyAreaIds);assert.equal(new Set(doc.scopeAreas).size,doc.scopeAreas.length);
+assert.equal(doc.areaNames[amritsar.id],'Amritsar heritage');assert.equal(doc.areaNames.PK609,'Maharaja Ranjit Singh');
+assert.equal(doc.fills['np-nepal'].color,'#123456');assert.deepEqual(doc.fills[amritsar.id],{color:'#92b997',pattern:'solid'},'Preset replaces district paint overrides within the selected region');
+assert.equal(model.mapPaintGroups(doc).length,4,'Only visible case-study colors enter the legend');
+for(const id of doc.scopeAreas){assert.ok(model.areaById.has(id),'Known selected unit '+id);assert.ok(model.visible(model.areaById.get(id),doc),'Selected unit visible '+id);}
+for(const group of study.caseStudy.groups)for(const area of model.areas.filter(a=>model.visible(a,doc)&&group.areaIds.some(id=>scope.areaBelongsTo(a,id))))assert.equal(model.effectivePaint(area,doc)?.color,group.color,'Case-study color reaches visible unit '+area.id);
+for(const area of model.areas.filter(a=>a.region==='in-punjab'&&a.level==='district'))assert.ok(model.visible(area,doc));
+const child=model.areas.find(a=>a.parent===amritsar.id&&a.level==='tehsil');assert.equal(model.effectivePaint(child,{...doc,fills:{...doc.fills,[amritsar.id]:{color:'#123456',pattern:'solid'}}})?.color,'#123456','Crafting a district color still updates linked tehsils');
+for(const id of ['PK60504','PK61404','PK61602','PK61501','PK61502','PK63502','PK63504','PK60104','PK60105','PK52805','PK52603','PK50103','PK50104','PK51103','PK52201','PK52203','PK52204','PK52205','lahore-t-2','lahore-t-9','pk-country'])assert.ok(!model.visible(model.areaById.get(id),doc),'Excluded area '+id);
+const restored=model.validate(JSON.parse(JSON.stringify(doc)));assert.equal(restored.caseStudyId,doc.caseStudyId);assert.deepEqual(restored.areaNames,doc.areaNames);assert.deepEqual(restored.scopeAreas,doc.scopeAreas);
+const renamed=naming.renamedArea(doc,amritsar,'  Khalsa–ਨਗਰ <West> & East  ');assert.equal(renamed[amritsar.id],'Khalsa–ਨਗਰ <West> & East');assert.equal(seed.areaNames[amritsar.id],'Amritsar heritage','Rename does not mutate previous document');
+assert.equal(naming.areaDisplayName(amritsar,{areaNames:renamed}),renamed[amritsar.id]);assert.equal(amritsar.name,'Amritsar','Source name stays intact');
+assert.ok(search.findAreas('Khalsa ਨਗਰ','district','all',{areaNames:renamed}).some(a=>a.id===amritsar.id));assert.ok(search.findAreas('Amritsar','district','all',{areaNames:renamed}).some(a=>a.id===amritsar.id));
+assert.equal(naming.renamedArea({areaNames:renamed},amritsar,'')[amritsar.id],undefined);
+const safe=model.validate({...model.initial,caseStudyId:'unknown',areaNames:{[amritsar.id]:'\u0000  '+('x'.repeat(200)),'unknown-area':'bad'}});assert.equal(safe.caseStudyId,'none');assert.equal(safe.areaNames[amritsar.id].length,100);assert.ok(!safe.areaNames['unknown-area']);
+const old={...model.initial};delete old.areaNames;delete old.caseStudyId;assert.deepEqual(model.validate(old).areaNames,{});assert.equal(model.validate(old).caseStudyId,'none');
+const geo=JSON.parse(await fs.readFile(new URL('../public/data/pk-lahore-study-tehsil.geojson',import.meta.url),'utf8'));
+const labels=JSON.parse(await fs.readFile(new URL('../public/data/pk-lahore-study-tehsil-labels.geojson',import.meta.url),'utf8'));
+assert.equal(geo.features.length,3);for(const f of geo.features){assert.equal(f.id,f.properties.id);assert.ok(spatial.containsPoint(f.geometry,labels.features.find(p=>p.id===f.id).geometry.coordinates));}
+const image=await fs.readFile(new URL('../public'+study.caseStudy.image,import.meta.url));assert.equal(crypto.createHash('sha256').update(image).digest('hex'),study.caseStudy.imageSha256);
+console.log('Verified exact case-study selections/exclusions, all 23 Indian Punjab districts, three sourced Lahore tehsils, four colors, reference hash, custom names, original identities, search, validation and saved settings.');

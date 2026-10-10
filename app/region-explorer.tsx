@@ -33,7 +33,7 @@ export default function RegionExplorer({doc,onExplore,onChange,onFit}:Props){
   }}>
    <option value="">{doc.mapScope==='combination'?`Explore · ${doc.scopeRegions.length} regions`:'Explore a region…'}</option>
    <option value="custom-combination">Combine states & territories…</option>
-   <optgroup label="Explore one region">{regions.map(region=><option key={region.id} value={region.id}>{region.name}</option>)}</optgroup>
+   <optgroup label="Explore one region">{regions.filter(region=>scopeRegions.some(source=>source.id===region.id)).map(region=><option key={region.id} value={region.id}>{region.name}</option>)}</optgroup>
   </select>
   <Dialog open={open} onOpenChange={setOpen}>
    <DialogContent className="region-composer" finalFocus={()=>{selectRef.current?.focus();return false;}}>

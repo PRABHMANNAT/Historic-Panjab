@@ -62,8 +62,8 @@ export function clipRiver(f:Feature,masks:Mask[]):Feature|undefined{
    const nearby=candidates.filter(m=>sx<=m.bbox[2]&&ex>=m.bbox[0]&&sy<=m.bbox[3]&&ey>=m.bbox[1]);
    if(!nearby.length){flush();continue;}
    const cuts=[0,1];
-   for(const {a:c,b:d}of edges){
-    if(Math.min(c[0],d[0])>ex||Math.max(c[0],d[0])<sx||Math.min(c[1],d[1])>ey||Math.max(c[1],d[1])<sy)continue;
+   // Query indexed boundary edges for this segment rather than scanning the entire river's envelope.
+   for(const {a:c,b:d}of nearby.flatMap(mask=>nearEdges(mask,[sx,sy,ex,ey]))){
     const t=crossing(a,b,c,d);if(t!==undefined)cuts.push(t);
    }
    cuts.sort((a,b)=>a-b);const unique=cuts.filter((v,j)=>!j||v-cuts[j-1]>1e-9);
