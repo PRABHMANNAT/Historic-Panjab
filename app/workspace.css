@@ -332,6 +332,7 @@
 .premium-studio .map-toolbar button {height: 35px; width: 35px; padding: 8px; border-radius: 7px; position: relative; color: #81907e;}
 .premium-studio .map-toolbar button:hover {background: #f1f6ec; color: #355b3c;}
 .premium-studio .map-toolbar button.active {color: #186b53; background: #e7f0df;}
+.premium-studio .map-toolbar button:disabled {opacity: .4; cursor: not-allowed;}
 .tool-tooltip {display: none; position: absolute; left: 48px; top: 5px; padding: 7px 10px; white-space: nowrap; font-size: 11px; border-radius: 5px; background: #234434; color: #fff; box-shadow: 0 4px 15px #123b2415; pointer-events: none; z-index: 10;}
 .map-toolbar button:is(:hover,:focus-visible) .tool-tooltip {display: block;}
 .tool-divider {height: 1px; background: #e5ebdf; margin: 4px 6px;}
