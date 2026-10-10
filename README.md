@@ -376,6 +376,23 @@ exports and Hide/Unhide.
 
 ## Saved custom maps
 
+The floating toolbar's **Normal** button exits empire and history case-study
+views. It restores the map used before entering history and retains colors,
+names and settings edited afterwards. The existing History tab's Off options
+use the same return behavior. Return settings are included in autosave and
+named maps, so they also work after reloading or reopening a saved map.
+Older historical maps without a stored earlier view return to the atlas and
+remove unchanged preset styling while retaining custom edits.
+
+Choose **View** on the floating toolbar for **Complete map**, **Selected map**
+or **Focus edited area**. Complete map temporarily shows the available atlas;
+Selected map restores the prior area group or combination, detail and hidden
+areas. Focus edited area shows and zooms to the last area colored or inspected.
+The overview retains custom colors and names. Choosing new geography from
+Layers/Search replaces the remembered view with that new selection.
+Run `npm run check:map-navigation` and `npm run check:map-navigation-browser`
+to verify history return, overview/selection/focus, saved maps and mobile controls.
+
 Choose **Save** (or Ctrl/Cmd+S), enter a map name, and choose **Save map**.
 **My maps** keeps a searchable library of your maps. Choose **Open** to return to
 a saved map, then **Save changes** to update it or **Save as new map** to keep a

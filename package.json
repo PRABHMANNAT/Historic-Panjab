@@ -46,7 +46,9 @@
     "check:custom-maps-browser": "node scripts/verify-custom-maps-browser.mjs",
     "data:punjab-seams": "python scripts/build-punjab-seams.py",
     "check:punjab-seams": "node scripts/check-punjab-seams.mjs",
-    "check:punjab-seams-browser": "node scripts/verify-punjab-seams-browser.mjs"
+    "check:punjab-seams-browser": "node scripts/verify-punjab-seams-browser.mjs",
+    "check:map-navigation": "node scripts/check-map-navigation.mjs",
+    "check:map-navigation-browser": "node scripts/verify-map-navigation-browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

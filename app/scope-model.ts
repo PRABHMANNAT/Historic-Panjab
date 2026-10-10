@@ -7,6 +7,11 @@ export const scopeModes=['atlas','full','single','combination','tricity','histor
 export type ScopeMode=typeof scopeModes[number];
 export type ScopeSettings={mapScope:ScopeMode;scopeRegion:string;scopeRegions:string[];historicRegions:string[];fullDetail:boolean;scopeAreas:string[]};
 export type ScopeDocument=Pick<MapDoc,'regions'|'countryView'|'delhiView'|'kashmirView'>&Partial<ScopeSettings>;
+export type ScopeNavigation=ScopeSettings&Pick<MapDoc,'regions'|'countryView'|'delhiView'|'kashmirView'|'hidden'|'areaDetails'>;
+export function scopeNavigation(doc:MapDoc):ScopeNavigation{
+ const {mapScope,scopeRegion,scopeRegions,historicRegions,fullDetail,scopeAreas,regions,countryView,delhiView,kashmirView,hidden,areaDetails}=doc;
+ return structuredClone({mapScope,scopeRegion,scopeRegions,historicRegions,fullDetail,scopeAreas,regions,countryView,delhiView,kashmirView,hidden,areaDetails});
+}
 export const defaultHistoricRegions=['in-punjab','pk-punjab','in-haryana','in-himachal','chandigarh'];
 export const scopeDefaults:ScopeSettings={mapScope:'atlas',scopeRegion:'in-delhi',scopeRegions:['in-punjab','pk-punjab'],historicRegions:[...defaultHistoricRegions],fullDetail:false,scopeAreas:[]};
 const catalog=[...raw,...pakistanDivisions,...caseStudyAreas] as Area[];
