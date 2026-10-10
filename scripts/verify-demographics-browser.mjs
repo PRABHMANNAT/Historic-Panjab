@@ -34,7 +34,7 @@ try{
  await page.getByRole('button',{name:'Redo',exact:true}).click();await idle();assert.deepEqual((await saved()).scopeAreas,[district.id,'np-nepal']);
  await page.getByRole('tab',{name:'People',exact:true}).click();await page.getByLabel('Demographic map layer').selectOption('language');
  assert.ok(await page.getByText(/No matching largest mother-tongue group records/).isVisible());
- await page.getByLabel('Census profile').selectOption('in-punjab');await page.getByRole('button',{name:'Show this census region',exact:true}).click();await idle();
+ await page.getByLabel('Census profile',{exact:true}).selectOption('in-punjab');await page.getByRole('button',{name:'Show this census region',exact:true}).click();await idle();
  assert.equal((await saved()).scopeRegion,'in-punjab');assert.ok(await page.locator('.demographic-map-legend').getByText('Punjabi',{exact:true}).isVisible());
  await page.screenshot({path:'outputs/demographics/language.png'});
  for(const mode of ['religion','population','literacy','urban']){await page.getByLabel('Demographic map layer').selectOption(mode);await idle();assert.equal((await saved()).demographicMode,mode);}

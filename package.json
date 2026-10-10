@@ -35,7 +35,9 @@
     "check:gurdwara-directory": "node scripts/check-gurdwara-directory.mjs",
     "data:gurdwara-directory": "node scripts/build-gurdwara-directory.mjs",
     "check:demographics": "node scripts/check-demographics.mjs",
-    "check:demographics-browser": "node scripts/verify-demographics-browser.mjs"
+    "check:demographics-browser": "node scripts/verify-demographics-browser.mjs",
+    "check:history-religion": "node scripts/check-history-religion.mjs",
+    "check:history-religion-browser": "node scripts/verify-history-religion-browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

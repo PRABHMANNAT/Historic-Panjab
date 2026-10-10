@@ -1,0 +1,9 @@
+import type {Area,MapDoc} from './map-model';
+import {areaById} from './map-model';
+import {demographicById,demographicSources,religionColors,recordAreaId,type DemographicRecord} from './demographic-model';
+
+export function ReligionProfile({record,palette=religionColors}:{record:DemographicRecord;palette?:Record<string,string>}){
+ const area=areaById.get(recordAreaId(record));
+ return <div className="religion-profile"><strong>{area?.name} · Census {record.year}</strong><p>{record.population?.toLocaleString('en-IN')} residents · {area?.level==='tehsil'?'Tehsil / subdivision':area?.level}</p><div className="religion-share-bar" aria-label="Religious population shares">{record.religions.map(v=><span key={v.name} style={{width:v.share+'%',background:palette[v.name]||'#8a8996'}} title={v.name+' '+v.share.toFixed(2)+'%'}/>)}</div><div className="religion-share-table">{[...record.religions].sort((a,b)=>b.share-a.share).map(v=><div key={v.name}><i style={{background:palette[v.name]||'#8a8996'}}/><span>{v.name}</span><strong>{v.share.toFixed(2)}%</strong><small>{v.population?.toLocaleString('en-IN')}</small></div>)}</div>{record.censusName&&record.censusName.toLowerCase()!==area?.name.toLowerCase()&&<p className="muted">Census source name: {record.censusName}</p>}<p className="muted">{record.note}</p>{demographicSources.filter(s=>record.sourceIds.includes(s.id)).map(s=><a className="data-source-link" key={s.id} href={s.url} target="_blank" rel="noreferrer">{s.title}</a>)}</div>;
+}
+export function AreaReligionStats({area,doc}:{area:Area;doc:MapDoc}){const record=demographicById.get(area.id);return <details className="inspected-religion" open={doc.demographicMode==='religion'||doc.demographicMode==='religion-share'}><summary>Religion demographics</summary>{record?<ReligionProfile record={record} palette={doc.religionPalette}/>:<p>No matching district or tehsil religion record for {area.name}. A state average is not substituted.</p>}</details>;}

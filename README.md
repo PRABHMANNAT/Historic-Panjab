@@ -39,6 +39,26 @@ Unhiding a child restores its hidden ancestors. Hidden polygons are removed from
 parent fills, natural/point overlay masks and vector exports. Paints are retained.
 Selections, visibility, undo/redo, local autosave and Save/Load work together.
 
+### Historical empire views
+
+Open **History** for the **Mauryan Empire (c. 250 BCE)**, **Mughal Empire (late
+17th century)** or **Sikh Empire (1839)**. Selecting a preset opens the full
+available map and colors modern districts whose source label points lie within
+the dated reference extent. Choose **Districts + tehsils / subdivisions** to
+color the finer units independently. The empire color is editable. Hide/Unhide,
+undo/redo, autosave, Save/Load and PNG/JPG/SVG export remain available.
+
+These are coarse comparisons using modern boundaries, not exact historical
+frontiers. Border units can straddle territory; local autonomy, nominal control,
+enclaves and frontier changes are not resolved. Each preset in
+[the history source manifest](app/empire-data.json) records its reference map,
+date, method, uncertainty and license. The Mauryan reconstruction follows
+Joppen's traditional envelope, the Mughal reconstruction follows the Library of
+Congress map's late-17th-century nominal extent, and the Sikh reconstruction uses
+John Walker's map of territory at Ranjit Singh's death. Their assumptions differ.
+Turning History off restores the user's retained paints. Census overlays also
+retain those paints while showing their own colors on a neutral background.
+
 ### Demographics and community shrines
 
 Open **People**, beside **Nature**, to display the largest reported mother-tongue
@@ -50,10 +70,33 @@ Largest-group maps show a plurality, which can be below 50%; language is reporte
 mother tongue, not official-language status. Derived language remainders are
 excluded from largest-group ranking.
 
-Data is attached only to matching whole-region polygons, never assigned as a
-state average to an isolated district or tehsil. Neighbouring-country demographics
-and the later Andhra Pradesh/Telangana and Jammu & Kashmir/Ladakh splits remain
-unshaded. Dadra & Nagar Haveli and Daman & Diu combine the two 2011 UT totals.
+Religion additionally includes **5,974 verified Indian Census 2011 area profiles:
+495 districts and 5,479 tehsils/subdivisions**. Pakistan Punjab **Census 2023 Table
+9** adds 340 atlas profiles across its two boundary editions: 36 districts in
+each edition, plus 133 legacy and 135 full-country tehsil profiles. These duplicate
+editions are alternative map views; their counts must not be added together.
+Each record keeps its census year and the source's eight reported categories.
+Use the **Religion administrative
+level** control to switch between state, district and tehsil maps. Choose either
+**Largest religious group** or **Religion population share** for a specific
+community. The floating key shows categories or six percentage ranges and lets
+you change the community colors. The people button in the vertical editing
+toolbar opens district religion maps directly. **Inspect area** displays all eight
+religion counts and percentages for a matched unit; profile search finds other
+units without inventing a parent average.
+
+Names/codes are matched conservatively against official state C-01 tables, with
+split or conflicting districts withheld. **1,272 Indian source units** have no
+reliable match. Pakistan Punjab joins use exact normalized district/tehsil names
+and explicit spelling aliases; changed Lahore subdivisions and ambiguous combined
+units are withheld. Other neighbouring-country local religion statistics remain
+unavailable. A category absent from a source is not treated as zero.
+See [matching rules and reproduction instructions](docs/religion-area-data.md),
+[full source/count audit](app/religion-area-data.json), and the compact runtime
+projection. State-level language and other indicators retain the original
+whole-region coverage: later Andhra Pradesh/Telangana and Jammu & Kashmir/Ladakh
+splits remain unshaded at that level. Dadra & Nagar Haveli and Daman & Diu combine
+the two 2011 UT totals. Districts and tehsils never receive a state average.
 The map's later boundary editions can differ from census geography. These are
 historical aggregates, not current estimates or descriptions of every resident.
 
@@ -68,6 +111,9 @@ legends and shrine photos carry into PNG/JPG/SVG exports and saved map settings.
 
 Run `npm run check:demographics` for source/data/model checks and
 `npm run check:demographics-browser` with the app on port 4545 for browser checks.
+Run `npm run check:history-religion` and
+`npm run check:history-religion-browser` for empire geography, religious count
+reconciliation, palettes, district/tehsil coverage, exports and mobile behavior.
 To reproduce the Census values, install `openpyxl` and `xlrd` for Python, then run
 `python scripts/import-demographic-census.py --input-dir work/census-2011 --download`.
 The importer verifies the three pinned workbook hashes and reconciles language
